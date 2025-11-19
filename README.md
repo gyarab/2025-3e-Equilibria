@@ -1,4 +1,4 @@
-# 2025-3e-equilibria
+# 2025-3e-Equilibria
 - Autoři: Adam Hruška, Tobiáš Černek a Vojtěch Macek
 - Třída: 3.E
 - Školní rok: 2025/2026
