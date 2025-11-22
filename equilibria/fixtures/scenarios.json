@@ -1,0 +1,1682 @@
+[
+{
+  "problem": {
+    "name": "Severe Drought in Jihomoravský and Středočeský",
+    "description": "Prolonged drought is threatening agriculture, reducing crop yields and water supply. Farmers are protesting and citizens worry about food prices.",
+    "possible_regions": ["Jihomoravský", "Středočeský"],
+    "time_before_expiration": 4,
+    "max_budget_to_appear": 100,
+    "min_budget_to_appear": 20,
+    "max_citizen_satisfaction_to_appear": 80,
+    "min_citizen_satisfaction_to_appear": 30,
+    "max_environment_to_appear": 100,
+    "min_environment_to_appear": 0,
+    "max_military_to_appear": 100,
+    "min_military_to_appear": 0,
+    "budget_bias": 2,
+    "citizen_satisfaction_bias": 2,
+    "environment_bias": 3,
+    "military_bias": 0,
+    "ideal_budget": 60,
+    "ideal_citizen_satisfaction": 55,
+    "ideal_environment": 40,
+    "ideal_military": 50
+  },
+  "solutions": [
+    {
+      "name": "Invest in Irrigation Projects",
+      "description": "Government invests heavily in new irrigation infrastructure to support farmers.",
+      "time_before_effect": 2,
+      "budget_change": -15,
+      "citizen_satisfaction_change": 8,
+      "environment_change": 2,
+      "military_change": 0
+    },
+    {
+      "name": "Provide Financial Aid Only",
+      "description": "Distribute subsidies and financial support to affected farmers without infrastructure projects.",
+      "time_before_effect": 1,
+      "budget_change": -10,
+      "citizen_satisfaction_change": 5,
+      "environment_change": 0,
+      "military_change": 0
+    },
+    {
+      "name": "Ignore and Hope for Rain",
+      "description": "Take no immediate action, hoping the drought will end naturally.",
+      "time_before_effect": 4,
+      "budget_change": 0,
+      "citizen_satisfaction_change": -12,
+      "environment_change": -3,
+      "military_change": 0
+    }
+  ]
+}
+,
+{
+  "problem": {
+    "name": "EU Sanctions Pressure in Prague",
+    "description": "EU imposes sanctions related to international trade, putting pressure on the government in Prague to comply or negotiate exceptions.",
+    "possible_regions": ["Praha"],
+    "time_before_expiration": 3,
+    "max_budget_to_appear": 90,
+    "min_budget_to_appear": 30,
+    "max_citizen_satisfaction_to_appear": 70,
+    "min_citizen_satisfaction_to_appear": 10,
+    "max_environment_to_appear": 100,
+    "min_environment_to_appear": 0,
+    "max_military_to_appear": 100,
+    "min_military_to_appear": 0,
+    "budget_bias": 2,
+    "citizen_satisfaction_bias": 2,
+    "environment_bias": 1,
+    "military_bias": 1,
+    "ideal_budget": 55,
+    "ideal_citizen_satisfaction": 60,
+    "ideal_environment": 50,
+    "ideal_military": 50
+  },
+  "solutions": [
+    {
+      "name": "Negotiate Exceptions",
+      "description": "Diplomats work with the EU to reduce sanctions impact.",
+      "time_before_effect": 2,
+      "budget_change": -5,
+      "citizen_satisfaction_change": 6,
+      "environment_change": 0,
+      "military_change": 0
+    },
+    {
+      "name": "Comply Fully",
+      "description": "Immediate full compliance with EU sanctions to avoid penalties.",
+      "time_before_effect": 1,
+      "budget_change": -10,
+      "citizen_satisfaction_change": -3,
+      "environment_change": 0,
+      "military_change": 0
+    },
+    {
+      "name": "Resist and Challenge",
+      "description": "Government publicly challenges sanctions, risking diplomatic tension.",
+      "time_before_effect": 3,
+      "budget_change": 0,
+      "citizen_satisfaction_change": -10,
+      "environment_change": 0,
+      "military_change": 0
+    }
+  ]
+}
+,
+{
+  "problem": {
+    "name": "Industrial Pollution in Moravskoslezský",
+    "description": "Air pollution from factories in Moravskoslezský is causing health concerns and protests in nearby communities.",
+    "possible_regions": ["Moravskoslezský"],
+    "time_before_expiration": 5,
+    "max_budget_to_appear": 100,
+    "min_budget_to_appear": 40,
+    "max_citizen_satisfaction_to_appear": 70,
+    "min_citizen_satisfaction_to_appear": 20,
+    "max_environment_to_appear": 90,
+    "min_environment_to_appear": 10,
+    "max_military_to_appear": 100,
+    "min_military_to_appear": 0,
+    "budget_bias": 1,
+    "citizen_satisfaction_bias": 2,
+    "environment_bias": 3,
+    "military_bias": 0,
+    "ideal_budget": 50,
+    "ideal_citizen_satisfaction": 55,
+    "ideal_environment": 45,
+    "ideal_military": 50
+  },
+  "solutions": [
+    {
+      "name": "Enforce Environmental Regulations",
+      "description": "Impose strict limits and fines on factories emitting pollutants.",
+      "time_before_effect": 2,
+      "budget_change": -8,
+      "citizen_satisfaction_change": 10,
+      "environment_change": 7,
+      "military_change": 0
+    },
+    {
+      "name": "Provide Incentives for Clean Tech",
+      "description": "Offer tax breaks and subsidies to factories that adopt cleaner technologies.",
+      "time_before_effect": 3,
+      "budget_change": -12,
+      "citizen_satisfaction_change": 6,
+      "environment_change": 9,
+      "military_change": 0
+    },
+    {
+      "name": "Take No Action",
+      "description": "Avoid intervening, hoping the issue resolves naturally.",
+      "time_before_effect": 4,
+      "budget_change": 0,
+      "citizen_satisfaction_change": -15,
+      "environment_change": -10,
+      "military_change": 0
+    }
+  ]
+}
+,
+{
+  "problem": {
+    "name": "Teacher Strike in Plzeňský",
+    "description": "Teachers in Plzeňský are striking over salary disputes, causing school closures and parental unrest.",
+    "possible_regions": ["Plzeňský"],
+    "time_before_expiration": 3,
+    "max_budget_to_appear": 90,
+    "min_budget_to_appear": 20,
+    "max_citizen_satisfaction_to_appear": 85,
+    "min_citizen_satisfaction_to_appear": 30,
+    "max_environment_to_appear": 100,
+    "min_environment_to_appear": 0,
+    "max_military_to_appear": 100,
+    "min_military_to_appear": 0,
+    "budget_bias": 2,
+    "citizen_satisfaction_bias": 3,
+    "environment_bias": 0,
+    "military_bias": 0,
+    "ideal_budget": 55,
+    "ideal_citizen_satisfaction": 60,
+    "ideal_environment": 50,
+    "ideal_military": 50
+  },
+  "solutions": [
+    {
+      "name": "Increase Teacher Salaries",
+      "description": "Allocate additional funds to raise teacher pay, ending the strike.",
+      "time_before_effect": 1,
+      "budget_change": -12,
+      "citizen_satisfaction_change": 10,
+      "environment_change": 0,
+      "military_change": 0
+    },
+    {
+      "name": "Negotiate Partial Compromise",
+      "description": "Offer moderate salary increase and improved conditions.",
+      "time_before_effect": 2,
+      "budget_change": -7,
+      "citizen_satisfaction_change": 6,
+      "environment_change": 0,
+      "military_change": 0
+    },
+    {
+      "name": "Refuse Demands",
+      "description": "Keep budget unchanged, risking prolonged strike.",
+      "time_before_effect": 3,
+      "budget_change": 0,
+      "citizen_satisfaction_change": -15,
+      "environment_change": 0,
+      "military_change": 0
+    }
+  ]
+}
+,
+{
+  "problem": {
+    "name": "Cyberattack on National Health System",
+    "description": "A cyberattack is crippling healthcare IT systems nationwide, causing delays in treatment and public panic.",
+    "possible_regions": ["Praha"],
+    "time_before_expiration": 2,
+    "max_budget_to_appear": 100,
+    "min_budget_to_appear": 30,
+    "max_citizen_satisfaction_to_appear": 85,
+    "min_citizen_satisfaction_to_appear": 20,
+    "max_environment_to_appear": 100,
+    "min_environment_to_appear": 0,
+    "max_military_to_appear": 100,
+    "min_military_to_appear": 0,
+    "budget_bias": 2,
+    "citizen_satisfaction_bias": 3,
+    "environment_bias": 0,
+    "military_bias": 2,
+    "ideal_budget": 50,
+    "ideal_citizen_satisfaction": 55,
+    "ideal_environment": 50,
+    "ideal_military": 60
+  },
+  "solutions": [
+    {
+      "name": "Deploy Emergency IT Teams",
+      "description": "Immediately send expert teams to recover systems and secure networks.",
+      "time_before_effect": 1,
+      "budget_change": -10,
+      "citizen_satisfaction_change": 12,
+      "environment_change": 0,
+      "military_change": 2
+    },
+    {
+      "name": "Invest in Long-Term Cybersecurity",
+      "description": "Upgrade infrastructure to prevent future attacks.",
+      "time_before_effect": 3,
+      "budget_change": -15,
+      "citizen_satisfaction_change": 6,
+      "environment_change": 0,
+      "military_change": 3
+    },
+    {
+      "name": "Delay Action",
+      "description": "Wait for external assistance, risking further damage.",
+      "time_before_effect": 4,
+      "budget_change": 0,
+      "citizen_satisfaction_change": -18,
+      "environment_change": 0,
+      "military_change": -2
+    }
+  ]
+}
+,
+{
+  "problem": {
+    "name": "Floods in Jihočeský and Zlínský",
+    "description": "Heavy rains caused riverbanks to overflow, threatening towns and agriculture.",
+    "possible_regions": ["Jihočeský", "Zlínský"],
+    "time_before_expiration": 3,
+    "max_budget_to_appear": 100,
+    "min_budget_to_appear": 20,
+    "max_citizen_satisfaction_to_appear": 90,
+    "min_citizen_satisfaction_to_appear": 20,
+    "max_environment_to_appear": 95,
+    "min_environment_to_appear": 10,
+    "max_military_to_appear": 100,
+    "min_military_to_appear": 0,
+    "budget_bias": 2,
+    "citizen_satisfaction_bias": 3,
+    "environment_bias": 3,
+    "military_bias": 1,
+    "ideal_budget": 55,
+    "ideal_citizen_satisfaction": 60,
+    "ideal_environment": 50,
+    "ideal_military": 50
+  },
+  "solutions": [
+    {
+      "name": "Emergency Evacuation and Relief",
+      "description": "Mobilize resources to evacuate affected citizens and provide aid.",
+      "time_before_effect": 1,
+      "budget_change": -12,
+      "citizen_satisfaction_change": 15,
+      "environment_change": -2,
+      "military_change": 3
+    },
+    {
+      "name": "Build Flood Barriers",
+      "description": "Invest in long-term infrastructure to prevent future floods.",
+      "time_before_effect": 3,
+      "budget_change": -18,
+      "citizen_satisfaction_change": 8,
+      "environment_change": 2,
+      "military_change": 0
+    },
+    {
+      "name": "Minimal Intervention",
+      "description": "Only provide small-scale aid, hoping flood subsides naturally.",
+      "time_before_effect": 2,
+      "budget_change": -5,
+      "citizen_satisfaction_change": -8,
+      "environment_change": -1,
+      "military_change": 0
+    }
+  ]
+}
+,
+{
+  "problem": {
+    "name": "Energy Price Surge due to Global Crisis",
+    "description": "International energy prices are rising, impacting domestic energy bills and inflation.",
+    "possible_regions": ["Praha"],
+    "time_before_expiration": 4,
+    "max_budget_to_appear": 100,
+    "min_budget_to_appear": 10,
+    "max_citizen_satisfaction_to_appear": 80,
+    "min_citizen_satisfaction_to_appear": 20,
+    "max_environment_to_appear": 100,
+    "min_environment_to_appear": 0,
+    "max_military_to_appear": 100,
+    "min_military_to_appear": 0,
+    "budget_bias": 2,
+    "citizen_satisfaction_bias": 3,
+    "environment_bias": 1,
+    "military_bias": 0,
+    "ideal_budget": 50,
+    "ideal_citizen_satisfaction": 55,
+    "ideal_environment": 50,
+    "ideal_military": 50
+  },
+  "solutions": [
+    {
+      "name": "Subsidize Energy Prices",
+      "description": "Provide temporary subsidies to citizens to reduce energy costs.",
+      "time_before_effect": 1,
+      "budget_change": -15,
+      "citizen_satisfaction_change": 10,
+      "environment_change": 0,
+      "military_change": 0
+    },
+    {
+      "name": "Encourage Renewable Energy",
+      "description": "Invest in renewable infrastructure to reduce dependency on imports.",
+      "time_before_effect": 3,
+      "budget_change": -20,
+      "citizen_satisfaction_change": 6,
+      "environment_change": 5,
+      "military_change": 0
+    },
+    {
+      "name": "Do Nothing",
+      "description": "Keep budget untouched, risk public dissatisfaction.",
+      "time_before_effect": 2,
+      "budget_change": 0,
+      "citizen_satisfaction_change": -12,
+      "environment_change": 0,
+      "military_change": 0
+    }
+  ]
+}
+,
+{
+  "problem": {
+    "name": "Labor Shortage in Vysočina",
+    "description": "Key industries face worker shortages, slowing production and causing unrest among employers.",
+    "possible_regions": ["Vysočina"],
+    "time_before_expiration": 3,
+    "max_budget_to_appear": 100,
+    "min_budget_to_appear": 20,
+    "max_citizen_satisfaction_to_appear": 85,
+    "min_citizen_satisfaction_to_appear": 30,
+    "max_environment_to_appear": 100,
+    "min_environment_to_appear": 0,
+    "max_military_to_appear": 100,
+    "min_military_to_appear": 0,
+    "budget_bias": 2,
+    "citizen_satisfaction_bias": 3,
+    "environment_bias": 0,
+    "military_bias": 0,
+    "ideal_budget": 55,
+    "ideal_citizen_satisfaction": 60,
+    "ideal_environment": 50,
+    "ideal_military": 50
+  },
+  "solutions": [
+    {
+      "name": "Offer Temporary Worker Incentives",
+      "description": "Provide financial bonuses and benefits to attract workers.",
+      "time_before_effect": 1,
+      "budget_change": -8,
+      "citizen_satisfaction_change": 10,
+      "environment_change": 0,
+      "military_change": 0
+    },
+    {
+      "name": "Increase Automation",
+      "description": "Invest in machinery and automation to compensate for labor shortages.",
+      "time_before_effect": 3,
+      "budget_change": -15,
+      "citizen_satisfaction_change": 3,
+      "environment_change": 0,
+      "military_change": 0
+    },
+    {
+      "name": "Do Nothing",
+      "description": "Leave market to adjust naturally.",
+      "time_before_effect": 2,
+      "budget_change": 0,
+      "citizen_satisfaction_change": -7,
+      "environment_change": 0,
+      "military_change": 0
+    }
+  ]
+}
+,
+{
+  "problem": {
+    "name": "Chemical Spill in Pardubický",
+    "description": "A chemical spill from a local plant threatens water supply and public health.",
+    "possible_regions": ["Pardubický"],
+    "time_before_expiration": 2,
+    "max_budget_to_appear": 100,
+    "min_budget_to_appear": 30,
+    "max_citizen_satisfaction_to_appear": 85,
+    "min_citizen_satisfaction_to_appear": 25,
+    "max_environment_to_appear": 90,
+    "min_environment_to_appear": 10,
+    "max_military_to_appear": 100,
+    "min_military_to_appear": 0,
+    "budget_bias": 2,
+    "citizen_satisfaction_bias": 3,
+    "environment_bias": 3,
+    "military_bias": 0,
+    "ideal_budget": 50,
+    "ideal_citizen_satisfaction": 55,
+    "ideal_environment": 45,
+    "ideal_military": 50
+  },
+  "solutions": [
+    {
+      "name": "Immediate Clean-up and Evacuation",
+      "description": "Deploy emergency teams to contain spill and protect citizens.",
+      "time_before_effect": 1,
+      "budget_change": -12,
+      "citizen_satisfaction_change": 15,
+      "environment_change": 8,
+      "military_change": 0
+    },
+    {
+      "name": "Provide Compensation to Affected Citizens",
+      "description": "Give financial compensation to victims, but delay clean-up.",
+      "time_before_effect": 2,
+      "budget_change": -10,
+      "citizen_satisfaction_change": 8,
+      "environment_change": -2,
+      "military_change": 0
+    },
+    {
+      "name": "Minimal Action",
+      "description": "Wait and assess damage, minimal intervention.",
+      "time_before_effect": 3,
+      "budget_change": -5,
+      "citizen_satisfaction_change": -10,
+      "environment_change": -5,
+      "military_change": 0
+    }
+  ]
+}
+,
+{
+  "problem": {
+    "name": "Public Transport Strike in Brno",
+    "description": "Public transportation workers go on strike, disrupting daily commutes and local economy.",
+    "possible_regions": ["Jihomoravský"],
+    "time_before_expiration": 3,
+    "max_budget_to_appear": 90,
+    "min_budget_to_appear": 20,
+    "max_citizen_satisfaction_to_appear": 85,
+    "min_citizen_satisfaction_to_appear": 25,
+    "max_environment_to_appear": 100,
+    "min_environment_to_appear": 0,
+    "max_military_to_appear": 100,
+    "min_military_to_appear": 0,
+    "budget_bias": 2,
+    "citizen_satisfaction_bias": 3,
+    "environment_bias": 1,
+    "military_bias": 0,
+    "ideal_budget": 55,
+    "ideal_citizen_satisfaction": 60,
+    "ideal_environment": 50,
+    "ideal_military": 50
+  },
+  "solutions": [
+    {
+      "name": "Negotiate Salary Increase",
+      "description": "Reach agreement with unions for moderate salary increases.",
+      "time_before_effect": 1,
+      "budget_change": -8,
+      "citizen_satisfaction_change": 12,
+      "environment_change": 0,
+      "military_change": 0
+    },
+    {
+      "name": "Provide Temporary Incentives",
+      "description": "Offer one-time bonuses to resolve strike quickly.",
+      "time_before_effect": 1,
+      "budget_change": -5,
+      "citizen_satisfaction_change": 8,
+      "environment_change": 0,
+      "military_change": 0
+    },
+    {
+      "name": "Maintain Hard Line",
+      "description": "Refuse demands, hoping strike will end without concessions.",
+      "time_before_effect": 2,
+      "budget_change": 0,
+      "citizen_satisfaction_change": -15,
+      "environment_change": 0,
+      "military_change": 0
+    }
+  ]
+}
+,
+{
+  "problem": {
+    "name": "Implement EU Green Deal Programs",
+    "description": "The EU introduces new sustainability programs. Your government must decide how aggressively to implement them nationwide.",
+    "possible_regions": ["Praha"],
+    "time_before_expiration": 6,
+    "max_budget_to_appear": 100,
+    "min_budget_to_appear": 10,
+    "max_citizen_satisfaction_to_appear": 90,
+    "min_citizen_satisfaction_to_appear": 20,
+    "max_environment_to_appear": 100,
+    "min_environment_to_appear": 0,
+    "max_military_to_appear": 100,
+    "min_military_to_appear": 0,
+    "budget_bias": 3,
+    "citizen_satisfaction_bias": 2,
+    "environment_bias": 4,
+    "military_bias": 0,
+    "ideal_budget": 55,
+    "ideal_citizen_satisfaction": 60,
+    "ideal_environment": 65,
+    "ideal_military": 50
+  },
+  "solutions": [
+    {
+      "name": "Full Implementation",
+      "description": "Adopt all programs immediately, invest in clean energy and transportation.",
+      "time_before_effect": 4,
+      "budget_change": -25,
+      "citizen_satisfaction_change": 5,
+      "environment_change": 15,
+      "military_change": 0
+    },
+    {
+      "name": "Phased Approach",
+      "description": "Implement gradually to spread costs and monitor outcomes.",
+      "time_before_effect": 6,
+      "budget_change": -15,
+      "citizen_satisfaction_change": 8,
+      "environment_change": 10,
+      "military_change": 0
+    },
+    {
+      "name": "Minimal Compliance",
+      "description": "Only fulfill mandatory requirements, avoiding large investments.",
+      "time_before_effect": 6,
+      "budget_change": -5,
+      "citizen_satisfaction_change": -3,
+      "environment_change": 3,
+      "military_change": 0
+    }
+  ]
+}
+,
+{
+  "problem": {
+    "name": "Attracting Tech Startups to Brno",
+    "description": "Government wants to develop Brno as a tech hub. Policies must be chosen to attract innovation.",
+    "possible_regions": ["Jihomoravský"],
+    "time_before_expiration": 5,
+    "max_budget_to_appear": 100,
+    "min_budget_to_appear": 20,
+    "max_citizen_satisfaction_to_appear": 80,
+    "min_citizen_satisfaction_to_appear": 20,
+    "max_environment_to_appear": 100,
+    "min_environment_to_appear": 0,
+    "max_military_to_appear": 100,
+    "min_military_to_appear": 0,
+    "budget_bias": 3,
+    "citizen_satisfaction_bias": 2,
+    "environment_bias": 1,
+    "military_bias": 0,
+    "ideal_budget": 55,
+    "ideal_citizen_satisfaction": 60,
+    "ideal_environment": 50,
+    "ideal_military": 50
+  },
+  "solutions": [
+    {
+      "name": "Tax Incentives and Grants",
+      "description": "Offer generous incentives to attract foreign and local startups.",
+      "time_before_effect": 3,
+      "budget_change": -20,
+      "citizen_satisfaction_change": 10,
+      "environment_change": 0,
+      "military_change": 0
+    },
+    {
+      "name": "Develop Tech Parks",
+      "description": "Invest in physical infrastructure like coworking and incubator spaces.",
+      "time_before_effect": 5,
+      "budget_change": -25,
+      "citizen_satisfaction_change": 8,
+      "environment_change": 1,
+      "military_change": 0
+    },
+    {
+      "name": "Focus on Regulations Only",
+      "description": "Simplify bureaucracy but offer minimal financial support.",
+      "time_before_effect": 4,
+      "budget_change": -5,
+      "citizen_satisfaction_change": 4,
+      "environment_change": 0,
+      "military_change": 0
+    }
+  ]
+}
+,
+{
+  "problem": {
+    "name": "Rising Tourism in Prague",
+    "description": "Tourist numbers are increasing rapidly, causing strain on transport and services but boosting the economy.",
+    "possible_regions": ["Praha"],
+    "time_before_expiration": 4,
+    "max_budget_to_appear": 100,
+    "min_budget_to_appear": 20,
+    "max_citizen_satisfaction_to_appear": 90,
+    "min_citizen_satisfaction_to_appear": 30,
+    "max_environment_to_appear": 95,
+    "min_environment_to_appear": 0,
+    "max_military_to_appear": 100,
+    "min_military_to_appear": 0,
+    "budget_bias": 2,
+    "citizen_satisfaction_bias": 3,
+    "environment_bias": 2,
+    "military_bias": 0,
+    "ideal_budget": 60,
+    "ideal_citizen_satisfaction": 65,
+    "ideal_environment": 50,
+    "ideal_military": 50
+  },
+  "solutions": [
+    {
+      "name": "Invest in Public Transport and Services",
+      "description": "Upgrade infrastructure to handle increased tourists and improve citizen comfort.",
+      "time_before_effect": 3,
+      "budget_change": -18,
+      "citizen_satisfaction_change": 8,
+      "environment_change": 3,
+      "military_change": 0
+    },
+    {
+      "name": "Limit Tourist Access",
+      "description": "Introduce visitor caps or fees to protect residents and environment.",
+      "time_before_effect": 2,
+      "budget_change": 5,
+      "citizen_satisfaction_change": -5,
+      "environment_change": 6,
+      "military_change": 0
+    },
+    {
+      "name": "Do Nothing",
+      "description": "Allow natural growth without interventions, risk overcrowding.",
+      "time_before_effect": 4,
+      "budget_change": 0,
+      "citizen_satisfaction_change": -8,
+      "environment_change": -3,
+      "military_change": 0
+    }
+  ]
+}
+,
+{
+  "problem": {
+    "name": "Regional Rail Modernization in Ústecký",
+    "description": "The government can invest in upgrading the rail system to improve efficiency and connectivity.",
+    "possible_regions": ["Ústecký"],
+    "time_before_expiration": 5,
+    "max_budget_to_appear": 100,
+    "min_budget_to_appear": 30,
+    "max_citizen_satisfaction_to_appear": 80,
+    "min_citizen_satisfaction_to_appear": 20,
+    "max_environment_to_appear": 100,
+    "min_environment_to_appear": 0,
+    "max_military_to_appear": 100,
+    "min_military_to_appear": 0,
+    "budget_bias": 3,
+    "citizen_satisfaction_bias": 2,
+    "environment_bias": 2,
+    "military_bias": 0,
+    "ideal_budget": 55,
+    "ideal_citizen_satisfaction": 60,
+    "ideal_environment": 55,
+    "ideal_military": 50
+  },
+  "solutions": [
+    {
+      "name": "Full Upgrade",
+      "description": "Invest heavily in modernizing tracks, trains, and stations.",
+      "time_before_effect": 5,
+      "budget_change": -25,
+      "citizen_satisfaction_change": 10,
+      "environment_change": 8,
+      "military_change": 0
+    },
+    {
+      "name": "Partial Improvements",
+      "description": "Upgrade only the most critical lines and stations.",
+      "time_before_effect": 3,
+      "budget_change": -15,
+      "citizen_satisfaction_change": 6,
+      "environment_change": 4,
+      "military_change": 0
+    },
+    {
+      "name": "Delay Projects",
+      "description": "Keep budget for other needs, risk outdated infrastructure.",
+      "time_before_effect": 4,
+      "budget_change": 0,
+      "citizen_satisfaction_change": -8,
+      "environment_change": -3,
+      "military_change": 0
+    }
+  ]
+}
+,
+{
+  "problem": {
+    "name": "EU Digital Tax Directive",
+    "description": "EU proposes a digital tax. You must decide the domestic approach to compliance and taxation of tech giants.",
+    "possible_regions": ["Praha"],
+    "time_before_expiration": 6,
+    "max_budget_to_appear": 100,
+    "min_budget_to_appear": 0,
+    "max_citizen_satisfaction_to_appear": 80,
+    "min_citizen_satisfaction_to_appear": 20,
+    "max_environment_to_appear": 100,
+    "min_environment_to_appear": 0,
+    "max_military_to_appear": 100,
+    "min_military_to_appear": 0,
+    "budget_bias": 4,
+    "citizen_satisfaction_bias": 2,
+    "environment_bias": 0,
+    "military_bias": 0,
+    "ideal_budget": 60,
+    "ideal_citizen_satisfaction": 55,
+    "ideal_environment": 50,
+    "ideal_military": 50
+  },
+  "solutions": [
+    {
+      "name": "Aggressive Implementation",
+      "description": "Apply high digital tax rates, increasing revenue but potentially upsetting businesses.",
+      "time_before_effect": 4,
+      "budget_change": 20,
+      "citizen_satisfaction_change": -5,
+      "environment_change": 0,
+      "military_change": 0
+    },
+    {
+      "name": "Moderate Compliance",
+      "description": "Implement fair rates balancing revenue and business climate.",
+      "time_before_effect": 5,
+      "budget_change": 12,
+      "citizen_satisfaction_change": 0,
+      "environment_change": 0,
+      "military_change": 0
+    },
+    {
+      "name": "Minimal Compliance",
+      "description": "Apply low rates, risking EU criticism.",
+      "time_before_effect": 6,
+      "budget_change": 5,
+      "citizen_satisfaction_change": 3,
+      "environment_change": 0,
+      "military_change": 0
+    }
+  ]
+}
+,
+{
+  "problem": {
+    "name": "University Research Funding Strategy",
+    "description": "Decide the distribution of research grants to public universities, impacting innovation and long-term education quality.",
+    "possible_regions": ["Praha", "Brno"],
+    "time_before_expiration": 6,
+    "max_budget_to_appear": 100,
+    "min_budget_to_appear": 0,
+    "max_citizen_satisfaction_to_appear": 80,
+    "min_citizen_satisfaction_to_appear": 20,
+    "max_environment_to_appear": 100,
+    "min_environment_to_appear": 0,
+    "max_military_to_appear": 100,
+    "min_military_to_appear": 0,
+    "budget_bias": 3,
+    "citizen_satisfaction_bias": 2,
+    "environment_bias": 1,
+    "military_bias": 0,
+    "ideal_budget": 50,
+    "ideal_citizen_satisfaction": 60,
+    "ideal_environment": 50,
+    "ideal_military": 50
+  },
+  "solutions": [
+    {
+      "name": "Fund High-Impact Research Only",
+      "description": "Allocate grants to projects with international recognition potential.",
+      "time_before_effect": 5,
+      "budget_change": -20,
+      "citizen_satisfaction_change": 5,
+      "environment_change": 0,
+      "military_change": 0
+    },
+    {
+      "name": "Distribute Equally",
+      "description": "Spread grants fairly across universities regardless of impact.",
+      "time_before_effect": 6,
+      "budget_change": -25,
+      "citizen_satisfaction_change": 8,
+      "environment_change": 0,
+      "military_change": 0
+    },
+    {
+      "name": "Minimal Funding",
+      "description": "Cut back grants to preserve budget for other programs.",
+      "time_before_effect": 4,
+      "budget_change": -10,
+      "citizen_satisfaction_change": -5,
+      "environment_change": 0,
+      "military_change": 0
+    }
+  ]
+}
+,
+{
+  "problem": {
+    "name": "Hosting International Summit in Prague",
+    "description": "Opportunity to host a major EU summit. The decision impacts international prestige, costs, and citizen satisfaction.",
+    "possible_regions": ["Praha"],
+    "time_before_expiration": 3,
+    "max_budget_to_appear": 100,
+    "min_budget_to_appear": 20,
+    "max_citizen_satisfaction_to_appear": 90,
+    "min_citizen_satisfaction_to_appear": 40,
+    "max_environment_to_appear": 100,
+    "min_environment_to_appear": 0,
+    "max_military_to_appear": 100,
+    "min_military_to_appear": 0,
+    "budget_bias": 3,
+    "citizen_satisfaction_bias": 3,
+    "environment_bias": 1,
+    "military_bias": 0,
+    "ideal_budget": 50,
+    "ideal_citizen_satisfaction": 65,
+    "ideal_environment": 50,
+    "ideal_military": 50
+  },
+  "solutions": [
+    {
+      "name": "Full Hosting Commitment",
+      "description": "Spend heavily to host summit with maximum visibility and security.",
+      "time_before_effect": 2,
+      "budget_change": -20,
+      "citizen_satisfaction_change": 12,
+      "environment_change": -3,
+      "military_change": 2
+    },
+    {
+      "name": "Minimal Hosting",
+      "description": "Host only essential meetings to reduce costs.",
+      "time_before_effect": 3,
+      "budget_change": -8,
+      "citizen_satisfaction_change": 5,
+      "environment_change": 0,
+      "military_change": 1
+    },
+    {
+      "name": "Decline Invitation",
+      "description": "Refuse to host, saving budget but losing prestige.",
+      "time_before_effect": 1,
+      "budget_change": 5,
+      "citizen_satisfaction_change": -5,
+      "environment_change": 0,
+      "military_change": 0
+    }
+  ]
+}
+,
+{
+  "problem": {
+    "name": "Urban Housing Development in Ostrava",
+    "description": "The city faces a housing shortage. Decisions affect budget, citizen satisfaction, and environment.",
+    "possible_regions": ["Moravskoslezský"],
+    "time_before_expiration": 5,
+    "max_budget_to_appear": 100,
+    "min_budget_to_appear": 20,
+    "max_citizen_satisfaction_to_appear": 85,
+    "min_citizen_satisfaction_to_appear": 30,
+    "max_environment_to_appear": 95,
+    "min_environment_to_appear": 10,
+    "max_military_to_appear": 100,
+    "min_military_to_appear": 0,
+    "budget_bias": 3,
+    "citizen_satisfaction_bias": 3,
+    "environment_bias": 2,
+    "military_bias": 0,
+    "ideal_budget": 50,
+    "ideal_citizen_satisfaction": 60,
+    "ideal_environment": 50,
+    "ideal_military": 50
+  },
+  "solutions": [
+    {
+      "name": "Build New Affordable Housing",
+      "description": "Invest heavily in residential construction projects.",
+      "time_before_effect": 4,
+      "budget_change": -25,
+      "citizen_satisfaction_change": 10,
+      "environment_change": -5,
+      "military_change": 0
+    },
+    {
+      "name": "Encourage Private Developers",
+      "description": "Provide incentives for private companies to build housing.",
+      "time_before_effect": 5,
+      "budget_change": -15,
+      "citizen_satisfaction_change": 8,
+      "environment_change": -2,
+      "military_change": 0
+    },
+    {
+      "name": "Do Nothing",
+      "description": "Avoid immediate investment, risk public dissatisfaction.",
+      "time_before_effect": 3,
+      "budget_change": 0,
+      "citizen_satisfaction_change": -10,
+      "environment_change": 0,
+      "military_change": 0
+    }
+  ]
+}
+,
+{
+  "problem": {
+    "name": "National AI Strategy",
+    "description": "Decide on funding and regulation for AI development, influencing economy and citizen perception over long term.",
+    "possible_regions": ["Praha"],
+    "time_before_expiration": 6,
+    "max_budget_to_appear": 100,
+    "min_budget_to_appear": 10,
+    "max_citizen_satisfaction_to_appear": 85,
+    "min_citizen_satisfaction_to_appear": 20,
+    "max_environment_to_appear": 100,
+    "min_environment_to_appear": 0,
+    "max_military_to_appear": 100,
+    "min_military_to_appear": 0,
+    "budget_bias": 3,
+    "citizen_satisfaction_bias": 2,
+    "environment_bias": 1,
+    "military_bias": 1,
+    "ideal_budget": 50,
+    "ideal_citizen_satisfaction": 60,
+    "ideal_environment": 50,
+    "ideal_military": 55
+  },
+  "solutions": [
+    {
+      "name": "Invest Heavily in AI Research",
+      "description": "Fund research centers, attract talent, and push AI innovation.",
+      "time_before_effect": 6,
+      "budget_change": -30,
+      "citizen_satisfaction_change": 10,
+      "environment_change": 0,
+      "military_change": 5
+    },
+    {
+      "name": "Moderate Investment",
+      "description": "Support AI development gradually, monitor societal impact.",
+      "time_before_effect": 5,
+      "budget_change": -15,
+      "citizen_satisfaction_change": 5,
+      "environment_change": 0,
+      "military_change": 2
+    },
+    {
+      "name": "Minimal Support",
+      "description": "Limited funding, prioritize budget for other sectors.",
+      "time_before_effect": 4,
+      "budget_change": -5,
+      "citizen_satisfaction_change": -3,
+      "environment_change": 0,
+      "military_change": 0
+    }
+  ]
+}
+,
+{
+  "problem": {
+    "name": "Flood Protection in South Moravia",
+    "description": "Heavy rains predicted; need to protect agricultural land and citizens from flooding.",
+    "possible_regions": ["Jihomoravský"],
+    "time_before_expiration": 3,
+    "max_budget_to_appear": 100,
+    "min_budget_to_appear": 10,
+    "max_citizen_satisfaction_to_appear": 90,
+    "min_citizen_satisfaction_to_appear": 30,
+    "max_environment_to_appear": 100,
+    "min_environment_to_appear": 0,
+    "max_military_to_appear": 100,
+    "min_military_to_appear": 0,
+    "budget_bias": 3,
+    "citizen_satisfaction_bias": 3,
+    "environment_bias": 3,
+    "military_bias": 1,
+    "ideal_budget": 55,
+    "ideal_citizen_satisfaction": 65,
+    "ideal_environment": 60,
+    "ideal_military": 50
+  },
+  "solutions": [
+    {
+      "name": "Build Temporary Levees",
+      "description": "Rapidly deploy barriers to protect towns and farmland.",
+      "time_before_effect": 2,
+      "budget_change": -15,
+      "citizen_satisfaction_change": 12,
+      "environment_change": 5,
+      "military_change": 0
+    },
+    {
+      "name": "Evacuate Affected Areas",
+      "description": "Focus on citizen safety, minimize infrastructure investment.",
+      "time_before_effect": 1,
+      "budget_change": -5,
+      "citizen_satisfaction_change": 8,
+      "environment_change": 0,
+      "military_change": 0
+    },
+    {
+      "name": "Do Minimal Action",
+      "description": "Let water rise naturally, avoid costs but risk major damages.",
+      "time_before_effect": 3,
+      "budget_change": 0,
+      "citizen_satisfaction_change": -15,
+      "environment_change": -10,
+      "military_change": 0
+    }
+  ]
+}
+,
+{
+  "name": "Energy Grid Instability After EU Policy Change",
+  "origin": "EU (Praha)",
+  "description": "The EU passes a sudden policy accelerating the phase-out of coal subsidies. The national energy grid becomes unstable due to rapid shifts toward renewables. Several regions report local outages.",
+  "possible_regions": ["Praha", "Moravskoslezský kraj", "Ústecký kraj"],
+  "time_before_expiration": 4,
+
+  "min_stats": {
+    "budget": 20,
+    "citizen_satisfaction": 20,
+    "environment": 30,
+    "military": 0
+  },
+  "max_stats": {
+    "budget": 100,
+    "citizen_satisfaction": 90,
+    "environment": 100,
+    "military": 100
+  },
+
+  "ideal": {
+    "budget": 60,
+    "citizen_satisfaction": 55,
+    "environment": 70,
+    "military": 40
+  },
+
+  "solutions": [
+
+    {
+      "name": "Launch Emergency Stabilization Program",
+      "description": "Allocate emergency funds to stabilize the energy grid and support rapid construction of backup power systems. This ensures immediate stability but significantly strains the budget.",
+      "time_before_effect": 1,
+      "budget_change": -25,
+      "citizen_satisfaction_change": 10,
+      "environment_change": 4,
+      "military_change": 0
+    },
+
+    {
+      "name": "Negotiate Temporary Exemptions with the EU",
+      "description": "Lobby Brussels for a transition delay. This approach protects the energy grid short-term but risks EU criticism and public backlash from environmental groups.",
+      "time_before_effect": 3,
+      "budget_change": -5,
+      "citizen_satisfaction_change": -3,
+      "environment_change": -6,
+      "military_change": 0
+    },
+
+    {
+      "name": "Accelerate Renewable Integration",
+      "description": "Push a rapid nationwide renewable expansion. This aligns with EU goals but causes short-term outages and lowered public satisfaction due to price spikes.",
+      "time_before_effect": 2,
+      "budget_change": -15,
+      "citizen_satisfaction_change": -8,
+      "environment_change": 15,
+      "military_change": 0
+    }
+  ]
+}
+,
+{
+  "problem": {
+    "name": "Smart City Implementation in Prague",
+    "description": "EU offers funding for smart city technologies. Decide how extensively to modernize Prague’s infrastructure.",
+    "possible_regions": ["Praha"],
+    "time_before_expiration": 6,
+    "max_budget_to_appear": 100,
+    "min_budget_to_appear": 20,
+    "max_citizen_satisfaction_to_appear": 85,
+    "min_citizen_satisfaction_to_appear": 30,
+    "max_environment_to_appear": 100,
+    "min_environment_to_appear": 0,
+    "max_military_to_appear": 100,
+    "min_military_to_appear": 0,
+    "budget_bias": 4,
+    "citizen_satisfaction_bias": 3,
+    "environment_bias": 2,
+    "military_bias": 0,
+    "ideal_budget": 55,
+    "ideal_citizen_satisfaction": 65,
+    "ideal_environment": 60,
+    "ideal_military": 50
+  },
+  "solutions": [
+    {
+      "name": "Full Smart City Upgrade",
+      "description": "Implement full AI traffic management, energy monitoring, and smart services.",
+      "time_before_effect": 5,
+      "budget_change": -30,
+      "citizen_satisfaction_change": 12,
+      "environment_change": 10,
+      "military_change": 0
+    },
+    {
+      "name": "Partial Implementation",
+      "description": "Introduce only major technologies in high-traffic districts.",
+      "time_before_effect": 6,
+      "budget_change": -18,
+      "citizen_satisfaction_change": 8,
+      "environment_change": 6,
+      "military_change": 0
+    },
+    {
+      "name": "Minimal Adoption",
+      "description": "Invest only in pilot projects to test feasibility.",
+      "time_before_effect": 4,
+      "budget_change": -8,
+      "citizen_satisfaction_change": 3,
+      "environment_change": 2,
+      "military_change": 0
+    }
+  ]
+}
+,
+{
+  "problem": {
+    "name": "International Energy Crisis",
+    "description": "Global energy prices spike. Decide how to respond to ensure stability and affordability.",
+    "possible_regions": ["Praha", "Moravskoslezský", "Jihomoravský"],
+    "time_before_expiration": 4,
+    "max_budget_to_appear": 100,
+    "min_budget_to_appear": 30,
+    "max_citizen_satisfaction_to_appear": 80,
+    "min_citizen_satisfaction_to_appear": 20,
+    "max_environment_to_appear": 100,
+    "min_environment_to_appear": 0,
+    "max_military_to_appear": 100,
+    "min_military_to_appear": 0,
+    "budget_bias": 4,
+    "citizen_satisfaction_bias": 3,
+    "environment_bias": 2,
+    "military_bias": 1,
+    "ideal_budget": 50,
+    "ideal_citizen_satisfaction": 60,
+    "ideal_environment": 50,
+    "ideal_military": 50
+  },
+  "solutions": [
+    {
+      "name": "Subsidize Energy Prices",
+      "description": "Provide temporary subsidies to households and industries.",
+      "time_before_effect": 2,
+      "budget_change": -25,
+      "citizen_satisfaction_change": 15,
+      "environment_change": -3,
+      "military_change": 0
+    },
+    {
+      "name": "Promote Renewable Energy",
+      "description": "Invest in renewable projects to reduce dependency on imports.",
+      "time_before_effect": 4,
+      "budget_change": -20,
+      "citizen_satisfaction_change": 5,
+      "environment_change": 12,
+      "military_change": 0
+    },
+    {
+      "name": "Do Minimal Intervention",
+      "description": "Avoid large spending, risk higher citizen dissatisfaction.",
+      "time_before_effect": 3,
+      "budget_change": 0,
+      "citizen_satisfaction_change": -10,
+      "environment_change": 0,
+      "military_change": 0
+    }
+  ]
+}
+,
+{
+  "problem": {
+    "name": "Regional Floodplain Restoration in South Bohemia",
+    "description": "EU funds are available to restore natural floodplains to prevent future floods.",
+    "possible_regions": ["Jihočeský"],
+    "time_before_expiration": 5,
+    "max_budget_to_appear": 100,
+    "min_budget_to_appear": 20,
+    "max_citizen_satisfaction_to_appear": 80,
+    "min_citizen_satisfaction_to_appear": 30,
+    "max_environment_to_appear": 100,
+    "min_environment_to_appear": 0,
+    "max_military_to_appear": 100,
+    "min_military_to_appear": 0,
+    "budget_bias": 3,
+    "citizen_satisfaction_bias": 2,
+    "environment_bias": 4,
+    "military_bias": 0,
+    "ideal_budget": 55,
+    "ideal_citizen_satisfaction": 60,
+    "ideal_environment": 70,
+    "ideal_military": 50
+  },
+  "solutions": [
+    {
+      "name": "Full Restoration",
+      "description": "Restore all targeted floodplains for maximum ecological benefit.",
+      "time_before_effect": 6,
+      "budget_change": -22,
+      "citizen_satisfaction_change": 5,
+      "environment_change": 18,
+      "military_change": 0
+    },
+    {
+      "name": "Partial Restoration",
+      "description": "Focus on high-risk areas only.",
+      "time_before_effect": 5,
+      "budget_change": -12,
+      "citizen_satisfaction_change": 3,
+      "environment_change": 10,
+      "military_change": 0
+    },
+    {
+      "name": "Delay Projects",
+      "description": "Postpone investment to save budget, risk future damage.",
+      "time_before_effect": 4,
+      "budget_change": 0,
+      "citizen_satisfaction_change": -5,
+      "environment_change": -8,
+      "military_change": 0
+    }
+  ]
+}
+,
+{
+  "problem": {
+    "name": "Labor Strike in Automotive Sector",
+    "description": "Workers in a major automotive plant threaten strike. Decide the government's intervention strategy.",
+    "possible_regions": ["Moravskoslezský"],
+    "time_before_expiration": 3,
+    "max_budget_to_appear": 100,
+    "min_budget_to_appear": 10,
+    "max_citizen_satisfaction_to_appear": 85,
+    "min_citizen_satisfaction_to_appear": 30,
+    "max_environment_to_appear": 100,
+    "min_environment_to_appear": 0,
+    "max_military_to_appear": 100,
+    "min_military_to_appear": 0,
+    "budget_bias": 3,
+    "citizen_satisfaction_bias": 4,
+    "environment_bias": 1,
+    "military_bias": 0,
+    "ideal_budget": 50,
+    "ideal_citizen_satisfaction": 60,
+    "ideal_environment": 50,
+    "ideal_military": 50
+  },
+  "solutions": [
+    {
+      "name": "Negotiate with Unions",
+      "description": "Offer concessions to workers to prevent strike.",
+      "time_before_effect": 2,
+      "budget_change": -10,
+      "citizen_satisfaction_change": 12,
+      "environment_change": 0,
+      "military_change": 0
+    },
+    {
+      "name": "Maintain Firm Position",
+      "description": "Do not negotiate, risk production halt.",
+      "time_before_effect": 3,
+      "budget_change": 0,
+      "citizen_satisfaction_change": -8,
+      "environment_change": 0,
+      "military_change": 0
+    },
+    {
+      "name": "Temporary Subsidy",
+      "description": "Provide short-term financial aid to prevent strike.",
+      "time_before_effect": 1,
+      "budget_change": -5,
+      "citizen_satisfaction_change": 5,
+      "environment_change": 0,
+      "military_change": 0
+    }
+  ]
+}
+,
+{
+  "problem": {
+    "name": "National Cybersecurity Upgrade",
+    "description": "Recent attacks on government infrastructure highlight vulnerabilities. Decide on investment in cyber defense.",
+    "possible_regions": ["Praha", "Brno"],
+    "time_before_expiration": 4,
+    "max_budget_to_appear": 100,
+    "min_budget_to_appear": 10,
+    "max_citizen_satisfaction_to_appear": 85,
+    "min_citizen_satisfaction_to_appear": 25,
+    "max_environment_to_appear": 100,
+    "min_environment_to_appear": 0,
+    "max_military_to_appear": 100,
+    "min_military_to_appear": 0,
+    "budget_bias": 4,
+    "citizen_satisfaction_bias": 2,
+    "environment_bias": 0,
+    "military_bias": 3,
+    "ideal_budget": 50,
+    "ideal_citizen_satisfaction": 60,
+    "ideal_environment": 50,
+    "ideal_military": 65
+  },
+  "solutions": [
+    {
+      "name": "Comprehensive Upgrade",
+      "description": "Invest heavily in cyber infrastructure, training, and monitoring.",
+      "time_before_effect": 3,
+      "budget_change": -25,
+      "citizen_satisfaction_change": 8,
+      "environment_change": 0,
+      "military_change": 15
+    },
+    {
+      "name": "Partial Upgrade",
+      "description": "Focus on critical systems only.",
+      "time_before_effect": 4,
+      "budget_change": -15,
+      "citizen_satisfaction_change": 5,
+      "environment_change": 0,
+      "military_change": 8
+    },
+    {
+      "name": "Minimal Action",
+      "description": "Do not invest now, risk future attacks.",
+      "time_before_effect": 5,
+      "budget_change": 0,
+      "citizen_satisfaction_change": -10,
+      "environment_change": 0,
+      "military_change": -5
+    }
+  ]
+}
+,
+{
+  "problem": {
+    "name": "Green Transport Initiative",
+    "description": "EU offers subsidies for promoting electric vehicles and bike lanes in urban centers.",
+    "possible_regions": ["Praha", "Brno", "Ostrava"],
+    "time_before_expiration": 5,
+    "max_budget_to_appear": 100,
+    "min_budget_to_appear": 20,
+    "max_citizen_satisfaction_to_appear": 85,
+    "min_citizen_satisfaction_to_appear": 30,
+    "max_environment_to_appear": 100,
+    "min_environment_to_appear": 0,
+    "max_military_to_appear": 100,
+    "min_military_to_appear": 0,
+    "budget_bias": 3,
+    "citizen_satisfaction_bias": 3,
+    "environment_bias": 5,
+    "military_bias": 0,
+    "ideal_budget": 55,
+    "ideal_citizen_satisfaction": 65,
+    "ideal_environment": 70,
+    "ideal_military": 50
+  },
+  "solutions": [
+    {
+      "name": "Full Implementation",
+      "description": "Upgrade infrastructure for EVs, expand bike lanes, and offer incentives.",
+      "time_before_effect": 5,
+      "budget_change": -20,
+      "citizen_satisfaction_change": 10,
+      "environment_change": 15,
+      "military_change": 0
+    },
+    {
+      "name": "Partial Implementation",
+      "description": "Focus on selected districts with highest traffic.",
+      "time_before_effect": 4,
+      "budget_change": -12,
+      "citizen_satisfaction_change": 6,
+      "environment_change": 8,
+      "military_change": 0
+    },
+    {
+      "name": "Delay Program",
+      "description": "Postpone investments, save budget but lose environmental momentum.",
+      "time_before_effect": 3,
+      "budget_change": 0,
+      "citizen_satisfaction_change": -3,
+      "environment_change": -5,
+      "military_change": 0
+    }
+  ]
+}
+,
+{
+  "problem": {
+    "name": "Border Security Tensions",
+    "description": "An increase in illegal border crossings from neighboring countries triggers public concern.",
+    "possible_regions": ["Moravskoslezský", "Ústecký"],
+    "time_before_expiration": 4,
+    "max_budget_to_appear": 100,
+    "min_budget_to_appear": 25,
+    "max_citizen_satisfaction_to_appear": 80,
+    "min_citizen_satisfaction_to_appear": 20,
+    "max_environment_to_appear": 100,
+    "min_environment_to_appear": 0,
+    "max_military_to_appear": 100,
+    "min_military_to_appear": 10,
+    "budget_bias": 4,
+    "citizen_satisfaction_bias": 4,
+    "environment_bias": 1,
+    "military_bias": 5,
+    "ideal_budget": 55,
+    "ideal_citizen_satisfaction": 60,
+    "ideal_environment": 50,
+    "ideal_military": 65
+  },
+  "solutions": [
+    {
+      "name": "Increase Border Patrols",
+      "description": "Deploy additional security forces to secure the borders.",
+      "time_before_effect": 2,
+      "budget_change": -15,
+      "citizen_satisfaction_change": 12,
+      "environment_change": -2,
+      "military_change": 10
+    },
+    {
+      "name": "Diplomatic Approach",
+      "description": "Negotiate with neighbors to manage migration collaboratively.",
+      "time_before_effect": 5,
+      "budget_change": -8,
+      "citizen_satisfaction_change": 6,
+      "environment_change": 0,
+      "military_change": 2
+    },
+    {
+      "name": "Minimal Intervention",
+      "description": "Avoid large-scale action, risk public dissatisfaction.",
+      "time_before_effect": 3,
+      "budget_change": 0,
+      "citizen_satisfaction_change": -10,
+      "environment_change": 0,
+      "military_change": -5
+    }
+  ]
+}
+,
+{
+  "problem": {
+    "name": "High-Tech Education Reform",
+    "description": "Introduce AI-driven education programs in selected regions to boost future workforce skills.",
+    "possible_regions": ["Praha", "Jihomoravský"],
+    "time_before_expiration": 6,
+    "max_budget_to_appear": 100,
+    "min_budget_to_appear": 15,
+    "max_citizen_satisfaction_to_appear": 90,
+    "min_citizen_satisfaction_to_appear": 25,
+    "max_environment_to_appear": 100,
+    "min_environment_to_appear": 0,
+    "max_military_to_appear": 100,
+    "min_military_to_appear": 0,
+    "budget_bias": 4,
+    "citizen_satisfaction_bias": 5,
+    "environment_bias": 1,
+    "military_bias": 0,
+    "ideal_budget": 55,
+    "ideal_citizen_satisfaction": 70,
+    "ideal_environment": 50,
+    "ideal_military": 50
+  },
+  "solutions": [
+    {
+      "name": "Nationwide Rollout",
+      "description": "Implement AI programs in all schools immediately.",
+      "time_before_effect": 6,
+      "budget_change": -25,
+      "citizen_satisfaction_change": 15,
+      "environment_change": 0,
+      "military_change": 0
+    },
+    {
+      "name": "Pilot Program",
+      "description": "Introduce AI in select schools to test effectiveness.",
+      "time_before_effect": 4,
+      "budget_change": -15,
+      "citizen_satisfaction_change": 8,
+      "environment_change": 0,
+      "military_change": 0
+    },
+    {
+      "name": "Delay Reform",
+      "description": "Postpone adoption, conserve budget, risk lagging skills.",
+      "time_before_effect": 3,
+      "budget_change": 0,
+      "citizen_satisfaction_change": -5,
+      "environment_change": 0,
+      "military_change": 0
+    }
+  ]
+}
+,
+{
+  "problem": {
+    "name": "Flood Alert in Moravia",
+    "description": "Heavy rains threaten several towns; regional measures are required.",
+    "possible_regions": ["Olomoucký", "Jihomoravský"],
+    "time_before_expiration": 2,
+    "max_budget_to_appear": 100,
+    "min_budget_to_appear": 20,
+    "max_citizen_satisfaction_to_appear": 85,
+    "min_citizen_satisfaction_to_appear": 30,
+    "max_environment_to_appear": 100,
+    "min_environment_to_appear": 0,
+    "max_military_to_appear": 100,
+    "min_military_to_appear": 0,
+    "budget_bias": 3,
+    "citizen_satisfaction_bias": 4,
+    "environment_bias": 2,
+    "military_bias": 0,
+    "ideal_budget": 50,
+    "ideal_citizen_satisfaction": 60,
+    "ideal_environment": 55,
+    "ideal_military": 50
+  },
+  "solutions": [
+    {
+      "name": "Immediate Evacuation & Aid",
+      "description": "Deploy emergency services and relocate residents at risk.",
+      "time_before_effect": 1,
+      "budget_change": -15,
+      "citizen_satisfaction_change": 12,
+      "environment_change": -3,
+      "military_change": 0
+    },
+    {
+      "name": "Partial Measures",
+      "description": "Focus on the most vulnerable towns only.",
+      "time_before_effect": 2,
+      "budget_change": -8,
+      "citizen_satisfaction_change": 6,
+      "environment_change": -1,
+      "military_change": 0
+    },
+    {
+      "name": "Wait & Monitor",
+      "description": "Take no immediate action, risk disaster.",
+      "time_before_effect": 3,
+      "budget_change": 0,
+      "citizen_satisfaction_change": -10,
+      "environment_change": -5,
+      "military_change": 0
+    }
+  ]
+}
+,
+{
+  "problem": {
+    "name": "National AI Regulation Debate",
+    "description": "EU proposes strict AI regulations. Decide national stance and implementation.",
+    "possible_regions": ["Praha"],
+    "time_before_expiration": 5,
+    "max_budget_to_appear": 100,
+    "min_budget_to_appear": 10,
+    "max_citizen_satisfaction_to_appear": 90,
+    "min_citizen_satisfaction_to_appear": 30,
+    "max_environment_to_appear": 100,
+    "min_environment_to_appear": 0,
+    "max_military_to_appear": 100,
+    "min_military_to_appear": 0,
+    "budget_bias": 2,
+    "citizen_satisfaction_bias": 3,
+    "environment_bias": 1,
+    "military_bias": 0,
+    "ideal_budget": 55,
+    "ideal_citizen_satisfaction": 65,
+    "ideal_environment": 50,
+    "ideal_military": 50
+  },
+  "solutions": [
+    {
+      "name": "Full Compliance with EU",
+      "description": "Adopt all proposed regulations strictly, ensuring EU alignment.",
+      "time_before_effect": 3,
+      "budget_change": -10,
+      "citizen_satisfaction_change": 5,
+      "environment_change": 0,
+      "military_change": 0
+    },
+    {
+      "name": "Moderate Adoption",
+      "description": "Implement key regulations, but leave some flexibility for innovation.",
+      "time_before_effect": 4,
+      "budget_change": -5,
+      "citizen_satisfaction_change": 8,
+      "environment_change": 0,
+      "military_change": 0
+    },
+    {
+      "name": "Reject Strict Rules",
+      "description": "Delay adoption, prioritize national flexibility.",
+      "time_before_effect": 5,
+      "budget_change": 0,
+      "citizen_satisfaction_change": -5,
+      "environment_change": 0,
+      "military_change": 0
+    }
+  ]
+}
+]
