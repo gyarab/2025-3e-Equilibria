@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Equilibria | Homepage</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fustat:wght@400;600;700;800&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Fustat', sans-serif;
+            color: white;
+            background: black;
+            overflow-x: hidden;
+        }
+
+        #particles-js {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            z-index: -1;
+        }
+
+        header {
+            display: flex;
+            justify-content: flex-end;
+            padding: 20px 40px;
+            position: fixed;
+            top: -80px;
+            width: 100%;
+            z-index: 100;
+            transition: top 0.4s ease;
+        }
+
+        #home-icon, #login-icon {
+            font-size: 2.5rem;
+            color: white;
+            cursor: pointer;
+            position: fixed;
+            top: 20px;
+            transition: opacity 0.5s ease, transform 0.3s ease;
+            z-index: 200;
+        }
+
+        #home-icon { 
+            right: 40px; opacity: 0; 
+        }
+
+        #login-icon { 
+            right: 90px; opacity: 0.8; 
+        }
+
+        #home-icon:hover, #login-icon:hover { 
+            transform: scale(1.2); 
+        }
+
+        .hero {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 5rem;
+            letter-spacing: 6px;
+            font-weight: 800;
+            text-shadow: 0 6px 18px rgba(0,0,0,0.45);
+            margin: 0;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInUp 1.5s forwards 0.3s;
+        }
+
+        h2 {
+            font-size: 3.2rem;
+            text-align: center;
+        }
+
+        p.subtitle {
+            font-size: 1.4rem;
+            opacity: 0;
+            font-weight: 600;
+            margin-top: 1rem;
+            margin-bottom: 3rem;
+            transform: translateY(20px);
+            animation: fadeInUp 1.5s forwards 0.6s;
+        }
+
+        .btn-container {
+            display: flex;
+            flex-direction: column;
+            gap: 1.1rem;
+            width: 260px;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInUp 1.5s forwards 0.9s;
+        }
+
+        .btn {
+            padding: 1rem;
+            background: rgba(255, 255, 255, 0.08);
+            border: 2px solid rgba(255, 255, 255, 0.2);
+            border-radius: 14px;
+            font-family: 'Fustat', sans-serif;
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: white;
+            cursor: pointer;
+            transition: 0.3s;
+            backdrop-filter: blur(8px);
+        }
+
+        .btn:hover {
+            background: rgba(255, 255, 255, 0.25);
+            border-color: rgba(255, 255, 255, 0.4);
+            transform: translateY(-4px) scale(1.03);
+        }
+
+        section {
+            padding: 120px 20px;
+            text-align: left;
+            background: rgba(0,0,0,0.8);
+            min-height: 100vh;
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 1s ease, transform 1s ease;
+        }
+
+        section.visible { 
+            opacity: 1; transform: translateY(0); 
+        }
+
+        footer { 
+            text-align: center; padding: 20px; opacity: 0.65; font-weight: 400; 
+        }
+
+        @keyframes fadeInUp { 
+            to { opacity: 1; transform: translateY(0); } 
+        }
+
+    </style>
+</head>
+<body>
+
+<div id="particles-js"></div>
+
+<header id="navbar">
+    <span id="home-icon" class="material-symbols-outlined" onclick="scrollToSection('hero')">home</span>
+    <span id="login-icon" class="material-symbols-outlined" onclick="loginWithGoogle()">login</span>
+</header>
+
+<div class="hero" id="hero">
+    <h1>Equilibria</h1>
+    <p class="subtitle">Strategic Governance Simulator</p>
+    <div class="btn-container">
+        <button class="btn" onclick="window.location.href='game.html'">Start Game</button>
+        <button class="btn" onclick="scrollToSection('game-manual')">Game Manual</button>
+        <button class="btn" onclick="scrollToSection('scenario-overview')">Scenario Overview</button>
+        <button class="btn" onclick="scrollToSection('about-project')">About the Project</button>
+    </div>
+</div>
+
+    <section id="game-manual">
+        <h2>Game Manual</h2>
+    </section>
+
+    <section id="scenario-overview">
+        <h2>Scenario Overview</h2>
+    </section>
+
+    <section id="about-project">
+        <h2>About the Project</h2>
+    </section>
+
+<footer>© 2025 Equilibria Gymnázium Arabská</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+    // Particles background
+    particlesJS('particles-js', {
+        particles: {
+            number: { value: 80 },
+            color: { value: '#ffffff' },
+            shape: { type: 'circle' },
+            opacity: { value: 0.5 },
+            size: { value: 3, random: true },
+            move: { enable: true, speed: 2, direction: 'none', out_mode: 'out' }
+        },
+        interactivity: {
+            events: {
+                onhover: { enable: true, mode: 'repulse' },
+                onclick: { enable: true, mode: 'push' }
+            }
+        },
+        retina_detect: true
+    });
+
+    function scrollToSection(id) {
+        document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
+    }
+
+    // Google Login
+    function loginWithGoogle() {
+        window.location.href = "/accounts/google/login/"; // Django Allauth endpoint
+    }
+
+    // Animation of home icon and navbar on scroll
+    window.addEventListener('scroll', function() {
+        const navbar = document.getElementById('navbar');
+        const homeIcon = document.getElementById('home-icon');
+        const hero = document.getElementById('hero');
+
+        if(window.scrollY > hero.offsetHeight) { homeIcon.style.opacity = '1'; }
+        else { homeIcon.style.opacity = '0'; }
+
+        if(window.scrollY > window.innerHeight / 2) { navbar.style.top = '0'; }
+        else { navbar.style.top = '-80px'; }
+
+        document.querySelectorAll('section').forEach(section => {
+            const rect = section.getBoundingClientRect();
+            if(rect.top < window.innerHeight - 100) section.classList.add('visible');
+        });
+    });
+
+    // If login successful, display welcome message
+    document.addEventListener('DOMContentLoaded', () => {
+        const userName = localStorage.getItem('userName');
+        if(userName) {
+            const hero = document.getElementById('hero');
+            const welcome = document.createElement('p');
+            welcome.textContent = `Welcome ${userName}`;
+            welcome.style.fontSize = '1.8rem';
+            welcome.style.marginTop = '1rem';
+            hero.appendChild(welcome);
+        }
+    });
+</script>
+
+</body>
+</html>
