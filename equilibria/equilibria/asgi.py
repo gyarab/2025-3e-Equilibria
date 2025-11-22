@@ -1,16 +1,24 @@
-"""
-ASGI config for equilibria project.
-
-It exposes the ASGI callable as a module-level variable named ``application``.
-
-For more information on this file, see
-https://docs.djangoproject.com/en/5.2/howto/deployment/asgi/
-"""
-
 import os
+import django
 
-from django.core.asgi import get_asgi_application
-
+# 1️⃣ Set Django settings module
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'equilibria.settings')
 
-application = get_asgi_application()
+# 2️⃣ Setup Django before importing anything else
+django.setup()
+
+# 3️⃣ Now import ASGI stuff
+from channels.routing import ProtocolTypeRouter, URLRouter
+from channels.auth import AuthMiddlewareStack
+from django.core.asgi import get_asgi_application
+import main.routing  # must come after django.setup()
+
+# 4️⃣ ASGI application
+application = ProtocolTypeRouter({
+    "http": get_asgi_application(),
+    "websocket": AuthMiddlewareStack(
+        URLRouter(
+            main.routing.websocket_urlpatterns
+        )
+    ),
+})

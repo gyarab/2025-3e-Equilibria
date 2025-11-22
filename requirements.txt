@@ -3,3 +3,6 @@ django-allauth
 django-environ
 requests
 jwt
+channels
+channels_redis
+redis

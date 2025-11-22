@@ -9,10 +9,12 @@ from django.contrib import admin
 from django.urls import path, include
 from django.views.generic import TemplateView
 from main.views import homepage
+from main import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('homepage/', TemplateView.as_view(template_name='homepage.html')),
     path('accounts/', include('allauth.urls')),
     path('', homepage, name='homepage'),
+    path('game/play/<int:game_id>/', views.game_view, name='game_view'),
 ]

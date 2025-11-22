@@ -1,0 +1,100 @@
+[
+{
+    "model": "main.nameregion",
+    "pk": 1,
+    "fields": {
+        "name": "Hlavní mìsto Praha"
+    }
+},
+{
+    "model": "main.nameregion",
+    "pk": 2,
+    "fields": {
+        "name": "Støedoèeský kraj"
+    }
+},
+{
+    "model": "main.nameregion",
+    "pk": 3,
+    "fields": {
+        "name": "Jihoèeský kraj"
+    }
+},
+{
+    "model": "main.nameregion",
+    "pk": 4,
+    "fields": {
+        "name": "Plzeòský kraj"
+    }
+},
+{
+    "model": "main.nameregion",
+    "pk": 5,
+    "fields": {
+        "name": "Karlovarský kraj"
+    }
+},
+{
+    "model": "main.nameregion",
+    "pk": 6,
+    "fields": {
+        "name": "Ústecký kraj"
+    }
+},
+{
+    "model": "main.nameregion",
+    "pk": 7,
+    "fields": {
+        "name": "Liberecký kraj"
+    }
+},
+{
+    "model": "main.nameregion",
+    "pk": 8,
+    "fields": {
+        "name": "Královéhradecký kraj"
+    }
+},
+{
+    "model": "main.nameregion",
+    "pk": 9,
+    "fields": {
+        "name": "Pardubický kraj"
+    }
+},
+{
+    "model": "main.nameregion",
+    "pk": 10,
+    "fields": {
+        "name": "Kraj Vysoèina"
+    }
+},
+{
+    "model": "main.nameregion",
+    "pk": 11,
+    "fields": {
+        "name": "Jihomoravský kraj"
+    }
+},
+{
+    "model": "main.nameregion",
+    "pk": 12,
+    "fields": {
+        "name": "Olomoucký kraj"
+    }
+},
+{
+    "model": "main.nameregion",
+    "pk": 13,
+    "fields": {
+        "name": "Zlínský kraj"
+    }
+},
+{
+    "model": "main.nameregion",
+    "pk": 14,
+    "fields": {
+        "name": "Moravskoslezský kraj"
+    }
+}
+]

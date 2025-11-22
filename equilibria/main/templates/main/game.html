@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Country Simulation Game</title>
+    <style>
+        body { font-family: sans-serif; padding: 20px; }
+        .region { border: 1px solid #ccc; padding: 10px; margin: 5px; }
+        .problem { background: #f9f9f9; padding: 5px; margin: 5px 0; }
+        .solutions button { margin-right: 5px; }
+        #game-stats { margin-bottom: 20px; }
+
+        .problem-box {
+            width: 300px;
+            padding: 20px;
+            background: white;
+            border-radius: 12px;
+            border: 2px solid #444;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+            pointer-events: auto;
+            opacity: 1;
+            transition: opacity 0.3s ease, transform 0.2s ease;
+        }
+
+        .problem-box.hidden {
+            opacity: 0;
+            pointer-events: none; /* unclickable */
+            transform: scale(0.95);
+        }
+
+        .problem-buttons {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+
+        .problem-buttons button {
+            padding: 8px 14px;
+            border-radius: 6px;
+            border: none;
+            background: #2d7bf4;
+            color: white;
+            cursor: pointer;
+        }
+
+        .problem-buttons button:hover {
+            background: #1b5ccc;
+        }
+    </style>
+</head>
+<body>
+    <h1>Country Simulation (Placeholder)</h1>
+
+    <div id="game-stats">
+        <p>Budget: <span id="budget">0</span></p>
+        <p>Citizen Satisfaction: <span id="citizen_satisfaction">0</span></p>
+        <p>Environment: <span id="environment">0</span></p>
+        <p>Military: <span id="military">0</span></p>
+    </div>
+
+    <div id="regions">
+        {% for region in regions %}
+            <div class="region" id="region-{{ region.id }}">
+                <h3>{{ region.name }}</h3>
+
+                <div id="problem-box-{{ region.id }}" class="problem-box hidden">
+                    <h2 id="problem-title-{{ region.id }}">Title</h2>
+                    <p id="problem-description-{{ region.id }}">Short description goes here.</p>
+
+                    <div class="problem-buttons-{{ region.id }}"></div>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+
+    <script>
+        const gameId = "{{ game.id }}";
+        const wsScheme = window.location.protocol === "https:" ? "wss" : "ws";
+        const socket = new WebSocket(`${wsScheme}://${window.location.host}/ws/game/${gameId}/`);
+
+        socket.onopen = () => console.log("WebSocket connected");
+
+        function updateStats(game) {
+            document.getElementById("budget").innerText = game.budget;
+            document.getElementById("citizen_satisfaction").innerText = game.citizen_satisfaction;
+            document.getElementById("environment").innerText = game.environment;
+            document.getElementById("military").innerText = game.military;
+        }
+
+        function sendSolution(solutionId, regionId) {
+            socket.send(JSON.stringify({
+                "solution_id": solutionId,
+                "region_id": regionId
+            }));
+        }
+
+        function updateState(data) {
+            const box = document.getElementById('problem-box-' + data.problem.region_id);
+            
+
+            document.getElementById('problem-title-' + data.problem.region_id).innerText = data.problem.title;
+            document.getElementById('problem-description-' + data.problem.region_id).innerText = data.problem.description;
+            
+            const buttonDiv = document.getElementById('problem-buttons-' + data.problem.region_id);
+            buttonDiv.innerHTML = ''; // Clear previous buttons
+            data.solutions.forEach(sol => {
+                const btn = document.createElement("button");
+                btn.innerText = sol.name + " (Budget: " + sol.budget_change + ", Satisfaction: " + sol.citizen_satisfaction_change + 
+                ", Environment: " + sol.environment_change + ", Military: " + sol.military_change + ")";
+                btn.onclick = () => sendSolution(sol.id, data.problem.region_id);
+                buttonDiv.appendChild(btn);
+            });
+            box.classList.remove('hidden');
+        }
+
+        socket.onmessage = function(e) {
+            const data = JSON.parse(e.data);
+
+            if (data.type === "initial_state") {
+                updateStats(data.game);
+
+                // Create region divs
+                data.regions.forEach(r => {
+                    const div = document.createElement("div");
+                    div.className = "region";
+                    div.id = "region-" + r.id;
+                    div.innerHTML = `<h3>${r.name}</h3>`;
+                    regionsDiv.appendChild(div);
+                });
+            } else if (data.type === "new_state") {
+                updateState(data);
+            } else if (data.type === "update_stats") {
+                updateStats(data.game);
+
+                // Remove resolved problem
+                const problemDiv = document.getElementById("problem-" + data.problem_id);
+                if (problemDiv) problemDiv.remove();
+            } else if (data.type === "error") {
+                alert("Error: " + data.message);
+            }
+        };
+    </script>
+</body>
+</html>
