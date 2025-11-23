@@ -4,4 +4,4 @@ python manage.py makemigrations
 python manage.py migrate
 python manage.py loaddata fixtures/*.json
 docker start myredis
-python manage.py runserver
+daphne -p 8000 equilibria.asgi:application
