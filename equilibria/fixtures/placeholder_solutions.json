@@ -1,0 +1,44 @@
+[
+{
+    "model": "main.solutionchoice",
+    "pk": 1,
+    "fields": {
+        "name": "Placeholder solution",
+        "problem": 1,
+        "description": "Placeholder solution",
+        "time_before_effect": 0,
+        "budget_change": 10,
+        "citizen_satisfaction_change": 10,
+        "environment_change": 10,
+        "military_change": 10
+    }
+},
+{
+    "model": "main.solutionchoice",
+    "pk": 2,
+    "fields": {
+        "name": "Placeholder solution -10",
+        "problem": 1,
+        "description": "Placeholder solution",
+        "time_before_effect": 0,
+        "budget_change": -10,
+        "citizen_satisfaction_change": -10,
+        "environment_change": -10,
+        "military_change": -10
+    }
+},
+{
+    "model": "main.solutionchoice",
+    "pk": 3,
+    "fields": {
+        "name": "Placeholder solution later",
+        "problem": 1,
+        "description": "Placeholder solution",
+        "time_before_effect": 2,
+        "budget_change": 15,
+        "citizen_satisfaction_change": 15,
+        "environment_change": 15,
+        "military_change": 15
+    }
+}
+]
