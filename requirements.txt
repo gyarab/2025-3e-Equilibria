@@ -6,3 +6,4 @@ jwt
 channels
 channels_redis
 redis
+daphne

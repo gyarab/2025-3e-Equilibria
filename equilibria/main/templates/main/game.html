@@ -66,7 +66,7 @@
                     <h2 id="problem-title-{{ region.id }}">Title</h2>
                     <p id="problem-description-{{ region.id }}">Short description goes here.</p>
 
-                    <div class="problem-buttons-{{ region.id }}"></div>
+                    <div id="problem-buttons-{{ region.id }}" class="problem-buttons"></div>
                 </div>
             </div>
         {% endfor %}
@@ -91,6 +91,9 @@
                 "solution_id": solutionId,
                 "region_id": regionId
             }));
+
+            const box = document.getElementById('problem-box-' + regionId);
+            box.classList.add('hidden');
         }
 
         function updateState(data) {
@@ -117,23 +120,10 @@
 
             if (data.type === "initial_state") {
                 updateStats(data.game);
-
-                // Create region divs
-                data.regions.forEach(r => {
-                    const div = document.createElement("div");
-                    div.className = "region";
-                    div.id = "region-" + r.id;
-                    div.innerHTML = `<h3>${r.name}</h3>`;
-                    regionsDiv.appendChild(div);
-                });
             } else if (data.type === "new_state") {
                 updateState(data);
             } else if (data.type === "update_stats") {
                 updateStats(data.game);
-
-                // Remove resolved problem
-                const problemDiv = document.getElementById("problem-" + data.problem_id);
-                if (problemDiv) problemDiv.remove();
             } else if (data.type === "error") {
                 alert("Error: " + data.message);
             }

@@ -37,8 +37,7 @@ class GameConsumer(AsyncWebsocketConsumer):
 
         # Apply solution effect
         try:
-            solution = await database_sync_to_async(SolutionChoice.objects.get)(id=solution_id, problem=problem)
-            problem = await database_sync_to_async(solution.problem)
+            solution = await database_sync_to_async(SolutionChoice.objects.get)(id=solution_id)
             region = await database_sync_to_async(Region.objects.get)(id=region_id)
             game = await database_sync_to_async(Game.objects.get)(id=self.game_id)
             
@@ -112,7 +111,7 @@ class GameConsumer(AsyncWebsocketConsumer):
                     print("No possible problems for region")
                 
                 problem = await self.choose_problem(game, possible_problems)
-                region = await database_sync_to_async(Region.objects.get)(name=chosen_region.name)
+                region = await database_sync_to_async(Region.objects.get)(name=chosen_region.name, game=game)
                 region.problem = problem
                 region.occupied = True
                 await database_sync_to_async(region.save)()

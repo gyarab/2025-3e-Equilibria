@@ -3,98 +3,98 @@
     "model": "main.nameregion",
     "pk": 1,
     "fields": {
-        "name": "Hlavní mìsto Praha"
+        "name": "HlavnÃ­ mÄ›sto Praha"
     }
 },
 {
     "model": "main.nameregion",
     "pk": 2,
     "fields": {
-        "name": "Støedoèeskı kraj"
+        "name": "StÅ™edoÄeskÃ½ kraj"
     }
 },
 {
     "model": "main.nameregion",
     "pk": 3,
     "fields": {
-        "name": "Jihoèeskı kraj"
+        "name": "JihoÄeskÃ½ kraj"
     }
 },
 {
     "model": "main.nameregion",
     "pk": 4,
     "fields": {
-        "name": "Plzeòskı kraj"
+        "name": "PlzeÅˆskÃ½ kraj"
     }
 },
 {
     "model": "main.nameregion",
     "pk": 5,
     "fields": {
-        "name": "Karlovarskı kraj"
+        "name": "KarlovarskÃ½ kraj"
     }
 },
 {
     "model": "main.nameregion",
     "pk": 6,
     "fields": {
-        "name": "Ústeckı kraj"
+        "name": "ÃšsteckÃ½ kraj"
     }
 },
 {
     "model": "main.nameregion",
     "pk": 7,
     "fields": {
-        "name": "Libereckı kraj"
+        "name": "LibereckÃ½ kraj"
     }
 },
 {
     "model": "main.nameregion",
     "pk": 8,
     "fields": {
-        "name": "Královéhradeckı kraj"
+        "name": "KrÃ¡lovÃ©hradeckÃ½ kraj"
     }
 },
 {
     "model": "main.nameregion",
     "pk": 9,
     "fields": {
-        "name": "Pardubickı kraj"
+        "name": "PardubickÃ½ kraj"
     }
 },
 {
     "model": "main.nameregion",
     "pk": 10,
     "fields": {
-        "name": "Kraj Vysoèina"
+        "name": "Kraj VysoÄina"
     }
 },
 {
     "model": "main.nameregion",
     "pk": 11,
     "fields": {
-        "name": "Jihomoravskı kraj"
+        "name": "JihomoravskÃ½ kraj"
     }
 },
 {
     "model": "main.nameregion",
     "pk": 12,
     "fields": {
-        "name": "Olomouckı kraj"
+        "name": "OlomouckÃ½ kraj"
     }
 },
 {
     "model": "main.nameregion",
     "pk": 13,
     "fields": {
-        "name": "Zlínskı kraj"
+        "name": "ZlÃ­nskÃ½ kraj"
     }
 },
 {
     "model": "main.nameregion",
     "pk": 14,
     "fields": {
-        "name": "Moravskoslezskı kraj"
+        "name": "MoravskoslezskÃ½ kraj"
     }
 }
 ]
