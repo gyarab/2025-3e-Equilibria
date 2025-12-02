@@ -42,11 +42,11 @@ class ProblemInstance(models.Model):
 
     time_before_expiration = models.IntegerField(default=0) # Time before problem dissappears if not solved
 
-    # If stats are within these ranges, the problem can appear
-    max_budget_to_appear = models.IntegerField(default=100)
-    max_citizen_satisfaction_to_appear = models.IntegerField(default=100)
-    max_environment_to_appear = models.IntegerField(default=100)
-    max_military_to_appear = models.IntegerField(default=100)
+    # If stats are within these ranges, the problem can appear (range 0 - 1000)
+    max_budget_to_appear = models.IntegerField(default=1000)
+    max_citizen_satisfaction_to_appear = models.IntegerField(default=1000)
+    max_environment_to_appear = models.IntegerField(default=1000)
+    max_military_to_appear = models.IntegerField(default=1000)
     min_budget_to_appear = models.IntegerField(default=0)
     min_citizen_satisfaction_to_appear = models.IntegerField(default=0)
     min_environment_to_appear = models.IntegerField(default=0)
@@ -59,10 +59,10 @@ class ProblemInstance(models.Model):
     military_bias = models.IntegerField(default=1)
 
     # Ideal values for each stat
-    ideal_budget = models.IntegerField(default=50)
-    ideal_citizen_satisfaction = models.IntegerField(default=50)
-    ideal_environment = models.IntegerField(default=50)
-    ideal_military = models.IntegerField(default=50)
+    ideal_budget = models.IntegerField(default=500)
+    ideal_citizen_satisfaction = models.IntegerField(default=500)
+    ideal_environment = models.IntegerField(default=500)
+    ideal_military = models.IntegerField(default=500)
 
     def __str__(self):
         return f"Problem {self.id}: {self.name}"
@@ -74,6 +74,8 @@ class SolutionChoice(models.Model):
     description = models.CharField(max_length=255, default="Placeholder solution")
 
     time_before_effect = models.IntegerField(default=0) # Time before the changes to stats happen after solution is chosen
+
+    # Changes to stats when solution is applied (range -1000 to 1000)
     budget_change = models.IntegerField(default=0)
     citizen_satisfaction_change = models.IntegerField(default=0)
     environment_change = models.IntegerField(default=0)

@@ -17,3 +17,6 @@ def game_view(request, game_id):
         "regions": regions,
     }
     return render(request, "main/game.html", context)
+
+def test(request):
+    return render(request, 'main/test_map.html')

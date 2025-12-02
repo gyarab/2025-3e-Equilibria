@@ -1,0 +1,24 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Responzivní mapa ČR</title>
+<link rel="stylesheet" href="{% static 'main/css/map.css' %}">
+</head>
+<body>
+<div class="status-bars">
+    <div class="status-bar"><span>Economy</span><div class="bar"><div class="fill" data-value="750"></div></div></div>
+    <div class="status-bar"><span>Citizen Satisfaction</span><div class="bar"><div class="fill" data-value="620"></div></div></div>
+    <div class="status-bar"><span>Environment</span><div class="bar"><div class="fill" data-value="480"></div></div></div>
+    <div class="status-bar"><span>Military Power</span><div class="bar"><div class="fill" data-value="900"></div></div></div>
+</div>
+
+<div class="map-container">
+    <svg id="map-svg" viewBox="0 0 3508 2480.4" preserveAspectRatio="xMidYMid meet"></svg>
+</div>
+
+<script src="{% static 'main/js/map.js' %}"></script>
+</body>
+</html>

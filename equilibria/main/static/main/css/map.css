@@ -1,0 +1,213 @@
+/* ===== Reset a základní styl ===== */
+html, body {
+    margin:0;
+    padding:0;
+    width:100%;
+    height:100%;
+    overflow:hidden;
+    font-family:'Cinzel', serif;
+    background:#1a1a1a;
+    color:#f0e6d2;
+    display:flex;
+    flex-direction:column;
+}
+
+/* ===== Status bary ===== */
+.status-bars {
+    display:flex;
+    justify-content:space-around;
+    padding:15px;
+    background:linear-gradient(90deg,#3b2f2f,#5c4a3c);
+}
+
+.status-bar { 
+    text-align:center; 
+    position:relative; 
+}
+
+.bar {
+    width:140px;
+    height:18px;
+    background:#2e1f1f;
+    border-radius:9px;
+    border:2px solid #6a4a3c;
+    position: relative;
+    overflow:hidden;
+}
+
+.fill {
+    height:100%;
+    width:0;
+    background: linear-gradient(90deg, #f3c14f, #b24c00);
+    border-radius:9px;
+    transition: width 0.6s ease;
+}
+
+.bar .bar-text {
+    position:absolute;
+    width:100%;
+    height:100%;
+    top:0;
+    left:0;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:rgba(255,255,255,0.7);
+    font-weight:bold;
+    font-size:12px;
+    opacity:0;
+    pointer-events:none;
+    transition: opacity 0.2s;
+}
+
+.bar:hover .bar-text { opacity:1; }
+
+/* ===== Kontejner mapy ===== */
+.map-container {
+    flex:1;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:#111;
+    padding: 0.5px 1px 1px 1px; /* zmenšena mezera nahoře/dole */
+    box-sizing: border-box;
+}
+
+.map-container svg {
+    width: 100%;
+    height: auto;
+    max-height: calc(100vh - 50px - 3px); /* status bar + padding */
+    display: block;
+
+    overflow: visible;
+
+    position: relative;
+    z-index: 10; 
+    pointer-events: auto !important;
+}
+
+/* ===== Regiony mapy ===== */
+.region {
+    stroke:#f0e6d2;
+    stroke-width:1.5;
+    fill:#2e2e2e;
+    transition:fill 0.3s;
+}
+
+.region:hover { 
+    fill:#444; 
+}
+
+/* ===== Piny ===== */
+.pin {
+    cursor:pointer;
+    transform-origin: bottom center;
+    transform-box: fill-box;
+    transition: transform 0.2s, filter 0.2s;
+}
+
+.pin path {
+    fill: #b22222;
+    stroke: none; /* žádná outline */
+    transition: filter 0.2s;
+}
+
+.pin text {
+    fill:#fff;
+    font-size:50px; /* vykřičník uvnitř kapky */
+    font-weight:bold;
+    font-family:'Cinzel', serif;
+    text-anchor: middle;
+    dominant-baseline: middle;
+    pointer-events: none;
+}
+
+/* Hover efekt pinu */
+.pin:hover path {
+    filter: drop-shadow(0 0 15px #fff);
+}
+
+/* ===== Tooltip uvnitř SVG ===== */
+.tooltip {
+    visibility: hidden;
+    pointer-events: none;
+}
+
+.tooltip rect {
+    fill: rgba(0,0,0,0.95);
+    stroke: #ff6600;
+    stroke-width:3;
+    rx:10;
+    ry:10;
+}
+
+.tooltip text {
+    fill:#f0e6d2;
+    font-family:'Cinzel', serif;
+    font-size:16px;
+}
+
+.tooltip-content-html {
+    color: #f0e6d2;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 0;
+    margin: 0;
+    height: 100%; 
+    display: flex;
+    flex-direction: column; /* Umožní zarovnat tlačítka dolů */
+    position: relative; /* Důležité pro kontext zobrazení */
+    z-index: 1;
+}
+
+.tooltip foreignObject {
+    overflow: visible;    
+}
+
+/* Nadpis */
+.tooltip-content-html h3.tooltip-title {
+    margin: 0 0 5px 0;
+    font-size: 18px;
+    color: #ff6600; /* Oranžová barva */
+    border-bottom: 1px solid #ff6600;
+    padding-bottom: 3px;
+}
+
+/* Popis */
+.tooltip-content-html p.tooltip-desc {
+    margin: 5px 0 10px 0;
+    font-size: 14px;
+    flex-grow: 1; /* Zatlačí tlačítka na dno */
+    overflow: hidden; /* Skryje text, pokud je příliš dlouhý */
+}
+
+/* Kontejner tlačítek */
+.solution-buttons {
+    margin-top: 5px;
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Tlačítka */
+.solution-buttons button {
+    background-color: #ff6600;
+    color: #111;
+    border: none;
+    padding: 5px 8px;
+    cursor: pointer;
+    font-size: 12px;
+    border-radius: 4px;
+    flex-grow: 1; /* Tlačítka se roztáhnou, aby zaplnila šířku */
+    margin: 0 2px;
+}
+
+.solution-buttons button:first-child {
+    margin-left: 0;
+}
+
+.solution-buttons button:last-child {
+    margin-right: 0;
+}
+
+.solution-buttons button:hover {
+    background-color: #cc5200;
+}
