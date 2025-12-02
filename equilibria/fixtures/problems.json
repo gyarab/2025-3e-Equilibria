@@ -1,0 +1,142 @@
+[
+{
+    "model": "main.probleminstance",
+    "pk": 1,
+    "fields": {
+        "name": "Severe Drought",
+        "description": "Prolonged drought is threatening agriculture, reducing crop yields and water supply.",
+        "time_before_expiration": 8,
+        "max_budget_to_appear": 500,
+        "max_citizen_satisfaction_to_appear": 500,
+        "max_environment_to_appear": 500,
+        "max_military_to_appear": 500,
+        "min_budget_to_appear": 0,
+        "min_citizen_satisfaction_to_appear": 200,
+        "min_environment_to_appear": 350,
+        "min_military_to_appear": 250,
+        "budget_bias": 2,
+        "citizen_satisfaction_bias": 1,
+        "environment_bias": 3,
+        "military_bias": 1,
+        "ideal_budget": 500,
+        "ideal_citizen_satisfaction": 500,
+        "ideal_environment": 500,
+        "ideal_military": 500,
+        "possible_regions": [
+            1
+        ]
+    }
+},
+{
+    "model": "main.probleminstance",
+    "pk": 2,
+    "fields": {
+        "name": "EU Sanctions Pressure in Prague",
+        "description": "EU imposes sanctions related to international trade, putting pressure on the government.",
+        "time_before_expiration": 12,
+        "max_budget_to_appear": 1000,
+        "max_citizen_satisfaction_to_appear": 1000,
+        "max_environment_to_appear": 1000,
+        "max_military_to_appear": 1000,
+        "min_budget_to_appear": 100,
+        "min_citizen_satisfaction_to_appear": 200,
+        "min_environment_to_appear": 150,
+        "min_military_to_appear": 175,
+        "budget_bias": 3,
+        "citizen_satisfaction_bias": 2,
+        "environment_bias": 1,
+        "military_bias": 1,
+        "ideal_budget": 1000,
+        "ideal_citizen_satisfaction": 1000,
+        "ideal_environment": 1000,
+        "ideal_military": 1000,
+        "possible_regions": [
+            2
+        ]
+    }
+},
+{
+    "model": "main.probleminstance",
+    "pk": 3,
+    "fields": {
+        "name": "Industrial Pollution",
+        "description": "Air pollution from factories in Moravskoslezsk� is causing health concerns",
+        "time_before_expiration": 6,
+        "max_budget_to_appear": 1000,
+        "max_citizen_satisfaction_to_appear": 1000,
+        "max_environment_to_appear": 1000,
+        "max_military_to_appear": 1000,
+        "min_budget_to_appear": 200,
+        "min_citizen_satisfaction_to_appear": 250,
+        "min_environment_to_appear": 350,
+        "min_military_to_appear": 100,
+        "budget_bias": 1,
+        "citizen_satisfaction_bias": 2,
+        "environment_bias": 3,
+        "military_bias": 0,
+        "ideal_budget": 1000,
+        "ideal_citizen_satisfaction": 1000,
+        "ideal_environment": 1000,
+        "ideal_military": 1000,
+        "possible_regions": [
+            3
+        ]
+    }
+},
+{
+    "model": "main.probleminstance",
+    "pk": 4,
+    "fields": {
+        "name": "Teacher Strike",
+        "description": "Teachers in Plzensky are striking over salary disputes",
+        "time_before_expiration": 20,
+        "max_budget_to_appear": 1000,
+        "max_citizen_satisfaction_to_appear": 1000,
+        "max_environment_to_appear": 1000,
+        "max_military_to_appear": 1000,
+        "min_budget_to_appear": 500,
+        "min_citizen_satisfaction_to_appear": 325,
+        "min_environment_to_appear": 100,
+        "min_military_to_appear": 250,
+        "budget_bias": 2,
+        "citizen_satisfaction_bias": 3,
+        "environment_bias": 0,
+        "military_bias": 1,
+        "ideal_budget": 1000,
+        "ideal_citizen_satisfaction": 1000,
+        "ideal_environment": 1000,
+        "ideal_military": 1000,
+        "possible_regions": [
+            4
+        ]
+    }
+},
+{
+    "model": "main.probleminstance",
+    "pk": 5,
+    "fields": {
+        "name": "Cyberattack on National Health System",
+        "description": "A cyberattack is crippling healthcare IT systems nationwide",
+        "time_before_expiration": 15,
+        "max_budget_to_appear": 1000,
+        "max_citizen_satisfaction_to_appear": 1000,
+        "max_environment_to_appear": 1000,
+        "max_military_to_appear": 1000,
+        "min_budget_to_appear": 200,
+        "min_citizen_satisfaction_to_appear": 150,
+        "min_environment_to_appear": 50,
+        "min_military_to_appear": 250,
+        "budget_bias": 2,
+        "citizen_satisfaction_bias": 2,
+        "environment_bias": 0,
+        "military_bias": 3,
+        "ideal_budget": 1000,
+        "ideal_citizen_satisfaction": 1000,
+        "ideal_environment": 1000,
+        "ideal_military": 1000,
+        "possible_regions": [
+            2
+        ]
+    }
+}
+]

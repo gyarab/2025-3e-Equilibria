@@ -1,0 +1,212 @@
+[
+{
+    "model": "main.solutionchoice",
+    "pk": 1,
+    "fields": {
+        "name": "Invest in Irrigation Projects",
+        "problem": 1,
+        "description": "Government invests heavily in new irrigation infrastructure to support farmers.",
+        "time_before_effect": 8,
+        "budget_change": -35,
+        "citizen_satisfaction_change": 45,
+        "environment_change": 20,
+        "military_change": 0
+    }
+},
+{
+    "model": "main.solutionchoice",
+    "pk": 2,
+    "fields": {
+        "name": "Provide Financial Aid Only",
+        "problem": 1,
+        "description": "Distribute subsidies and financial support to affected farmers.",
+        "time_before_effect": 8,
+        "budget_change": -50,
+        "citizen_satisfaction_change": 30,
+        "environment_change": 45,
+        "military_change": 0
+    }
+},
+{
+    "model": "main.solutionchoice",
+    "pk": 3,
+    "fields": {
+        "name": "Ignore and Hope for Rain",
+        "problem": 1,
+        "description": "Take no immediate action, hoping the drought will end naturally.",
+        "time_before_effect": 8,
+        "budget_change": 0,
+        "citizen_satisfaction_change": -25,
+        "environment_change": -30,
+        "military_change": 0
+    }
+},
+{
+    "model": "main.solutionchoice",
+    "pk": 4,
+    "fields": {
+        "name": "Negotiate Exceptions",
+        "problem": 2,
+        "description": "Diplomats work with the EU to reduce sanctions impact.",
+        "time_before_effect": 12,
+        "budget_change": -35,
+        "citizen_satisfaction_change": 40,
+        "environment_change": 0,
+        "military_change": 0
+    }
+},
+{
+    "model": "main.solutionchoice",
+    "pk": 5,
+    "fields": {
+        "name": "Comply Fully",
+        "problem": 2,
+        "description": "Immediate full compliance with EU sanctions to avoid penalties.",
+        "time_before_effect": 20,
+        "budget_change": -55,
+        "citizen_satisfaction_change": -25,
+        "environment_change": 0,
+        "military_change": 0
+    }
+},
+{
+    "model": "main.solutionchoice",
+    "pk": 6,
+    "fields": {
+        "name": "Resist and Challenge",
+        "problem": 2,
+        "description": "Government publicly challenges sanctions, risking diplomatic tension.",
+        "time_before_effect": 35,
+        "budget_change": 0,
+        "citizen_satisfaction_change": -30,
+        "environment_change": 0,
+        "military_change": 0
+    }
+},
+{
+    "model": "main.solutionchoice",
+    "pk": 7,
+    "fields": {
+        "name": "Enforce Environmental Regulations",
+        "problem": 3,
+        "description": "Impose strict limits and fines on factories emitting pollutants.",
+        "time_before_effect": 8,
+        "budget_change": -20,
+        "citizen_satisfaction_change": 30,
+        "environment_change": 45,
+        "military_change": 0
+    }
+},
+{
+    "model": "main.solutionchoice",
+    "pk": 8,
+    "fields": {
+        "name": "Provide Incentives for Clean Tech",
+        "problem": 3,
+        "description": "Offer tax breaks and subsidies to factories that adopt cleaner technologies.",
+        "time_before_effect": 8,
+        "budget_change": -40,
+        "citizen_satisfaction_change": 35,
+        "environment_change": 45,
+        "military_change": 0
+    }
+},
+{
+    "model": "main.solutionchoice",
+    "pk": 9,
+    "fields": {
+        "name": "Take No Action",
+        "problem": 3,
+        "description": "Avoid intervening, hoping the issue resolves naturally.",
+        "time_before_effect": 25,
+        "budget_change": 0,
+        "citizen_satisfaction_change": -40,
+        "environment_change": -15,
+        "military_change": 0
+    }
+},
+{
+    "model": "main.solutionchoice",
+    "pk": 10,
+    "fields": {
+        "name": "Increase Teacher Salaries",
+        "problem": 4,
+        "description": "Allocate additional funds to raise teacher pay",
+        "time_before_effect": 15,
+        "budget_change": -60,
+        "citizen_satisfaction_change": 50,
+        "environment_change": 0,
+        "military_change": 15
+    }
+},
+{
+    "model": "main.solutionchoice",
+    "pk": 11,
+    "fields": {
+        "name": "Negotiate Partial Compromise",
+        "problem": 4,
+        "description": "Offer moderate salary increase and improved conditions.",
+        "time_before_effect": 40,
+        "budget_change": -40,
+        "citizen_satisfaction_change": 10,
+        "environment_change": 0,
+        "military_change": -15
+    }
+},
+{
+    "model": "main.solutionchoice",
+    "pk": 12,
+    "fields": {
+        "name": "Refuse Demands",
+        "problem": 4,
+        "description": "Keep budget unchanged, risking prolonged strike.",
+        "time_before_effect": 5,
+        "budget_change": 0,
+        "citizen_satisfaction_change": -55,
+        "environment_change": 0,
+        "military_change": -25
+    }
+},
+{
+    "model": "main.solutionchoice",
+    "pk": 13,
+    "fields": {
+        "name": "Deploy Emergency IT Teams",
+        "problem": 5,
+        "description": "Immediately send expert teams to recover systems and secure networks.",
+        "time_before_effect": 1,
+        "budget_change": -50,
+        "citizen_satisfaction_change": 20,
+        "environment_change": 0,
+        "military_change": 30
+    }
+},
+{
+    "model": "main.solutionchoice",
+    "pk": 14,
+    "fields": {
+        "name": "Invest in Long-Term Cybersecurity",
+        "problem": 5,
+        "description": "Upgrade infrastructure to prevent future attacks.",
+        "time_before_effect": 50,
+        "budget_change": -80,
+        "citizen_satisfaction_change": 75,
+        "environment_change": 0,
+        "military_change": 10
+    }
+},
+{
+    "model": "main.solutionchoice",
+    "pk": 15,
+    "fields": {
+        "name": "Delay Action",
+        "problem": 5,
+        "description": "Wait for external assistance, risking further damage.",
+        "time_before_effect": 20,
+        "budget_change": 0,
+        "citizen_satisfaction_change": -50,
+        "environment_change": 0,
+        "military_change": -25
+    }
+}
+]
