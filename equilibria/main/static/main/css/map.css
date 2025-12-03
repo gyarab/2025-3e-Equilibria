@@ -1,4 +1,3 @@
-/* ===== Reset a základní styl ===== */
 html, body {
     margin:0;
     padding:0;
@@ -12,7 +11,6 @@ html, body {
     flex-direction:column;
 }
 
-/* ===== Status bary ===== */
 .status-bars {
     display:flex;
     justify-content:space-around;
@@ -62,21 +60,20 @@ html, body {
 
 .bar:hover .bar-text { opacity:1; }
 
-/* ===== Kontejner mapy ===== */
 .map-container {
     flex:1;
     display:flex;
     justify-content:center;
     align-items:center;
     background:#111;
-    padding: 0.5px 1px 1px 1px; /* zmenšena mezera nahoře/dole */
+    padding: 0.5px 1px 1px 1px; 
     box-sizing: border-box;
 }
 
 .map-container svg {
     width: 100%;
     height: auto;
-    max-height: calc(100vh - 50px - 3px); /* status bar + padding */
+    max-height: calc(100vh - 50px - 3px);
     display: block;
 
     overflow: visible;
@@ -86,7 +83,6 @@ html, body {
     pointer-events: auto !important;
 }
 
-/* ===== Regiony mapy ===== */
 .region {
     stroke:#f0e6d2;
     stroke-width:1.5;
@@ -98,7 +94,6 @@ html, body {
     fill:#444; 
 }
 
-/* ===== Piny ===== */
 .pin {
     cursor:pointer;
     transform-origin: bottom center;
@@ -108,13 +103,13 @@ html, body {
 
 .pin path {
     fill: #b22222;
-    stroke: none; /* žádná outline */
+    stroke: none;
     transition: filter 0.2s;
 }
 
 .pin text {
     fill:#fff;
-    font-size:50px; /* vykřičník uvnitř kapky */
+    font-size:50px;
     font-weight:bold;
     font-family:'Cinzel', serif;
     text-anchor: middle;
@@ -122,12 +117,10 @@ html, body {
     pointer-events: none;
 }
 
-/* Hover efekt pinu */
 .pin:hover path {
     filter: drop-shadow(0 0 15px #fff);
 }
 
-/* ===== Tooltip uvnitř SVG ===== */
 .tooltip {
     visibility: hidden;
     pointer-events: none;
@@ -154,8 +147,8 @@ html, body {
     margin: 0;
     height: 100%; 
     display: flex;
-    flex-direction: column; /* Umožní zarovnat tlačítka dolů */
-    position: relative; /* Důležité pro kontext zobrazení */
+    flex-direction: column;
+    position: relative;
     z-index: 1;
 }
 
@@ -163,31 +156,27 @@ html, body {
     overflow: visible;    
 }
 
-/* Nadpis */
 .tooltip-content-html h3.tooltip-title {
     margin: 0 0 5px 0;
     font-size: 18px;
-    color: #ff6600; /* Oranžová barva */
+    color: #ff6600;
     border-bottom: 1px solid #ff6600;
     padding-bottom: 3px;
 }
 
-/* Popis */
 .tooltip-content-html p.tooltip-desc {
     margin: 5px 0 10px 0;
     font-size: 14px;
-    flex-grow: 1; /* Zatlačí tlačítka na dno */
-    overflow: hidden; /* Skryje text, pokud je příliš dlouhý */
+    flex-grow: 1;
+    overflow: hidden;
 }
 
-/* Kontejner tlačítek */
 .solution-buttons {
     margin-top: 5px;
     display: flex;
     justify-content: space-between;
 }
 
-/* Tlačítka */
 .solution-buttons button {
     background-color: #ff6600;
     color: #111;
@@ -196,7 +185,7 @@ html, body {
     cursor: pointer;
     font-size: 12px;
     border-radius: 4px;
-    flex-grow: 1; /* Tlačítka se roztáhnou, aby zaplnila šířku */
+    flex-grow: 1;
     margin: 0 2px;
 }
 

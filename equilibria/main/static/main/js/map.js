@@ -1,7 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
     const svg = document.getElementById('map-svg');
 
-    // 1️⃣ Animace status barů
     document.querySelectorAll('.bar').forEach(bar => {
         const fill = bar.querySelector('.fill');
         if (!fill) return;
@@ -15,7 +14,7 @@ document.addEventListener("DOMContentLoaded", () => {
         bar.appendChild(number);
     });
 
-    // 2️⃣ Načtení SVG mapy a vytvoření pinů
+    // Loading the SVG map and adding interactive pins etc.
     fetch("/static/main/svg/Cesko-kraje.svg")
         .then(resp => resp.text())
         .then(svgText => {
@@ -29,8 +28,6 @@ document.addEventListener("DOMContentLoaded", () => {
                 gMap.appendChild(p);
             });
             svg.appendChild(gMap);
-
-            // ... (kód pro gMap a paths zůstává) ...
 
             const pinsData = [
                 {
@@ -57,8 +54,8 @@ document.addEventListener("DOMContentLoaded", () => {
                 },
                 {
                     name: "Jihočeský",
-                    x: 1800, 
-                    y: 1550, 
+                    x: 950, 
+                    y: 1350, 
                     desc: "Problém Jihočeský: Kůrovcová kalamita v lesích a nutnost jejich obnovy.",
                     solutions: [
                         { text: "Těžba a sanace", id: "SAN_JHC" },
@@ -68,8 +65,8 @@ document.addEventListener("DOMContentLoaded", () => {
                 },
                 {
                     name: "Plzeňský",
-                    x: 1200, 
-                    y: 1150, 
+                    x: 685, 
+                    y: 800, 
                     desc: "Problém Plzeňský: Zvýšená nezaměstnanost v pohraničních oblastech a odliv mladých lidí.",
                     solutions: [
                         { text: "Podpora malého podnikání", id: "POD_PLZ" },
@@ -79,17 +76,17 @@ document.addEventListener("DOMContentLoaded", () => {
                 }
             ];
 
-            // 1. Pole pro sběr tooltipů
+            //Field for storing tooltips to add later
             const tooltipsToAdd = [];
 
             pinsData.forEach(pin => {
 
-                // === SKUPINA PINU ===
+                //Problem pins on the map
                 const gPin = document.createElementNS("http://www.w3.org/2000/svg","g");
                 gPin.classList.add("pin");
                 gPin.style.pointerEvents = 'all';
 
-                // Kruh
+                // Circle part of the pin
                 const circle = document.createElementNS("http://www.w3.org/2000/svg","circle");
                 circle.setAttribute("cx",0);
                 circle.setAttribute("cy",0);
@@ -97,13 +94,13 @@ document.addEventListener("DOMContentLoaded", () => {
                 circle.setAttribute("fill","#b22222");
                 gPin.appendChild(circle);
 
-                // Trojúhelník (ocásek)
+                // Triangle part of the pin
                 const triangle = document.createElementNS("http://www.w3.org/2000/svg","polygon");
                 triangle.setAttribute("points","-18,9 18,9 0,60");
                 triangle.setAttribute("fill","#b22222");
                 gPin.appendChild(triangle);
 
-                // Vykřičník
+                // Exclamation mark inside the pin
                 const exclamation = document.createElementNS("http://www.w3.org/2000/svg","text");
                 exclamation.setAttribute("x",0);
                 exclamation.setAttribute("y",10);
@@ -114,11 +111,11 @@ document.addEventListener("DOMContentLoaded", () => {
                 exclamation.textContent = "!";
                 gPin.appendChild(exclamation);
 
-                // --- POČÁTEČNÍ TRANSFORMACE ---
+                // Initial pin scaling for better visibility
                 gPin.setAttribute("transform", `translate(${pin.x},${pin.y}) scale(3)`);
 
 
-                // === TOOLTIP ===
+                // Tooltip creation
                 const tooltip = document.createElementNS("http://www.w3.org/2000/svg","g");
                 tooltip.classList.add("tooltip");
                 tooltip.setAttribute("visibility","hidden");
@@ -127,13 +124,13 @@ document.addEventListener("DOMContentLoaded", () => {
                 const HEIGHT = 360;
                 const MARGIN_ABOVE_PIN = 150;
 
-                // UPRAVENÁ POZICE A VĚTŠÍ ROZMĚR TOOLTIPU (šířka 280, výška 180)
+                // Positioning tooltip above the pin
                 tooltip.setAttribute("transform", `translate(${pin.x - (WIDTH/2)}, ${pin.y - (HEIGHT + MARGIN_ABOVE_PIN)})`);
 
-                // 1. SVG Pozadí (větší)
+                // Tooltip Background Rectangle
                 const rect = document.createElementNS("http://www.w3.org/2000/svg","rect");
-                rect.setAttribute("width", WIDTH); // Nová šířka
-                rect.setAttribute("height", HEIGHT); // Nová výška
+                rect.setAttribute("width", WIDTH);
+                rect.setAttribute("height", HEIGHT);
                 rect.setAttribute("rx",10);
                 rect.setAttribute("ry",10);
                 rect.setAttribute("fill","rgba(0,0,0,0.95)");
@@ -141,7 +138,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 rect.setAttribute("stroke-width","3");
                 tooltip.appendChild(rect);
 
-                // 2. Foreign Object pro HTML (Nadpis, Text a Tlačítka)
+                // Foreign Object for HTML (Title, Text, and Buttons)
                 const foreignObject = document.createElementNS("http://www.w3.org/2000/svg", "foreignObject");
                 foreignObject.setAttribute("x", 10);
                 foreignObject.setAttribute("y", 10);
@@ -149,11 +146,11 @@ document.addEventListener("DOMContentLoaded", () => {
                 foreignObject.setAttribute("height", HEIGHT - 20);
                 tooltip.appendChild(foreignObject);
 
-                // 3. HTML obsah
+                // HTML content inside Foreign Object
                 const htmlContent = document.createElement('div');
                 htmlContent.classList.add('tooltip-content-html');
 
-                // Generování tlačítek z datové struktury
+                // Generating buttons from data structure
                 const buttonHTML = pin.solutions.map(sol => 
                     `<button class="solution-btn" data-solution-id="${sol.id}">${sol.text}</button>`
                 ).join('');
@@ -167,17 +164,16 @@ document.addEventListener("DOMContentLoaded", () => {
                 `;
                 foreignObject.appendChild(htmlContent);
 
-                // *** Listener pro tlačítka (vzor pro interaktivitu) ***
+                // Event listeners for solution buttons
                 htmlContent.querySelectorAll('.solution-btn').forEach(button => {
                     button.addEventListener('click', (e) => {
-                        // Zde můžete implementovat logiku řešení, např. odeslání dat
                         console.log(`Kliknuto na řešení pro ${pin.name}: ${button.textContent} (ID: ${button.dataset.solutionId})`);
-                        e.stopPropagation(); // Zabrání zavření tooltipu po kliku na tlačítko
+                        e.stopPropagation(); 
                     });
                 });
 
 
-                // === HOVER EFEKT ===
+                // Pin hover effects
                 gPin.addEventListener("mouseenter", () => {
                     gPin.setAttribute("transform", `translate(${pin.x},${pin.y}) scale(3.3)`);
                     gPin.style.filter = "drop-shadow(0 0 15px #fff)";
@@ -189,7 +185,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 });
 
 
-                // === CLICK PRO ZOBRAZENÍ TOOLTIPU ===
+                // Click event to show tooltip
                 gPin.addEventListener("click", (e) => {
                     document.querySelectorAll('.tooltip').forEach(t => {
                         t.style.visibility = 'hidden';
@@ -205,8 +201,6 @@ document.addEventListener("DOMContentLoaded", () => {
                 tooltipsToAdd.push(tooltip);
             });
 
-            // 4. AŽ ZDE, po přidání všech pinů, přidáme všechny tooltipy
-            // Tím zajistíme, že jsou "navrchu"
             tooltipsToAdd.forEach(tooltip => {
                 svg.appendChild(tooltip);
             });
