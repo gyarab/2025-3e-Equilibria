@@ -31,9 +31,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
             const pinsData = [
                 {
-                    name: "Praha", 
-                    x: 2600, 
-                    y: 720, 
+                    name: "Hlavní město Praha", 
+                    x: 1225, 
+                    y: 1000, 
                     desc: "Problém v Praze: Vysoké znečištění ovzduší a dopravy v centru města.",
                     solutions: [
                         { text: "Zóna bez emisí", id: "ZBE_PRG" },
@@ -42,10 +42,10 @@ document.addEventListener("DOMContentLoaded", () => {
                     ]
                 },
                 {
-                    name: "Středočeský", 
-                    x: 2450, 
+                    name: "Středočeský kraj", 
+                    x: 1050, 
                     y: 950, 
-                    desc: "Problém Středočeský: Nedostatečná infrastruktura a zásobování vodou v suchých oblastech.",
+                    desc: "Problém Středočeský kraj: Nedostatečná infrastruktura a zásobování vodou v suchých oblastech.",
                     solutions: [
                         { text: "Nový vodovod", id: "VOD_STC" },
                         { text: "Dotace na studny", id: "DOT_STC" },
@@ -53,10 +53,10 @@ document.addEventListener("DOMContentLoaded", () => {
                     ]
                 },
                 {
-                    name: "Jihočeský",
-                    x: 950, 
-                    y: 1350, 
-                    desc: "Problém Jihočeský: Kůrovcová kalamita v lesích a nutnost jejich obnovy.",
+                    name: "Jihočeský kraj",
+                    x: 1150, 
+                    y: 1800, 
+                    desc: "Problém Jihočeský kraj: Kůrovcová kalamita v lesích a nutnost jejich obnovy.",
                     solutions: [
                         { text: "Těžba a sanace", id: "SAN_JHC" },
                         { text: "Výsadba smíšených lesů", id: "LES_JHC" },
@@ -64,14 +64,124 @@ document.addEventListener("DOMContentLoaded", () => {
                     ]
                 },
                 {
-                    name: "Plzeňský",
+                    name: "Plzeňský kraj",
                     x: 685, 
-                    y: 800, 
-                    desc: "Problém Plzeňský: Zvýšená nezaměstnanost v pohraničních oblastech a odliv mladých lidí.",
+                    y: 1350, 
+                    desc: "Problém Plzeňský kraj: Zvýšená nezaměstnanost v pohraničních oblastech a odliv mladých lidí.",
                     solutions: [
                         { text: "Podpora malého podnikání", id: "POD_PLZ" },
                         { text: "Rekvalifikační kurzy", id: "REK_PLZ" },
                         { text: "Investice do průmyslu", id: "INV_PLZ" }
+                    ]
+                },
+                {
+                    name: "Karlovarský kraj",
+                    x: 450, 
+                    y: 900,
+                    desc: "Problém Karlovarský kraj: Pokles lázeňství a turistického ruchu v regionu.",
+                    solutions: [
+                        { text: "Marketingová kampaň", id: "MKT_KVK" },
+                        { text: "Podpora lázeňství", id: "POD_KVK" },
+                        { text: "Zlepšení infrastruktury", id: "INF_KVK" }
+                    ]
+                },
+                {
+                    name: "Ústecký kraj",
+                    x: 975,
+                    y: 625,
+                    desc: "Problém Ústecký kraj: Vysoká míra znečištění ovzduší a zdravotní problémy obyvatel.",
+                    solutions: [
+                        { text: "Snížení emisí z průmyslu", id: "EMI_USK" },
+                        { text: "Zalesňování", id: "ZAL_USK" },
+                        { text: "Zdravotní programy", id: "ZDR_USK" }
+                    ]
+                },
+                {
+                    name: "Liberecký kraj",
+                    x: 1525,
+                    y: 500,
+                    desc: "Problém Liberecký kraj: Nedostatečná dopravní infrastruktura a spojení s okolními regiony.",
+                    solutions: [
+                        { text: "Modernizace silnic", id: "SIL_LIB" },
+                        { text: "Zlepšení veřejné dopravy", id: "VER_LIB" },
+                        { text: "Podpora cyklostezek", id: "CYK_LIB" }
+                    ]
+                },
+                {
+                    name: "Královéhradecký kraj",
+                    x: 1900,
+                    y: 900,
+                    desc: "Problém Královéhradecký kraj: Nedostatek pracovních příležitostí pro mladé lidi v regionu.",
+                    solutions: [
+                        { text: "Podpora startupů", id: "STU_KHK" },
+                        { text: "Vzdělávací programy", id: "VZD_KHK" },
+                        { text: "Spolupráce s firmami", id: "FIR_KHK" }
+                    ]
+                },
+                {
+                    name: "Pardubický kraj",
+                    x: 1875,
+                    y: 1075,
+                    desc: "Problém Pardubický kraj: Znečištění řeky Labe a jeho dopady na ekosystém.",
+                    solutions: [
+                        { text: "Čištění řeky", id: "CIS_PCE" },
+                        { text: "Ochrana přírody", id: "OCH_PCE" },
+                        { text: "Vzdělávací kampaně", id: "VZD_PCE" }
+                    ]
+                },
+                {
+                    name: "Kraj Vysočina", 
+                    x: 1825,
+                    y: 1575, 
+                    desc: "Problém Kraj Vysočina: Stárnutí populace a nedostatek zdravotnických služeb v odlehlých oblastech.",
+                    solutions: [
+                        { text: "Mobilní kliniky", id: "MOB_VYS" },
+                        { text: "Podpora mladých lékařů", id: "POD_VYS" },
+                        { text: "Zlepšení dopravy", id: "DOP_VYS" }
+                    ]
+                },
+                {
+                    name: "Jihomoravský kraj", 
+                    x: 2325,
+                    y: 1700, 
+                    desc: "Problém Jihomoravský kraj: Znečištění ovzduší a dopravní zácpy v Brně.",
+                    solutions: [
+                        { text: "Rozšíření MHD", id: "MHD_JMK" },
+                        { text: "Podpora cyklistiky", id: "CYK_JMK" },
+                        { text: "Zelené zóny", id: "ZEL_JMK" }
+                    ]
+                },
+                {
+                    name: "Olomoucký kraj", 
+                    x: 2625,
+                    y: 1385, 
+                    desc: "Problém Olomoucký kraj: Vysoká nezaměstnanost a odliv mladých lidí z regionu.",
+                    solutions: [
+                        { text: "Podpora podnikání", id: "POD_OLK" },
+                        { text: "Vzdělávací programy", id: "VZD_OLK" },
+                        { text: "Zlepšení infrastruktury", id: "INF_OLK" }
+                    ]
+                },
+                {
+                    name: "Zlínský kraj", 
+                    x: 2850,
+                    y: 1650, 
+                    desc: "Problém Zlínský kraj: Nedostatečná podpora malých a středních podniků v regionu.",
+                    solutions: [
+                        { text: "Podpora podnikání", id: "POD_ZLK" },
+                        { text: "Vzdělávací programy", id: "VZD_ZLK" },
+                        { text: "Zlepšení infrastruktury", id: "INF_ZLK" }
+                    ]
+                },
+                {
+                    name: "Moravskoslezský kraj", 
+                    x: 3150,
+                    y: 1150, 
+                    desc: "Problém Moravskoslezský kraj: Vysoká míra znečištění ovzduší a zdravotní problémy obyvatel.",
+                    solutions: [
+                        { text: "Snížení emisí", id: "SNI_MSK" },
+                        { text: "Zlepšení zdravotní péče", id: "ZDR_MSK" },
+                        { text: "Podpora ekologických technologií", id: "EKO_MSK" }
                     ]
                 }
             ];
@@ -120,13 +230,31 @@ document.addEventListener("DOMContentLoaded", () => {
                 tooltip.classList.add("tooltip");
                 tooltip.setAttribute("visibility","hidden");
 
-                const WIDTH = 560;
-                const HEIGHT = 360;
+                const WIDTH = 1080;
+                const HEIGHT = 720;
                 const MARGIN_ABOVE_PIN = 150;
+                let tool_tip_x  = pin.x - (WIDTH/2);
+                let tool_tip_y = pin.y - (HEIGHT + MARGIN_ABOVE_PIN);
+
+                // Convert SVG coordinates to screen coordinates
+                const pt = svg.createSVGPoint();
+                pt.x = pin.x;
+                pt.y = pin.y;
+                const screenPt = pt.matrixTransform(svg.getScreenCTM());
+
+                // Adjust tooltip position if it goes off-screen
+                if (screenPt.x + WIDTH/2 > window.innerWidth) {
+                    tool_tip_x = pin.x - WIDTH;
+                } else if (screenPt.x - WIDTH/2 < 0) {
+                    tool_tip_x = pin.x - WIDTH/2 + 20;
+                }
+
+                if (pin.y - (HEIGHT + MARGIN_ABOVE_PIN) < 0) {
+                    tool_tip_y = pin.y + MARGIN_ABOVE_PIN;
+                }
 
                 // Positioning tooltip above the pin
-                tooltip.setAttribute("transform", `translate(${pin.x - (WIDTH/2)}, ${pin.y - (HEIGHT + MARGIN_ABOVE_PIN)})`);
-
+                tooltip.setAttribute("transform", `translate(${tool_tip_x}, ${tool_tip_y})`);
                 // Tooltip Background Rectangle
                 const rect = document.createElementNS("http://www.w3.org/2000/svg","rect");
                 rect.setAttribute("width", WIDTH);
