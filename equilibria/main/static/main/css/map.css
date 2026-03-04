@@ -84,14 +84,11 @@ html, body {
 }
 
 .region {
-    stroke:#f0e6d2;
-    stroke-width:1.5;
-    fill:#2e2e2e;
     transition:fill 0.3s;
 }
 
 .region:hover { 
-    fill:#444; 
+    fill:#9e7f44; 
 }
 
 .pin {

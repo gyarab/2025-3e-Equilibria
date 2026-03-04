@@ -15,19 +15,45 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     // Loading the SVG map and adding interactive pins etc.
-    fetch("/static/main/svg/Cesko-kraje.svg")
+    fetch("/static/main/svg/czech_map.svg")
         .then(resp => resp.text())
         .then(svgText => {
             const parser = new DOMParser();
             const doc = parser.parseFromString(svgText, "image/svg+xml");
-            const paths = doc.querySelectorAll('path, polygon');
+            const externalSvg = doc.querySelector('svg');
 
-            const gMap = document.createElementNS("http://www.w3.org/2000/svg","g");
-            paths.forEach(p => {
-                p.classList.add('region');
-                gMap.appendChild(p);
+            // 1. Calculate Scale while preserving aspect ratio
+            const mapViewBox = externalSvg.getAttribute('viewBox').split(/[\s,]+/).map(parseFloat);
+            const orgW = mapViewBox[2];
+            const orgH = mapViewBox[3];
+
+            // Use the smaller scale factor to prevent deformation
+            const scale = Math.min(3508 / orgW, 2480 / orgH);
+
+            // Create a group for the map and apply scaling
+            const gMap = document.createElementNS("http://www.w3.org/2000/svg", "g");
+            gMap.id = "map-layer";
+
+            // Centering the map if it's smaller than the canvas
+            const dx = (3508 - (orgW * scale)) / 2;
+            const dy = (2480 - (orgH * scale)) / 2;
+            gMap.setAttribute("transform", `translate(${dx}, ${dy}) scale(${scale})`);
+
+            while (externalSvg.firstChild) {
+                gMap.appendChild(externalSvg.firstChild);
+            }
+
+            // Identify region borders by their fill color and add a class for styling
+            const regionBorderColor = "rgb(205,164,86)"
+            gMap.querySelectorAll('path, polygon').forEach(p => {
+                const fill = p.getAttribute('fill');
+
+                if(fill == regionBorderColor){
+                    p.classList.add('region');
+                }
             });
-            svg.appendChild(gMap);
+
+            svg.insertBefore(gMap, svg.firstChild);
 
             const pinsData = [
                 {
@@ -224,12 +250,12 @@ document.addEventListener("DOMContentLoaded", () => {
                 // Initial pin scaling for better visibility
                 gPin.setAttribute("transform", `translate(${pin.x},${pin.y}) scale(3)`);
 
-
                 // Tooltip creation
                 const tooltip = document.createElementNS("http://www.w3.org/2000/svg","g");
                 tooltip.classList.add("tooltip");
                 tooltip.setAttribute("visibility","hidden");
 
+                // Tooltip dimensions and positioning logic
                 const WIDTH = 1080;
                 const HEIGHT = 720;
                 const MARGIN_ABOVE_PIN = 150;
@@ -255,6 +281,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
                 // Positioning tooltip above the pin
                 tooltip.setAttribute("transform", `translate(${tool_tip_x}, ${tool_tip_y})`);
+
                 // Tooltip Background Rectangle
                 const rect = document.createElementNS("http://www.w3.org/2000/svg","rect");
                 rect.setAttribute("width", WIDTH);
@@ -283,9 +310,10 @@ document.addEventListener("DOMContentLoaded", () => {
                     `<button class="solution-btn" data-solution-id="${sol.id}">${sol.text}</button>`
                 ).join('');
 
+                // Setting the inner HTML of the tooltip content
                 htmlContent.innerHTML = `
-                    <h3 class="tooltip-title">${pin.name}</h3>
-                    <p class="tooltip-desc">${pin.desc}</p>
+                    <h3 class="tooltip-title">${gPin.name}</h3>
+                    <p class="tooltip-desc">${gPin.desc}</p>
                     <div class="solution-buttons">
                         ${buttonHTML}
                     </div>
@@ -307,6 +335,7 @@ document.addEventListener("DOMContentLoaded", () => {
                     gPin.style.filter = "drop-shadow(0 0 15px #fff)";
                 });
 
+                // Pin mouse leave effects
                 gPin.addEventListener("mouseleave", () => {
                     gPin.setAttribute("transform", `translate(${pin.x},${pin.y}) scale(3)`);
                     gPin.style.filter = "none";
