@@ -312,8 +312,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
                 // Setting the inner HTML of the tooltip content
                 htmlContent.innerHTML = `
-                    <h3 class="tooltip-title">${gPin.name}</h3>
-                    <p class="tooltip-desc">${gPin.desc}</p>
+                    <h3 class="tooltip-title">${pin.name}</h3>
+                    <p class="tooltip-desc">${pin.desc}</p>
                     <div class="solution-buttons">
                         ${buttonHTML}
                     </div>
