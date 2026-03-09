@@ -1,66 +1,80 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="cs">
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Equilibria | Homepage</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fustat:wght@400;600;700;800&display=swap">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
+    <title>Equilibria | Ročníkový projekt</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fustat:wght@300;400;600;800&family=JetBrains+Mono:wght@400;500&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
     <style>
+        :root {
+            --bg-body: #0a0c10;
+            --bg-card: #161b22;
+            --accent: #58a6ff; /* Modrá barva - působí víc akademicky/programátorsky */
+            --text-muted: #8b949e;
+            --border: #30363d;
+        }
+
         body {
             margin: 0;
-            padding: 0;
             font-family: 'Fustat', sans-serif;
-            color: white;
-            background: black;
-            overflow-x: hidden;
+            color: #c9d1d9;
+            background-color: var(--bg-body);
+            line-height: 1.6;
         }
 
         #particles-js {
             position: fixed;
-            width: 100%;
-            height: 100%;
-            top: 0;
-            left: 0;
+            width: 100%; height: 100%;
             z-index: -1;
+            opacity: 0.3;
         }
 
-        header {
+        /* Fixed Navbar */
+        nav {
+            background: rgba(22, 27, 34, 0.95);
+            border-bottom: 1px solid var(--border);
+            padding: 15px 5%;
             display: flex;
-            justify-content: flex-end;
-            padding: 20px 40px;
+            justify-content: space-between;
+            align-items: center;
             position: fixed;
-            top: -80px;
+            top: 0;
             width: 100%;
-            z-index: 100;
-            transition: top 0.4s ease;
+            z-index: 1000;
+            backdrop-filter: blur(8px);
         }
 
-        #home-icon, #login-icon {
-            font-size: 2.5rem;
-            color: white;
-            cursor: pointer;
-            position: fixed;
-            top: 20px;
-            transition: opacity 0.5s ease, transform 0.3s ease;
-            z-index: 200;
+        .nav-logo {
+            font-weight: 800;
+            font-size: 1.2rem;
+            letter-spacing: 1px;
+            color: #fff;
+            display: flex;
+            align-items: center;
+            gap: 10px;
         }
 
-        #home-icon { 
-            right: 40px; opacity: 0; 
+        .nav-links {
+            display: flex;
+            gap: 25px;
         }
 
-        #login-icon { 
-            right: 90px; opacity: 0.8; 
+        .nav-links a {
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 600;
+            transition: 0.2s;
         }
 
-        #home-icon:hover, #login-icon:hover { 
-            transform: scale(1.2); 
-        }
+        .nav-links a:hover { color: var(--accent); }
 
+        /* Hero */
         .hero {
-            height: 100vh;
+            padding-top: 120px;
+            min-height: 90vh;
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -68,181 +82,226 @@
             text-align: center;
         }
 
+        .project-badge {
+            background: rgba(88, 166, 255, 0.1);
+            color: var(--accent);
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            border: 1px solid rgba(88, 166, 255, 0.3);
+        }
+
         h1 {
-            font-size: 5rem;
-            letter-spacing: 6px;
+            font-size: clamp(2.5rem, 8vw, 5rem);
             font-weight: 800;
-            text-shadow: 0 6px 18px rgba(0,0,0,0.45);
-            margin: 0;
-            opacity: 0;
-            transform: translateY(20px);
-            animation: fadeInUp 1.5s forwards 0.3s;
+            margin-bottom: 10px;
+            color: #f0f6fc;
+        }
+
+        .lead-text {
+            color: var(--text-muted);
+            max-width: 700px;
+            font-size: 1.25rem;
+            margin-bottom: 40px;
+        }
+
+        /* Dashboard-style buttons */
+        .main-actions {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .btn-main {
+            padding: 12px 30px;
+            border-radius: 8px;
+            font-weight: 700;
+            text-decoration: none;
+            transition: 0.3s;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .btn-primary-custom {
+            background: var(--accent);
+            color: #fff;
+        }
+
+        .btn-secondary-custom {
+            background: transparent;
+            border: 1px solid var(--border);
+            color: #fff;
+        }
+
+        .btn-main:hover {
+            transform: translateY(-2px);
+            opacity: 0.9;
+            color: #fff;
+        }
+
+        /* Sections */
+        section {
+            padding: 80px 5%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .info-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 30px;
+            height: 100%;
         }
 
         h2 {
-            font-size: 3.2rem;
-            text-align: center;
-        }
-
-        p.subtitle {
-            font-size: 1.4rem;
-            opacity: 0;
-            font-weight: 600;
-            margin-top: 1rem;
-            margin-bottom: 3rem;
-            transform: translateY(20px);
-            animation: fadeInUp 1.5s forwards 0.6s;
-        }
-
-        .btn-container {
-            display: flex;
-            flex-direction: column;
-            gap: 1.1rem;
-            width: 260px;
-            opacity: 0;
-            transform: translateY(20px);
-            animation: fadeInUp 1.5s forwards 0.9s;
-        }
-
-        .btn {
-            padding: 1rem;
-            background: rgba(255, 255, 255, 0.08);
-            border: 2px solid rgba(255, 255, 255, 0.2);
-            border-radius: 14px;
-            font-family: 'Fustat', sans-serif;
-            font-size: 1.2rem;
             font-weight: 700;
-            color: white;
-            cursor: pointer;
-            transition: 0.3s;
-            backdrop-filter: blur(8px);
+            margin-bottom: 30px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
         }
 
-        .btn:hover {
-            background: rgba(255, 255, 255, 0.25);
-            border-color: rgba(255, 255, 255, 0.4);
-            transform: translateY(-4px) scale(1.03);
+        .tech-stack {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.85rem;
+            color: var(--accent);
         }
 
-        section {
-            padding: 120px 20px;
-            text-align: left;
-            background: rgba(0,0,0,0.8);
-            min-height: 100vh;
+        footer {
+            border-top: 1px solid var(--border);
+            padding: 40px 5%;
+            text-align: center;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+
+        /* Animace viditelnosti */
+        .reveal {
             opacity: 0;
-            transform: translateY(30px);
-            transition: opacity 1s ease, transform 1s ease;
+            transform: translateY(20px);
+            transition: 0.6s all ease-out;
         }
-
-        section.visible { 
-            opacity: 1; transform: translateY(0); 
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
         }
-
-        footer { 
-            text-align: center; padding: 20px; opacity: 0.65; font-weight: 400; 
-        }
-
-        @keyframes fadeInUp { 
-            to { opacity: 1; transform: translateY(0); } 
-        }
-
     </style>
 </head>
 <body>
 
 <div id="particles-js"></div>
 
-<header id="navbar">
-    <span id="home-icon" class="material-symbols-outlined" onclick="scrollToSection('hero')">home</span>
-    <span id="login-icon" class="material-symbols-outlined" onclick="loginWithGoogle()">login</span>
-</header>
+<nav>
+    <div class="nav-logo">
+        <span class="material-symbols-outlined" style="color: var(--accent)">query_stats</span>
+        EQUILIBRIA
+    </div>
+    <div class="nav-links d-none d-md-flex">
+        <a href="#hero" onclick="scrollToSection('hero')">Domů</a>
+        <a href="#game-manual" onclick="scrollToSection('game-manual')">Dokumentace</a>
+        <a href="#about-project" onclick="scrollToSection('about-project')">O projektu</a>
+        <a href="#" onclick="loginWithGoogle()"><span class="material-symbols-outlined" style="font-size: 1.2rem; vertical-align: middle;">account_circle</span> Přihlásit</a>
+    </div>
+</nav>
 
 <div class="hero" id="hero">
+    <div class="project-badge">RP 2026 | Gymnázium Arabská</div>
     <h1>Equilibria</h1>
-    <p class="subtitle">Strategic Governance Simulator</p>
-    <div class="btn-container">
-        <button class="btn" onclick="window.location.href='game.html'">Start Game</button>
-        <button class="btn" onclick="scrollToSection('game-manual')">Game Manual</button>
-        <button class="btn" onclick="scrollToSection('scenario-overview')">Scenario Overview</button>
-        <button class="btn" onclick="scrollToSection('about-project')">About the Project</button>
+    <p class="lead-text">Simulační engine pro modelování politické stability a ekonomických dopadů vládních reforem.</p>
+    
+    <div class="main-actions">
+        <a href="test" class="btn-main btn-primary-custom">Spustit simulaci</a>
+        <a href="#game-manual" class="btn-main btn-secondary-custom" onclick="scrollToSection('game-manual')">Metodika a manuál</a>
     </div>
 </div>
 
-    <section id="game-manual">
-        <h2>Game Manual</h2>
-    </section>
+<section id="game-manual" class="reveal">
+    <div class="row g-4">
+        <div class="col-md-8">
+            <div class="info-card">
+                <h2><span class="material-symbols-outlined">menu_book</span> Herní manuál</h2>
+                <p>Simulace pracuje s pěti základními pilíři státu: <strong>Ekonomika, Společenský konsenzus, Infrastruktura, Bezpečnost a Ekologie</strong>.</p>
+                <p>Hráč v roli guvernéra reaguje na náhodné události a pomocí legislativních karet mění parametry systému. Cílem je udržet rovnováhu (Equilibrium) po dobu 48 měsíců.</p>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="info-card">
+                <h3>Technické parametry</h3>
+                <ul class="tech-stack list-unstyled">
+                    <li>> Backend: Django 5.1</li>
+                    <li>> Frontend: HTML5 / Bootstrap 5</li>
+                    <li>> Engine: Custom JS Logic</li>
+                    <li>> Database: PostgreSQL</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
 
-    <section id="scenario-overview">
-        <h2>Scenario Overview</h2>
-    </section>
+<section id="about-project" class="reveal">
+    <div class="info-card">
+        <h2><span class="material-symbols-outlined">info</span> O projektu</h2>
+        <div class="row">
+            <div class="col-md-6">
+                <p>Tato práce vznikla jako ročníkový projekt ve 3. ročníku na Gymnáziu Arabská v rámci předmětu Programování. Cílem bylo vytvořit komplexní webovou aplikaci, která kombinuje matematický model společnosti s interaktivním uživatelským rozhraním.</p>
+            </div>
+            <div class="col-md-6">
+                <table class="table table-dark table-borderless">
+                    <tr><td class="">Autor:</td><td>Tobiáš Černek, Adam Hruška a Vojtěch Macek</td></tr>
+                    <tr><td class="">Třída:</td><td>3.E</td></tr>
+                    <tr><td class="">Vedoucí:</td><td>Mgr. Jan Lána</td></tr>
+                </table>
+            </div>
+        </div>
+    </div>
+</section>
 
-    <section id="about-project">
-        <h2>About the Project</h2>
-    </section>
-
-<footer>© 2025 Equilibria Gymnázium Arabská</footer>
+<footer>
+    <p>Navrženo a naprogramováno pro Gymnázium Arabská © 2026</p>
+    <p style="font-size: 0.7rem;">Simulátor Equilibria v1.0.4-stable</p>
+</footer>
 
 <script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
 <script>
-    // Particles background
+    // Konfigurace částic - decentnější, aby to nepřebíjelo obsah
     particlesJS('particles-js', {
         particles: {
-            number: { value: 80 },
-            color: { value: '#ffffff' },
-            shape: { type: 'circle' },
-            opacity: { value: 0.5 },
-            size: { value: 3, random: true },
-            move: { enable: true, speed: 2, direction: 'none', out_mode: 'out' }
-        },
-        interactivity: {
-            events: {
-                onhover: { enable: true, mode: 'repulse' },
-                onclick: { enable: true, mode: 'push' }
-            }
-        },
-        retina_detect: true
+            number: { value: 30 },
+            color: { value: '#58a6ff' },
+            opacity: { value: 0.2 },
+            size: { value: 2 },
+            line_linked: { enable: true, distance: 150, color: '#58a6ff', opacity: 0.1 },
+            move: { enable: true, speed: 1.5 }
+        }
     });
 
     function scrollToSection(id) {
         document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
     }
 
-    // Google Login
     function loginWithGoogle() {
-        window.location.href = "/accounts/google/login/"; // Django Allauth endpoint
+        window.location.href = "/accounts/google/login/";
     }
 
-    // Animation of home icon and navbar on scroll
-    window.addEventListener('scroll', function() {
-        const navbar = document.getElementById('navbar');
-        const homeIcon = document.getElementById('home-icon');
-        const hero = document.getElementById('hero');
-
-        if(window.scrollY > hero.offsetHeight) { homeIcon.style.opacity = '1'; }
-        else { homeIcon.style.opacity = '0'; }
-
-        if(window.scrollY > window.innerHeight / 2) { navbar.style.top = '0'; }
-        else { navbar.style.top = '-80px'; }
-
-        document.querySelectorAll('section').forEach(section => {
-            const rect = section.getBoundingClientRect();
-            if(rect.top < window.innerHeight - 100) section.classList.add('visible');
-        });
-    });
-
-    // If login successful, display welcome message
-    document.addEventListener('DOMContentLoaded', () => {
-        const userName = localStorage.getItem('userName');
-        if(userName) {
-            const hero = document.getElementById('hero');
-            const welcome = document.createElement('p');
-            welcome.textContent = `Welcome ${userName}`;
-            welcome.style.fontSize = '1.8rem';
-            welcome.style.marginTop = '1rem';
-            hero.appendChild(welcome);
+    // Reveal animace při scrollu
+    function reveal() {
+        var reveals = document.querySelectorAll(".reveal");
+        for (var i = 0; i < reveals.length; i++) {
+            var windowHeight = window.innerHeight;
+            var elementTop = reveals[i].getBoundingClientRect().top;
+            var elementVisible = 150;
+            if (elementTop < windowHeight - elementVisible) {
+                reveals[i].classList.add("active");
+            }
         }
-    });
+    }
+    window.addEventListener("scroll", reveal);
+    reveal(); // Spustit jednou při načtení
 </script>
 
 </body>

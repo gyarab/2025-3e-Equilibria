@@ -1,12 +1,42 @@
 document.addEventListener("DOMContentLoaded", () => {
     const svg = document.getElementById('map-svg');
+    const startBtn = document.getElementById('start-btn');
+    const timerDisplay = document.getElementById('game-timer');
 
+    // --- LOGIKA ČASOVAČE ---
+    let seconds = 0;
+    let timerInterval = null;
+    let isGameRunning = false;
+
+    function updateTimer() {
+        seconds++;
+        const mins = Math.floor(seconds / 60).toString().padStart(2, '0');
+        const secs = (seconds % 60).toString().padStart(2, '0');
+        timerDisplay.textContent = `${mins}:${secs}`;
+    }
+
+    startBtn.addEventListener('click', () => {
+        if (!isGameRunning) {
+            isGameRunning = true;
+            startBtn.textContent = "GAME RUNNING";
+            startBtn.classList.add('active');
+            timerInterval = setInterval(updateTimer, 1000);
+            console.log("Simulace byla úspěšně spuštěna.");
+            
+            // Zde můžeš přidat spuštění dynamiky hry (např. klesání barů)
+        }
+    });
+
+    // --- INICIALIZACE STATUS BARŮ ---
     document.querySelectorAll('.bar').forEach(bar => {
         const fill = bar.querySelector('.fill');
         if (!fill) return;
 
         const value = parseInt(fill.getAttribute('data-value'), 10);
-        fill.style.width = Math.min(100, (value / 1000) * 100) + '%';
+        // Animace naplnění po načtení
+        setTimeout(() => {
+            fill.style.width = Math.min(100, (value / 1000) * 100) + '%';
+        }, 300);
 
         const number = document.createElement('div');
         number.className = 'bar-text';
@@ -14,7 +44,7 @@ document.addEventListener("DOMContentLoaded", () => {
         bar.appendChild(number);
     });
 
-    // Loading the SVG map and adding interactive pins etc.
+    // --- NAČTENÍ A ZPRACOVÁNÍ MAPY ---
     fetch("/static/main/svg/czech_map.svg")
         .then(resp => resp.text())
         .then(svgText => {
@@ -22,19 +52,15 @@ document.addEventListener("DOMContentLoaded", () => {
             const doc = parser.parseFromString(svgText, "image/svg+xml");
             const externalSvg = doc.querySelector('svg');
 
-            // 1. Calculate Scale while preserving aspect ratio
-            const mapViewBox = externalSvg.getAttribute('viewBox').split(/[\s,]+/).map(parseFloat);
-            const orgW = mapViewBox[2];
-            const orgH = mapViewBox[3];
+            const viewBox = externalSvg.getAttribute('viewBox').split(/[\s,]+/).map(parseFloat);
+            const orgW = viewBox[2];
+            const orgH = viewBox[3];
 
-            // Use the smaller scale factor to prevent deformation
             const scale = Math.min(3508 / orgW, 2480 / orgH);
 
-            // Create a group for the map and apply scaling
             const gMap = document.createElementNS("http://www.w3.org/2000/svg", "g");
             gMap.id = "map-layer";
 
-            // Centering the map if it's smaller than the canvas
             const dx = (3508 - (orgW * scale)) / 2;
             const dy = (2480 - (orgH * scale)) / 2;
             gMap.setAttribute("transform", `translate(${dx}, ${dy}) scale(${scale})`);
@@ -43,18 +69,18 @@ document.addEventListener("DOMContentLoaded", () => {
                 gMap.appendChild(externalSvg.firstChild);
             }
 
-            // Identify region borders by their fill color and add a class for styling
-            const regionBorderColor = "rgb(205,164,86)"
+            const regionBorderColor = "rgb(205,164,86)";
             gMap.querySelectorAll('path, polygon').forEach(p => {
                 const fill = p.getAttribute('fill');
-
                 if(fill == regionBorderColor){
                     p.classList.add('region');
+                    p.removeAttribute('fill'); 
                 }
             });
 
             svg.insertBefore(gMap, svg.firstChild);
 
+            // --- KOMPLETNÍ DATA VŠECH 14 KRAJŮ ---
             const pinsData = [
                 {
                     name: "Hlavní město Praha", 
@@ -212,162 +238,106 @@ document.addEventListener("DOMContentLoaded", () => {
                 }
             ];
 
-            //Field for storing tooltips to add later
-            const tooltipsToAdd = [];
+            const tooltipsList = [];
 
             pinsData.forEach(pin => {
-
-                //Problem pins on the map
+                // Vytvoření grupy pro Pin
                 const gPin = document.createElementNS("http://www.w3.org/2000/svg","g");
                 gPin.classList.add("pin");
                 gPin.style.pointerEvents = 'all';
 
-                // Circle part of the pin
-                const circle = document.createElementNS("http://www.w3.org/2000/svg","circle");
-                circle.setAttribute("cx",0);
-                circle.setAttribute("cy",0);
-                circle.setAttribute("r",20);
-                circle.setAttribute("fill","#b22222");
-                gPin.appendChild(circle);
+                // Pulzující radarová aura
+                const radar = document.createElementNS("http://www.w3.org/2000/svg","circle");
+                radar.classList.add("radar");
+                radar.setAttribute("cx", 0);
+                radar.setAttribute("cy", 0);
+                radar.setAttribute("r", 20);
+                gPin.appendChild(radar);
 
-                // Triangle part of the pin
-                const triangle = document.createElementNS("http://www.w3.org/2000/svg","polygon");
-                triangle.setAttribute("points","-18,9 18,9 0,60");
-                triangle.setAttribute("fill","#b22222");
-                gPin.appendChild(triangle);
+                // Hlavní bod pinu
+                const center = document.createElementNS("http://www.w3.org/2000/svg","circle");
+                center.setAttribute("cx", 0);
+                center.setAttribute("cy", 0);
+                center.setAttribute("r", 10);
+                center.setAttribute("fill", "#58a6ff");
+                center.setAttribute("stroke", "#ffffff");
+                center.setAttribute("stroke-width", "2");
+                gPin.appendChild(center);
 
-                // Exclamation mark inside the pin
-                const exclamation = document.createElementNS("http://www.w3.org/2000/svg","text");
-                exclamation.setAttribute("x",0);
-                exclamation.setAttribute("y",10);
-                exclamation.setAttribute("text-anchor","middle");
-                exclamation.setAttribute("dominant-baseline","middle");
-                exclamation.setAttribute("font-size","26");
-                exclamation.setAttribute("fill","#fff");
-                exclamation.textContent = "!";
-                gPin.appendChild(exclamation);
+                // Ikona vykřičníku
+                const icon = document.createElementNS("http://www.w3.org/2000/svg","text");
+                icon.setAttribute("x", 0);
+                icon.setAttribute("y", 1);
+                icon.setAttribute("text-anchor", "middle");
+                icon.setAttribute("dominant-baseline", "middle");
+                icon.setAttribute("font-size", "12");
+                icon.setAttribute("fill", "#fff");
+                icon.setAttribute("font-weight", "bold");
+                icon.style.pointerEvents = "none";
+                icon.textContent = "!";
+                gPin.appendChild(icon);
 
-                // Initial pin scaling for better visibility
-                gPin.setAttribute("transform", `translate(${pin.x},${pin.y}) scale(3)`);
+                // Pozicování a měřítko pinu
+                gPin.setAttribute("transform", `translate(${pin.x},${pin.y}) scale(4)`);
 
-                // Tooltip creation
+                // Vytvoření Tooltipu
                 const tooltip = document.createElementNS("http://www.w3.org/2000/svg","g");
                 tooltip.classList.add("tooltip");
-                tooltip.setAttribute("visibility","hidden");
+                
+                const W = 1300;
+                const H = 800;
+                const MARGIN = 220;
+                
+                tooltip.setAttribute("transform", `translate(${pin.x - W/2}, ${pin.y - H - MARGIN})`);
 
-                // Tooltip dimensions and positioning logic
-                const WIDTH = 1080;
-                const HEIGHT = 720;
-                const MARGIN_ABOVE_PIN = 150;
-                let tool_tip_x  = pin.x - (WIDTH/2);
-                let tool_tip_y = pin.y - (HEIGHT + MARGIN_ABOVE_PIN);
-
-                // Convert SVG coordinates to screen coordinates
-                const pt = svg.createSVGPoint();
-                pt.x = pin.x;
-                pt.y = pin.y;
-                const screenPt = pt.matrixTransform(svg.getScreenCTM());
-
-                // Adjust tooltip position if it goes off-screen
-                if (screenPt.x + WIDTH/2 > window.innerWidth) {
-                    tool_tip_x = pin.x - WIDTH;
-                } else if (screenPt.x - WIDTH/2 < 0) {
-                    tool_tip_x = pin.x - WIDTH/2 + 20;
-                }
-
-                if (pin.y - (HEIGHT + MARGIN_ABOVE_PIN) < 0) {
-                    tool_tip_y = pin.y + MARGIN_ABOVE_PIN;
-                }
-
-                // Positioning tooltip above the pin
-                tooltip.setAttribute("transform", `translate(${tool_tip_x}, ${tool_tip_y})`);
-
-                // Tooltip Background Rectangle
                 const rect = document.createElementNS("http://www.w3.org/2000/svg","rect");
-                rect.setAttribute("width", WIDTH);
-                rect.setAttribute("height", HEIGHT);
-                rect.setAttribute("rx",10);
-                rect.setAttribute("ry",10);
-                rect.setAttribute("fill","rgba(0,0,0,0.95)");
-                rect.setAttribute("stroke","#ff6600");
-                rect.setAttribute("stroke-width","3");
+                rect.setAttribute("width", W);
+                rect.setAttribute("height", H);
                 tooltip.appendChild(rect);
 
-                // Foreign Object for HTML (Title, Text, and Buttons)
-                const foreignObject = document.createElementNS("http://www.w3.org/2000/svg", "foreignObject");
-                foreignObject.setAttribute("x", 10);
-                foreignObject.setAttribute("y", 10);
-                foreignObject.setAttribute("width", WIDTH - 20);
-                foreignObject.setAttribute("height", HEIGHT - 20);
-                tooltip.appendChild(foreignObject);
+                const fo = document.createElementNS("http://www.w3.org/2000/svg", "foreignObject");
+                fo.setAttribute("width", W);
+                fo.setAttribute("height", H);
+                tooltip.appendChild(fo);
 
-                // HTML content inside Foreign Object
-                const htmlContent = document.createElement('div');
-                htmlContent.classList.add('tooltip-content-html');
-
-                // Generating buttons from data structure
-                const buttonHTML = pin.solutions.map(sol => 
-                    `<button class="solution-btn" data-solution-id="${sol.id}">${sol.text}</button>`
+                const div = document.createElement('div');
+                div.className = 'tooltip-content-html';
+                
+                const buttonHTML = pin.solutions.map(s => 
+                    `<button class="solution-btn" data-id="${s.id}">${s.text}</button>`
                 ).join('');
 
-                // Setting the inner HTML of the tooltip content
-                htmlContent.innerHTML = `
+                div.innerHTML = `
                     <h3 class="tooltip-title">${pin.name}</h3>
                     <p class="tooltip-desc">${pin.desc}</p>
                     <div class="solution-buttons">
                         ${buttonHTML}
                     </div>
                 `;
-                foreignObject.appendChild(htmlContent);
+                fo.appendChild(div);
 
-                // Event listeners for solution buttons
-                htmlContent.querySelectorAll('.solution-btn').forEach(button => {
-                    button.addEventListener('click', (e) => {
-                        console.log(`Kliknuto na řešení pro ${pin.name}: ${button.textContent} (ID: ${button.dataset.solutionId})`);
-                        e.stopPropagation(); 
-                    });
-                });
-
-
-                // Pin hover effects
-                gPin.addEventListener("mouseenter", () => {
-                    gPin.setAttribute("transform", `translate(${pin.x},${pin.y}) scale(3.3)`);
-                    gPin.style.filter = "drop-shadow(0 0 15px #fff)";
-                });
-
-                // Pin mouse leave effects
-                gPin.addEventListener("mouseleave", () => {
-                    gPin.setAttribute("transform", `translate(${pin.x},${pin.y}) scale(3)`);
-                    gPin.style.filter = "none";
-                });
-
-
-                // Click event to show tooltip
-                gPin.addEventListener("click", (e) => {
-                    document.querySelectorAll('.tooltip').forEach(t => {
-                        t.style.visibility = 'hidden';
-                        t.style.pointerEvents = 'none';
-                    });
+                // Logika interakce
+                gPin.onclick = (e) => {
+                    document.querySelectorAll('.tooltip').forEach(t => t.style.visibility = 'hidden');
                     tooltip.style.visibility = "visible";
                     tooltip.style.pointerEvents = 'auto';
-
                     e.stopPropagation();
-                });
+                };
+
+                // Přidání do SVG
                 svg.appendChild(gPin);
-                
-                tooltipsToAdd.push(tooltip);
+                tooltipsList.push(tooltip);
             });
 
-            tooltipsToAdd.forEach(tooltip => {
-                svg.appendChild(tooltip);
-            });
+            // Přidání tooltipů navrch
+            tooltipsList.forEach(t => svg.appendChild(t));
 
-            svg.addEventListener("click", () => {
-                document.querySelectorAll('.tooltip')
-                    .forEach(t => {
-                        t.style.visibility = 'hidden';
-                        t.style.pointerEvents = 'none';
-                    });
-            });
+            // Zavření tooltipu při kliku mimo
+            svg.onclick = () => {
+                document.querySelectorAll('.tooltip').forEach(t => {
+                    t.style.visibility = 'hidden';
+                    t.style.pointerEvents = 'none';
+                });
+            };
         });
 });

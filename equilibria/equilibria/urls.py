@@ -12,10 +12,10 @@ from main.views import homepage, test
 from main import views
 
 urlpatterns = [
+    path('accounts/', include('allauth.urls')),
     path('admin/', admin.site.urls),
     path('homepage/', TemplateView.as_view(template_name='homepage.html')),
     path('test/', test, name='test'),
-    path('accounts/', include('allauth.urls')),
     path('', homepage, name='homepage'),
     path('game/play/<int:game_id>/', views.game_view, name='game_view'),
 ]

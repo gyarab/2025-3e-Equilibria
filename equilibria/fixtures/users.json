@@ -1,29 +1,10 @@
 [
 {
     "model": "auth.user",
-    "pk": 1,
-    "fields": {
-        "password": "pbkdf2_sha256$1000000$HLM8jaKnuHG5BGEkD4jM4v$SOGEMo5w/k9FuVVmTtl1CfvfBx79k/S0QQ3bmsHhSdU=",
-        "last_login": "2025-11-20T20:54:32.707Z",
-        "is_superuser": true,
-        "username": "admin-tobias",
-        "first_name": "",
-        "last_name": "",
-        "email": "tobias.cernek.s@gyarab.cz",
-        "is_staff": true,
-        "is_active": true,
-        "date_joined": "2025-11-20T20:53:45.142Z",
-        "groups": [],
-        "user_permissions": []
-    }
-},
-
-{
-    "model": "auth.user",
-    "pk": 2,
+    "pk": 3,
     "fields": {
         "password": "pbkdf2_sha256$1000000$pP3kAxn2sHKBGwRdKS5ELY$wzydW5ICyx3jGWDkk2tQnLFerYepJiQFBELcwqVCVuw=",
-        "last_login": null,
+        "last_login": "2025-12-02T18:53:20.039Z",
         "is_superuser": true,
         "username": "admin-adam",
         "first_name": "",
@@ -32,6 +13,24 @@
         "is_staff": true,
         "is_active": true,
         "date_joined": "2025-12-02T18:50:35.710Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 4,
+    "fields": {
+        "password": "pbkdf2_sha256$1000000$yDn1CSIrs0UUouoEIM60jt$p6VIKdk3SVwCT6Z0w/tOM0cPmGm9fVZ0IaxEBSa45hI=",
+        "last_login": "2026-03-09T17:07:54.403Z",
+        "is_superuser": true,
+        "username": "hruska",
+        "first_name": "",
+        "last_name": "",
+        "email": "",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2026-03-09T17:07:34.194Z",
         "groups": [],
         "user_permissions": []
     }
