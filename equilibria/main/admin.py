@@ -2,7 +2,7 @@ from django.contrib import admin
 from .models import Game, NameRegion, Region, ProblemInstance, SolutionChoice
 
 class GameAdmin(admin.ModelAdmin):
-    list_display = ('id', 'current_turn', 'budget', 'citizen_satisfaction', 'environment', 'military', 'is_active')
+    list_display = ('id', 'current_turn', 'economy', 'citizen_satisfaction', 'environment', 'military_power', 'is_active')
 
 class NameRegionAdmin(admin.ModelAdmin):
     list_display = ('id', 'name')

@@ -9,7 +9,6 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 env = environ.Env()
 environ.Env.read_env(os.path.join(BASE_DIR, '.env'))
 
-# --- OPRAVA: SECRET_KEY vložen přímo, aby neházel KeyError ---
 SECRET_KEY = 'django-insecure-lu2r-m31w=hp5h=lmf34+%m$nz74vv^hbsr!wp=qripv^zfrbh'
 
 DEBUG = True
@@ -25,7 +24,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'django.contrib.sites',  # Nutné pro Allauth a Admin nastavení
+    'django.contrib.sites',
 
     'allauth',
     'allauth.account',
@@ -96,7 +95,7 @@ AUTH_PASSWORD_VALIDATORS = [
 ]
 
 # Internationalization
-LANGUAGE_CODE = 'cs' # Změněno na češtinu pro lepší orientaci v Adminu
+LANGUAGE_CODE = 'cs'
 TIME_ZONE = 'Europe/Prague'
 USE_I18N = True
 USE_TZ = True
@@ -111,7 +110,6 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 # ASGI a Channels
 ASGI_APPLICATION = 'equilibria.asgi.application'
 
-# --- OPRAVA REDIS: Pokud nemáš Redis v .env, použije se výchozí port 6379 ---
 CHANNEL_LAYERS = {
     "default": {
         "BACKEND": "channels_redis.core.RedisChannelLayer",

@@ -12,11 +12,19 @@ def game_view(request, game_id):
     
     regions = game.regions.all()
 
+    regions_data = []
+    for region in regions:
+        regions_data.append({
+            "name": region.name,
+            "problem": region.problem.name if region.problem else None,
+            "occupied": region.occupied,
+        })
+
     context = {
         "game": game,
-        "regions": regions,
+        "regions": regions_data,
     }
-    return render(request, "main/game.html", context)
+    return render(request, "main/test_map.html", context)
 
 def test(request):
     return render(request, 'main/test_map.html')

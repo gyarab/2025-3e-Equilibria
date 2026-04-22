@@ -10,10 +10,10 @@ class Game(models.Model):
     )
 
     current_turn = models.IntegerField(default=0)  # Each turn = 1 week (ingame time) or 4 seconds (real time)
-    budget = models.IntegerField(default=100)
+    economy = models.IntegerField(default=100)
     citizen_satisfaction = models.IntegerField(default=50)
     environment = models.IntegerField(default=50)
-    military = models.IntegerField(default=50)
+    military_power = models.IntegerField(default=50)
     is_active = models.BooleanField(default=True)
 
     def __str__(self):

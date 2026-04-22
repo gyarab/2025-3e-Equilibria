@@ -1,0 +1,20 @@
+[
+{
+    "model": "auth.user",
+    "pk": 1,
+    "fields": {
+        "password": "pbkdf2_sha256$1000000$T66Ma7RCd3QMvcvafJUSq8$wDz+QW0kE+sJCTmMN4s52i+ffYFv4TRRnc+HAwh2ekY=",
+        "last_login": null,
+        "is_superuser": true,
+        "username": "admin-tobias",
+        "first_name": "",
+        "last_name": "",
+        "email": "",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2026-03-10T18:43:38.973Z",
+        "groups": [],
+        "user_permissions": []
+    }
+}
+]

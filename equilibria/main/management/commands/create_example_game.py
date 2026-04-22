@@ -1,7 +1,7 @@
 import random
 from django.core.management.base import BaseCommand
 from django.contrib.auth.models import User
-from main.models import Game, Region, ProblemInstance, SolutionChoice
+from main.models import Game
 
 class Command(BaseCommand):
     help = "Create a placeholder game with regions, problems, and 3 solutions each"
@@ -16,10 +16,10 @@ class Command(BaseCommand):
         # Create game
         game = Game.objects.create(
             player=user,
-            budget=100,
+            economy=100,
             citizen_satisfaction=50,
             environment=50,
-            military=50
+            military_power=50
         )
         self.stdout.write(self.style.SUCCESS(f"Created game {game.id} for {user.username}"))
 

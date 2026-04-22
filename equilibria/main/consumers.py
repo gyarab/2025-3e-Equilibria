@@ -45,23 +45,23 @@ class GameConsumer(AsyncWebsocketConsumer):
             await asyncio.sleep(solution.time_before_effect * 4) # Waits before aplying the changes, 4 = amount of seconds for a passing of 1 game turn
 
             region.problem = None
-            region.occupied = False  # Clears the region of the problem
+            region.occupied = False
             await database_sync_to_async(region.save)()
 
-            game.budget += solution.budget_change
+            game.economy += solution.budget_change
             game.citizen_satisfaction += solution.citizen_satisfaction_change
             game.environment += solution.environment_change
-            game.military += solution.military_change
+            game.military_power += solution.military_change
             await database_sync_to_async(game.save)()
 
             # Notify frontend
             await self.send(text_data=json.dumps({
-                "type": "update_stats",
+                "type": "update_state",
                 "game": {
-                    "budget": game.budget,
+                    "economy": game.economy,
                     "citizen_satisfaction": game.citizen_satisfaction,
                     "environment": game.environment,
-                    "military": game.military,
+                    "military_power": game.military_power,
                 },
             }))
 
@@ -77,10 +77,10 @@ class GameConsumer(AsyncWebsocketConsumer):
         await self.send(text_data=json.dumps({
             "type": "initial_state",
             "game": {
-                "budget": game.budget,
+                "economy": game.economy,
                 "citizen_satisfaction": game.citizen_satisfaction,
                 "environment": game.environment,
-                "military": game.military,
+                "military_power": game.military_power,
             },
         }))
 
@@ -96,14 +96,14 @@ class GameConsumer(AsyncWebsocketConsumer):
                 chosen_region = random.choice(name_regions)
                 possible_problems = await database_sync_to_async(list)(
                     chosen_region.possible_problems.filter(
-                        max_budget_to_appear__gte=game.budget,
+                        max_budget_to_appear__gte=game.economy,
                         max_citizen_satisfaction_to_appear__gte=game.citizen_satisfaction,
                         max_environment_to_appear__gte=game.environment,
-                        max_military_to_appear__gte=game.military,
-                        min_budget_to_appear__lte=game.budget,
+                        max_military_to_appear__gte=game.military_power,
+                        min_budget_to_appear__lte=game.economy,
                         min_citizen_satisfaction_to_appear__lte=game.citizen_satisfaction,
                         min_environment_to_appear__lte=game.environment,
-                        min_military_to_appear__lte=game.military,
+                        min_military_to_appear__lte=game.military_power,
                         )
                 )
 
@@ -118,10 +118,10 @@ class GameConsumer(AsyncWebsocketConsumer):
         
                 # Send problem to frontend
                 await self.send(text_data=json.dumps({
-                    "type": "new_state",
+                    "type": "new_problem",
                     "problem": {
                         "id": problem.id,
-                        "region_id": region.id,
+                        "region_id": chosen_region.id,
                         "title": problem.name,
                         "description": problem.description,
                     },
@@ -141,10 +141,10 @@ class GameConsumer(AsyncWebsocketConsumer):
                 await asyncio.sleep(4)
 
     async def calculate_problem_chance_factor(self, game, problem):
-        budget_factor = (abs(game.budget - problem.ideal_budget)) * problem.budget_bias
+        budget_factor = (abs(game.economy - problem.ideal_budget)) * problem.budget_bias
         satisfaction_factor = (abs(game.citizen_satisfaction - problem.ideal_citizen_satisfaction)) * problem.citizen_satisfaction_bias
         environment_factor = (abs(game.environment - problem.ideal_environment)) * problem.environment_bias
-        military_factor = (abs(game.military - problem.ideal_military)) * problem.military_bias
+        military_factor = (abs(game.military_power - problem.ideal_military)) * problem.military_bias
         return budget_factor + satisfaction_factor + environment_factor + military_factor
     
     async def choose_problem(self, game, possible_problems):
