@@ -41,6 +41,7 @@ class ProblemInstance(models.Model):
     description = models.TextField(default="Placeholder problem description")
 
     time_before_expiration = models.IntegerField(default=0) # Time before problem dissappears if not solved
+    rarity = models.IntegerField(default=1) # Rarity of problem appearing. Rarity 1 problem is 10 times more likely to appear than rarity 10 problem (range 1 - 10)
 
     # If stats are within these ranges, the problem can appear (range 0 - 1000)
     max_budget_to_appear = models.IntegerField(default=1000)
@@ -58,11 +59,11 @@ class ProblemInstance(models.Model):
     environment_bias = models.IntegerField(default=1)
     military_bias = models.IntegerField(default=1)
 
-    # Ideal values for each stat
-    ideal_budget = models.IntegerField(default=500)
-    ideal_citizen_satisfaction = models.IntegerField(default=500)
-    ideal_environment = models.IntegerField(default=500)
-    ideal_military = models.IntegerField(default=500)
+    # Determines whether the probability of the problem appearing increases or decreases as the indicator reaches bigger values (0 = downward, 1 = upward)
+    budget_tendency = models.IntegerField(default=0, choices=[(0, "Downward"), (1, "Upward")]) 
+    citizen_satisfaction_tendency = models.IntegerField(default=0, choices=[(0, "Downward"), (1, "Upward")])
+    environment_tendency = models.IntegerField(default=0, choices=[(0, "Downward"), (1, "Upward")])
+    military_tendency = models.IntegerField(default=0, choices=[(0, "Downward"), (1, "Upward")])
 
     def __str__(self):
         return f"Problem {self.id}: {self.name}"

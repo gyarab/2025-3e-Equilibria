@@ -250,12 +250,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
                 // Setting the inner HTML of the tooltip content
                 htmlContent.innerHTML = `
-                    <h3 class="tooltip-title tooltip-title-${pin.id}"></h3>
-                    <p class="tooltip-desc tooltip-desc-${pin.id}"></p>
+                    <h3 id="tooltip-title-${pin.id}" class="tooltip-titl"></h3>
+                    <p id="tooltip-desc-${pin.id}" class="tooltip-desc"></p>
                     <div class="solution-buttons">
-                        <button class="solution-btn btn-${pin.id}"></button>
-                        <button class="solution-btn btn-${pin.id}"></button>
-                        <button class="solution-btn btn-${pin.id}"></button>
+                        <button id="solution-btn-1-${pin.id}" class="solution-btn"></button>
+                        <button id="solution-btn-2-${pin.id}" class="solution-btn"></button>
+                        <button id="solution-btn-3-${pin.id}" class="solution-btn"></button>
                     </div>
                 `;
                 foreignObject.appendChild(htmlContent);
@@ -263,8 +263,8 @@ document.addEventListener("DOMContentLoaded", () => {
                 // Event listeners for solution buttons
                 htmlContent.querySelectorAll('.solution-btn').forEach(button => {
                     button.addEventListener('click', (e) => {
-                        t.style.visibility = 'hidden';
-                        t.style.pointerEvents = 'none';
+                        tooltip.style.visibility = 'hidden';
+                        tooltip.style.pointerEvents = 'none';
                         e.stopPropagation();
                     });
                 });
@@ -351,20 +351,18 @@ document.addEventListener("DOMContentLoaded", () => {
             pin.style.pointerEvents = "all";
         }
 
-        document.querySelector(`.tooltip-title-${problem.region_id}`).textContent = problem.title;
-        document.querySelector(`.tooltip-desc-${problem.region_id}`).textContent = problem.description;
+        document.getElementById(`tooltip-title-${problem.region_id}`).innerText = problem.title;
+        document.getElementById(`tooltip-desc-${problem.region_id}`).innerText = problem.description;
 
-        const buttons = document.querySelectorAll(`.btn-${problem.region_id}`);
         const solutions = data.solutions;
-        buttons.forEach((button, index) => {
-            if(solutions && solutions[index]){
-                button.textContent = solutions[index].name;
+        solutions.forEach((s, index) => {
+            const button = document.getElementById(`solution-btn-${index + 1}-${problem.region_id}`);
+            if(button){
+                button.innerText = s.name;
                 button.style.display = "inline-block";
-                button.onclick = () => sendSolution(solutions[index].id, problem.region_id, pin);
-            } else {
-                button.style.display = "none";
+                button.onclick = () => sendSolution(s.id, problem.region_id, pin);
             }
-        });
+        })
     }
 
     function sendSolution(solutionId, regionId, pin){

@@ -14,11 +14,11 @@ class RegionAdmin(admin.ModelAdmin):
 
 class ProblemInstanceAdmin(admin.ModelAdmin):
     list_display = (
-        'id', 'name', 'description', 'time_before_expiration',
+        'id', 'name', 'description', 'time_before_expiration', 'rarity',
         'max_budget_to_appear', 'max_citizen_satisfaction_to_appear',
         'max_environment_to_appear', 'max_military_to_appear', 'min_budget_to_appear', 'min_citizen_satisfaction_to_appear',
         'min_environment_to_appear', 'min_military_to_appear', 'budget_bias', 'citizen_satisfaction_bias',
-        'environment_bias', 'military_bias', 'ideal_budget', 'ideal_citizen_satisfaction', 'ideal_environment', 'ideal_military')
+        'environment_bias', 'military_bias', 'budget_tendency', 'citizen_satisfaction_tendency', 'environment_tendency', 'military_tendency')
 
 class SolutionChoiceAdmin(admin.ModelAdmin):
     list_display = ('id', 'name', 'problem', 'description', 'budget_change', 'citizen_satisfaction_change', 'environment_change', 'military_change')
