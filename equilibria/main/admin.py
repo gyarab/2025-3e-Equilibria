@@ -1,5 +1,6 @@
 from django.contrib import admin
-from .models import Game, NameRegion, Region, ProblemInstance, SolutionChoice
+from .models import Game, NameRegion, Region, ProblemInstance, SolutionChoice, GameUser
+from django.contrib.auth.admin import UserAdmin
 
 class GameAdmin(admin.ModelAdmin):
     list_display = ('id', 'current_turn', 'economy', 'citizen_satisfaction', 'environment', 'military_power', 'is_active')
@@ -28,3 +29,4 @@ admin.site.register(NameRegion, NameRegionAdmin)
 admin.site.register(Region, RegionAdmin)
 admin.site.register(ProblemInstance, ProblemInstanceAdmin)
 admin.site.register(SolutionChoice, SolutionChoiceAdmin)
+admin.site.register(GameUser, UserAdmin)

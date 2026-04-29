@@ -2,27 +2,38 @@
 <!DOCTYPE html>
 <html lang="cs">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Responzivní mapa ČR</title>
-<link rel="stylesheet" href="{% static 'main/css/map.css' %}">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responzivní mapa ČR</title>
+    <link rel="stylesheet" href="{% static 'main/css/map.css' %}">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fustat:wght@300;400;600;800&family=JetBrains+Mono:wght@400;500&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <style>
+        .body {
+            font-family: 'Fustat', serif;
+            background: #0a0c10;
+            color: #f0e6d2;
+        }
+    </style>
 </head>
 <body>
-<div class="status-bars">
-    <div class="status-bar"><span>Economy</span><div class="bar"><div id="economy" class="fill" data-value="500"></div></div></div>
-    <div class="status-bar"><span>Citizen Satisfaction</span><div class="bar"><div id="satisfaction" class="fill" data-value="500"></div></div></div>
-    <div class="status-bar"><span>Environment</span><div class="bar"><div id="environment" class="fill" data-value="500"></div></div></div>
-    <div class="status-bar"><span>Military Power</span><div class="bar"><div id="military-power" class="fill" data-value="500"></div></div></div>
-</div>
+    <div id="particles-js"></div>
+    <div class="status-bars">
+        <div class="status-bar"><span>Economy</span><div class="bar"><div id="economy" class="fill" data-value="500"></div></div></div>
+        <div class="status-bar"><span>Citizen Satisfaction</span><div class="bar"><div id="satisfaction" class="fill" data-value="500"></div></div></div>
+        <div class="status-bar"><span>Environment</span><div class="bar"><div id="environment" class="fill" data-value="500"></div></div></div>
+        <div class="status-bar"><span>Military Power</span><div class="bar"><div id="military-power" class="fill" data-value="500"></div></div></div>
+    </div>
 
-<div class="map-container">
-    <svg id="map-svg" viewBox="0 0 3508 2480" preserveAspectRatio="xMidYMid meet"></svg>
-</div>
+    <div class="map-container">
+        <svg id="map-svg" viewBox="0 0 3508 2480" preserveAspectRatio="xMidYMid meet"></svg>
+    </div>
 
 <script>
     const gameID = '{{ game.id }}';
     const regionsData = '{{ regions }}';
 </script>
+<script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
 <script src="{% static 'main/js/map.js' %}"></script>
 </body>
 </html>

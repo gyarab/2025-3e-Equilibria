@@ -1,5 +1,6 @@
 from django.conf import settings
 from django.db import models
+from django.contrib.auth.models import AbstractUser
 
 class Game(models.Model):
     player = models.ForeignKey(
@@ -54,10 +55,10 @@ class ProblemInstance(models.Model):
     min_military_to_appear = models.IntegerField(default=0)
 
     # How much each stat influences chance of appearance
-    budget_bias = models.IntegerField(default=1)
-    citizen_satisfaction_bias = models.IntegerField(default=1)
-    environment_bias = models.IntegerField(default=1)
-    military_bias = models.IntegerField(default=1)
+    budget_bias = models.FloatField(default=1)
+    citizen_satisfaction_bias = models.FloatField(default=1)
+    environment_bias = models.FloatField(default=1)
+    military_bias = models.FloatField(default=1)
 
     # Determines whether the probability of the problem appearing increases or decreases as the indicator reaches bigger values (0 = downward, 1 = upward)
     budget_tendency = models.IntegerField(default=0, choices=[(0, "Downward"), (1, "Upward")]) 
@@ -84,3 +85,6 @@ class SolutionChoice(models.Model):
 
     def __str__(self):
         return f"Solution for problem {self.problem.id}"
+    
+class GameUser(AbstractUser):
+    pass

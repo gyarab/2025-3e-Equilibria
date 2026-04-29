@@ -16,7 +16,7 @@ class Command(BaseCommand):
         # Create game
         game = Game.objects.create(
             player=user,
-            economy=100,
+            economy=50,
             citizen_satisfaction=50,
             environment=50,
             military_power=50

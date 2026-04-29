@@ -120,3 +120,5 @@ CHANNEL_LAYERS = {
 }
 
 SOCIALACCOUNT_ADAPTER = 'allauth.socialaccount.adapter.DefaultSocialAccountAdapter'
+
+AUTH_USER_MODEL = "main.GameUser"

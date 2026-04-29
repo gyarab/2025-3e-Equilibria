@@ -92,11 +92,9 @@ class GameConsumer(AsyncWebsocketConsumer):
                 problems = ProblemInstance.objects.all()
                 game.current_turn += 1
                 await database_sync_to_async(lambda: game.save())()
-                print(f"Turn {game.current_turn} started")
                 
-                problem, region = await self.choose_problem(game, problems)
+                problem, region, region_name = await self.choose_problem(game, problems)
                 if not problem:
-                    print("No problem chosen, skipping turn")
                     await asyncio.sleep(4)  # Wait before trying to spawn next problem
                     continue
                 
@@ -105,7 +103,6 @@ class GameConsumer(AsyncWebsocketConsumer):
                 await database_sync_to_async(lambda: region.save())()
 
                 solutions_list = await database_sync_to_async(lambda: list(problem.solutions.all()))()
-                print("ready to send problem")
         
                 # Send problem to frontend
                 await self.send(text_data=json.dumps({
@@ -113,6 +110,7 @@ class GameConsumer(AsyncWebsocketConsumer):
                     "problem": {
                         "id": problem.id,
                         "region_id": region.id,
+                        "region_name_id": region_name.id,
                         "title": problem.name,
                         "description": problem.description,
                     },
@@ -187,7 +185,6 @@ class GameConsumer(AsyncWebsocketConsumer):
     
     async def choose_problem(self, game, problems):
         problems = await self.filter_problems(game, problems)
-        print("set filtered")
         if not problems:
             return None, None
         
@@ -197,20 +194,16 @@ class GameConsumer(AsyncWebsocketConsumer):
             for prob in problems:
                 problem_chances.append(self.calculate_problem_probability(game, prob))
             
-            print("probabilities calculated")
             if sum(problem_chances) <= 0:
                 return None, None
 
             problem = random.choices(problems, weights=problem_chances, k=1)[0]
-            print(f"Chosen problem: {problem.name} with probability {problem_chances[problems.index(problem)]}%")
             possible_regions = await database_sync_to_async(lambda: list(problem.possible_regions.all()))()
-            print(f"Possible regions for {problem.name}: {[nr.name for nr in possible_regions]}")
             regions = await database_sync_to_async(lambda: list(Region.objects.filter(game=game, name__in=[nr.name for nr in possible_regions], occupied=False)))()
-            print(f"Available regions for {problem.name}: {[r.name for r in regions]}")
             if regions:
                 region = random.choice(regions)
                 possible_region = await database_sync_to_async(lambda: NameRegion.objects.get(name=region.name))()
-                return problem, possible_region
+                return problem, region, possible_region
             else:
                 problems.remove(problem)
 

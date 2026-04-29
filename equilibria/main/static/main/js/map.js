@@ -1,4 +1,15 @@
 document.addEventListener("DOMContentLoaded", () => {
+    particlesJS('particles-js', {
+        particles: {
+            number: { value: 50 },
+            color: { value: '#58a6ff' },
+            opacity: { value: 0.5 },
+            size: { value: 2 },
+            line_linked: { enable: true, distance: 150, color: '#58a6ff', opacity: 0.1 },
+            move: { enable: true, speed: 1.5 }
+        }
+    });
+
     const svg = document.getElementById('map-svg');
 
     document.querySelectorAll('.bar').forEach(bar => {
@@ -57,14 +68,17 @@ document.addEventListener("DOMContentLoaded", () => {
             }
 
             // Identify region borders by their fill color and add a class for styling
-            const regionBorderColor = "rgb(205,164,86)"
             gMap.querySelectorAll('path, polygon').forEach(p => {
-                const fill = p.getAttribute('fill');
+                const gClass = p.getAttribute('class');
 
-                if(fill == regionBorderColor){
-                    p.classList.add('region');
+                if(gClass == "region"){
+                    p.setAttribute('fill', '#161b22');
+                }else if(gClass == "outline"){
+                    p.setAttribute('fill', '#3379ca');
                 }
             });
+
+
 
             svg.insertBefore(gMap, svg.firstChild);
 
@@ -200,7 +214,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
                 // Tooltip dimensions and positioning logic
                 const WIDTH = 1080;
-                const HEIGHT = 720;
+                const HEIGHT = 1200;
                 const MARGIN_ABOVE_PIN = 150;
                 let tool_tip_x  = pin.x - (WIDTH/2);
                 let tool_tip_y = pin.y - (HEIGHT + MARGIN_ABOVE_PIN);
@@ -219,7 +233,9 @@ document.addEventListener("DOMContentLoaded", () => {
                 }
 
                 if (pin.y - (HEIGHT + MARGIN_ABOVE_PIN) < 0) {
-                    tool_tip_y = pin.y + MARGIN_ABOVE_PIN;
+                    tool_tip_y = pin.y;
+                } else if (screenPt.y - (HEIGHT + MARGIN_ABOVE_PIN) > window.innerHeight) {
+                    tool_tip_y = pin.y;
                 }
 
                 // Positioning tooltip above the pin
@@ -246,12 +262,15 @@ document.addEventListener("DOMContentLoaded", () => {
 
                 // HTML content inside Foreign Object
                 const htmlContent = document.createElement('div');
-                htmlContent.classList.add("tooltip-content-html-" + pin.id);
+                htmlContent.classList.add("tooltip-content-html");
+                htmlContent.setAttribute("id", `tooltip-content-html-${pin.id}`);
 
                 // Setting the inner HTML of the tooltip content
                 htmlContent.innerHTML = `
-                    <h3 id="tooltip-title-${pin.id}" class="tooltip-titl"></h3>
-                    <p id="tooltip-desc-${pin.id}" class="tooltip-desc"></p>
+                    <div id="tooltip-text-${pin.id}" class="tooltip-text">
+                        <h2 id="tooltip-title-${pin.id}" class="tooltip-title"></h2>
+                        <p id="tooltip-desc-${pin.id}" class="tooltip-desc"></p>
+                    </div>
                     <div class="solution-buttons">
                         <button id="solution-btn-1-${pin.id}" class="solution-btn"></button>
                         <button id="solution-btn-2-${pin.id}" class="solution-btn"></button>
@@ -345,21 +364,20 @@ document.addEventListener("DOMContentLoaded", () => {
     function displayProblem(data){
         const problem = data.problem;
         console.log("New problem in region:", problem.region_id);
-        const pin = document.getElementById(problem.region_id);
+        const pin = document.getElementById(problem.region_name_id);
         if(pin){
             pin.classList.remove("hidden");
             pin.style.pointerEvents = "all";
         }
 
-        document.getElementById(`tooltip-title-${problem.region_id}`).innerText = problem.title;
-        document.getElementById(`tooltip-desc-${problem.region_id}`).innerText = problem.description;
+        document.getElementById(`tooltip-title-${problem.region_name_id}`).innerText = problem.title;
+        document.getElementById(`tooltip-desc-${problem.region_name_id}`).innerText = problem.description;
 
         const solutions = data.solutions;
         solutions.forEach((s, index) => {
-            const button = document.getElementById(`solution-btn-${index + 1}-${problem.region_id}`);
+            const button = document.getElementById(`solution-btn-${index + 1}-${problem.region_name_id}`);
             if(button){
                 button.innerText = s.name;
-                button.style.display = "inline-block";
                 button.onclick = () => sendSolution(s.id, problem.region_id, pin);
             }
         })
@@ -371,6 +389,7 @@ document.addEventListener("DOMContentLoaded", () => {
             "solution_id": solutionId,
             "region_id": regionId
         }));
+        console.log("Sent solution", solutionId, "for region", regionId);
 
         pin.style.pointerEvents = "none";
         pin.classList.add("hidden");

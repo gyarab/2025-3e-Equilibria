@@ -1,0 +1,432 @@
+:root {
+    --bg-body: #0a0c10;
+    --bg-card: #161b22;
+    --accent: #58a6ff; 
+    --text-muted: #8b949e;
+    --border: #30363d;
+}
+
+body {
+   margin: 0;
+   font-family: 'Fustat', sans-serif;
+    color: #c9d1d9;
+    background-color: var(--bg-body);
+    line-height: 1.6;
+}
+
+#particles-js {
+    position: fixed;
+    width: 100%; height: 100%;
+    z-index: -1;
+    opacity: 0.5;
+}
+
+nav {
+    background: rgba(22, 27, 34, 0.95);
+    border-bottom: 1px solid var(--border);
+    padding: 15px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    backdrop-filter: blur(8px);
+}
+
+.nav-logo {
+    font-weight: 800;
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+}
+
+.nav-links {
+    display: flex;
+    gap: 25px;
+}
+
+.nav-links a {
+    color: var(--text-muted);
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 600;
+    transition: 0.2s;
+}
+
+.nav-links a:hover { color: var(--accent); }
+
+.hero {
+    padding-top: 120px;
+    min-height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.project-badge {
+    background: rgba(88, 166, 255, 0.1);
+    color: var(--accent);
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    border: 1px solid rgba(88, 166, 255, 0.3);
+}
+
+h1 {
+    font-size: clamp(2.5rem, 8vw, 5rem);
+    font-weight: 800;
+    margin-bottom: 10px;
+    color: #f0f6fc;
+}
+
+.lead-text {
+    color: var(--text-muted);
+    max-width: 700px;
+    font-size: 1.25rem;
+    margin-bottom: 40px;
+}
+
+.main-actions {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.btn-main {
+    padding: 12px 30px;
+    border-radius: 8px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: 0.3s;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.btn-primary-custom {
+     background: var(--accent);
+     color: #fff;
+}
+
+.btn-secondary-custom {
+    background: transparent;
+    border: 1px solid var(--border);
+    color: #fff;
+}
+
+.btn-main:hover {
+    transform: translateY(-2px);
+    opacity: 0.9;
+    color: #fff;
+}
+
+section {
+    padding: 80px 5%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.info-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 30px;
+    height: 100%;
+}
+
+h2 {
+    font-weight: 700;
+    margin-bottom: 30px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.tech-stack {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.85rem;
+    color: var(--accent);
+}
+
+footer {
+    border-top: 1px solid var(--border);
+    padding: 40px 5%;
+    text-align: center;
+    color: var(--text-muted);
+    font-size: 0.9rem;
+}
+
+.reveal {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: 0.6s all ease-out;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Pro login */
+.auth-wrapper {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 100px 20px 20px 20px; 
+}
+
+/* Samotná přihlašovací karta */
+.auth-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 40px;
+    width: 100%;
+    max-width: 420px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.5);
+}
+
+.auth-card h2 {
+    font-weight: 700;
+    margin-bottom: 25px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #f0f6fc;
+    font-size: 1.8rem;
+}
+
+/* Stylování Django formulářů */
+.auth-card p {
+    margin-bottom: 15px;
+}
+
+.auth-card label {
+    display: block;
+    font-weight: 600;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    margin-bottom: 5px;
+}
+
+.auth-card input {
+    width: 100%;
+    padding: 10px 12px;
+    background-color: var(--bg-body);
+    border: 1px solid var(--border);
+    color: #c9d1d9;
+    border-radius: 6px;
+    font-family: inherit;
+    transition: border-color 0.2s;
+}
+
+.auth-card input:focus {
+    outline: none;
+    border-color: var(--accent);
+}
+
+/* Nápovědy u hesel a chybové hlášky od Djanga */
+.helptext, .errorlist {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    margin-top: 4px;
+    display: block;
+    padding-left: 0;
+    list-style: none;
+}
+.errorlist { 
+    color: #f85149; 
+}
+
+/* Tlačítka */
+.btn-submit {
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+    font-weight: 700;
+    background: var(--accent);
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+    margin-top: 10px;
+    font-family: inherit;
+}
+
+.btn-submit:hover {
+    opacity: 0.9;
+    transform: translateY(-2px);
+}
+
+.toggle-btn {
+    background: none;
+    border: none;
+    color: var(--text-muted);
+    cursor: pointer;
+    margin-top: 20px;
+    padding: 0;
+    font-size: 0.85rem;
+    width: 100%;
+    text-align: center;
+    transition: 0.2s;
+}
+
+.toggle-btn:hover {
+    color: var(--accent);
+    text-decoration: underline;
+}
+
+.user-menu-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.user-dropdown {
+    display: none; 
+    position: absolute;
+    top: 100%;
+    right: 0;
+    margin-top: 10px;
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    min-width: 180px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.5);
+    padding: 10px 0;
+    z-index: 1001;
+    flex-direction: column;
+}
+
+.user-dropdown.show{
+    display: flex;
+}
+
+.user-icon {
+    cursor: pointer;
+    user-select: none;
+    display: inline-flex;
+    text-decoration: none;
+}
+
+.user-dropdown .user-info {
+    padding: 5px 15px;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    font-weight: 600;
+}
+
+.user-dropdown hr {
+    border-color: var(--border);
+    margin: 8px 0;
+}
+
+.user-dropdown a, .user-dropdown button {
+    padding: 8px 15px;
+    color: #c9d1d9;
+    text-decoration: none;
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: none;
+    border: none;
+    width: 100%;
+    text-align: left;
+    cursor: pointer;
+    font-family: inherit;
+    transition: 0.2s;
+}
+
+.user-dropdown a:hover, .user-dropdown button:hover {
+    background: rgba(88, 166, 255, 0.1);
+    color: var(--accent);
+}
+
+.user-dropdown button.dropdown-logout:hover {
+    background: rgba(248, 81, 73, 0.1);
+    color: #f85149;
+}
+
+.user-dropdown button.dropdown-login:hover {
+    background: var(--bg-card);
+    color: var(--accent);
+}
+
+.equilibria-css-tooltip {
+    position: relative;
+    display: inline-flex;
+    cursor: help;
+}
+
+.equilibria-css-tooltip .help-icon {
+    color: var(--accent);
+    font-size: 1.1rem;
+    opacity: 0.8;
+}
+
+.equilibria-css-tooltip:hover .help-icon {
+    opacity: 1;
+}
+
+.tooltip-dropdown {
+    visibility: hidden;
+    opacity: 0;
+    position: absolute;
+    bottom: 130%; 
+    left: 50%;
+    transform: translateX(-50%); 
+    
+    background-color: var(--bg-card);
+    border: 1px solid var(--accent);
+    color: #f0f6fc;
+    padding: 12px 15px;
+    border-radius: 8px;
+    width: max-content;
+    max-width: 250px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.6);
+    font-size: 0.8rem;
+    z-index: 1000;
+    
+    transition: opacity 0.1s ease-in-out;
+}
+
+.equilibria-css-tooltip:hover .tooltip-dropdown {
+    visibility: visible;
+    opacity: 1;
+}
+
+.tooltip-dropdown::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -6px;
+    border-width: 6px;
+    border-style: solid;
+    border-color: var(--accent) transparent transparent transparent;
+}
+
+.tooltip-dropdown ul {
+    padding-left: 15px;
+    margin: 0;
+}
+
+.tooltip-dropdown ul li::marker {
+    color: var(--accent);
+}
+
+/* Skrytí ošklivých výchozích textů od Djanga */
+.helptext { display: none !important; }
