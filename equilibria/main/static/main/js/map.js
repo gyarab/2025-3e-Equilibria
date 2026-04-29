@@ -209,7 +209,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
                 // Tooltip creation
                 const tooltip = document.createElementNS("http://www.w3.org/2000/svg","g");
-                tooltip.classList.add("tooltip");
+                tooltip.classList.add("map-tooltip");
                 tooltip.setAttribute("visibility","hidden");
 
                 // Tooltip dimensions and positioning logic
@@ -283,7 +283,8 @@ document.addEventListener("DOMContentLoaded", () => {
                 htmlContent.querySelectorAll('.solution-btn').forEach(button => {
                     button.addEventListener('click', (e) => {
                         tooltip.style.visibility = 'hidden';
-                        tooltip.style.pointerEvents = 'none';
+                        tooltip.style.pointerEvents = 'none'
+                        tooltip.setAttribute("visibility", "hidden");
                         e.stopPropagation();
                     });
                 });
@@ -303,12 +304,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
                 // Click event to show tooltip
                 gPin.addEventListener("click", (e) => {
-                    document.querySelectorAll('.tooltip').forEach(t => {
+                    document.querySelectorAll('.map-tooltip').forEach(t => {
                         t.style.visibility = 'hidden';
                         t.style.pointerEvents = 'none';
                     });
                     tooltip.style.visibility = "visible";
                     tooltip.style.pointerEvents = 'auto';
+                    tooltip.setAttribute("visibility", "visible");
 
                     e.stopPropagation();
                 });
@@ -325,7 +327,7 @@ document.addEventListener("DOMContentLoaded", () => {
             });
 
             svg.addEventListener("click", () => {
-                document.querySelectorAll('.tooltip')
+                document.querySelectorAll('.map-tooltip')
                     .forEach(t => {
                         t.style.visibility = 'hidden';
                         t.style.pointerEvents = 'none';
@@ -350,6 +352,16 @@ document.addEventListener("DOMContentLoaded", () => {
             case "new_problem":
                 displayProblem(data);
                 break;
+            case "problems_expired":
+                hideExpiredProblems(data.expired_problems);
+                updateIndicators(data.game);
+                break;
+            case "new_turn":
+                document.getElementById('round-counter').textContent = data.current_turn;
+                break;
+            case "game_over":
+                showGameOver();
+                break;
         }
 
     }
@@ -359,6 +371,7 @@ document.addEventListener("DOMContentLoaded", () => {
         updateBar(document.getElementById('satisfaction'), game.citizen_satisfaction);
         updateBar(document.getElementById('environment'), game.environment);
         updateBar(document.getElementById('military-power'), game.military_power);
+        document.getElementById('round-counter').textContent = game.current_turn;
     }
 
     function displayProblem(data){
@@ -394,4 +407,69 @@ document.addEventListener("DOMContentLoaded", () => {
         pin.style.pointerEvents = "none";
         pin.classList.add("hidden");
     }
+
+    function hideExpiredProblems(expiredProblems){
+        expiredProblems.forEach(regionNameId => {
+            const pin = document.getElementById(regionNameId);
+            if(pin){
+                pin.style.pointerEvents = "none";
+                pin.classList.add("hidden");
+            }
+        });
+    }
+
+    function showGameOver(){
+        const overlay = document.getElementById("game-over-screen");
+        if(overlay){
+            overlay.classList.remove("hidden-overlay");
+            overlay.classList.add("active");
+        }
+
+        const map = document.getElementById("map-container");
+        if(map){
+            map.style.pointerEvents = "none";
+        }
+    }
 });
+
+async function initializeGame(){
+    const btn = event.currentTarget;
+    btn.style.pointerEvents = 'none';
+    btn.innerText = 'Startování...';
+
+    try{
+        const response = await fetch("/initializeGame/", {
+            method: "POST",
+            headers: {
+                'X-CSRFToken': getCookie('csrftoken'),
+                'Content-Type': 'application/json'
+            }
+        })
+
+        const data = await response.json();
+
+        if (data.status === 'success') {
+            window.location.href = `/game/play/${data.game_id}`;
+        }
+    }catch (error) {
+        console.error("Nepodařilo se vytvořit hru:", error);
+        alert("Chyba při startu hry. Zkus to znovu.");
+        btn.style.pointerEvents = 'auto';
+        btn.innerText = 'Start Over';
+    }
+}
+
+function getCookie(name) {
+    let cookieValue = null;
+    if (document.cookie && document.cookie !== '') {
+        const cookies = document.cookie.split(';');
+        for (let i = 0; i < cookies.length; i++) {
+            const cookie = cookies[i].trim();
+            if (cookie.substring(0, name.length + 1) === (name + '=')) {
+                cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+                break;
+            }
+        }
+    }
+    return cookieValue;
+}

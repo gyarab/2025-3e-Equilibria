@@ -62,6 +62,7 @@ class GameConsumer(AsyncWebsocketConsumer):
                     "citizen_satisfaction": game.citizen_satisfaction,
                     "environment": game.environment,
                     "military_power": game.military_power,
+                    "current_turn": game.current_turn,
                 },
             }))
 
@@ -81,6 +82,7 @@ class GameConsumer(AsyncWebsocketConsumer):
                 "citizen_satisfaction": game.citizen_satisfaction,
                 "environment": game.environment,
                 "military_power": game.military_power,
+                "current_turn": game.current_turn,
             },
         }))
 
@@ -89,8 +91,17 @@ class GameConsumer(AsyncWebsocketConsumer):
         while True:
             try:
                 game = await database_sync_to_async(lambda: Game.objects.get(id=self.game_id))()
+                if self.check_game_over(game):
+                    await self.send(text_data=json.dumps({
+                        "type": "game_over",
+                    }))
+                    return
                 problems = ProblemInstance.objects.all()
                 game.current_turn += 1
+                await self.send(text_data=json.dumps({
+                    "type": "new_turn",
+                    "current_turn": game.current_turn,
+                }))
                 await database_sync_to_async(lambda: game.save())()
                 
                 problem, region, region_name = await self.choose_problem(game, problems)
@@ -100,6 +111,7 @@ class GameConsumer(AsyncWebsocketConsumer):
                 
                 region.problem = problem
                 region.occupied = True
+                region.problem_expiration_turn = game.current_turn + problem.time_before_expiration
                 await database_sync_to_async(lambda: region.save())()
 
                 solutions_list = await database_sync_to_async(lambda: list(problem.solutions.all()))()
@@ -122,6 +134,20 @@ class GameConsumer(AsyncWebsocketConsumer):
                     ],
                     "turn": game.current_turn,
                 }))
+
+                expired_problems = await self.handle_expired_problems(game)
+                if expired_problems:
+                    await self.send(text_data=json.dumps({
+                        "type": "problems_expired",
+                        "expired_problems": [region_name.id for region_name in expired_problems],
+                        "game": {
+                            "economy": game.economy,
+                            "citizen_satisfaction": game.citizen_satisfaction,
+                            "environment": game.environment,
+                            "military_power": game.military_power,
+                            "current_turn": game.current_turn,
+                        },
+                    }))
 
                 await asyncio.sleep(4)  # wait before spawning next problem
 
@@ -208,3 +234,31 @@ class GameConsumer(AsyncWebsocketConsumer):
                 problems.remove(problem)
 
         return None, None
+    
+    @database_sync_to_async
+    def handle_expired_problems(self, game):
+        regions = list(Region.objects.filter(game=game, occupied=True, problem_expiration_turn__lte=game.current_turn))
+        expired_problems = []
+
+        for region in regions:
+            problem = region.problem
+            name_region = NameRegion.objects.get(name=region.name)
+            expired_problems.append(name_region)
+            region.problem = None
+            region.occupied = False
+            region.problem_expiration_turn = None
+            region.save()
+
+            game.economy += problem.budget_expiration_change
+            game.citizen_satisfaction += problem.citizen_satisfaction_expiration_change
+            game.environment += problem.environment_expiration_change
+            game.military_power += problem.military_expiration_change
+
+        if expired_problems:
+            game.save()
+        return expired_problems
+    
+    def check_game_over(self, game):
+        if game.economy <= 0 or game.citizen_satisfaction <= 0 or game.environment <= 0 or game.military_power <= 0:
+            return True
+        return False

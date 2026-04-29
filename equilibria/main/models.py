@@ -31,6 +31,7 @@ class Region(models.Model):
     game = models.ForeignKey(Game, on_delete=models.CASCADE, related_name="regions", null=True, blank=True)
     problem = models.ForeignKey('ProblemInstance', on_delete=models.SET_NULL, null=True, blank=True, related_name="regions") # Problem currently in the region in the game
     occupied = models.BooleanField(default=False)
+    problem_expiration_turn = models.IntegerField(null=True, blank=True)
 
     def __str__(self):
         return f"{self.name} (Region)"
@@ -65,6 +66,12 @@ class ProblemInstance(models.Model):
     citizen_satisfaction_tendency = models.IntegerField(default=0, choices=[(0, "Downward"), (1, "Upward")])
     environment_tendency = models.IntegerField(default=0, choices=[(0, "Downward"), (1, "Upward")])
     military_tendency = models.IntegerField(default=0, choices=[(0, "Downward"), (1, "Upward")])
+
+    # How the problem affects the game if left unsolved (range -1000 to 1000)
+    budget_expiration_change = models.IntegerField(default=0)
+    citizen_satisfaction_expiration_change = models.IntegerField(default=0)
+    environment_expiration_change = models.IntegerField(default=0)
+    military_expiration_change = models.IntegerField(default=0)
 
     def __str__(self):
         return f"Problem {self.id}: {self.name}"
