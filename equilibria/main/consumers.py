@@ -25,48 +25,67 @@ class GameConsumer(AsyncWebsocketConsumer):
         asyncio.create_task(self.start_game_cycle())
 
     async def disconnect(self, close_code):
+        game = await database_sync_to_async(Game.objects.get)(id=self.game_id)
+        try:
+            await self.update_highest_round(game)
+        except Exception as e:
+            print(f"Error updating highest round: {e}")
         await self.channel_layer.group_discard(
             self.game_group_name,
             self.channel_name
         )
 
+    @database_sync_to_async
+    def update_highest_round(self, game):
+        if game.current_turn > game.player.highest_round:
+            game.player.highest_round = game.current_turn
+            game.player.save()
+
     async def receive(self, text_data):
         data = json.loads(text_data)
         solution_id = data.get("solution_id")
         region_id = data.get("region_id")
+        asyncio.create_task(self.process_solution_task(solution_id, region_id))
 
-        # Apply solution effect
+
+    async def process_solution_task(self, solution_id, region_id):
         try:
             solution = await database_sync_to_async(SolutionChoice.objects.get)(id=solution_id)
-            region = await database_sync_to_async(Region.objects.get)(id=region_id)
-            game = await database_sync_to_async(Game.objects.get)(id=self.game_id)
-            
 
-            await asyncio.sleep(solution.time_before_effect * 4) # Waits before aplying the changes, 4 = amount of seconds for passing one game turn
+            await asyncio.sleep(solution.time_before_effect * 4)
 
-            region.problem = None
-            region.occupied = False
-            await database_sync_to_async(region.save)()
+            @database_sync_to_async
+            def apply_solution_to_db(g_id, r_id, sol):
+                current_game = Game.objects.get(id=g_id)
+                current_region = Region.objects.get(id=r_id)
 
-            game.economy += solution.budget_change
-            game.citizen_satisfaction += solution.citizen_satisfaction_change
-            game.environment += solution.environment_change
-            game.military_power += solution.military_change
-            await database_sync_to_async(game.save)()
+                current_region.problem = None
+                current_region.occupied = False
+                current_region.save()
 
-            # Notify frontend
+                current_game.economy += sol.budget_change
+                current_game.citizen_satisfaction += sol.citizen_satisfaction_change
+                current_game.environment += sol.environment_change
+                current_game.military_power += sol.military_change
+                current_game.save()
+
+                return current_game
+
+            updated_game = await apply_solution_to_db(self.game_id, region_id, solution)
+
             await self.send(text_data=json.dumps({
                 "type": "update_state",
                 "game": {
-                    "economy": game.economy,
-                    "citizen_satisfaction": game.citizen_satisfaction,
-                    "environment": game.environment,
-                    "military_power": game.military_power,
-                    "current_turn": game.current_turn,
+                    "economy": updated_game.economy,
+                    "citizen_satisfaction": updated_game.citizen_satisfaction,
+                    "environment": updated_game.environment,
+                    "military_power": updated_game.military_power,
+                    "current_turn": updated_game.current_turn,
                 },
             }))
 
         except Exception as e:
+            print(f"Error in process_solution_task: {e}")
             await self.send(text_data=json.dumps({
                 "type": "error",
                 "message": str(e)

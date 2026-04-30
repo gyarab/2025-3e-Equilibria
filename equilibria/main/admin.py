@@ -24,9 +24,13 @@ class ProblemInstanceAdmin(admin.ModelAdmin):
 class SolutionChoiceAdmin(admin.ModelAdmin):
     list_display = ('id', 'name', 'problem', 'description', 'budget_change', 'citizen_satisfaction_change', 'environment_change', 'military_change')
 
+class GameUserAdmin(UserAdmin):
+    list_display = ('username', 'email', 'highest_round', 'is_staff', 'is_active')
+    search_fields = ('username', 'email')
+
 admin.site.register(Game, GameAdmin)
 admin.site.register(NameRegion, NameRegionAdmin)
 admin.site.register(Region, RegionAdmin)
 admin.site.register(ProblemInstance, ProblemInstanceAdmin)
 admin.site.register(SolutionChoice, SolutionChoiceAdmin)
-admin.site.register(GameUser, UserAdmin)
+admin.site.register(GameUser, GameUserAdmin)

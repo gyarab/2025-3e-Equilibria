@@ -3,12 +3,7 @@ from django.db import models
 from django.contrib.auth.models import AbstractUser
 
 class Game(models.Model):
-    player = models.ForeignKey(
-        settings.AUTH_USER_MODEL,
-        on_delete=models.CASCADE,
-        null=True,
-        blank=True
-    )
+    player = models.GameUser = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE, related_name="games", null=True, blank=True)
 
     current_turn = models.IntegerField(default=0)  # Each turn = 1 week (ingame time) or 4 seconds (real time)
     economy = models.IntegerField(default=100)
@@ -94,4 +89,5 @@ class SolutionChoice(models.Model):
         return f"Solution for problem {self.problem.id}"
     
 class GameUser(AbstractUser):
+    highest_round = models.IntegerField(default=0)
     pass
