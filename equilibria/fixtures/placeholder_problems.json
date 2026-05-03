@@ -3,42 +3,3100 @@
     "model": "main.probleminstance",
     "pk": 1,
     "fields": {
-        "name": "Placeholder problem",
-        "description": "Placeholder problem description",
-        "time_before_expiration": 5,
-        "rarity": 1,
-        "max_budget_to_appear": 1000,
-        "max_citizen_satisfaction_to_appear": 1000,
-        "max_environment_to_appear": 1000,
-        "max_military_to_appear": 1000,
-        "min_budget_to_appear": 0,
-        "min_citizen_satisfaction_to_appear": 0,
-        "min_environment_to_appear": 0,
+        "name": "Energetická krize v Evropě",
+        "description": "Kvůli omezení dodávek plynu a rostoucím cenám energií hrozí masivní zdražení elektřiny. Domácnosti i firmy jsou pod tlakem a hrozí protesty i ekonomický útlum.",
+        "time_before_expiration": 3,
+        "rarity": 2,
+
+        "min_budget_to_appear": 300,
+        "max_budget_to_appear": 900,
+        "min_citizen_satisfaction_to_appear": 200,
+        "max_citizen_satisfaction_to_appear": 800,
+        "min_environment_to_appear": 100,
+        "max_environment_to_appear": 700,
         "min_military_to_appear": 0,
+        "max_military_to_appear": 1000,
+
         "budget_bias": 1.0,
-        "citizen_satisfaction_bias": 1.0,
-        "environment_bias": 1.0,
+        "citizen_satisfaction_bias": 2.0,
+        "environment_bias": 0.0,
         "military_bias": 1.0,
+
         "budget_tendency": 0,
         "citizen_satisfaction_tendency": 0,
         "environment_tendency": 0,
         "military_tendency": 0,
-        "possible_regions": [
-            1,
-            2,
-            3,
-            4,
-            5,
-            6,
-            7,
-            8,
-            9,
-            10,
-            11,
-            12,
-            13,
-            14
-        ]
+
+        "possible_regions": [1,2,3,4,5,6,7,8,9,10,11,12,13,14]
+    }
+},
+{
+    "model": "main.probleminstance",
+    "pk": 2,
+    "fields": {
+        "name": "Kůrovcová kalamita",
+        "description": "Lesy napadla kůrovcová kalamita. Dochází k masivnímu odlesňování, což má dopad na ekologii i ekonomiku (dřevařství).",
+        "time_before_expiration": 4,
+        "rarity": 1,
+
+        "min_budget_to_appear": 200,
+        "max_budget_to_appear": 700,
+        "min_citizen_satisfaction_to_appear": 300,
+        "max_citizen_satisfaction_to_appear": 900,
+        "min_environment_to_appear": 200,
+        "max_environment_to_appear": 800,
+        "min_military_to_appear": 0,
+        "max_military_to_appear": 1000,
+
+        "budget_bias": 0.0,
+        "citizen_satisfaction_bias": 2.0,
+        "environment_bias": 0.0,
+        "military_bias": 1.0,
+
+        "budget_tendency": 0,
+        "citizen_satisfaction_tendency": 0,
+        "environment_tendency": 0,
+        "military_tendency": 0,
+
+        "possible_regions": [10,3,4]
+    }
+},
+{
+    "model": "main.probleminstance",
+    "pk": 3,
+    "fields": {
+        "name": "Stávka učitelů",
+        "description": "Učitelé vyhlašují stávku kvůli nízkým platům a špatným podmínkám. Školy se zavírají a roste nespokojenost rodičů i studentů.",
+        "time_before_expiration": 2,
+        "rarity": 1,
+
+        "min_budget_to_appear": 300,
+        "max_budget_to_appear": 800,
+        "min_citizen_satisfaction_to_appear": 400,
+        "max_citizen_satisfaction_to_appear": 900,
+        "min_environment_to_appear": 0,
+        "max_environment_to_appear": 1000,
+        "min_military_to_appear": 0,
+        "max_military_to_appear": 1000,
+
+        "budget_bias": 1.0,
+        "citizen_satisfaction_bias": 0.0,
+        "environment_bias": 0.0,
+        "military_bias": 1.0,
+
+        "budget_tendency": 0,
+        "citizen_satisfaction_tendency": 0,
+        "environment_tendency": 0,
+        "military_tendency": 0,
+
+        "possible_regions": [1,2,3,4,5,6,7,8,9,10,11,12,13,14]
+    }
+},
+{
+    "model": "main.probleminstance",
+    "pk": 4,
+    "fields": {
+        "name": "Povodně na Moravě",
+        "description": "Silné deště způsobily rozsáhlé povodně. Jsou ohroženy domy, infrastruktura i lidské životy.",
+        "time_before_expiration": 1,
+        "rarity": 1,
+
+        "min_budget_to_appear": 200,
+        "max_budget_to_appear": 800,
+        "min_citizen_satisfaction_to_appear": 200,
+        "max_citizen_satisfaction_to_appear": 900,
+        "min_environment_to_appear": 300,
+        "max_environment_to_appear": 1000,
+        "min_military_to_appear": 100,
+        "max_military_to_appear": 1000,
+
+        "budget_bias": 1.0,
+        "citizen_satisfaction_bias": 2.0,
+        "environment_bias": 1.0,
+        "military_bias": 0.0,
+
+        "budget_tendency": 0,
+        "citizen_satisfaction_tendency": 0,
+        "environment_tendency": 0,
+        "military_tendency": 0,
+
+        "possible_regions": [11,12]
+    }
+},
+{
+    "model": "main.probleminstance",
+    "pk": 5,
+    "fields": {
+        "name": "Migrační vlna",
+        "description": "Kvůli konfliktu v zahraničí přichází velké množství uprchlíků. Stát musí řešit humanitární pomoc i bezpečnost.",
+        "time_before_expiration": 3,
+        "rarity": 1,
+
+        "min_budget_to_appear": 300,
+        "max_budget_to_appear": 900,
+        "min_citizen_satisfaction_to_appear": 300,
+        "max_citizen_satisfaction_to_appear": 800,
+        "min_environment_to_appear": 0,
+        "max_environment_to_appear": 1000,
+        "min_military_to_appear": 200,
+        "max_military_to_appear": 900,
+
+        "budget_bias": 1.0,
+        "citizen_satisfaction_bias": 0.0,
+        "environment_bias": 0.0,
+        "military_bias": 1.0,
+
+        "budget_tendency": 0,
+        "citizen_satisfaction_tendency": 0,
+        "environment_tendency": 0,
+        "military_tendency": 0,
+
+        "possible_regions": [1,2,3,4,5,6,7,8,9,10,11,12,13,14]
+    }
+},
+{
+    "model": "main.probleminstance",
+    "pk": 6,
+    "fields": {
+        "name": "Kybernetický útok na infrastrukturu",
+        "description": "Hackeři zaútočili na státní systémy (banky, elektřina, doprava). Hrozí kolaps služeb.",
+        "time_before_expiration": 2,
+        "rarity": 2,
+
+        "min_budget_to_appear": 500,
+        "max_budget_to_appear": 1000,
+        "min_citizen_satisfaction_to_appear": 200,
+        "max_citizen_satisfaction_to_appear": 700,
+        "min_environment_to_appear": 0,
+        "max_environment_to_appear": 1000,
+        "min_military_to_appear": 300,
+        "max_military_to_appear": 1000,
+
+        "budget_bias": 1.0,
+        "citizen_satisfaction_bias": 0.0,
+        "environment_bias": 2.0,
+        "military_bias": 1.0,
+
+        "budget_tendency": 0,
+        "citizen_satisfaction_tendency": 0,
+        "environment_tendency": 1,
+        "military_tendency": 1,
+
+        "possible_regions": [1,2,3,4,5,6,7,8,9,10,11,12,13,14]
+    }
+},
+{
+    "model": "main.probleminstance",
+    "pk": 7,
+    "fields": {
+        "name": "Pandemie nového viru",
+        "description": "Šíří se nový virus. Je nutné zavést opatření, která ale omezují ekonomiku i svobodu obyvatel.",
+        "time_before_expiration": 4,
+        "rarity": 3,
+
+        "min_budget_to_appear": 200,
+        "max_budget_to_appear": 900,
+        "min_citizen_satisfaction_to_appear": 200,
+        "max_citizen_satisfaction_to_appear": 800,
+        "min_environment_to_appear": 0,
+        "max_environment_to_appear": 1000,
+        "min_military_to_appear": 0,
+        "max_military_to_appear": 1000,
+
+        "budget_bias": 1.0,
+        "citizen_satisfaction_bias": 2.0,
+        "environment_bias": 0.0,
+        "military_bias": 0.0,
+
+        "budget_tendency": 0,
+        "citizen_satisfaction_tendency": 0,
+        "environment_tendency": 0,
+        "military_tendency": 0,
+
+        "possible_regions": [1,2,3,4,5,6,7,8,9,10,11,12,13,14]
+    }
+},
+{
+    "model": "main.probleminstance",
+    "pk": 8,
+    "fields": {
+        "name": "Výstavba dálnice",
+        "description": "Plánuje se nová dálnice. Pomůže ekonomice, ale poškodí přírodu a vyvolá protesty obyvatel.",
+        "time_before_expiration": 3,
+        "rarity": 1,
+
+        "min_budget_to_appear": 400,
+        "max_budget_to_appear": 1000,
+        "min_citizen_satisfaction_to_appear": 300,
+        "max_citizen_satisfaction_to_appear": 800,
+        "min_environment_to_appear": 300,
+        "max_environment_to_appear": 900,
+        "min_military_to_appear": 0,
+        "max_military_to_appear": 1000,
+
+        "budget_bias": 0.0,
+        "citizen_satisfaction_bias": 1.0,
+        "environment_bias": 0.0,
+        "military_bias": 2.0,
+
+        "budget_tendency": 0,
+        "citizen_satisfaction_tendency": 0,
+        "environment_tendency": 0,
+        "military_tendency": 1,
+
+        "possible_regions": [1,2,3,4,5,6,7,8,9,10,11,12,13,14]
+    }
+},
+{
+    "model": "main.probleminstance",
+    "pk": 9,
+    "fields": {
+        "name": "Zvýšení vojenských výdajů",
+        "description": "Mezinárodní situace se zhoršuje. Je potřeba investovat do armády, což zatíží rozpočet.",
+        "time_before_expiration": 4,
+        "rarity": 1,
+
+        "min_budget_to_appear": 300,
+        "max_budget_to_appear": 900,
+        "min_citizen_satisfaction_to_appear": 200,
+        "max_citizen_satisfaction_to_appear": 700,
+        "min_environment_to_appear": 0,
+        "max_environment_to_appear": 1000,
+        "min_military_to_appear": 300,
+        "max_military_to_appear": 800,
+
+        "budget_bias": 0.0,
+        "citizen_satisfaction_bias": 0.0,
+        "environment_bias": 2.0,
+        "military_bias": 1.0,
+
+        "budget_tendency": 0,
+        "citizen_satisfaction_tendency": 0,
+        "environment_tendency": 1,
+        "military_tendency": 0,
+
+        "possible_regions": [1,2,3,4,5,6,7,8,9,10,11,12,13,14]
+    }
+},
+{
+    "model": "main.probleminstance",
+    "pk": 10,
+    "fields": {
+        "name": "Nedostatek pitné vody",
+        "description": "Dlouhodobé sucho způsobuje nedostatek vody. Zemědělství i obyvatelé jsou ohroženi.",
+        "time_before_expiration": 2,
+        "rarity": 2,
+
+        "min_budget_to_appear": 200,
+        "max_budget_to_appear": 800,
+        "min_citizen_satisfaction_to_appear": 200,
+        "max_citizen_satisfaction_to_appear": 800,
+        "min_environment_to_appear": 400,
+        "max_environment_to_appear": 1000,
+        "min_military_to_appear": 0,
+        "max_military_to_appear": 1000,
+
+        "budget_bias": 2.0,
+        "citizen_satisfaction_bias": 0.0,
+        "environment_bias": 0.0,
+        "military_bias": 0.0,
+
+        "budget_tendency": 0,
+        "citizen_satisfaction_tendency": 0,
+        "environment_tendency": 0,
+        "military_tendency": 0,
+
+        "possible_regions": [1,2,3,4,5,6,7,8,9,10,11,12,13,14]
+    }
+},
+{
+    "model": "main.probleminstance",
+    "pk": 11,
+    "fields": {
+        "name": "Nedostupné bydlení",
+        "description": "Dlouhodobý růst cen nemovitostí a nájmů způsobuje nedostupnost bydlení. Mladí lidé i rodiny mají problém zůstat ve městě.",
+        "time_before_expiration": 3,
+        "rarity": 1,
+
+        "min_budget_to_appear": 400,
+        "max_budget_to_appear": 900,
+        "min_citizen_satisfaction_to_appear": 400,
+        "max_citizen_satisfaction_to_appear": 900,
+        "min_environment_to_appear": 0,
+        "max_environment_to_appear": 1000,
+        "min_military_to_appear": 0,
+        "max_military_to_appear": 1000,
+
+        "budget_bias": 2.0,
+        "citizen_satisfaction_bias": 0.0,
+        "environment_bias": 0.0,
+        "military_bias": 1.0,
+
+        "budget_tendency": 0,
+        "citizen_satisfaction_tendency": 0,
+        "environment_tendency": 0,
+        "military_tendency": 0,
+
+        "possible_regions": [1]
+    }
+},
+{
+    "model": "main.probleminstance",
+    "pk": 12,
+    "fields": {
+        "name": "Přetížená doprava",
+        "description": "Vysoký počet aut způsobuje časté zácpy a dopravní kolapsy. Doprava zpomaluje ekonomiku i každodenní život obyvatel.",
+        "time_before_expiration": 3,
+        "rarity": 1,
+
+        "min_budget_to_appear": 400,
+        "max_budget_to_appear": 900,
+        "min_citizen_satisfaction_to_appear": 300,
+        "max_citizen_satisfaction_to_appear": 900,
+        "min_environment_to_appear": 0,
+        "max_environment_to_appear": 1000,
+        "min_military_to_appear": 0,
+        "max_military_to_appear": 1000,
+
+        "budget_bias": 1.0,
+        "citizen_satisfaction_bias": 1.0,
+        "environment_bias": 0.0,
+        "military_bias": 0.0,
+
+        "budget_tendency": 0,
+        "citizen_satisfaction_tendency": 0,
+        "environment_tendency": 0,
+        "military_tendency": 1,
+
+        "possible_regions": [1]
+    }
+},
+{
+    "model": "main.probleminstance",
+    "pk": 13,
+    "fields": {
+        "name": "Turismus vs kvalita života",
+        "description": "Masový turismus zatěžuje centrum města a zhoršuje kvalitu života obyvatel. Dochází k hluku, přeplnění a růstu cen.",
+        "time_before_expiration": 3,
+        "rarity": 1,
+
+        "min_budget_to_appear": 500,
+        "max_budget_to_appear": 1000,
+        "min_citizen_satisfaction_to_appear": 400,
+        "max_citizen_satisfaction_to_appear": 900,
+        "min_environment_to_appear": 0,
+        "max_environment_to_appear": 1000,
+        "min_military_to_appear": 0,
+        "max_military_to_appear": 1000,
+
+        "budget_bias": 1.0,
+        "citizen_satisfaction_bias": 1.0,
+        "environment_bias": 0.0,
+        "military_bias": 0.0,
+
+        "budget_tendency": 0,
+        "citizen_satisfaction_tendency": 0,
+        "environment_tendency": 0,
+        "military_tendency": 1,
+
+        "possible_regions": [1]
+    }
+},
+{
+    "model": "main.probleminstance",
+    "pk": 14,
+    "fields": {
+        "name": "Suburbanizace",
+        "description": "Rychlé rozšiřování obcí vede k nedostatku infrastruktury. Chybí školy, silnice i služby pro rostoucí počet obyvatel.",
+        "time_before_expiration": 4,
+        "rarity": 1,
+
+        "min_budget_to_appear": 400,
+        "max_budget_to_appear": 900,
+        "min_citizen_satisfaction_to_appear": 300,
+        "max_citizen_satisfaction_to_appear": 900,
+        "min_environment_to_appear": 200,
+        "max_environment_to_appear": 900,
+        "min_military_to_appear": 0,
+        "max_military_to_appear": 1000,
+
+        "budget_bias": 1.0,
+        "citizen_satisfaction_bias": 0.0,
+        "environment_bias": 0.0,
+        "military_bias": 0.0,
+
+        "budget_tendency": 0,
+        "citizen_satisfaction_tendency": 0,
+        "environment_tendency": 0,
+        "military_tendency": 0,
+
+        "possible_regions": [2]
+    }
+},
+{
+    "model": "main.probleminstance",
+    "pk": 15,
+    "fields": {
+        "name": "Přetížené silnice",
+        "description": "Každodenní dojíždění do Prahy způsobuje dopravní přetížení. Silnice nestačí kapacitě a vznikají časté zácpy.",
+        "time_before_expiration": 2,
+        "rarity": 1,
+
+        "min_budget_to_appear": 400,
+        "max_budget_to_appear": 900,
+        "min_citizen_satisfaction_to_appear": 300,
+        "max_citizen_satisfaction_to_appear": 900,
+        "min_environment_to_appear": 0,
+        "max_environment_to_appear": 1000,
+        "min_military_to_appear": 0,
+        "max_military_to_appear": 800,
+
+        "budget_bias": 1.0,
+        "citizen_satisfaction_bias": 1.0,
+        "environment_bias": 0.0,
+        "military_bias": 0.0,
+
+        "budget_tendency": 0,
+        "citizen_satisfaction_tendency": 0,
+        "environment_tendency": 0,
+        "military_tendency": 1,
+
+        "possible_regions": [2]
+    }
+},
+{
+    "model": "main.probleminstance",
+    "pk": 16,
+    "fields": {
+        "name": "Nedostatek škol",
+        "description": "Rostoucí počet dětí převyšuje kapacity škol a školek. Rodiny mají problém umístit děti do vzdělávacích zařízení.",
+        "time_before_expiration": 3,
+        "rarity": 1,
+
+        "min_budget_to_appear": 400,
+        "max_budget_to_appear": 900,
+        "min_citizen_satisfaction_to_appear": 400,
+        "max_citizen_satisfaction_to_appear": 900,
+        "min_environment_to_appear": 0,
+        "max_environment_to_appear": 1000,
+        "min_military_to_appear": 0,
+        "max_military_to_appear": 1000,
+
+        "budget_bias": 1.0,
+        "citizen_satisfaction_bias": 0.0,
+        "environment_bias": 0.0,
+        "military_bias": 0.0,
+
+        "budget_tendency": 0,
+        "citizen_satisfaction_tendency": 0,
+        "environment_tendency": 0,
+        "military_tendency": 0,
+
+        "possible_regions": [2]
+    }
+},
+{
+    "model": "main.probleminstance",
+    "pk": 17,
+    "fields": {
+        "name": "Nedostatek pracovní síly",
+        "description": "Firmy nemohou najít dostatek zaměstnanců. To zpomaluje výrobu a ekonomický růst.",
+        "time_before_expiration": 3,
+        "rarity": 1,
+
+        "min_budget_to_appear": 400,
+        "max_budget_to_appear": 900,
+        "min_citizen_satisfaction_to_appear": 300,
+        "max_citizen_satisfaction_to_appear": 800,
+        "min_environment_to_appear": 0,
+        "max_environment_to_appear": 1000,
+        "min_military_to_appear": 0,
+        "max_military_to_appear": 1000,
+
+        "budget_bias": 1.0,
+        "citizen_satisfaction_bias": 0.0,
+        "environment_bias": 0.0,
+        "military_bias": 1.0,
+
+        "budget_tendency": 0,
+        "citizen_satisfaction_tendency": 0,
+        "environment_tendency": 0,
+        "military_tendency": 0,
+
+        "possible_regions": [4]
+    }
+},
+{
+    "model": "main.probleminstance",
+    "pk": 18,
+    "fields": {
+        "name": "Závislost na průmyslu",
+        "description": "Region je závislý na několika velkých firmách. Ekonomický výpadek by měl velké dopady na zaměstnanost.",
+        "time_before_expiration": 4,
+        "rarity": 1,
+
+        "min_budget_to_appear": 400,
+        "max_budget_to_appear": 1000,
+        "min_citizen_satisfaction_to_appear": 300,
+        "max_citizen_satisfaction_to_appear": 900,
+        "min_environment_to_appear": 0,
+        "max_environment_to_appear": 1000,
+        "min_military_to_appear": 0,
+        "max_military_to_appear": 1000,
+
+        "budget_bias": 0.0,
+        "citizen_satisfaction_bias": 0.0,
+        "environment_bias": 0.0,
+        "military_bias": 1.0,
+
+        "budget_tendency": 0,
+        "citizen_satisfaction_tendency": 0,
+        "environment_tendency": 0,
+        "military_tendency": 0,
+
+        "possible_regions": [4]
+    }
+},
+{
+    "model": "main.probleminstance",
+    "pk": 19,
+    "fields": {
+        "name": "Dopravní infrastruktura",
+        "description": "Některé oblasti mají špatné dopravní napojení. To omezuje rozvoj regionu a dostupnost služeb.",
+        "time_before_expiration": 3,
+        "rarity": 1,
+
+        "min_budget_to_appear": 300,
+        "max_budget_to_appear": 800,
+        "min_citizen_satisfaction_to_appear": 300,
+        "max_citizen_satisfaction_to_appear": 900,
+        "min_environment_to_appear": 0,
+        "max_environment_to_appear": 1000,
+        "min_military_to_appear": 0,
+        "max_military_to_appear": 1000,
+
+        "budget_bias": 1.0,
+        "citizen_satisfaction_bias": 0.0,
+        "environment_bias": 0.0,
+        "military_bias": 0.0,
+
+        "budget_tendency": 0,
+        "citizen_satisfaction_tendency": 0,
+        "environment_tendency": 0,
+        "military_tendency": 0,
+
+        "possible_regions": [4]
+    }
+},
+{
+    "model": "main.probleminstance",
+    "pk": 20,
+    "fields": {
+        "name": "Nedostatek zdravotnického personálu",
+        "description": "Nemocnice a zdravotnická zařízení trpí nedostatkem lékařů a sester. Péče o pacienty se zhoršuje a čekací doby rostou.",
+        "time_before_expiration": 2,
+        "rarity": 1,
+
+        "min_budget_to_appear": 300,
+        "max_budget_to_appear": 700,
+        "min_citizen_satisfaction_to_appear": 300,
+        "max_citizen_satisfaction_to_appear": 800,
+        "min_environment_to_appear": 0,
+        "max_environment_to_appear": 1000,
+        "min_military_to_appear": 100,
+        "max_military_to_appear": 500,
+
+        "budget_bias": 1.0,
+        "citizen_satisfaction_bias": 0.0,
+        "environment_bias": 0.0,
+        "military_bias": 0.0,
+
+        "budget_tendency": 0,
+        "citizen_satisfaction_tendency": 0,
+        "environment_tendency": 0,
+        "military_tendency": 0,
+
+        "possible_regions": [5]
+    }
+},
+{
+    "model": "main.probleminstance",
+    "pk": 21,
+    "fields": {
+        "name": "Kolaps lázeňské sezóny",
+        "description": "Pokles turistů způsobuje propad příjmů. Lázně i navázané služby se dostávají do finančních problémů.",
+        "time_before_expiration": 2,
+        "rarity": 1,
+
+        "min_budget_to_appear": 400,
+        "max_budget_to_appear": 800,
+        "min_citizen_satisfaction_to_appear": 400,
+        "max_citizen_satisfaction_to_appear": 900,
+        "min_environment_to_appear": 0,
+        "max_environment_to_appear": 1000,
+        "min_military_to_appear": 50,
+        "max_military_to_appear": 300,
+
+        "budget_bias": 0.0,
+        "citizen_satisfaction_bias": 0.0,
+        "environment_bias": 0.0,
+        "military_bias": 1.0,
+
+        "budget_tendency": 0,
+        "citizen_satisfaction_tendency": 0,
+        "environment_tendency": 0,
+        "military_tendency": 0,
+
+        "possible_regions": [5]
+    }
+},
+{
+    "model": "main.probleminstance",
+    "pk": 22,
+    "fields": {
+        "name": "Nedostatek policie",
+        "description": "Nízký počet policistů snižuje bezpečnost v regionu. Roste kriminalita a klesá důvěra obyvatel.",
+        "time_before_expiration": 1,
+        "rarity": 1,
+
+        "min_budget_to_appear": 300,
+        "max_budget_to_appear": 700,
+        "min_citizen_satisfaction_to_appear": 300,
+        "max_citizen_satisfaction_to_appear": 800,
+        "min_environment_to_appear": 0,
+        "max_environment_to_appear": 1000,
+        "min_military_to_appear": 200,
+        "max_military_to_appear": 600,
+
+        "budget_bias": 1.0,
+        "citizen_satisfaction_bias": 0.0,
+        "environment_bias": 2.0,
+        "military_bias": 0.0,
+
+        "budget_tendency": 0,
+        "citizen_satisfaction_tendency": 0,
+        "environment_tendency": 0,
+        "military_tendency": 0,
+
+        "possible_regions": [5]
+    }
+},
+{
+    "model": "main.probleminstance",
+    "pk": 23,
+    "fields": {
+        "name": "Nelegální skládky",
+        "description": "Vznik nelegálních skládek zatěžuje životní prostředí. Dochází ke znečištění půdy i vody.",
+        "time_before_expiration": 2,
+        "rarity": 1,
+
+        "min_budget_to_appear": 300,
+        "max_budget_to_appear": 700,
+        "min_citizen_satisfaction_to_appear": 300,
+        "max_citizen_satisfaction_to_appear": 800,
+        "min_environment_to_appear": 400,
+        "max_environment_to_appear": 1000,
+        "min_military_to_appear": 100,
+        "max_military_to_appear": 400,
+
+        "budget_bias": 1.0,
+        "citizen_satisfaction_bias": 2.0,
+        "environment_bias": 0.0,
+        "military_bias": 0.0,
+
+        "budget_tendency": 0,
+        "citizen_satisfaction_tendency": 0,
+        "environment_tendency": 0,
+        "military_tendency": 0,
+
+        "possible_regions": [6]
+    }
+},
+{
+    "model": "main.probleminstance",
+    "pk": 24,
+    "fields": {
+        "name": "Nezaměstnanost v průmyslu",
+        "description": "Uzavření továren zvyšuje nezaměstnanost. Region ztrácí ekonomickou stabilitu a lidé přicházejí o práci.",
+        "time_before_expiration": 3,
+        "rarity": 1,
+
+        "min_budget_to_appear": 300,
+        "max_budget_to_appear": 800,
+        "min_citizen_satisfaction_to_appear": 300,
+        "max_citizen_satisfaction_to_appear": 800,
+        "min_environment_to_appear": 0,
+        "max_environment_to_appear": 1000,
+        "min_military_to_appear": 100,
+        "max_military_to_appear": 500,
+
+        "budget_bias": 1.0,
+        "citizen_satisfaction_bias": 0.0,
+        "environment_bias": 0.0,
+        "military_bias": 1.0,
+
+        "budget_tendency": 0,
+        "citizen_satisfaction_tendency": 0,
+        "environment_tendency": 0,
+        "military_tendency": 0,
+
+        "possible_regions": [6]
+    }
+},
+{
+    "model": "main.probleminstance",
+    "pk": 25,
+    "fields": {
+        "name": "Přetížené sociální služby",
+        "description": "Velký počet lidí potřebuje pomoc. Systém nestíhá a kvalita péče klesá.",
+        "time_before_expiration": 2,
+        "rarity": 1,
+
+        "min_budget_to_appear": 300,
+        "max_budget_to_appear": 700,
+        "min_citizen_satisfaction_to_appear": 300,
+        "max_citizen_satisfaction_to_appear": 900,
+        "min_environment_to_appear": 0,
+        "max_environment_to_appear": 1000,
+        "min_military_to_appear": 100,
+        "max_military_to_appear": 400,
+
+        "budget_bias": 1.0,
+        "citizen_satisfaction_bias": 0.0,
+        "environment_bias": 0.0,
+        "military_bias": 0.0,
+
+        "budget_tendency": 0,
+        "citizen_satisfaction_tendency": 0,
+        "environment_tendency": 0,
+        "military_tendency": 0,
+
+        "possible_regions": [6]
+    }
+},
+{
+    "model": "main.probleminstance",
+    "pk": 26,
+    "fields": {
+        "name": "Přetížení horských oblastí",
+        "description": "Turismus zatěžuje přírodu i infrastrukturu. Dochází k poškození ekosystémů.",
+        "time_before_expiration": 2,
+        "rarity": 1,
+
+        "min_budget_to_appear": 400,
+        "max_budget_to_appear": 800,
+        "min_citizen_satisfaction_to_appear": 400,
+        "max_citizen_satisfaction_to_appear": 900,
+        "min_environment_to_appear": 400,
+        "max_environment_to_appear": 1000,
+        "min_military_to_appear": 50,
+        "max_military_to_appear": 300,
+
+        "budget_bias": 0.0,
+        "citizen_satisfaction_bias": 1.0,
+        "environment_bias": 0.0,
+        "military_bias": 0.0,
+
+        "budget_tendency": 1,
+        "citizen_satisfaction_tendency": 0,
+        "environment_tendency": 0,
+        "military_tendency": 1,
+
+        "possible_regions": [7]
+    }
+},
+{
+    "model": "main.probleminstance",
+    "pk": 27,
+    "fields": {
+        "name": "Nedostatek hasičů",
+        "description": "Nízký počet hasičů omezuje reakce na krize. Riziko škod i ztrát roste.",
+        "time_before_expiration": 1,
+        "rarity": 1,
+
+        "min_budget_to_appear": 300,
+        "max_budget_to_appear": 700,
+        "min_citizen_satisfaction_to_appear": 300,
+        "max_citizen_satisfaction_to_appear": 800,
+        "min_environment_to_appear": 0,
+        "max_environment_to_appear": 1000,
+        "min_military_to_appear": 200,
+        "max_military_to_appear": 700,
+
+        "budget_bias": 0.0,
+        "citizen_satisfaction_bias": 0.0,
+        "environment_bias": 1.0,
+        "military_bias": 0.0,
+
+        "budget_tendency": 0,
+        "citizen_satisfaction_tendency": 0,
+        "environment_tendency": 0,
+        "military_tendency": 0,
+
+        "possible_regions": [7,3,4]
+    }
+},
+{
+    "model": "main.probleminstance",
+    "pk": 28,
+    "fields": {
+        "name": "Dopravní izolace",
+        "description": "Špatná dostupnost omezuje rozvoj regionu. Lidé mají problém s prací i službami.",
+        "time_before_expiration": 3,
+        "rarity": 2,
+
+        "min_budget_to_appear": 300,
+        "max_budget_to_appear": 700,
+        "min_citizen_satisfaction_to_appear": 300,
+        "max_citizen_satisfaction_to_appear": 800,
+        "min_environment_to_appear": 0,
+        "max_environment_to_appear": 1000,
+        "min_military_to_appear": 50,
+        "max_military_to_appear": 300,
+
+        "budget_bias": 1.0,
+        "citizen_satisfaction_bias": 0.0,
+        "environment_bias": 0.0,
+        "military_bias": 0.0,
+
+        "budget_tendency": 0,
+        "citizen_satisfaction_tendency": 0,
+        "environment_tendency": 0,
+        "military_tendency": 0,
+
+        "possible_regions": [7]
+    }
+},
+{
+    "model": "main.probleminstance",
+    "pk": 29,
+    "fields": {
+        "name": "Nedostatek dostupného bydlení",
+        "description": "Rostoucí ceny bydlení nutí obyvatele odcházet z regionu. Mladé rodiny si nemohou dovolit vlastní bydlení.",
+        "time_before_expiration": 3,
+        "rarity": 1,
+
+        "min_budget_to_appear": 300,
+        "max_budget_to_appear": 800,
+        "min_citizen_satisfaction_to_appear": 300,
+        "max_citizen_satisfaction_to_appear": 800,
+        "min_environment_to_appear": 0,
+        "max_environment_to_appear": 1000,
+        "min_military_to_appear": 100,
+        "max_military_to_appear": 400,
+
+        "budget_bias": 1.0,
+        "citizen_satisfaction_bias": 0.0,
+        "environment_bias": 0.0,
+        "military_bias": 1.0,
+
+        "budget_tendency": 0,
+        "citizen_satisfaction_tendency": 0,
+        "environment_tendency": 0,
+        "military_tendency": 0,
+
+        "possible_regions": [8]
+    }
+},
+{
+    "model": "main.probleminstance",
+    "pk": 30,
+    "fields": {
+        "name": "Přetížené nemocnice",
+        "description": "Zdravotnická zařízení nestíhají nápor pacientů. Kvalita péče klesá.",
+        "time_before_expiration": 1,
+        "rarity": 1,
+
+        "min_budget_to_appear": 300,
+        "max_budget_to_appear": 700,
+        "min_citizen_satisfaction_to_appear": 300,
+        "max_citizen_satisfaction_to_appear": 800,
+        "min_environment_to_appear": 0,
+        "max_environment_to_appear": 1000,
+        "min_military_to_appear": 200,
+        "max_military_to_appear": 600,
+
+        "budget_bias": 1.0,
+        "citizen_satisfaction_bias": 0.0,
+        "environment_bias": 0.0,
+        "military_bias": 1.0,
+
+        "budget_tendency": 0,
+        "citizen_satisfaction_tendency": 0,
+        "environment_tendency": 0,
+        "military_tendency": 0,
+
+        "possible_regions": [8]
+    }
+},
+{
+    "model": "main.probleminstance",
+    "pk": 31,
+    "fields": {
+        "name": "Lavinové riziko v horách",
+        "description": "Zvýšené riziko lavin ohrožuje turisty i infrastrukturu. Zásahy jsou náročné a nebezpečné.",
+        "time_before_expiration": 1,
+        "rarity": 1,
+
+        "min_budget_to_appear": 300,
+        "max_budget_to_appear": 700,
+        "min_citizen_satisfaction_to_appear": 300,
+        "max_citizen_satisfaction_to_appear": 900,
+        "min_environment_to_appear": 400,
+        "max_environment_to_appear": 1000,
+        "min_military_to_appear": 300,
+        "max_military_to_appear": 800,
+
+        "budget_bias": 0.0,
+        "citizen_satisfaction_bias": 2.0,
+        "environment_bias": 0.0,
+        "military_bias": 0.0,
+
+        "budget_tendency": 0,
+        "citizen_satisfaction_tendency": 0,
+        "environment_tendency": 0,
+        "military_tendency": 0,
+
+        "possible_regions": [8]
+    }
+},
+{
+    "model": "main.probleminstance",
+    "pk": 32,
+    "fields": {
+        "name": "Chemická havárie",
+        "description": "Únik nebezpečných látek ohrožuje obyvatele i životní prostředí.",
+        "time_before_expiration": 1,
+        "rarity": 2,
+
+        "min_budget_to_appear": 300,
+        "max_budget_to_appear": 700,
+        "min_citizen_satisfaction_to_appear": 300,
+        "max_citizen_satisfaction_to_appear": 900,
+        "min_environment_to_appear": 400,
+        "max_environment_to_appear": 1000,
+        "min_military_to_appear": 300,
+        "max_military_to_appear": 800,
+
+        "budget_bias": 1.0,
+        "citizen_satisfaction_bias": 2.0,
+        "environment_bias": 1.0,
+        "military_bias": 0.0,
+
+        "budget_tendency": 0,
+        "citizen_satisfaction_tendency": 0,
+        "environment_tendency": 0,
+        "military_tendency": 0,
+
+        "possible_regions": [9]
+    }
+},
+{
+    "model": "main.probleminstance",
+    "pk": 33,
+    "fields": {
+        "name": "Nedostatek vody pro průmysl",
+        "description": "Firmy nemají dostatek vody pro výrobu. Hrozí omezení produkce.",
+        "time_before_expiration": 3,
+        "rarity": 1,
+
+        "min_budget_to_appear": 400,
+        "max_budget_to_appear": 900,
+        "min_citizen_satisfaction_to_appear": 300,
+        "max_citizen_satisfaction_to_appear": 800,
+        "min_environment_to_appear": 400,
+        "max_environment_to_appear": 1000,
+        "min_military_to_appear": 100,
+        "max_military_to_appear": 400,
+
+        "budget_bias": 0.0,
+        "citizen_satisfaction_bias": 1.0,
+        "environment_bias": 0.0,
+        "military_bias": 1.0,
+
+        "budget_tendency": 0,
+        "citizen_satisfaction_tendency": 0,
+        "environment_tendency": 0,
+        "military_tendency": 0,
+
+        "possible_regions": [9]
+    }
+},
+{
+    "model": "main.probleminstance",
+    "pk": 34,
+    "fields": {
+        "name": "Rozvoj logistických center",
+        "description": "Region má potenciál stát se dopravním uzlem. Výstavba skladů a center ale zatěžuje okolí.",
+        "time_before_expiration": 3,
+        "rarity": 1,
+
+        "min_budget_to_appear": 300,
+        "max_budget_to_appear": 700,
+        "min_citizen_satisfaction_to_appear": 300,
+        "max_citizen_satisfaction_to_appear": 900,
+        "min_environment_to_appear": 200,
+        "max_environment_to_appear": 800,
+        "min_military_to_appear": 200,
+        "max_military_to_appear": 900,
+
+        "budget_bias": 0.0,
+        "citizen_satisfaction_bias": 2.0,
+        "environment_bias": 0.0,
+        "military_bias": 1.0,
+
+        "budget_tendency": 0,
+        "citizen_satisfaction_tendency": 0,
+        "environment_tendency": 0,
+        "military_tendency": 1,
+
+        "possible_regions": [9]
+    }
+},
+{
+    "model": "main.probleminstance",
+    "pk": 35,
+    "fields": {
+        "name": "Nedostatek pracovních příležitostí",
+        "description": "Mladí lidé odcházejí za prací jinam.",
+        "time_before_expiration": 3,
+        "rarity": 1,
+
+        "min_budget_to_appear": 300,
+        "max_budget_to_appear": 700,
+        "min_citizen_satisfaction_to_appear": 300,
+        "max_citizen_satisfaction_to_appear": 800,
+        "min_environment_to_appear": 0,
+        "max_environment_to_appear": 1000,
+        "min_military_to_appear": 200,
+        "max_military_to_appear": 700,
+
+        "budget_bias": 1.0,
+        "citizen_satisfaction_bias": 0.0,
+        "environment_bias": 0.0,
+        "military_bias": 1.0,
+
+        "budget_tendency": 0,
+        "citizen_satisfaction_tendency": 0,
+        "environment_tendency": 0,
+        "military_tendency": 0,
+
+        "possible_regions": [10]
+    }
+},
+{
+    "model": "main.probleminstance",
+    "pk": 36,
+    "fields": {
+        "name": "Kvalita silnic",
+        "description": "Špatný stav komunikací omezuje dopravu.",
+        "time_before_expiration": 2,
+        "rarity": 1,
+
+        "min_budget_to_appear": 300,
+        "max_budget_to_appear": 700,
+        "min_citizen_satisfaction_to_appear": 300,
+        "max_citizen_satisfaction_to_appear": 800,
+        "min_environment_to_appear": 0,
+        "max_environment_to_appear": 1000,
+        "min_military_to_appear": 200,
+        "max_military_to_appear": 700,
+
+        "budget_bias": 2.0,
+        "citizen_satisfaction_bias": 1.0,
+        "environment_bias": 0.0,
+        "military_bias": 1.0,
+
+        "budget_tendency": 0,
+        "citizen_satisfaction_tendency": 0,
+        "environment_tendency": 0,
+        "military_tendency": 0,
+
+        "possible_regions": [10]
+    }
+},
+{
+    "model": "main.probleminstance",
+    "pk": 37,
+    "fields": {
+        "name": "Energetická soběstačnost",
+        "description": "Region řeší závislost na energiích.",
+        "time_before_expiration": 3,
+        "rarity": 1,
+
+        "min_budget_to_appear": 300,
+        "max_budget_to_appear": 700,
+        "min_citizen_satisfaction_to_appear": 300,
+        "max_citizen_satisfaction_to_appear": 800,
+        "min_environment_to_appear": 200,
+        "max_environment_to_appear": 900,
+        "min_military_to_appear": 200,
+        "max_military_to_appear": 900,
+
+        "budget_bias": 1.0,
+        "citizen_satisfaction_bias": 2.0,
+        "environment_bias": 0.0,
+        "military_bias": 1.0,
+
+        "budget_tendency": 0,
+        "citizen_satisfaction_tendency": 1,
+        "environment_tendency": 0,
+        "military_tendency": 0,
+
+        "possible_regions": [10]
+    }
+},
+{
+    "model": "main.probleminstance",
+    "pk": 38,
+    "fields": {
+        "name": "Sucho a zemědělství",
+        "description": "Nedostatek vody ohrožuje úrodu.",
+        "time_before_expiration": 3,
+        "rarity": 1,
+
+        "min_budget_to_appear": 300,
+        "max_budget_to_appear": 700,
+        "min_citizen_satisfaction_to_appear": 300,
+        "max_citizen_satisfaction_to_appear": 900,
+        "min_environment_to_appear": 400,
+        "max_environment_to_appear": 1000,
+        "min_military_to_appear": 200,
+        "max_military_to_appear": 900,
+
+        "budget_bias": 0.0,
+        "citizen_satisfaction_bias": 2.0,
+        "environment_bias": 0.0,
+        "military_bias": 1.0,
+
+        "budget_tendency": 0,
+        "citizen_satisfaction_tendency": 0,
+        "environment_tendency": 0,
+        "military_tendency": 0,
+
+        "possible_regions": [11,12]
+    }
+},
+{
+    "model": "main.probleminstance",
+    "pk": 39,
+    "fields": {
+        "name": "Růst IT sektoru",
+        "description": "Region má potenciál v technologiích.",
+        "time_before_expiration": 3,
+        "rarity": 1,
+
+        "min_budget_to_appear": 300,
+        "max_budget_to_appear": 700,
+        "min_citizen_satisfaction_to_appear": 300,
+        "max_citizen_satisfaction_to_appear": 900,
+        "min_environment_to_appear": 0,
+        "max_environment_to_appear": 1000,
+        "min_military_to_appear": 200,
+        "max_military_to_appear": 700,
+
+        "budget_bias": 0.0,
+        "citizen_satisfaction_bias": 0.0,
+        "environment_bias": 0.0,
+        "military_bias": 1.0,
+
+        "budget_tendency": 0,
+        "citizen_satisfaction_tendency": 0,
+        "environment_tendency": 0,
+        "military_tendency": 1,
+
+        "possible_regions": [11]
+    }
+},
+{
+    "model": "main.probleminstance",
+    "pk": 40,
+    "fields": {
+        "name": "Přetížené město Brno",
+        "description": "Doprava a infrastruktura nestíhá.",
+        "time_before_expiration": 2,
+        "rarity": 1,
+
+        "min_budget_to_appear": 300,
+        "max_budget_to_appear": 700,
+        "min_citizen_satisfaction_to_appear": 300,
+        "max_citizen_satisfaction_to_appear": 900,
+        "min_environment_to_appear": 0,
+        "max_environment_to_appear": 1000,
+        "min_military_to_appear": 200,
+        "max_military_to_appear": 700,
+
+        "budget_bias": 1.0,
+        "citizen_satisfaction_bias": 0.0,
+        "environment_bias": 0.0,
+        "military_bias": 1.0,
+
+        "budget_tendency": 0,
+        "citizen_satisfaction_tendency": 0,
+        "environment_tendency": 0,
+        "military_tendency": 1,
+
+        "possible_regions": [11]
+    }
+},
+{
+    "model": "main.probleminstance",
+    "pk": 41,
+    "fields": {
+        "name": "Útlum těžkého průmyslu",
+        "description": "Zanikají pracovní místa.",
+        "time_before_expiration": 3,
+        "rarity": 1,
+
+        "min_budget_to_appear": 300,
+        "max_budget_to_appear": 700,
+        "min_citizen_satisfaction_to_appear": 300,
+        "max_citizen_satisfaction_to_appear": 900,
+        "min_environment_to_appear": 0,
+        "max_environment_to_appear": 1000,
+        "min_military_to_appear": 200,
+        "max_military_to_appear": 800,
+
+        "budget_bias": 1.0,
+        "citizen_satisfaction_bias": 0.0,
+        "environment_bias": 0.0,
+        "military_bias": 1.0,
+
+        "budget_tendency": 0,
+        "citizen_satisfaction_tendency": 0,
+        "environment_tendency": 0,
+        "military_tendency": 0,
+
+        "possible_regions": [14]
+    }
+},
+{
+    "model": "main.probleminstance",
+    "pk": 42,
+    "fields": {
+        "name": "Znečištění ovzduší",
+        "description": "Špatná kvalita vzduchu.",
+        "time_before_expiration": 2,
+        "rarity": 2,
+
+        "min_budget_to_appear": 300,
+        "max_budget_to_appear": 700,
+        "min_citizen_satisfaction_to_appear": 300,
+        "max_citizen_satisfaction_to_appear": 900,
+        "min_environment_to_appear": 400,
+        "max_environment_to_appear": 1000,
+        "min_military_to_appear": 200,
+        "max_military_to_appear": 900,
+
+        "budget_bias": 0.0,
+        "citizen_satisfaction_bias": 2.0,
+        "environment_bias": 0.0,
+        "military_bias": 0.0,
+
+        "budget_tendency": 0,
+        "citizen_satisfaction_tendency": 0,
+        "environment_tendency": 0,
+        "military_tendency": 0,
+
+        "possible_regions": [14]
+    }
+},
+{
+    "model": "main.probleminstance",
+    "pk": 43,
+    "fields": {
+        "name": "Sociální problémy",
+        "description": "Chudoba a nezaměstnanost zvyšují napětí ve společnosti. Region se potýká s nízkou životní úrovní a odlivem obyvatel.",
+        "time_before_expiration": 3,
+        "rarity": 1,
+
+        "min_budget_to_appear": 300,
+        "max_budget_to_appear": 700,
+        "min_citizen_satisfaction_to_appear": 300,
+        "max_citizen_satisfaction_to_appear": 900,
+        "min_environment_to_appear": 0,
+        "max_environment_to_appear": 1000,
+        "min_military_to_appear": 200,
+        "max_military_to_appear": 700,
+
+        "budget_bias": 2.0,
+        "citizen_satisfaction_bias": 0.0,
+        "environment_bias": 0.0,
+        "military_bias": 1.0,
+
+        "budget_tendency": 0,
+        "citizen_satisfaction_tendency": 0,
+        "environment_tendency": 0,
+        "military_tendency": 0,
+
+        "possible_regions": [14]
+    }
+},
+{
+    "model": "main.probleminstance",
+    "pk": 44,
+    "fields": {
+        "name": "Úpadek tradiční výroby",
+        "description": "Tradiční průmysl ztrácí konkurenceschopnost. Firmy zavírají provozy a roste nezaměstnanost.",
+        "time_before_expiration": 3,
+        "rarity": 1,
+
+        "min_budget_to_appear": 300,
+        "max_budget_to_appear": 700,
+        "min_citizen_satisfaction_to_appear": 300,
+        "max_citizen_satisfaction_to_appear": 800,
+        "min_environment_to_appear": 0,
+        "max_environment_to_appear": 1000,
+        "min_military_to_appear": 200,
+        "max_military_to_appear": 700,
+
+        "budget_bias": 1.0,
+        "citizen_satisfaction_bias": 0.0,
+        "environment_bias": 0.0,
+        "military_bias": 0.0,
+
+        "budget_tendency": 0,
+        "citizen_satisfaction_tendency": 0,
+        "environment_tendency": 0,
+        "military_tendency": 0,
+
+        "possible_regions": [13]
+    }
+},
+{
+    "model": "main.probleminstance",
+    "pk": 45,
+    "fields": {
+        "name": "Nedostatek mladých lidí",
+        "description": "Mladí lidé odcházejí do větších měst. Region ztrácí pracovní sílu i inovace.",
+        "time_before_expiration": 3,
+        "rarity": 2,
+
+        "min_budget_to_appear": 300,
+        "max_budget_to_appear": 700,
+        "min_citizen_satisfaction_to_appear": 300,
+        "max_citizen_satisfaction_to_appear": 800,
+        "min_environment_to_appear": 0,
+        "max_environment_to_appear": 1000,
+        "min_military_to_appear": 200,
+        "max_military_to_appear": 700,
+
+        "budget_bias": 0.0,
+        "citizen_satisfaction_bias": 0.0,
+        "environment_bias": 0.0,
+        "military_bias": 1.0,
+
+        "budget_tendency": 0,
+        "citizen_satisfaction_tendency": 0,
+        "environment_tendency": 0,
+        "military_tendency": 0,
+
+        "possible_regions": [13,12]
+    }
+},
+{
+    "model": "main.probleminstance",
+    "pk": 46,
+    "fields": {
+        "name": "Rozvoj turismu",
+        "description": "Region chce přilákat více návštěvníků. To ale může zatížit přírodu i bezpečnostní složky.",
+        "time_before_expiration": 2,
+        "rarity": 1,
+
+        "min_budget_to_appear": 300,
+        "max_budget_to_appear": 700,
+        "min_citizen_satisfaction_to_appear": 300,
+        "max_citizen_satisfaction_to_appear": 800,
+        "min_environment_to_appear": 200,
+        "max_environment_to_appear": 900,
+        "min_military_to_appear": 200,
+        "max_military_to_appear": 800,
+
+        "budget_bias": 0.0,
+        "citizen_satisfaction_bias": 0.0,
+        "environment_bias": 0.0,
+        "military_bias": 1.0,
+
+        "budget_tendency": 0,
+        "citizen_satisfaction_tendency": 0,
+        "environment_tendency": 0,
+        "military_tendency": 1,
+
+        "possible_regions": [13]
+    }
+},
+{
+    "model": "main.probleminstance",
+    "pk": 47,
+    "fields": {
+        "name": "Kolaps nemocniční IT sítě",
+        "description": "Hackerský útok vyřadil nemocniční systémy. Operace se ruší a zdravotnictví kolabuje.",
+        "time_before_expiration": 1,
+        "rarity": 2,
+
+        "min_budget_to_appear": 300,
+        "max_budget_to_appear": 800,
+        "min_citizen_satisfaction_to_appear": 300,
+        "max_citizen_satisfaction_to_appear": 900,
+        "min_environment_to_appear": 0,
+        "max_environment_to_appear": 1000,
+        "min_military_to_appear": 200,
+        "max_military_to_appear": 700,
+
+        "budget_bias": 0.0,
+        "citizen_satisfaction_bias": 0.0,
+        "environment_bias": 2.0,
+        "military_bias": 1.0,
+
+        "budget_tendency": 0,
+        "citizen_satisfaction_tendency": 0,
+        "environment_tendency": 1,
+        "military_tendency": 0,
+
+        "possible_regions": [12]
+    }
+},
+{
+    "model": "main.probleminstance",
+    "pk": 48,
+    "fields": {
+        "name": "Nelegální těžba dřeva",
+        "description": "Organizované skupiny nelegálně těží lesy. Stát ztrácí kontrolu nad územím.",
+        "time_before_expiration": 2,
+        "rarity": 1,
+
+        "min_budget_to_appear": 300,
+        "max_budget_to_appear": 800,
+        "min_citizen_satisfaction_to_appear": 300,
+        "max_citizen_satisfaction_to_appear": 800,
+        "min_environment_to_appear": 200,
+        "max_environment_to_appear": 900,
+        "min_military_to_appear": 200,
+        "max_military_to_appear": 900,
+
+        "budget_bias": 0.0,
+        "citizen_satisfaction_bias": 1.0,
+        "environment_bias": 0.0,
+        "military_bias": 1.0,
+
+        "budget_tendency": 0,
+        "citizen_satisfaction_tendency": 0,
+        "environment_tendency": 0,
+        "military_tendency": 0,
+
+        "possible_regions": [12]
+    }
+},
+{
+    "model": "main.probleminstance",
+    "pk": 49,
+    "fields": {
+        "name": "Kolaps univerzity",
+        "description": "Univerzita ztrácí financování a studenty. Region přichází o vzdělané lidi.",
+        "time_before_expiration": 3,
+        "rarity": 1,
+
+        "min_budget_to_appear": 300,
+        "max_budget_to_appear": 700,
+        "min_citizen_satisfaction_to_appear": 300,
+        "max_citizen_satisfaction_to_appear": 800,
+        "min_environment_to_appear": 0,
+        "max_environment_to_appear": 1000,
+        "min_military_to_appear": 200,
+        "max_military_to_appear": 700,
+
+        "budget_bias": 1.0,
+        "citizen_satisfaction_bias": 0.0,
+        "environment_bias": 0.0,
+        "military_bias": 0.0,
+
+        "budget_tendency": 1,
+        "citizen_satisfaction_tendency": 0,
+        "environment_tendency": 0,
+        "military_tendency": 0,
+
+        "possible_regions": [12]
+    }
+},
+{
+    "model": "main.probleminstance",
+    "pk": 50,
+    "fields": {
+        "name": "Kolaps rybníkářství",
+        "description": "Nemoci ryb a změny klimatu způsobují masivní úhyn ryb. Tradiční odvětví je ohroženo.",
+        "time_before_expiration": 3,
+        "rarity": 1,
+
+        "min_budget_to_appear": 300,
+        "max_budget_to_appear": 700,
+        "min_citizen_satisfaction_to_appear": 300,
+        "max_citizen_satisfaction_to_appear": 900,
+        "min_environment_to_appear": 300,
+        "max_environment_to_appear": 900,
+        "min_military_to_appear": 300,
+        "max_military_to_appear": 1000,
+
+        "budget_bias": 1.0,
+        "citizen_satisfaction_bias": 0.0,
+        "environment_bias": 0.0,
+        "military_bias": 0.0,
+
+        "budget_tendency": 0,
+        "citizen_satisfaction_tendency": 0,
+        "environment_tendency": 0,
+        "military_tendency": 0,
+
+        "possible_regions": [3]
+    }
+},
+{
+    "model": "main.probleminstance",
+    "pk": 51,
+    "fields": {
+        "name": "Nelegální kempy u přehrad",
+        "description": "Turisté zakládají nelegální kempy. Vzniká nepořádek a bezpečnostní problémy.",
+        "time_before_expiration": 2,
+        "rarity": 1,
+
+        "min_budget_to_appear": 300,
+        "max_budget_to_appear": 800,
+        "min_citizen_satisfaction_to_appear": 300,
+        "max_citizen_satisfaction_to_appear": 800,
+        "min_environment_to_appear": 300,
+        "max_environment_to_appear": 900,
+        "min_military_to_appear": 200,
+        "max_military_to_appear": 900,
+
+        "budget_bias": 0.0,
+        "citizen_satisfaction_bias": 0.0,
+        "environment_bias": 0.0,
+        "military_bias": 1.0,
+
+        "budget_tendency": 0,
+        "citizen_satisfaction_tendency": 0,
+        "environment_tendency": 0,
+        "military_tendency": 0,
+
+        "possible_regions": [3]
+    }
+},
+{
+    "model": "main.probleminstance",
+    "pk": 52,
+    "fields": {
+        "name": "Jaderná elektrárna Temelín – rozšíření",
+        "description": "Plánuje se rozšíření elektrárny. Přinese energii, ale vyvolává obavy obyvatel.",
+        "time_before_expiration": 3,
+        "rarity": 3,
+
+        "min_budget_to_appear": 300,
+        "max_budget_to_appear": 800,
+        "min_citizen_satisfaction_to_appear": 300,
+        "max_citizen_satisfaction_to_appear": 900,
+        "min_environment_to_appear": 200,
+        "max_environment_to_appear": 800,
+        "min_military_to_appear": 200,
+        "max_military_to_appear": 900,
+
+        "budget_bias": 1.0,
+        "citizen_satisfaction_bias": 1.0,
+        "environment_bias": 0.0,
+        "military_bias": 2.0,
+
+        "budget_tendency": 0,
+        "citizen_satisfaction_tendency": 1,
+        "environment_tendency": 0,
+        "military_tendency": 1,
+
+        "possible_regions": [3]
+    }
+},
+{
+    "model": "main.probleminstance",
+    "pk": 53,
+    "fields": {
+        "name": "Lokální znečištění řeky",
+        "description": "Průmyslový únik znečišťuje řeku. Zasahuje pitnou vodu i ekosystém.",
+        "time_before_expiration": 2,
+        "rarity": 2,
+
+        "min_budget_to_appear": 300,
+        "max_budget_to_appear": 700,
+        "min_citizen_satisfaction_to_appear": 300,
+        "max_citizen_satisfaction_to_appear": 900,
+        "min_environment_to_appear": 0,
+        "max_environment_to_appear": 200,
+        "min_military_to_appear": 200,
+        "max_military_to_appear": 600,
+
+        "budget_bias": 0.0,
+        "citizen_satisfaction_bias": 1.0,
+        "environment_bias": 0.0,
+        "military_bias": 0.0,
+
+        "budget_tendency": 0,
+        "citizen_satisfaction_tendency": 0,
+        "environment_tendency": 0,
+        "military_tendency": 0,
+
+        "possible_regions": [2,6,9]
+    }
+},
+{
+    "model": "main.probleminstance",
+    "pk": 54,
+    "fields": {
+        "name": "Kácení lesů kvůli výstavbě",
+        "description": "Masivní odlesňování kvůli výstavbě.",
+        "time_before_expiration": 3,
+        "rarity": 1,
+
+        "min_budget_to_appear": 300,
+        "max_budget_to_appear": 700,
+        "min_citizen_satisfaction_to_appear": 300,
+        "max_citizen_satisfaction_to_appear": 900,
+        "min_environment_to_appear": 100,
+        "max_environment_to_appear": 500,
+        "min_military_to_appear": 200,
+        "max_military_to_appear": 800,
+
+        "budget_bias": 0.0,
+        "citizen_satisfaction_bias": 1.0,
+        "environment_bias": 0.0,
+        "military_bias": 0.0,
+
+        "budget_tendency": 0,
+        "citizen_satisfaction_tendency": 0,
+        "environment_tendency": 0,
+        "military_tendency": 0,
+
+        "possible_regions": [3,4,10]
+    }
+},
+{
+    "model": "main.probleminstance",
+    "pk": 55,
+    "fields": {
+        "name": "Sucho a úbytek vody",
+        "description": "Dlouhodobé sucho ohrožuje zásoby vody.",
+        "time_before_expiration": 3,
+        "rarity": 1,
+
+        "min_budget_to_appear": 300,
+        "max_budget_to_appear": 700,
+        "min_citizen_satisfaction_to_appear": 300,
+        "max_citizen_satisfaction_to_appear": 900,
+        "min_environment_to_appear": 300,
+        "max_environment_to_appear": 700,
+        "min_military_to_appear": 400,
+        "max_military_to_appear": 900,
+
+        "budget_bias": 0.0,
+        "citizen_satisfaction_bias": 1.0,
+        "environment_bias": 0.0,
+        "military_bias": 0.0,
+
+        "budget_tendency": 0,
+        "citizen_satisfaction_tendency": 0,
+        "environment_tendency": 0,
+        "military_tendency": 0,
+
+        "possible_regions": [11,12,13]
+    }
+},
+{
+    "model": "main.probleminstance",
+    "pk": 56,
+    "fields": {
+        "name": "Masivní smog ve městech",
+        "description": "Znečištěné ovzduší ohrožuje zdraví obyvatel.",
+        "time_before_expiration": 1,
+        "rarity": 2,
+
+        "min_budget_to_appear": 300,
+        "max_budget_to_appear": 800,
+        "min_citizen_satisfaction_to_appear": 300,
+        "max_citizen_satisfaction_to_appear": 900,
+        "min_environment_to_appear": 400,
+        "max_environment_to_appear": 800,
+        "min_military_to_appear": 300,
+        "max_military_to_appear": 900,
+
+        "budget_bias": 1.0,
+        "citizen_satisfaction_bias": 1.0,
+        "environment_bias": 0.0,
+        "military_bias": 0.0,
+
+        "budget_tendency": 0,
+        "citizen_satisfaction_tendency": 0,
+        "environment_tendency": 0,
+        "military_tendency": 0,
+
+        "possible_regions": [14,1,6]
+    }
+},
+{
+    "model": "main.probleminstance",
+    "pk": 57,
+    "fields": {
+        "name": "Napětí na hranicích",
+        "description": "Zvyšuje se napětí na hranicích. Dochází k incidentům a narušení bezpečnosti.",
+        "time_before_expiration": 2,
+        "rarity": 2,
+
+        "min_budget_to_appear": 400,
+        "max_budget_to_appear": 1000,
+        "min_citizen_satisfaction_to_appear": 300,
+        "max_citizen_satisfaction_to_appear": 900,
+        "min_environment_to_appear": 200,
+        "max_environment_to_appear": 900,
+        "min_military_to_appear": 200,
+        "max_military_to_appear": 700,
+
+        "budget_bias": 1.0,
+        "citizen_satisfaction_bias": 0.0,
+        "environment_bias": 2.0,
+        "military_bias": 0.0,
+
+        "budget_tendency": 0,
+        "citizen_satisfaction_tendency": 0,
+        "environment_tendency": 1,
+        "military_tendency": 0,
+
+        "possible_regions": [5,6,14]
+    }
+},
+{
+    "model": "main.probleminstance",
+    "pk": 58,
+    "fields": {
+        "name": "Kolaps policie ve městech",
+        "description": "Policie nestíhá řešit kriminalitu. Roste chaos ve městech.",
+        "time_before_expiration": 1,
+        "rarity": 2,
+
+        "min_budget_to_appear": 300,
+        "max_budget_to_appear": 900,
+        "min_citizen_satisfaction_to_appear": 300,
+        "max_citizen_satisfaction_to_appear": 900,
+        "min_environment_to_appear": 0,
+        "max_environment_to_appear": 1000,
+        "min_military_to_appear": 200,
+        "max_military_to_appear": 700,
+
+        "budget_bias": 1.0,
+        "citizen_satisfaction_bias": 0.0,
+        "environment_bias": 2.0,
+        "military_bias": 0.0,
+
+        "budget_tendency": 0,
+        "citizen_satisfaction_tendency": 0,
+        "environment_tendency": 0,
+        "military_tendency": 0,
+
+        "possible_regions": [1,11,14]
+    }
+},
+{
+    "model": "main.probleminstance",
+    "pk": 59,
+    "fields": {
+        "name": "Výpadek armádní techniky",
+        "description": "Zastaralá technika selhává. Stát není připraven na krizové situace.",
+        "time_before_expiration": 3,
+        "rarity": 2,
+
+        "min_budget_to_appear": 300,
+        "max_budget_to_appear": 900,
+        "min_citizen_satisfaction_to_appear": 300,
+        "max_citizen_satisfaction_to_appear": 900,
+        "min_environment_to_appear": 0,
+        "max_environment_to_appear": 1000,
+        "min_military_to_appear": 200,
+        "max_military_to_appear": 700,
+
+        "budget_bias": 0.0,
+        "citizen_satisfaction_bias": 0.0,
+        "environment_bias": 1.0,
+        "military_bias": 0.0,
+
+        "budget_tendency": 0,
+        "citizen_satisfaction_tendency": 0,
+        "environment_tendency": 0,
+        "military_tendency": 0,
+
+        "possible_regions": [1,2,3,4,5,6,7,8,9,10,11,12,13,14]
+    }
+},
+{
+    "model": "main.probleminstance",
+    "pk": 60,
+    "fields": {
+        "name": "Teroristická hrozba",
+        "description": "Zpravodajské služby varují před útokem.",
+        "time_before_expiration": 1,
+        "rarity": 4,
+
+        "min_budget_to_appear": 400,
+        "max_budget_to_appear": 1000,
+        "min_citizen_satisfaction_to_appear": 300,
+        "max_citizen_satisfaction_to_appear": 900,
+        "min_environment_to_appear": 200,
+        "max_environment_to_appear": 900,
+        "min_military_to_appear": 200,
+        "max_military_to_appear": 700,
+
+        "budget_bias": 1.0,
+        "citizen_satisfaction_bias": 0.0,
+        "environment_bias": 2.0,
+        "military_bias": 0.0,
+
+        "budget_tendency": 0,
+        "citizen_satisfaction_tendency": 0,
+        "environment_tendency": 1,
+        "military_tendency": 0,
+
+        "possible_regions": [1,2,3,4,5,6,7,8,9,10,11,12,13,14]
+    }
+},
+{
+    "model": "main.probleminstance",
+    "pk": 61,
+    "fields": {
+        "name": "Blackout v regionu",
+        "description": "Rozsáhlý výpadek elektřiny ochromil domácnosti, firmy i dopravu. Obnova systému je nákladná a časově náročná.",
+        "time_before_expiration": 2,
+        "rarity": 2,
+
+        "min_budget_to_appear": 300,
+        "max_budget_to_appear": 900,
+        "min_citizen_satisfaction_to_appear": 300,
+        "max_citizen_satisfaction_to_appear": 900,
+        "min_environment_to_appear": 200,
+        "max_environment_to_appear": 800,
+        "min_military_to_appear": 200,
+        "max_military_to_appear": 700,
+
+        "budget_bias": 1.0,
+        "citizen_satisfaction_bias": 0.0,
+        "environment_bias": 1.0,
+        "military_bias": 0.0,
+
+        "budget_tendency": 0,
+        "citizen_satisfaction_tendency": 0,
+        "environment_tendency": 1,
+        "military_tendency": 0,
+
+        "possible_regions": [1,2]
+    }
+},
+{
+    "model": "main.probleminstance",
+    "pk": 62,
+    "fields": {
+        "name": "Únik toxických látek",
+        "description": "Průmyslová havárie ohrožuje zdraví obyvatel i přírodu.",
+        "time_before_expiration": 1,
+        "rarity": 3,
+
+        "min_budget_to_appear": 300,
+        "max_budget_to_appear": 800,
+        "min_citizen_satisfaction_to_appear": 300,
+        "max_citizen_satisfaction_to_appear": 900,
+        "min_environment_to_appear": 300,
+        "max_environment_to_appear": 900,
+        "min_military_to_appear": 400,
+        "max_military_to_appear": 1000,
+
+        "budget_bias": 0.0,
+        "citizen_satisfaction_bias": 2.0,
+        "environment_bias": 0.0,
+        "military_bias": 0.0,
+
+        "budget_tendency": 0,
+        "citizen_satisfaction_tendency": 1,
+        "environment_tendency": 0,
+        "military_tendency": 0,
+
+        "possible_regions": [6,9]
+    }
+},
+{
+    "model": "main.probleminstance",
+    "pk": 63,
+    "fields": {
+        "name": "Protesty a nepokoje",
+        "description": "Obyvatelé protestují proti vládě. Situace se může rychle zvrtnout v násilí.",
+        "time_before_expiration": 1,
+        "rarity": 1,
+
+        "min_budget_to_appear": 100,
+        "max_budget_to_appear": 500,
+        "min_citizen_satisfaction_to_appear": 0,
+        "max_citizen_satisfaction_to_appear": 400,
+        "min_environment_to_appear": 0,
+        "max_environment_to_appear": 300,
+        "min_military_to_appear": 0,
+        "max_military_to_appear": 500,
+
+        "budget_bias": 2.0,
+        "citizen_satisfaction_bias": 0.0,
+        "environment_bias": 2.0,
+        "military_bias": 0.0,
+
+        "budget_tendency": 0,
+        "citizen_satisfaction_tendency": 0,
+        "environment_tendency": 0,
+        "military_tendency": 0,
+
+        "possible_regions": [1,2,3,4,5,6,7,8,9,10,11,12,13,14]
+    }
+},
+{
+    "model": "main.probleminstance",
+    "pk": 64,
+    "fields": {
+        "name": "Kolaps zdravotnictví",
+        "description": "Nemocnice nestíhají, pacienti nedostávají péči.",
+        "time_before_expiration": 1,
+        "rarity": 2,
+
+        "min_budget_to_appear": 100,
+        "max_budget_to_appear": 500,
+        "min_citizen_satisfaction_to_appear": 100,
+        "max_citizen_satisfaction_to_appear": 400,
+        "min_environment_to_appear": 0,
+        "max_environment_to_appear": 300,
+        "min_military_to_appear": 0,
+        "max_military_to_appear": 400,
+
+        "budget_bias": 1.0,
+        "citizen_satisfaction_bias": 0.0,
+        "environment_bias": 1.0,
+        "military_bias": 0.0,
+
+        "budget_tendency": 0,
+        "citizen_satisfaction_tendency": 0,
+        "environment_tendency": 0,
+        "military_tendency": 0,
+
+        "possible_regions": [7,6,14]
+    }
+},
+{
+    "model": "main.probleminstance",
+    "pk": 65,
+    "fields": {
+        "name": "Nadměrná kriminalita",
+        "description": "Kriminalita roste, lidé se necítí bezpečně.",
+        "time_before_expiration": 1,
+        "rarity": 1,
+
+        "min_budget_to_appear": 0,
+        "max_budget_to_appear": 300,
+        "min_citizen_satisfaction_to_appear": 100,
+        "max_citizen_satisfaction_to_appear": 400,
+        "min_environment_to_appear": 0,
+        "max_environment_to_appear": 300,
+        "min_military_to_appear": 0,
+        "max_military_to_appear": 300,
+
+        "budget_bias": 0.0,
+        "citizen_satisfaction_bias": 0.0,
+        "environment_bias": 1.0,
+        "military_bias": 0.0,
+
+        "budget_tendency": 0,
+        "citizen_satisfaction_tendency": 0,
+        "environment_tendency": 0,
+        "military_tendency": 0,
+
+        "possible_regions": [1,14]
+    }
+},
+{
+    "model": "main.probleminstance",
+    "pk": 66,
+    "fields": {
+        "name": "Nedostatek potravin",
+        "description": "Dochází zásoby potravin. Obyvatelé začínají panikařit.",
+        "time_before_expiration": 1,
+        "rarity": 1,
+
+        "min_budget_to_appear": 0,
+        "max_budget_to_appear": 500,
+        "min_citizen_satisfaction_to_appear": 0,
+        "max_citizen_satisfaction_to_appear": 400,
+        "min_environment_to_appear": 0,
+        "max_environment_to_appear": 300,
+        "min_military_to_appear": 0,
+        "max_military_to_appear": 500,
+
+        "budget_bias": 1.0,
+        "citizen_satisfaction_bias": 1.0,
+        "environment_bias": 0.0,
+        "military_bias": 1.0,
+
+        "budget_tendency": 0,
+        "citizen_satisfaction_tendency": 0,
+        "environment_tendency": 0,
+        "military_tendency": 0,
+
+        "possible_regions": [1,2,3,4,5,6,7,8,9,10,11,12,13,14]
+    }
+},
+{
+    "model": "main.probleminstance",
+    "pk": 67,
+    "fields": {
+        "name": "Stávka řidičů MHD",
+        "description": "Kvůli nízkým platům stávkují řidiči. Hrozí kolaps města.",
+        "time_before_expiration": 1,
+        "rarity": 1,
+
+        "min_budget_to_appear": 0,
+        "max_budget_to_appear": 300,
+        "min_citizen_satisfaction_to_appear": 0,
+        "max_citizen_satisfaction_to_appear": 400,
+        "min_environment_to_appear": 0,
+        "max_environment_to_appear": 400,
+        "min_military_to_appear": 0,
+        "max_military_to_appear": 300,
+
+        "budget_bias": 1.0,
+        "citizen_satisfaction_bias": 0.0,
+        "environment_bias": 0.0,
+        "military_bias": 0.0,
+
+        "budget_tendency": 0,
+        "citizen_satisfaction_tendency": 0,
+        "environment_tendency": 0,
+        "military_tendency": 0,
+
+        "possible_regions": [1]
+    }
+},
+{
+    "model": "main.probleminstance",
+    "pk": 68,
+    "fields": {
+        "name": "Dezinformační krize",
+        "description": "Šíří se falešné zprávy a panika.",
+        "time_before_expiration": 1,
+        "rarity": 1,
+
+        "min_budget_to_appear": 0,
+        "max_budget_to_appear": 400,
+        "min_citizen_satisfaction_to_appear": 0,
+        "max_citizen_satisfaction_to_appear": 400,
+        "min_environment_to_appear": 0,
+        "max_environment_to_appear": 300,
+        "min_military_to_appear": 0,
+        "max_military_to_appear": 400,
+
+        "budget_bias": 1.0,
+        "citizen_satisfaction_bias": 0.0,
+        "environment_bias": 0.0,
+        "military_bias": 0.0,
+
+        "budget_tendency": 0,
+        "citizen_satisfaction_tendency": 0,
+        "environment_tendency": 0,
+        "military_tendency": 0,
+
+        "possible_regions": [1,2,3,4,5,6,7,8,9,10,11,12,13,14]
+    }
+},
+{
+    "model": "main.probleminstance",
+    "pk": 69,
+    "fields": {
+        "name": "Nedostatek energie",
+        "description": "Zdražování energie ovlivňuje domácnosti i firmy.",
+        "time_before_expiration": 1,
+        "rarity": 1,
+
+        "min_budget_to_appear": 100,
+        "max_budget_to_appear": 500,
+        "min_citizen_satisfaction_to_appear": 0,
+        "max_citizen_satisfaction_to_appear": 400,
+        "min_environment_to_appear": 0,
+        "max_environment_to_appear": 400,
+        "min_military_to_appear": 0,
+        "max_military_to_appear": 400,
+
+        "budget_bias": 0.0,
+        "citizen_satisfaction_bias": 1.0,
+        "environment_bias": 0.0,
+        "military_bias": 0.0,
+
+        "budget_tendency": 0,
+        "citizen_satisfaction_tendency": 0,
+        "environment_tendency": 0,
+        "military_tendency": 0,
+
+        "possible_regions": [3,2,1]
+    }
+},
+{
+    "model": "main.probleminstance",
+    "pk": 70,
+    "fields": {
+        "name": "Hrozba jaderné havárie",
+        "description": "Technická porucha v jaderné elektrárně. Hrozí únik radiace.",
+        "time_before_expiration": 1,
+        "rarity": 5,
+
+        "min_budget_to_appear": 300,
+        "max_budget_to_appear": 900,
+        "min_citizen_satisfaction_to_appear": 300,
+        "max_citizen_satisfaction_to_appear": 900,
+        "min_environment_to_appear": 0,
+        "max_environment_to_appear": 1000,
+        "min_military_to_appear": 600,
+        "max_military_to_appear": 1000,
+
+        "budget_bias": 1.0,
+        "citizen_satisfaction_bias": 2.0,
+        "environment_bias": 1.0,
+        "military_bias": 0.0,
+
+        "budget_tendency": 0,
+        "citizen_satisfaction_tendency": 1,
+        "environment_tendency": 0,
+        "military_tendency": 0,
+
+        "possible_regions": [3]
+    }
+},
+{
+    "model": "main.probleminstance",
+    "pk": 71,
+    "fields": {
+        "name": "Kolaps bankovního systému",
+        "description": "Banky přestávají fungovat. Lidé nemají přístup k penězům.",
+        "time_before_expiration": 1,
+        "rarity": 2,
+
+        "min_budget_to_appear": 200,
+        "max_budget_to_appear": 700,
+        "min_citizen_satisfaction_to_appear": 200,
+        "max_citizen_satisfaction_to_appear": 800,
+        "min_environment_to_appear": 0,
+        "max_environment_to_appear": 500,
+        "min_military_to_appear": 0,
+        "max_military_to_appear": 300,
+
+        "budget_bias": 1.0,
+        "citizen_satisfaction_bias": 0.0,
+        "environment_bias": 0.0,
+        "military_bias": 1.0,
+
+        "budget_tendency": 0,
+        "citizen_satisfaction_tendency": 0,
+        "environment_tendency": 0,
+        "military_tendency": 0,
+
+        "possible_regions": [1,2,3,4,5,6,7,8,9,10,11,12,13,14]
+    }
+},
+{
+    "model": "main.probleminstance",
+    "pk": 72,
+    "fields": {
+        "name": "Pandemie nové nemoci",
+        "description": "Rychle se šíří neznámá nemoc.",
+        "time_before_expiration": 1,
+        "rarity": 3,
+
+        "min_budget_to_appear": 200,
+        "max_budget_to_appear": 700,
+        "min_citizen_satisfaction_to_appear": 200,
+        "max_citizen_satisfaction_to_appear": 800,
+        "min_environment_to_appear": 0,
+        "max_environment_to_appear": 700,
+        "min_military_to_appear": 200,
+        "max_military_to_appear": 500,
+
+        "budget_bias": 1.0,
+        "citizen_satisfaction_bias": 2.0,
+        "environment_bias": 0.0,
+        "military_bias": 0.0,
+
+        "budget_tendency": 0,
+        "citizen_satisfaction_tendency": 0,
+        "environment_tendency": 0,
+        "military_tendency": 0,
+
+        "possible_regions": [1,2,3,4,5,6,7,8,9,10,11,12,13,14]
+    }
+},
+{
+    "model": "main.probleminstance",
+    "pk": 73,
+    "fields": {
+        "name": "Státní bankrot",
+        "description": "Stát není schopný splácet dluhy. Hrozí finanční kolaps.",
+        "time_before_expiration": 2,
+        "rarity": 5,
+
+        "min_budget_to_appear": 0,
+        "max_budget_to_appear": 700,
+        "min_citizen_satisfaction_to_appear": 0,
+        "max_citizen_satisfaction_to_appear": 300,
+        "min_environment_to_appear": 0,
+        "max_environment_to_appear": 600,
+        "min_military_to_appear": 0,
+        "max_military_to_appear": 300,
+
+        "budget_bias": 1.0,
+        "citizen_satisfaction_bias": 0.0,
+        "environment_bias": 1.0,
+        "military_bias": 2.0,
+
+        "budget_tendency": 0,
+        "citizen_satisfaction_tendency": 0,
+        "environment_tendency": 0,
+        "military_tendency": 0,
+
+        "possible_regions": [1,2,3,4,5,6,7,8,9,10,11,12,13,14]
+    }
+},
+{
+    "model": "main.probleminstance",
+    "pk": 74,
+    "fields": {
+        "name": "Kolaps měny",
+        "description": "Měna ztrácí hodnotu, inflace drasticky roste.",
+        "time_before_expiration": 3,
+        "rarity": 4,
+
+        "min_budget_to_appear": 0,
+        "max_budget_to_appear": 700,
+        "min_citizen_satisfaction_to_appear": 0,
+        "max_citizen_satisfaction_to_appear": 300,
+        "min_environment_to_appear": 0,
+        "max_environment_to_appear": 400,
+        "min_military_to_appear": 0,
+        "max_military_to_appear": 300,
+
+        "budget_bias": 0.0,
+        "citizen_satisfaction_bias": 0.0,
+        "environment_bias": 0.0,
+        "military_bias": 1.0,
+
+        "budget_tendency": 0,
+        "citizen_satisfaction_tendency": 0,
+        "environment_tendency": 0,
+        "military_tendency": 0,
+
+        "possible_regions": [1,2,3,4,5,6,7,8,9,10,11,12,13,14]
+    }
+},
+{
+    "model": "main.probleminstance",
+    "pk": 75,
+    "fields": {
+        "name": "Nedostatek základních služeb",
+        "description": "Stát nemá peníze na zdravotnictví a školy.",
+        "time_before_expiration": 2,
+        "rarity": 2,
+
+        "min_budget_to_appear": 0,
+        "max_budget_to_appear": 300,
+        "min_citizen_satisfaction_to_appear": 0,
+        "max_citizen_satisfaction_to_appear": 300,
+        "min_environment_to_appear": 0,
+        "max_environment_to_appear": 500,
+        "min_military_to_appear": 0,
+        "max_military_to_appear": 300,
+
+        "budget_bias": 0.0,
+        "citizen_satisfaction_bias": 0.0,
+        "environment_bias": 0.0,
+        "military_bias": 1.0,
+
+        "budget_tendency": 0,
+        "citizen_satisfaction_tendency": 0,
+        "environment_tendency": 0,
+        "military_tendency": 0,
+
+        "possible_regions": [12,14,10,6]
+    }
+},
+{
+    "model": "main.probleminstance",
+    "pk": 76,
+    "fields": {
+        "name": "Kolaps malých podniků",
+        "description": "Malé firmy krachují kvůli krizi.",
+        "time_before_expiration": 2,
+        "rarity": 1,
+
+        "min_budget_to_appear": 0,
+        "max_budget_to_appear": 300,
+        "min_citizen_satisfaction_to_appear": 0,
+        "max_citizen_satisfaction_to_appear": 300,
+        "min_environment_to_appear": 0,
+        "max_environment_to_appear": 500,
+        "min_military_to_appear": 0,
+        "max_military_to_appear": 300,
+
+        "budget_bias": 0.0,
+        "citizen_satisfaction_bias": 0.0,
+        "environment_bias": 0.0,
+        "military_bias": 1.0,
+
+        "budget_tendency": 0,
+        "citizen_satisfaction_tendency": 0,
+        "environment_tendency": 0,
+        "military_tendency": 0,
+
+        "possible_regions": [2,7,8]
+    }
+},
+{
+    "model": "main.probleminstance",
+    "pk": 77,
+    "fields": {
+        "name": "Dluhová spirála",
+        "description": "Dluhy rostou a úroky se zvyšují.",
+        "time_before_expiration": 2,
+        "rarity": 4,
+
+        "min_budget_to_appear": 0,
+        "max_budget_to_appear": 700,
+        "min_citizen_satisfaction_to_appear": 0,
+        "max_citizen_satisfaction_to_appear": 300,
+        "min_environment_to_appear": 0,
+        "max_environment_to_appear": 500,
+        "min_military_to_appear": 0,
+        "max_military_to_appear": 300,
+
+        "budget_bias": 1.0,
+        "citizen_satisfaction_bias": 0.0,
+        "environment_bias": 0.0,
+        "military_bias": 2.0,
+
+        "budget_tendency": 0,
+        "citizen_satisfaction_tendency": 0,
+        "environment_tendency": 0,
+        "military_tendency": 0,
+
+        "possible_regions": [1,2,3,4,5,6,7,8,9,10,11,12,13,14]
+    }
+},
+{
+    "model": "main.probleminstance",
+    "pk": 78,
+    "fields": {
+        "name": "Nelegální spalování odpadu",
+        "description": "Kvůli krizi firmy i obyvatelé spalují odpad nelegálně. Dochází k silnému znečištění ovzduší.",
+        "time_before_expiration": 1,
+        "rarity": 1,
+
+        "min_budget_to_appear": 0,
+        "max_budget_to_appear": 300,
+        "min_citizen_satisfaction_to_appear": 0,
+        "max_citizen_satisfaction_to_appear": 300,
+        "min_environment_to_appear": 0,
+        "max_environment_to_appear": 500,
+        "min_military_to_appear": 200,
+        "max_military_to_appear": 700,
+
+        "budget_bias": 0.0,
+        "citizen_satisfaction_bias": 2.0,
+        "environment_bias": 0.0,
+        "military_bias": 0.0,
+
+        "budget_tendency": 0,
+        "citizen_satisfaction_tendency": 0,
+        "environment_tendency": 0,
+        "military_tendency": 0,
+
+        "possible_regions": [6,14]
+    }
+},
+{
+    "model": "main.probleminstance",
+    "pk": 79,
+    "fields": {
+        "name": "Neudržované skládky",
+        "description": "Skládky přetékají a kontaminují půdu i vodu.",
+        "time_before_expiration": 2,
+        "rarity": 1,
+
+        "min_budget_to_appear": 0,
+        "max_budget_to_appear": 300,
+        "min_citizen_satisfaction_to_appear": 0,
+        "max_citizen_satisfaction_to_appear": 300,
+        "min_environment_to_appear": 0,
+        "max_environment_to_appear": 500,
+        "min_military_to_appear": 300,
+        "max_military_to_appear": 900,
+
+        "budget_bias": 0.0,
+        "citizen_satisfaction_bias": 2.0,
+        "environment_bias": 0.0,
+        "military_bias": 0.0,
+
+        "budget_tendency": 0,
+        "citizen_satisfaction_tendency": 0,
+        "environment_tendency": 0,
+        "military_tendency": 0,
+
+        "possible_regions": [2,4]
+    }
+},
+{
+    "model": "main.probleminstance",
+    "pk": 80,
+    "fields": {
+        "name": "Neregulovaná těžba uhlí",
+        "description": "Nekontrolovaná těžba uhlí ničí krajinu.",
+        "time_before_expiration": 2,
+        "rarity": 1,
+
+        "min_budget_to_appear": 0,
+        "max_budget_to_appear": 300,
+        "min_citizen_satisfaction_to_appear": 0,
+        "max_citizen_satisfaction_to_appear": 300,
+        "min_environment_to_appear": 0,
+        "max_environment_to_appear": 500,
+        "min_military_to_appear": 200,
+        "max_military_to_appear": 800,
+
+        "budget_bias": 0.0,
+        "citizen_satisfaction_bias": 1.0,
+        "environment_bias": 0.0,
+        "military_bias": 0.0,
+
+        "budget_tendency": 0,
+        "citizen_satisfaction_tendency": 0,
+        "environment_tendency": 0,
+        "military_tendency": 0,
+
+        "possible_regions": [5,3]
+    }
+},
+{
+    "model": "main.probleminstance",
+    "pk": 81,
+    "fields": {
+        "name": "Nedostatek peněz na údržbu parků ve městech",
+        "description": "Zeleň chátrá, kvalita života ve městech klesá.",
+        "time_before_expiration": 3,
+        "rarity": 1,
+
+        "min_budget_to_appear": 0,
+        "max_budget_to_appear": 400,
+        "min_citizen_satisfaction_to_appear": 0,
+        "max_citizen_satisfaction_to_appear": 300,
+        "min_environment_to_appear": 0,
+        "max_environment_to_appear": 600,
+        "min_military_to_appear": 200,
+        "max_military_to_appear": 700,
+
+        "budget_bias": 1.0,
+        "citizen_satisfaction_bias": 0.0,
+        "environment_bias": 0.0,
+        "military_bias": 1.0,
+
+        "budget_tendency": 0,
+        "citizen_satisfaction_tendency": 0,
+        "environment_tendency": 0,
+        "military_tendency": 0,
+
+        "possible_regions": [1,2,3,4,5,6,7,8,9,10,11,12,13,14]
+    }
+},
+{
+    "model": "main.probleminstance",
+    "pk": 82,
+    "fields": {
+        "name": "Vysychání řek kvůli krizi",
+        "description": "Nízké investice vedou k degradaci vodních zdrojů.",
+        "time_before_expiration": 3,
+        "rarity": 2,
+
+        "min_budget_to_appear": 0,
+        "max_budget_to_appear": 300,
+        "min_citizen_satisfaction_to_appear": 0,
+        "max_citizen_satisfaction_to_appear": 300,
+        "min_environment_to_appear": 0,
+        "max_environment_to_appear": 500,
+        "min_military_to_appear": 400,
+        "max_military_to_appear": 1000,
+
+        "budget_bias": 0.0,
+        "citizen_satisfaction_bias": 1.0,
+        "environment_bias": 0.0,
+        "military_bias": 0.0,
+
+        "budget_tendency": 0,
+        "citizen_satisfaction_tendency": 0,
+        "environment_tendency": 0,
+        "military_tendency": 0,
+
+        "possible_regions": [11,12]
+    }
+},
+{
+    "model": "main.probleminstance",
+    "pk": 83,
+    "fields": {
+        "name": "Nelegální skládky chemikálií",
+        "description": "Firmy se zbavují odpadu ilegálně.",
+        "time_before_expiration": 1,
+        "rarity": 2,
+
+        "min_budget_to_appear": 0,
+        "max_budget_to_appear": 400,
+        "min_citizen_satisfaction_to_appear": 0,
+        "max_citizen_satisfaction_to_appear": 300,
+        "min_environment_to_appear": 0,
+        "max_environment_to_appear": 400,
+        "min_military_to_appear": 400,
+        "max_military_to_appear": 1000,
+
+        "budget_bias": 0.0,
+        "citizen_satisfaction_bias": 2.0,
+        "environment_bias": 0.0,
+        "military_bias": 0.0,
+
+        "budget_tendency": 0,
+        "citizen_satisfaction_tendency": 1,
+        "environment_tendency": 0,
+        "military_tendency": 0,
+
+        "possible_regions": [9,6]
+    }
+},
+{
+    "model": "main.probleminstance",
+    "pk": 84,
+    "fields": {
+        "name": "Přemnožení škůdců",
+        "description": "Nedostatek financí na péči o krajinu vede k přemnožení škůdců.",
+        "time_before_expiration": 2,
+        "rarity": 1,
+
+        "min_budget_to_appear": 0,
+        "max_budget_to_appear": 300,
+        "min_citizen_satisfaction_to_appear": 0,
+        "max_citizen_satisfaction_to_appear": 300,
+        "min_environment_to_appear": 0,
+        "max_environment_to_appear": 500,
+        "min_military_to_appear": 200,
+        "max_military_to_appear": 800,
+
+        "budget_bias": 0.0,
+        "citizen_satisfaction_bias": 1.0,
+        "environment_bias": 0.0,
+        "military_bias": 0.0,
+
+        "budget_tendency": 0,
+        "citizen_satisfaction_tendency": 1,
+        "environment_tendency": 0,
+        "military_tendency": 0,
+
+        "possible_regions": [10,3]
+    }
+},
+{
+    "model": "main.probleminstance",
+    "pk": 85,
+    "fields": {
+        "name": "Nelegální kácení stromů",
+        "description": "Lidé těží dřevo kvůli nedostatku zdrojů.",
+        "time_before_expiration": 2,
+        "rarity": 1,
+
+        "min_budget_to_appear": 0,
+        "max_budget_to_appear": 300,
+        "min_citizen_satisfaction_to_appear": 0,
+        "max_citizen_satisfaction_to_appear": 300,
+        "min_environment_to_appear": 0,
+        "max_environment_to_appear": 500,
+        "min_military_to_appear": 200,
+        "max_military_to_appear": 900,
+
+        "budget_bias": 0.0,
+        "citizen_satisfaction_bias": 1.0,
+        "environment_bias": 0.0,
+        "military_bias": 0.0,
+
+        "budget_tendency": 0,
+        "citizen_satisfaction_tendency": 0,
+        "environment_tendency": 0,
+        "military_tendency": 0,
+
+        "possible_regions": [7,13]
+    }
+},
+{
+    "model": "main.probleminstance",
+    "pk": 86,
+    "fields": {
+        "name": "Přeregulovaná ochrana přírody",
+        "description": "Příliš přísné ekologické zákony brzdí výstavbu a podnikání. Region stagnuje.",
+        "time_before_expiration": 3,
+        "rarity": 1,
+
+        "min_budget_to_appear": 300,
+        "max_budget_to_appear": 700,
+        "min_citizen_satisfaction_to_appear": 400,
+        "max_citizen_satisfaction_to_appear": 900,
+        "min_environment_to_appear": 500,
+        "max_environment_to_appear": 1000,
+        "min_military_to_appear": 600,
+        "max_military_to_appear": 1000,
+
+        "budget_bias": 0.0,
+        "citizen_satisfaction_bias": 1.0,
+        "environment_bias": 0.0,
+        "military_bias": 0.0,
+
+        "budget_tendency": 0,
+        "citizen_satisfaction_tendency": 1,
+        "environment_tendency": 0,
+        "military_tendency": 0,
+
+        "possible_regions": [3,7]
+    }
+},
+{
+    "model": "main.probleminstance",
+    "pk": 87,
+    "fields": {
+        "name": "Přetížení obnovitelných zdrojů",
+        "description": "Síť nezvládá množství solárních a větrných elektráren. Dochází k výpadkům.",
+        "time_before_expiration": 2,
+        "rarity": 2,
+
+        "min_budget_to_appear": 400,
+        "max_budget_to_appear": 900,
+        "min_citizen_satisfaction_to_appear": 500,
+        "max_citizen_satisfaction_to_appear": 900,
+        "min_environment_to_appear": 500,
+        "max_environment_to_appear": 1000,
+        "min_military_to_appear": 500,
+        "max_military_to_appear": 900,
+
+        "budget_bias": 0.0,
+        "citizen_satisfaction_bias": 1.0,
+        "environment_bias": 0.0,
+        "military_bias": 1.0,
+
+        "budget_tendency": 0,
+        "citizen_satisfaction_tendency": 0,
+        "environment_tendency": 0,
+        "military_tendency": 1,
+
+        "possible_regions": [11,2]
+    }
+},
+{
+    "model": "main.probleminstance",
+    "pk": 88,
+    "fields": {
+        "name": "Kolaps biodiverzity",
+        "description": "Ekosystémy ztrácí druhovou rozmanitost. Dlouhodobé dopady jsou kritické.",
+        "time_before_expiration": 4,
+        "rarity": 1,
+
+        "min_budget_to_appear": 300,
+        "max_budget_to_appear": 700,
+        "min_citizen_satisfaction_to_appear": 300,
+        "max_citizen_satisfaction_to_appear": 900,
+        "min_environment_to_appear": 700,
+        "max_environment_to_appear": 1000,
+        "min_military_to_appear": 700,
+        "max_military_to_appear": 1000,
+
+        "budget_bias": 0.0,
+        "citizen_satisfaction_bias": 1.0,
+        "environment_bias": 0.0,
+        "military_bias": 0.0,
+
+        "budget_tendency": 0,
+        "citizen_satisfaction_tendency": 0,
+        "environment_tendency": 0,
+        "military_tendency": 0,
+
+        "possible_regions": [1,2,3,4,5,6,7,8,9,10,11,12,13,14]
+    }
+},
+{
+    "model": "main.probleminstance",
+    "pk": 89,
+    "fields": {
+        "name": "Přemnožení chráněných druhů",
+        "description": "Přemnožená zvěř ničí zemědělství a způsobuje škody.",
+        "time_before_expiration": 2,
+        "rarity": 2,
+
+        "min_budget_to_appear": 300,
+        "max_budget_to_appear": 700,
+        "min_citizen_satisfaction_to_appear": 400,
+        "max_citizen_satisfaction_to_appear": 900,
+        "min_environment_to_appear": 500,
+        "max_environment_to_appear": 900,
+        "min_military_to_appear": 500,
+        "max_military_to_appear": 1000,
+
+        "budget_bias": 0.0,
+        "citizen_satisfaction_bias": 1.0,
+        "environment_bias": 0.0,
+        "military_bias": 0.0,
+
+        "budget_tendency": 0,
+        "citizen_satisfaction_tendency": 1,
+        "environment_tendency": 0,
+        "military_tendency": 0,
+
+        "possible_regions": [10,13]
+    }
+},
+{
+    "model": "main.probleminstance",
+    "pk": 90,
+    "fields": {
+        "name": "Zelená energetická bublina",
+        "description": "Přehnané investice do green tech začínají být neudržitelné.",
+        "time_before_expiration": 3,
+        "rarity": 2,
+
+        "min_budget_to_appear": 300,
+        "max_budget_to_appear": 700,
+        "min_citizen_satisfaction_to_appear": 500,
+        "max_citizen_satisfaction_to_appear": 1000,
+        "min_environment_to_appear": 600,
+        "max_environment_to_appear": 1000,
+        "min_military_to_appear": 500,
+        "max_military_to_appear": 1000,
+
+        "budget_bias": 1.0,
+        "citizen_satisfaction_bias": 1.0,
+        "environment_bias": 0.0,
+        "military_bias": 1.0,
+
+        "budget_tendency": 0,
+        "citizen_satisfaction_tendency": 0,
+        "environment_tendency": 0,
+        "military_tendency": 0,
+
+        "possible_regions": [1,2,3,4,5,6,7,8,9,10,11,12,13,14]
+    }
+},
+{
+    "model": "main.probleminstance",
+    "pk": 91,
+    "fields": {
+        "name": "Kolaps vodní dopravy",
+        "description": "Nízká hladina řek znemožňuje lodní dopravu. Ekonomika i logistika trpí.",
+        "time_before_expiration": 2,
+        "rarity": 1,
+
+        "min_budget_to_appear": 300,
+        "max_budget_to_appear": 700,
+        "min_citizen_satisfaction_to_appear": 400,
+        "max_citizen_satisfaction_to_appear": 900,
+        "min_environment_to_appear": 300,
+        "max_environment_to_appear": 800,
+        "min_military_to_appear": 400,
+        "max_military_to_appear": 900,
+
+        "budget_bias": 0.0,
+        "citizen_satisfaction_bias": 1.0,
+        "environment_bias": 0.0,
+        "military_bias": 1.0,
+
+        "budget_tendency": 0,
+        "citizen_satisfaction_tendency": 0,
+        "environment_tendency": 0,
+        "military_tendency": 0,
+
+        "possible_regions": [2,6]
+    }
+},
+{
+    "model": "main.probleminstance",
+    "pk": 92,
+    "fields": {
+        "name": "Únik dat obyvatel",
+        "description": "Citlivá data občanů unikla na internet. Roste nedůvěra ve stát.",
+        "time_before_expiration": 1,
+        "rarity": 2,
+
+        "min_budget_to_appear": 300,
+        "max_budget_to_appear": 900,
+        "min_citizen_satisfaction_to_appear": 300,
+        "max_citizen_satisfaction_to_appear": 900,
+        "min_environment_to_appear": 200,
+        "max_environment_to_appear": 700,
+        "min_military_to_appear": 200,
+        "max_military_to_appear": 500,
+
+        "budget_bias": 1.0,
+        "citizen_satisfaction_bias": 0.0,
+        "environment_bias": 0.0,
+        "military_bias": 1.0,
+
+        "budget_tendency": 0,
+        "citizen_satisfaction_tendency": 0,
+        "environment_tendency": 0,
+        "military_tendency": 0,
+
+        "possible_regions": [1,2,3,4,5,6,7,8,9,10,11,12,13,14]
+    }
+},
+{
+    "model": "main.probleminstance",
+    "pk": 93,
+    "fields": {
+        "name": "Přetížení letišť",
+        "description": "Letiště nestíhá nápor cestujících.",
+        "time_before_expiration": 2,
+        "rarity": 2,
+
+        "min_budget_to_appear": 300,
+        "max_budget_to_appear": 700,
+        "min_citizen_satisfaction_to_appear": 500,
+        "max_citizen_satisfaction_to_appear": 1000,
+        "min_environment_to_appear": 400,
+        "max_environment_to_appear": 900,
+        "min_military_to_appear": 300,
+        "max_military_to_appear": 700,
+
+        "budget_bias": 1.0,
+        "citizen_satisfaction_bias": 1.0,
+        "environment_bias": 0.0,
+        "military_bias": 1.0,
+
+        "budget_tendency": 0,
+        "citizen_satisfaction_tendency": 0,
+        "environment_tendency": 0,
+        "military_tendency": 0,
+
+        "possible_regions": [1]
+    }
+},
+{
+    "model": "main.probleminstance",
+    "pk": 94,
+    "fields": {
+        "name": "Kolaps sportovních svazů",
+        "description": "Sportovní organizace krachují.",
+        "time_before_expiration": 3,
+        "rarity": 1,
+
+        "min_budget_to_appear": 200,
+        "max_budget_to_appear": 500,
+        "min_citizen_satisfaction_to_appear": 300,
+        "max_citizen_satisfaction_to_appear": 800,
+        "min_environment_to_appear": 200,
+        "max_environment_to_appear": 800,
+        "min_military_to_appear": 200,
+        "max_military_to_appear": 600,
+
+        "budget_bias": 1.0,
+        "citizen_satisfaction_bias": 0.0,
+        "environment_bias": 0.0,
+        "military_bias": 0.0,
+
+        "budget_tendency": 0,
+        "citizen_satisfaction_tendency": 0,
+        "environment_tendency": 0,
+        "military_tendency": 0,
+
+        "possible_regions": [1,2,3,4,5,6,7,8,9,10,11,12,13,14]
+    }
+},
+{
+    "model": "main.probleminstance",
+    "pk": 95,
+    "fields": {
+        "name": "Nelegální těžba kryptoměn",
+        "description": "Nelegální těžba zatěžuje síť a prostředí.",
+        "time_before_expiration": 2,
+        "rarity": 1,
+
+        "min_budget_to_appear": 300,
+        "max_budget_to_appear": 700,
+        "min_citizen_satisfaction_to_appear": 300,
+        "max_citizen_satisfaction_to_appear": 800,
+        "min_environment_to_appear": 200,
+        "max_environment_to_appear": 700,
+        "min_military_to_appear": 300,
+        "max_military_to_appear": 800,
+
+        "budget_bias": 0.0,
+        "citizen_satisfaction_bias": 0.0,
+        "environment_bias": 0.0,
+        "military_bias": 1.0,
+
+        "budget_tendency": 0,
+        "citizen_satisfaction_tendency": 0,
+        "environment_tendency": 0,
+        "military_tendency": 1,
+
+        "possible_regions": [14,6]
+    }
+},
+{
+    "model": "main.probleminstance",
+    "pk": 96,
+    "fields": {
+        "name": "Kolaps zásobování léky",
+        "description": "Chybí léky v nemocnicích i lékárnách.",
+        "time_before_expiration": 1,
+        "rarity": 2,
+
+        "min_budget_to_appear": 300,
+        "max_budget_to_appear": 700,
+        "min_citizen_satisfaction_to_appear": 300,
+        "max_citizen_satisfaction_to_appear": 800,
+        "min_environment_to_appear": 200,
+        "max_environment_to_appear": 800,
+        "min_military_to_appear": 200,
+        "max_military_to_appear": 600,
+
+        "budget_bias": 1.0,
+        "citizen_satisfaction_bias": 0.0,
+        "environment_bias": 0.0,
+        "military_bias": 0.0,
+
+        "budget_tendency": 1,
+        "citizen_satisfaction_tendency": 0,
+        "environment_tendency": 0,
+        "military_tendency": 0,
+
+        "possible_regions": [1,2,3,4,5,6,7,8,9,10,11,12,13,14]
+    }
+},
+{
+    "model": "main.probleminstance",
+    "pk": 97,
+    "fields": {
+        "name": "Nedostatek stavebních materiálů",
+        "description": "Stavebnictví stagnuje.",
+        "time_before_expiration": 2,
+        "rarity": 1,
+
+        "min_budget_to_appear": 200,
+        "max_budget_to_appear": 500,
+        "min_citizen_satisfaction_to_appear": 300,
+        "max_citizen_satisfaction_to_appear": 900,
+        "min_environment_to_appear": 300,
+        "max_environment_to_appear": 800,
+        "min_military_to_appear": 200,
+        "max_military_to_appear": 600,
+
+        "budget_bias": 0.0,
+        "citizen_satisfaction_bias": 1.0,
+        "environment_bias": 0.0,
+        "military_bias": 0.0,
+
+        "budget_tendency": 0,
+        "citizen_satisfaction_tendency": 0,
+        "environment_tendency": 0,
+        "military_tendency": 0,
+
+        "possible_regions": [1,2,3,4,5,6,7,8,9,10,11,12,13,14]
+    }
+},
+{
+    "model": "main.probleminstance",
+    "pk": 98,
+    "fields": {
+        "name": "Přetížení soudního systému",
+        "description": "Soudy nestíhají řešit případy.",
+        "time_before_expiration": 3,
+        "rarity": 2,
+
+        "min_budget_to_appear": 300,
+        "max_budget_to_appear": 700,
+        "min_citizen_satisfaction_to_appear": 300,
+        "max_citizen_satisfaction_to_appear": 800,
+        "min_environment_to_appear": 200,
+        "max_environment_to_appear": 800,
+        "min_military_to_appear": 200,
+        "max_military_to_appear": 600,
+
+        "budget_bias": 1.0,
+        "citizen_satisfaction_bias": 0.0,
+        "environment_bias": 0.0,
+        "military_bias": 0.0,
+
+        "budget_tendency": 0,
+        "citizen_satisfaction_tendency": 0,
+        "environment_tendency": 0,
+        "military_tendency": 0,
+
+        "possible_regions": [1,2,3,4,5,6,7,8,9,10,11,12,13,14]
+    }
+},
+{
+    "model": "main.probleminstance",
+    "pk": 99,
+    "fields": {
+        "name": "Kolaps kulturního sektoru",
+        "description": "Kultura přichází o financování.",
+        "time_before_expiration": 3,
+        "rarity": 1,
+
+        "min_budget_to_appear": 200,
+        "max_budget_to_appear": 500,
+        "min_citizen_satisfaction_to_appear": 300,
+        "max_citizen_satisfaction_to_appear": 800,
+        "min_environment_to_appear": 200,
+        "max_environment_to_appear": 900,
+        "min_military_to_appear": 200,
+        "max_military_to_appear": 600,
+
+        "budget_bias": 1.0,
+        "citizen_satisfaction_bias": 0.0,
+        "environment_bias": 0.0,
+        "military_bias": 0.0,
+
+        "budget_tendency": 0,
+        "citizen_satisfaction_tendency": 0,
+        "environment_tendency": 0,
+        "military_tendency": 0,
+
+        "possible_regions": [1,11]
+    }
+},
+{
+    "model": "main.probleminstance",
+    "pk": 100,
+    "fields": {
+        "name": "Nedostatek vody v průmyslu",
+        "description": "Průmysl nemá dostatek vody.",
+        "time_before_expiration": 2,
+        "rarity": 2,
+
+        "min_budget_to_appear": 300,
+        "max_budget_to_appear": 700,
+        "min_citizen_satisfaction_to_appear": 300,
+        "max_citizen_satisfaction_to_appear": 900,
+        "min_environment_to_appear": 300,
+        "max_environment_to_appear": 800,
+        "min_military_to_appear": 400,
+        "max_military_to_appear": 900,
+
+        "budget_bias": 0.0,
+        "citizen_satisfaction_bias": 1.0,
+        "environment_bias": 0.0,
+        "military_bias": 0.0,
+
+        "budget_tendency": 0,
+        "citizen_satisfaction_tendency": 0,
+        "environment_tendency": 0,
+        "military_tendency": 0,
+
+        "possible_regions": [9,6,8]
     }
 }
 ]

@@ -3,42 +3,3989 @@
     "model": "main.solutionchoice",
     "pk": 1,
     "fields": {
-        "name": "Placeholder solution",
+        "name": "Zastropování cen energií",
         "problem": 1,
-        "description": "Placeholder solution",
-        "time_before_effect": 0,
-        "budget_change": 10,
-        "citizen_satisfaction_change": 10,
-        "environment_change": 10,
-        "military_change": 10
+        "time_before_effect": 1,
+        "budget_change": -60,
+        "citizen_satisfaction_change": 60,
+        "environment_change": -30,
+        "military_change": 0
     }
 },
 {
     "model": "main.solutionchoice",
     "pk": 2,
     "fields": {
-        "name": "Placeholder solution -10",
+        "name": "Investice do obnovitelných zdrojů",
         "problem": 1,
-        "description": "Placeholder solution",
-        "time_before_effect": 0,
-        "budget_change": -10,
-        "citizen_satisfaction_change": -10,
-        "environment_change": -10,
-        "military_change": -10
+        "time_before_effect": 5,
+        "budget_change": -50,
+        "citizen_satisfaction_change": 20,
+        "environment_change": 70,
+        "military_change": 0
     }
 },
 {
     "model": "main.solutionchoice",
     "pk": 3,
     "fields": {
-        "name": "Placeholder solution later",
+        "name": "Zvýšení dovozu fosilních paliv",
         "problem": 1,
-        "description": "Placeholder solution",
+        "time_before_effect": 1,
+        "budget_change": -30,
+        "citizen_satisfaction_change": 40,
+        "environment_change": -70,
+        "military_change": 10
+    }
+},
+
+{
+    "model": "main.solutionchoice",
+    "pk": 4,
+    "fields": {
+        "name": "Masivní těžba napadených stromů",
+        "problem": 2,
+        "time_before_effect": 1,
+        "budget_change": 40,
+        "citizen_satisfaction_change": -20,
+        "environment_change": -60,
+        "military_change": 0
+    }
+},
+{
+    "model": "main.solutionchoice",
+    "pk": 5,
+    "fields": {
+        "name": "Ekologická obnova lesů",
+        "problem": 2,
+        "time_before_effect": 3,
+        "budget_change": -50,
+        "citizen_satisfaction_change": 20,
+        "environment_change": 70,
+        "military_change": 0
+    }
+},
+{
+    "model": "main.solutionchoice",
+    "pk": 6,
+    "fields": {
+        "name": "Nezasahovat (přirozený vývoj)",
+        "problem": 2,
+        "time_before_effect": 4,
+        "budget_change": -30,
+        "citizen_satisfaction_change": -40,
+        "environment_change": 40,
+        "military_change": 0
+    }
+},
+
+{
+    "model": "main.solutionchoice",
+    "pk": 7,
+    "fields": {
+        "name": "Zvýšení platů učitelů",
+        "problem": 3,
+        "time_before_effect": 1,
+        "budget_change": -60,
+        "citizen_satisfaction_change": 60,
+        "environment_change": 0,
+        "military_change": 0
+    }
+},
+{
+    "model": "main.solutionchoice",
+    "pk": 8,
+    "fields": {
+        "name": "Ignorování stávky",
+        "problem": 3,
         "time_before_effect": 2,
-        "budget_change": 15,
-        "citizen_satisfaction_change": 15,
-        "environment_change": 15,
-        "military_change": 15
+        "budget_change": 0,
+        "citizen_satisfaction_change": -70,
+        "environment_change": 0,
+        "military_change": 0
+    }
+},
+{
+    "model": "main.solutionchoice",
+    "pk": 9,
+    "fields": {
+        "name": "Reforma školství",
+        "problem": 3,
+        "time_before_effect": 5,
+        "budget_change": -40,
+        "citizen_satisfaction_change": 40,
+        "environment_change": 0,
+        "military_change": 0
+    }
+},
+
+{
+    "model": "main.solutionchoice",
+    "pk": 10,
+    "fields": {
+        "name": "Okamžitá humanitární pomoc",
+        "problem": 4,
+        "time_before_effect": 0,
+        "budget_change": -50,
+        "citizen_satisfaction_change": 60,
+        "environment_change": -30,
+        "military_change": 30
+    }
+},
+{
+    "model": "main.solutionchoice",
+    "pk": 11,
+    "fields": {
+        "name": "Budování protipovodňových opatření",
+        "problem": 4,
+        "time_before_effect": 3,
+        "budget_change": -60,
+        "citizen_satisfaction_change": 30,
+        "environment_change": 30,
+        "military_change": 0
+    }
+},
+{
+    "model": "main.solutionchoice",
+    "pk": 12,
+    "fields": {
+        "name": "Minimální zásah",
+        "problem": 4,
+        "time_before_effect": 1,
+        "budget_change": -20,
+        "citizen_satisfaction_change": -70,
+        "environment_change": -50,
+        "military_change": 0
+    }
+},
+
+{
+    "model": "main.solutionchoice",
+    "pk": 13,
+    "fields": {
+        "name": "Investice do kyberbezpečnosti",
+        "problem": 5,
+        "time_before_effect": 2,
+        "budget_change": -50,
+        "citizen_satisfaction_change": 20,
+        "environment_change": 0,
+        "military_change": 50
+    }
+},
+{
+    "model": "main.solutionchoice",
+    "pk": 14,
+    "fields": {
+        "name": "Spolupráce se zahraničím",
+        "problem": 5,
+        "time_before_effect": 1,
+        "budget_change": -30,
+        "citizen_satisfaction_change": 20,
+        "environment_change": 0,
+        "military_change": 40
+    }
+},
+{
+    "model": "main.solutionchoice",
+    "pk": 15,
+    "fields": {
+        "name": "Bez zásahu",
+        "problem": 5,
+        "time_before_effect": 2,
+        "budget_change": -70,
+        "citizen_satisfaction_change": -60,
+        "environment_change": 0,
+        "military_change": -40
+    }
+},
+{
+    "model": "main.solutionchoice",
+    "pk": 16,
+    "fields": {
+        "name": "Otevření hranic",
+        "problem": 6,
+        "time_before_effect": 1,
+        "budget_change": -40,
+        "citizen_satisfaction_change": 40,
+        "environment_change": -30,
+        "military_change": -30
+    }
+},
+{
+    "model": "main.solutionchoice",
+    "pk": 17,
+    "fields": {
+        "name": "Uzavření hranic",
+        "problem": 6,
+        "time_before_effect": 1,
+        "budget_change": 20,
+        "citizen_satisfaction_change": -40,
+        "environment_change": 0,
+        "military_change": 60
+    }
+},
+{
+    "model": "main.solutionchoice",
+    "pk": 18,
+    "fields": {
+        "name": "Přerozdělení v rámci EU",
+        "problem": 6,
+        "time_before_effect": 2,
+        "budget_change": -30,
+        "citizen_satisfaction_change": 20,
+        "environment_change": 0,
+        "military_change": 30
+    }
+},
+
+{
+    "model": "main.solutionchoice",
+    "pk": 19,
+    "fields": {
+        "name": "Tvrdý lockdown",
+        "problem": 7,
+        "time_before_effect": 1,
+        "budget_change": -70,
+        "citizen_satisfaction_change": -30,
+        "environment_change": 30,
+        "military_change": 0
+    }
+},
+{
+    "model": "main.solutionchoice",
+    "pk": 20,
+    "fields": {
+        "name": "Mírná opatření",
+        "problem": 7,
+        "time_before_effect": 1,
+        "budget_change": -30,
+        "citizen_satisfaction_change": 10,
+        "environment_change": 0,
+        "military_change": 0
+    }
+},
+{
+    "model": "main.solutionchoice",
+    "pk": 21,
+    "fields": {
+        "name": "Bez zásahu",
+        "problem": 7,
+        "time_before_effect": 2,
+        "budget_change": -60,
+        "citizen_satisfaction_change": -70,
+        "environment_change": 0,
+        "military_change": -30
+    }
+},
+
+{
+    "model": "main.solutionchoice",
+    "pk": 22,
+    "fields": {
+        "name": "Rychlá výstavba",
+        "problem": 8,
+        "time_before_effect": 2,
+        "budget_change": 60,
+        "citizen_satisfaction_change": 30,
+        "environment_change": -70,
+        "military_change": 0
+    }
+},
+{
+    "model": "main.solutionchoice",
+    "pk": 23,
+    "fields": {
+        "name": "Ekologická varianta",
+        "problem": 8,
+        "time_before_effect": 3,
+        "budget_change": -40,
+        "citizen_satisfaction_change": 20,
+        "environment_change": 60,
+        "military_change": 0
+    }
+},
+{
+    "model": "main.solutionchoice",
+    "pk": 24,
+    "fields": {
+        "name": "Zastavení projektu",
+        "problem": 8,
+        "time_before_effect": 1,
+        "budget_change": -50,
+        "citizen_satisfaction_change": -30,
+        "environment_change": 70,
+        "military_change": 0
+    }
+},
+
+{
+    "model": "main.solutionchoice",
+    "pk": 25,
+    "fields": {
+        "name": "Masivní investice",
+        "problem": 9,
+        "time_before_effect": 1,
+        "budget_change": -60,
+        "citizen_satisfaction_change": -20,
+        "environment_change": 0,
+        "military_change": 70
+    }
+},
+{
+    "model": "main.solutionchoice",
+    "pk": 26,
+    "fields": {
+        "name": "Postupné navyšování",
+        "problem": 9,
+        "time_before_effect": 2,
+        "budget_change": -40,
+        "citizen_satisfaction_change": 0,
+        "environment_change": 0,
+        "military_change": 40
+    }
+},
+{
+    "model": "main.solutionchoice",
+    "pk": 27,
+    "fields": {
+        "name": "Zachování stavu",
+        "problem": 9,
+        "time_before_effect": 1,
+        "budget_change": 0,
+        "citizen_satisfaction_change": 10,
+        "environment_change": 0,
+        "military_change": -40
+    }
+},
+
+{
+    "model": "main.solutionchoice",
+    "pk": 28,
+    "fields": {
+        "name": "Regulace spotřeby",
+        "problem": 10,
+        "time_before_effect": 1,
+        "budget_change": -30,
+        "citizen_satisfaction_change": -40,
+        "environment_change": 50,
+        "military_change": 0
+    }
+},
+{
+    "model": "main.solutionchoice",
+    "pk": 29,
+    "fields": {
+        "name": "Investice do infrastruktury",
+        "problem": 10,
+        "time_before_effect": 3,
+        "budget_change": -60,
+        "citizen_satisfaction_change": 30,
+        "environment_change": 30,
+        "military_change": 0
+    }
+},
+{
+    "model": "main.solutionchoice",
+    "pk": 30,
+    "fields": {
+        "name": "Dovoz vody",
+        "problem": 10,
+        "time_before_effect": 1,
+        "budget_change": -40,
+        "citizen_satisfaction_change": 40,
+        "environment_change": -30,
+        "military_change": 10
+    }
+},
+{
+    "model": "main.solutionchoice",
+    "pk": 31,
+    "fields": {
+        "name": "Regulace nájmů",
+        "problem": 11,
+        "time_before_effect": 1,
+        "budget_change": -50,
+        "citizen_satisfaction_change": 60,
+        "environment_change": 0,
+        "military_change": 0
+    }
+},
+{
+    "model": "main.solutionchoice",
+    "pk": 32,
+    "fields": {
+        "name": "Podpora výstavby",
+        "problem": 11,
+        "time_before_effect": 3,
+        "budget_change": -60,
+        "citizen_satisfaction_change": 40,
+        "environment_change": -30,
+        "military_change": 0
+    }
+},
+{
+    "model": "main.solutionchoice",
+    "pk": 33,
+    "fields": {
+        "name": "Bez zásahu",
+        "problem": 11,
+        "time_before_effect": 2,
+        "budget_change": 0,
+        "citizen_satisfaction_change": -50,
+        "environment_change": 0,
+        "military_change": 0
+    }
+},
+
+{
+    "model": "main.solutionchoice",
+    "pk": 34,
+    "fields": {
+        "name": "Investice do MHD",
+        "problem": 12,
+        "time_before_effect": 3,
+        "budget_change": -50,
+        "citizen_satisfaction_change": 40,
+        "environment_change": 30,
+        "military_change": 0
+    }
+},
+{
+    "model": "main.solutionchoice",
+    "pk": 35,
+    "fields": {
+        "name": "Omezení aut",
+        "problem": 12,
+        "time_before_effect": 1,
+        "budget_change": -30,
+        "citizen_satisfaction_change": -30,
+        "environment_change": 50,
+        "military_change": 0
+    }
+},
+{
+    "model": "main.solutionchoice",
+    "pk": 36,
+    "fields": {
+        "name": "Bez zásahu",
+        "problem": 12,
+        "time_before_effect": 2,
+        "budget_change": -40,
+        "citizen_satisfaction_change": -50,
+        "environment_change": -30,
+        "military_change": 0
+    }
+},
+
+{
+    "model": "main.solutionchoice",
+    "pk": 37,
+    "fields": {
+        "name": "Regulace turismu",
+        "problem": 13,
+        "time_before_effect": 1,
+        "budget_change": -40,
+        "citizen_satisfaction_change": 50,
+        "environment_change": 0,
+        "military_change": 0
+    }
+},
+{
+    "model": "main.solutionchoice",
+    "pk": 38,
+    "fields": {
+        "name": "Podpora turismu",
+        "problem": 13,
+        "time_before_effect": 1,
+        "budget_change": 60,
+        "citizen_satisfaction_change": -30,
+        "environment_change": -30,
+        "military_change": 0
+    }
+},
+{
+    "model": "main.solutionchoice",
+    "pk": 39,
+    "fields": {
+        "name": "Vyvážený přístup",
+        "problem": 13,
+        "time_before_effect": 2,
+        "budget_change": 20,
+        "citizen_satisfaction_change": 20,
+        "environment_change": 0,
+        "military_change": 0
+    }
+},
+
+{
+    "model": "main.solutionchoice",
+    "pk": 40,
+    "fields": {
+        "name": "Investice do infrastruktury",
+        "problem": 14,
+        "time_before_effect": 3,
+        "budget_change": -60,
+        "citizen_satisfaction_change": 40,
+        "environment_change": -60,
+        "military_change": 0
+    }
+},
+{
+    "model": "main.solutionchoice",
+    "pk": 41,
+    "fields": {
+        "name": "Regulace výstavby",
+        "problem": 14,
+        "time_before_effect": 1,
+        "budget_change": -30,
+        "citizen_satisfaction_change": -30,
+        "environment_change": 50,
+        "military_change": 0
+    }
+},
+{
+    "model": "main.solutionchoice",
+    "pk": 42,
+    "fields": {
+        "name": "Bez zásahu",
+        "problem": 14,
+        "time_before_effect": 2,
+        "budget_change": 0,
+        "citizen_satisfaction_change": -50,
+        "environment_change": 30,
+        "military_change": 0
+    }
+},
+
+{
+    "model": "main.solutionchoice",
+    "pk": 43,
+    "fields": {
+        "name": "Rozšíření silnic",
+        "problem": 15,
+        "time_before_effect": 2,
+        "budget_change": -40,
+        "citizen_satisfaction_change": 30,
+        "environment_change": -40,
+        "military_change": 0
+    }
+},
+{
+    "model": "main.solutionchoice",
+    "pk": 44,
+    "fields": {
+        "name": "Podpora vlaků",
+        "problem": 15,
+        "time_before_effect": 3,
+        "budget_change": -50,
+        "citizen_satisfaction_change": 40,
+        "environment_change": 30,
+        "military_change": 0
+    }
+},
+{
+    "model": "main.solutionchoice",
+    "pk": 45,
+    "fields": {
+        "name": "Bez zásahu",
+        "problem": 15,
+        "time_before_effect": 1,
+        "budget_change": -30,
+        "citizen_satisfaction_change": -50,
+        "environment_change": -30,
+        "military_change": 0
+    }
+},
+
+{
+    "model": "main.solutionchoice",
+    "pk": 46,
+    "fields": {
+        "name": "Výstavba škol",
+        "problem": 16,
+        "time_before_effect": 4,
+        "budget_change": -60,
+        "citizen_satisfaction_change": 50,
+        "environment_change": 0,
+        "military_change": 0
+    }
+},
+{
+    "model": "main.solutionchoice",
+    "pk": 47,
+    "fields": {
+        "name": "Dočasná řešení",
+        "problem": 16,
+        "time_before_effect": 1,
+        "budget_change": -30,
+        "citizen_satisfaction_change": 20,
+        "environment_change": 0,
+        "military_change": 0
+    }
+},
+{
+    "model": "main.solutionchoice",
+    "pk": 48,
+    "fields": {
+        "name": "Bez zásahu",
+        "problem": 16,
+        "time_before_effect": 2,
+        "budget_change": 0,
+        "citizen_satisfaction_change": -50,
+        "environment_change": 0,
+        "military_change": 0
+    }
+},
+
+{
+    "model": "main.solutionchoice",
+    "pk": 49,
+    "fields": {
+        "name": "Podpora zaměstnanců",
+        "problem": 17,
+        "time_before_effect": 2,
+        "budget_change": -50,
+        "citizen_satisfaction_change": 40,
+        "environment_change": 0,
+        "military_change": 0
+    }
+},
+{
+    "model": "main.solutionchoice",
+    "pk": 50,
+    "fields": {
+        "name": "Přilákání zahraničních pracovníků",
+        "problem": 17,
+        "time_before_effect": 1,
+        "budget_change": -30,
+        "citizen_satisfaction_change": 10,
+        "environment_change": 0,
+        "military_change": 0
+    }
+},
+{
+    "model": "main.solutionchoice",
+    "pk": 51,
+    "fields": {
+        "name": "Bez zásahu",
+        "problem": 17,
+        "time_before_effect": 2,
+        "budget_change": -40,
+        "citizen_satisfaction_change": -20,
+        "environment_change": 0,
+        "military_change": 0
+    }
+},
+
+{
+    "model": "main.solutionchoice",
+    "pk": 52,
+    "fields": {
+        "name": "Diverzifikace ekonomiky",
+        "problem": 18,
+        "time_before_effect": 3,
+        "budget_change": -50,
+        "citizen_satisfaction_change": 40,
+        "environment_change": 0,
+        "military_change": 0
+    }
+},
+{
+    "model": "main.solutionchoice",
+    "pk": 53,
+    "fields": {
+        "name": "Podpora průmyslu",
+        "problem": 18,
+        "time_before_effect": 1,
+        "budget_change": -30,
+        "citizen_satisfaction_change": 20,
+        "environment_change": 0,
+        "military_change": 0
+    }
+},
+{
+    "model": "main.solutionchoice",
+    "pk": 54,
+    "fields": {
+        "name": "Bez zásahu",
+        "problem": 18,
+        "time_before_effect": 2,
+        "budget_change": -40,
+        "citizen_satisfaction_change": -20,
+        "environment_change": -30,
+        "military_change": 0
+    }
+},
+
+{
+    "model": "main.solutionchoice",
+    "pk": 55,
+    "fields": {
+        "name": "Výstavba silnic",
+        "problem": 19,
+        "time_before_effect": 2,
+        "budget_change": -60,
+        "citizen_satisfaction_change": 30,
+        "environment_change": 0,
+        "military_change": 0
+    }
+},
+{
+    "model": "main.solutionchoice",
+    "pk": 56,
+    "fields": {
+        "name": "Podpora veřejné dopravy",
+        "problem": 19,
+        "time_before_effect": 2,
+        "budget_change": -40,
+        "citizen_satisfaction_change": 20,
+        "environment_change": -50,
+        "military_change": 0
+    }
+},
+{
+    "model": "main.solutionchoice",
+    "pk": 57,
+    "fields": {
+        "name": "Bez zásahu",
+        "problem": 19,
+        "time_before_effect": 1,
+        "budget_change": -70,
+        "citizen_satisfaction_change": -50,
+        "environment_change": 30,
+        "military_change": 0
+    }
+},
+
+{
+    "model": "main.solutionchoice",
+    "pk": 58,
+    "fields": {
+        "name": "Nábor ze zahraničí",
+        "problem": 20,
+        "time_before_effect": 1,
+        "budget_change": -50,
+        "citizen_satisfaction_change": 40,
+        "environment_change": -30,
+        "military_change": 0
+    }
+},
+{
+    "model": "main.solutionchoice",
+    "pk": 59,
+    "fields": {
+        "name": "Zvýšení platů",
+        "problem": 20,
+        "time_before_effect": 2,
+        "budget_change": -40,
+        "citizen_satisfaction_change": 30,
+        "environment_change": 0,
+        "military_change": 0
+    }
+},
+{
+    "model": "main.solutionchoice",
+    "pk": 60,
+    "fields": {
+        "name": "Bez zásahu",
+        "problem": 20,
+        "time_before_effect": 1,
+        "budget_change": -40,
+        "citizen_satisfaction_change": -30,
+        "environment_change": 0,
+        "military_change": 0
+    }
+},
+{
+    "model": "main.solutionchoice",
+    "pk": 61,
+    "fields": {
+        "name": "Marketingová kampaň",
+        "problem": 21,
+        "time_before_effect": 1,
+        "budget_change": -30,
+        "citizen_satisfaction_change": 20,
+        "environment_change": 0,
+        "military_change": 0
+    }
+},
+{
+    "model": "main.solutionchoice",
+    "pk": 62,
+    "fields": {
+        "name": "Státní dotace",
+        "problem": 21,
+        "time_before_effect": 1,
+        "budget_change": -50,
+        "citizen_satisfaction_change": 40,
+        "environment_change": 0,
+        "military_change": 0
+    }
+},
+{
+    "model": "main.solutionchoice",
+    "pk": 63,
+    "fields": {
+        "name": "Diverzifikace služeb",
+        "problem": 21,
+        "time_before_effect": 3,
+        "budget_change": -60,
+        "citizen_satisfaction_change": 30,
+        "environment_change": 0,
+        "military_change": 0
+    }
+},
+
+{
+    "model": "main.solutionchoice",
+    "pk": 64,
+    "fields": {
+        "name": "Nábor policistů",
+        "problem": 22,
+        "time_before_effect": 2,
+        "budget_change": -40,
+        "citizen_satisfaction_change": 20,
+        "environment_change": 0,
+        "military_change": 0
+    }
+},
+{
+    "model": "main.solutionchoice",
+    "pk": 65,
+    "fields": {
+        "name": "Přesun sil",
+        "problem": 22,
+        "time_before_effect": 1,
+        "budget_change": -50,
+        "citizen_satisfaction_change": 40,
+        "environment_change": 0,
+        "military_change": 0
+    }
+},
+{
+    "model": "main.solutionchoice",
+    "pk": 66,
+    "fields": {
+        "name": "Bez zásahu",
+        "problem": 22,
+        "time_before_effect": 1,
+        "budget_change": -40,
+        "citizen_satisfaction_change": 30,
+        "environment_change": 0,
+        "military_change": 60
+    }
+},
+
+{
+    "model": "main.solutionchoice",
+    "pk": 67,
+    "fields": {
+        "name": "Úklid a pokuty",
+        "problem": 23,
+        "time_before_effect": 1,
+        "budget_change": -40,
+        "citizen_satisfaction_change": 20,
+        "environment_change": 0,
+        "military_change": 40
+    }
+},
+{
+    "model": "main.solutionchoice",
+    "pk": 68,
+    "fields": {
+        "name": "Zvýšení kontrol",
+        "problem": 23,
+        "time_before_effect": 2,
+        "budget_change": -30,
+        "citizen_satisfaction_change": 30,
+        "environment_change": 0,
+        "military_change": -70
+    }
+},
+{
+    "model": "main.solutionchoice",
+    "pk": 69,
+    "fields": {
+        "name": "Bez zásahu",
+        "problem": 23,
+        "time_before_effect": 1,
+        "budget_change": -40,
+        "citizen_satisfaction_change": 20,
+        "environment_change": 60,
+        "military_change": 0
+    }
+},
+
+{
+    "model": "main.solutionchoice",
+    "pk": 70,
+    "fields": {
+        "name": "Rekvalifikace",
+        "problem": 24,
+        "time_before_effect": 2,
+        "budget_change": -40,
+        "citizen_satisfaction_change": 30,
+        "environment_change": 40,
+        "military_change": -30
+    }
+},
+{
+    "model": "main.solutionchoice",
+    "pk": 71,
+    "fields": {
+        "name": "Noví investoři",
+        "problem": 24,
+        "time_before_effect": 3,
+        "budget_change": -60,
+        "citizen_satisfaction_change": 40,
+        "environment_change": -70,
+        "military_change": -50
+    }
+},
+{
+    "model": "main.solutionchoice",
+    "pk": 72,
+    "fields": {
+        "name": "Obnovení výroby",
+        "problem": 24,
+        "time_before_effect": 2,
+        "budget_change": -40,
+        "citizen_satisfaction_change": 30,
+        "environment_change": 0,
+        "military_change": 0
+    }
+},
+
+{
+    "model": "main.solutionchoice",
+    "pk": 73,
+    "fields": {
+        "name": "Navýšení rozpočtu",
+        "problem": 25,
+        "time_before_effect": 1,
+        "budget_change": 70,
+        "citizen_satisfaction_change": 20,
+        "environment_change": -30,
+        "military_change": 0
+    }
+},
+{
+    "model": "main.solutionchoice",
+    "pk": 74,
+    "fields": {
+        "name": "Digitalizace systému",
+        "problem": 25,
+        "time_before_effect": 2,
+        "budget_change": 80,
+        "citizen_satisfaction_change": 40,
+        "environment_change": -50,
+        "military_change": 0
+    }
+},
+{
+    "model": "main.solutionchoice",
+    "pk": 75,
+    "fields": {
+        "name": "Zapojení soukromého sektoru",
+        "problem": 25,
+        "time_before_effect": 2,
+        "budget_change": -50,
+        "citizen_satisfaction_change": 30,
+        "environment_change": 0,
+        "military_change": 60
+    }
+},
+
+{
+    "model": "main.solutionchoice",
+    "pk": 76,
+    "fields": {
+        "name": "Regulace vstupu",
+        "problem": 26,
+        "time_before_effect": 1,
+        "budget_change": 20,
+        "citizen_satisfaction_change": 20,
+        "environment_change": 0,
+        "military_change": -50
+    }
+},
+{
+    "model": "main.solutionchoice",
+    "pk": 77,
+    "fields": {
+        "name": "Rozvoj infrastruktury",
+        "problem": 26,
+        "time_before_effect": 2,
+        "budget_change": 40,
+        "citizen_satisfaction_change": 40,
+        "environment_change": 0,
+        "military_change": 50
+    }
+},
+{
+    "model": "main.solutionchoice",
+    "pk": 78,
+    "fields": {
+        "name": "Ekoturismus",
+        "problem": 26,
+        "time_before_effect": 3,
+        "budget_change": -30,
+        "citizen_satisfaction_change": 40,
+        "environment_change": 60,
+        "military_change": 0
+    }
+},
+
+{
+    "model": "main.solutionchoice",
+    "pk": 79,
+    "fields": {
+        "name": "Nábor hasičů",
+        "problem": 27,
+        "time_before_effect": 2,
+        "budget_change": 50,
+        "citizen_satisfaction_change": 20,
+        "environment_change": -50,
+        "military_change": 0
+    }
+},
+{
+    "model": "main.solutionchoice",
+    "pk": 80,
+    "fields": {
+        "name": "Dobrovolní hasiči",
+        "problem": 27,
+        "time_before_effect": 1,
+        "budget_change": 40,
+        "citizen_satisfaction_change": 40,
+        "environment_change": 50,
+        "military_change": 0
+    }
+},
+{
+    "model": "main.solutionchoice",
+    "pk": 81,
+    "fields": {
+        "name": "Modernizace techniky",
+        "problem": 27,
+        "time_before_effect": 2,
+        "budget_change": -40,
+        "citizen_satisfaction_change": 30,
+        "environment_change": 0,
+        "military_change": -30
+    }
+},
+
+{
+    "model": "main.solutionchoice",
+    "pk": 82,
+    "fields": {
+        "name": "Výstavba silnic",
+        "problem": 28,
+        "time_before_effect": 3,
+        "budget_change": -30,
+        "citizen_satisfaction_change": 20,
+        "environment_change": 0,
+        "military_change": 0
+    }
+},
+{
+    "model": "main.solutionchoice",
+    "pk": 83,
+    "fields": {
+        "name": "Podpora veřejné dopravy",
+        "problem": 28,
+        "time_before_effect": 2,
+        "budget_change": 20,
+        "citizen_satisfaction_change": 40,
+        "environment_change": 0,
+        "military_change": 0
+    }
+},
+{
+    "model": "main.solutionchoice",
+    "pk": 84,
+    "fields": {
+        "name": "Podpora podnikání",
+        "problem": 28,
+        "time_before_effect": 2,
+        "budget_change": -60,
+        "citizen_satisfaction_change": 30,
+        "environment_change": -30,
+        "military_change": -30
+    }
+},
+
+{
+    "model": "main.solutionchoice",
+    "pk": 85,
+    "fields": {
+        "name": "Podpora výstavby",
+        "problem": 29,
+        "time_before_effect": 3,
+        "budget_change": -40,
+        "citizen_satisfaction_change": 20,
+        "environment_change": 0,
+        "military_change": 0
+    }
+},
+{
+    "model": "main.solutionchoice",
+    "pk": 86,
+    "fields": {
+        "name": "Regulace trhu",
+        "problem": 29,
+        "time_before_effect": 1,
+        "budget_change": 60,
+        "citizen_satisfaction_change": 40,
+        "environment_change": 0,
+        "military_change": -50
+    }
+},
+{
+    "model": "main.solutionchoice",
+    "pk": 87,
+    "fields": {
+        "name": "Podpora developerů",
+        "problem": 29,
+        "time_before_effect": 2,
+        "budget_change": -60,
+        "citizen_satisfaction_change": 30,
+        "environment_change": -30,
+        "military_change": 0
+    }
+},
+
+{
+    "model": "main.solutionchoice",
+    "pk": 88,
+    "fields": {
+        "name": "Navýšení kapacit",
+        "problem": 30,
+        "time_before_effect": 2,
+        "budget_change": -40,
+        "citizen_satisfaction_change": 20,
+        "environment_change": 0,
+        "military_change": 0
+    }
+},
+{
+    "model": "main.solutionchoice",
+    "pk": 89,
+    "fields": {
+        "name": "Digitalizace zdravotnictví",
+        "problem": 30,
+        "time_before_effect": 2,
+        "budget_change": 60,
+        "citizen_satisfaction_change": 40,
+        "environment_change": -50,
+        "military_change": 0
+    }
+},
+{
+    "model": "main.solutionchoice",
+    "pk": 90,
+    "fields": {
+        "name": "Zapojení klinik",
+        "problem": 30,
+        "time_before_effect": 1,
+        "budget_change": -50,
+        "citizen_satisfaction_change": 20,
+        "environment_change": 0,
+        "military_change": 40
+    }
+},
+{
+    "model": "main.solutionchoice",
+    "pk": 91,
+    "fields": {
+        "name": "Bezpečnostní opatření",
+        "problem": 31,
+        "time_before_effect": 1,
+        "budget_change": 20,
+        "citizen_satisfaction_change": -20,
+        "environment_change": 0,
+        "military_change": 60
+    }
+},
+{
+    "model": "main.solutionchoice",
+    "pk": 92,
+    "fields": {
+        "name": "Uzavření oblastí",
+        "problem": 31,
+        "time_before_effect": 1,
+        "budget_change": 40,
+        "citizen_satisfaction_change": 20,
+        "environment_change": 0,
+        "military_change": -60
+    }
+},
+{
+    "model": "main.solutionchoice",
+    "pk": 93,
+    "fields": {
+        "name": "Podpora turismu",
+        "problem": 31,
+        "time_before_effect": 1,
+        "budget_change": -30,
+        "citizen_satisfaction_change": 40,
+        "environment_change": 40,
+        "military_change": 60
+    }
+},
+
+{
+    "model": "main.solutionchoice",
+    "pk": 94,
+    "fields": {
+        "name": "Okamžitý zásah",
+        "problem": 32,
+        "time_before_effect": 0,
+        "budget_change": 0,
+        "citizen_satisfaction_change": -30,
+        "environment_change": 60,
+        "military_change": -60
+    }
+},
+{
+    "model": "main.solutionchoice",
+    "pk": 95,
+    "fields": {
+        "name": "Minimální zásah",
+        "problem": 32,
+        "time_before_effect": 1,
+        "budget_change": 50,
+        "citizen_satisfaction_change": -40,
+        "environment_change": -60,
+        "military_change": -70
+    }
+},
+{
+    "model": "main.solutionchoice",
+    "pk": 96,
+    "fields": {
+        "name": "Utajení problému",
+        "problem": 32,
+        "time_before_effect": 1,
+        "budget_change": -50,
+        "citizen_satisfaction_change": 20,
+        "environment_change": 60,
+        "military_change": 40
+    }
+},
+
+{
+    "model": "main.solutionchoice",
+    "pk": 97,
+    "fields": {
+        "name": "Omezení průmyslu",
+        "problem": 33,
+        "time_before_effect": 1,
+        "budget_change": -30,
+        "citizen_satisfaction_change": 30,
+        "environment_change": -60,
+        "military_change": 60
+    }
+},
+{
+    "model": "main.solutionchoice",
+    "pk": 98,
+    "fields": {
+        "name": "Nové zdroje vody",
+        "problem": 33,
+        "time_before_effect": 3,
+        "budget_change": 20,
+        "citizen_satisfaction_change": -20,
+        "environment_change": -70,
+        "military_change": -60
+    }
+},
+{
+    "model": "main.solutionchoice",
+    "pk": 99,
+    "fields": {
+        "name": "Priorita průmyslu",
+        "problem": 33,
+        "time_before_effect": 1,
+        "budget_change": -60,
+        "citizen_satisfaction_change": -10,
+        "environment_change": 40,
+        "military_change": 0
+    }
+},
+
+{
+    "model": "main.solutionchoice",
+    "pk": 100,
+    "fields": {
+        "name": "Masivní výstavba",
+        "problem": 34,
+        "time_before_effect": 2,
+        "budget_change": 70,
+        "citizen_satisfaction_change": 20,
+        "environment_change": -60,
+        "military_change": 0
+    }
+},
+{
+    "model": "main.solutionchoice",
+    "pk": 101,
+    "fields": {
+        "name": "Regulovaný rozvoj",
+        "problem": 34,
+        "time_before_effect": 3,
+        "budget_change": 40,
+        "citizen_satisfaction_change": 30,
+        "environment_change": 20,
+        "military_change": 0
+    }
+},
+{
+    "model": "main.solutionchoice",
+    "pk": 102,
+    "fields": {
+        "name": "Zastavení projektů",
+        "problem": 34,
+        "time_before_effect": 1,
+        "budget_change": -50,
+        "citizen_satisfaction_change": -20,
+        "environment_change": 70,
+        "military_change": 0
+    }
+},
+
+{
+    "model": "main.solutionchoice",
+    "pk": 103,
+    "fields": {
+        "name": "Podpora firem",
+        "problem": 35,
+        "time_before_effect": 2,
+        "budget_change": 60,
+        "citizen_satisfaction_change": 40,
+        "environment_change": -30,
+        "military_change": 0
+    }
+},
+{
+    "model": "main.solutionchoice",
+    "pk": 104,
+    "fields": {
+        "name": "Investice do regionu",
+        "problem": 35,
+        "time_before_effect": 3,
+        "budget_change": -50,
+        "citizen_satisfaction_change": 50,
+        "environment_change": 0,
+        "military_change": 0
+    }
+},
+{
+    "model": "main.solutionchoice",
+    "pk": 105,
+    "fields": {
+        "name": "Bez zásahu",
+        "problem": 35,
+        "time_before_effect": 2,
+        "budget_change": -50,
+        "citizen_satisfaction_change": -60,
+        "environment_change": 0,
+        "military_change": 0
+    }
+},
+
+{
+    "model": "main.solutionchoice",
+    "pk": 106,
+    "fields": {
+        "name": "Rekonstrukce",
+        "problem": 36,
+        "time_before_effect": 2,
+        "budget_change": -50,
+        "citizen_satisfaction_change": 50,
+        "environment_change": -20,
+        "military_change": 0
+    }
+},
+{
+    "model": "main.solutionchoice",
+    "pk": 107,
+    "fields": {
+        "name": "PPP projekty",
+        "problem": 36,
+        "time_before_effect": 2,
+        "budget_change": 40,
+        "citizen_satisfaction_change": 30,
+        "environment_change": -10,
+        "military_change": 0
+    }
+},
+{
+    "model": "main.solutionchoice",
+    "pk": 108,
+    "fields": {
+        "name": "Bez zásahu",
+        "problem": 36,
+        "time_before_effect": 1,
+        "budget_change": -40,
+        "citizen_satisfaction_change": -50,
+        "environment_change": 0,
+        "military_change": 0
+    }
+},
+
+{
+    "model": "main.solutionchoice",
+    "pk": 109,
+    "fields": {
+        "name": "Obnovitelné zdroje",
+        "problem": 37,
+        "time_before_effect": 3,
+        "budget_change": -50,
+        "citizen_satisfaction_change": 30,
+        "environment_change": 70,
+        "military_change": 0
+    }
+},
+{
+    "model": "main.solutionchoice",
+    "pk": 110,
+    "fields": {
+        "name": "Podpora průmyslu",
+        "problem": 37,
+        "time_before_effect": 1,
+        "budget_change": 60,
+        "citizen_satisfaction_change": 20,
+        "environment_change": -50,
+        "military_change": 0
+    }
+},
+{
+    "model": "main.solutionchoice",
+    "pk": 111,
+    "fields": {
+        "name": "Bez zásahu",
+        "problem": 37,
+        "time_before_effect": 2,
+        "budget_change": -50,
+        "citizen_satisfaction_change": -50,
+        "environment_change": -30,
+        "military_change": 0
+    }
+},
+
+{
+    "model": "main.solutionchoice",
+    "pk": 112,
+    "fields": {
+        "name": "Zavlažování",
+        "problem": 38,
+        "time_before_effect": 3,
+        "budget_change": -50,
+        "citizen_satisfaction_change": 40,
+        "environment_change": 60,
+        "military_change": 0
+    }
+},
+{
+    "model": "main.solutionchoice",
+    "pk": 113,
+    "fields": {
+        "name": "Maximalizace produkce",
+        "problem": 38,
+        "time_before_effect": 1,
+        "budget_change": 60,
+        "citizen_satisfaction_change": 20,
+        "environment_change": -60,
+        "military_change": 0
+    }
+},
+{
+    "model": "main.solutionchoice",
+    "pk": 114,
+    "fields": {
+        "name": "Bez zásahu",
+        "problem": 38,
+        "time_before_effect": 2,
+        "budget_change": -60,
+        "citizen_satisfaction_change": -50,
+        "environment_change": -70,
+        "military_change": 0
+    }
+},
+
+{
+    "model": "main.solutionchoice",
+    "pk": 115,
+    "fields": {
+        "name": "Podpora startupů",
+        "problem": 39,
+        "time_before_effect": 2,
+        "budget_change": 70,
+        "citizen_satisfaction_change": 40,
+        "environment_change": 0,
+        "military_change": 0
+    }
+},
+{
+    "model": "main.solutionchoice",
+    "pk": 116,
+    "fields": {
+        "name": "Regulace",
+        "problem": 39,
+        "time_before_effect": 1,
+        "budget_change": -30,
+        "citizen_satisfaction_change": -20,
+        "environment_change": 0,
+        "military_change": 0
+    }
+},
+{
+    "model": "main.solutionchoice",
+    "pk": 117,
+    "fields": {
+        "name": "Bez zásahu",
+        "problem": 39,
+        "time_before_effect": 2,
+        "budget_change": -20,
+        "citizen_satisfaction_change": -30,
+        "environment_change": 0,
+        "military_change": 0
+    }
+},
+
+{
+    "model": "main.solutionchoice",
+    "pk": 118,
+    "fields": {
+        "name": "Investice do MHD",
+        "problem": 40,
+        "time_before_effect": 3,
+        "budget_change": -50,
+        "citizen_satisfaction_change": 50,
+        "environment_change": 30,
+        "military_change": 0
+    }
+},
+{
+    "model": "main.solutionchoice",
+    "pk": 119,
+    "fields": {
+        "name": "Rozšíření silnic",
+        "problem": 40,
+        "time_before_effect": 2,
+        "budget_change": 40,
+        "citizen_satisfaction_change": 30,
+        "environment_change": -50,
+        "military_change": 0
+    }
+},
+{
+    "model": "main.solutionchoice",
+    "pk": 120,
+    "fields": {
+        "name": "Bez zásahu",
+        "problem": 40,
+        "time_before_effect": 1,
+        "budget_change": -40,
+        "citizen_satisfaction_change": -60,
+        "environment_change": -30,
+        "military_change": 0
+    }
+},
+{
+    "model": "main.solutionchoice",
+    "pk": 121,
+    "fields": {
+        "name": "Investice do nového průmyslu",
+        "problem": 41,
+        "time_before_effect": 3,
+        "budget_change": 70,
+        "citizen_satisfaction_change": 40,
+        "environment_change": -30,
+        "military_change": 0
+    }
+},
+{
+    "model": "main.solutionchoice",
+    "pk": 122,
+    "fields": {
+        "name": "Dotace starým firmám",
+        "problem": 41,
+        "time_before_effect": 1,
+        "budget_change": -50,
+        "citizen_satisfaction_change": 20,
+        "environment_change": -40,
+        "military_change": 0
+    }
+},
+{
+    "model": "main.solutionchoice",
+    "pk": 123,
+    "fields": {
+        "name": "Bez zásahu",
+        "problem": 41,
+        "time_before_effect": 2,
+        "budget_change": -70,
+        "citizen_satisfaction_change": -60,
+        "environment_change": 0,
+        "military_change": 0
+    }
+},
+
+{
+    "model": "main.solutionchoice",
+    "pk": 124,
+    "fields": {
+        "name": "Omezení emisí",
+        "problem": 42,
+        "time_before_effect": 2,
+        "budget_change": -50,
+        "citizen_satisfaction_change": 40,
+        "environment_change": 70,
+        "military_change": 0
+    }
+},
+{
+    "model": "main.solutionchoice",
+    "pk": 125,
+    "fields": {
+        "name": "Zachování výroby",
+        "problem": 42,
+        "time_before_effect": 1,
+        "budget_change": 60,
+        "citizen_satisfaction_change": 20,
+        "environment_change": -60,
+        "military_change": 0
+    }
+},
+{
+    "model": "main.solutionchoice",
+    "pk": 126,
+    "fields": {
+        "name": "Bez zásahu",
+        "problem": 42,
+        "time_before_effect": 1,
+        "budget_change": -50,
+        "citizen_satisfaction_change": -50,
+        "environment_change": -70,
+        "military_change": 0
+    }
+},
+
+{
+    "model": "main.solutionchoice",
+    "pk": 127,
+    "fields": {
+        "name": "Podpora podnikání",
+        "problem": 43,
+        "time_before_effect": 2,
+        "budget_change": 70,
+        "citizen_satisfaction_change": 40,
+        "environment_change": -20,
+        "military_change": 0
+    }
+},
+{
+    "model": "main.solutionchoice",
+    "pk": 128,
+    "fields": {
+        "name": "Investice do průmyslu",
+        "problem": 43,
+        "time_before_effect": 3,
+        "budget_change": 60,
+        "citizen_satisfaction_change": 30,
+        "environment_change": -30,
+        "military_change": 0
+    }
+},
+{
+    "model": "main.solutionchoice",
+    "pk": 129,
+    "fields": {
+        "name": "Přímá pomoc obyvatelům",
+        "problem": 43,
+        "time_before_effect": 2,
+        "budget_change": -40,
+        "citizen_satisfaction_change": 70,
+        "environment_change": 0,
+        "military_change": -15
+    }
+},
+
+{
+    "model": "main.solutionchoice",
+    "pk": 130,
+    "fields": {
+        "name": "Modernizace výroby",
+        "problem": 44,
+        "time_before_effect": 3,
+        "budget_change": 60,
+        "citizen_satisfaction_change": 40,
+        "environment_change": -10,
+        "military_change": 0
+    }
+},
+{
+    "model": "main.solutionchoice",
+    "pk": 131,
+    "fields": {
+        "name": "Podpora exportu",
+        "problem": 44,
+        "time_before_effect": 2,
+        "budget_change": 70,
+        "citizen_satisfaction_change": 30,
+        "environment_change": 0,
+        "military_change": 0
+    }
+},
+{
+    "model": "main.solutionchoice",
+    "pk": 132,
+    "fields": {
+        "name": "Dotace firmám",
+        "problem": 44,
+        "time_before_effect": 1,
+        "budget_change": -40,
+        "citizen_satisfaction_change": 20,
+        "environment_change": 0,
+        "military_change": 0
+    }
+},
+
+{
+    "model": "main.solutionchoice",
+    "pk": 133,
+    "fields": {
+        "name": "Nové pracovní příležitosti",
+        "problem": 45,
+        "time_before_effect": 2,
+        "budget_change": 70,
+        "citizen_satisfaction_change": 40,
+        "environment_change": 0,
+        "military_change": 0
+    }
+},
+{
+    "model": "main.solutionchoice",
+    "pk": 134,
+    "fields": {
+        "name": "Podpora bydlení",
+        "problem": 45,
+        "time_before_effect": 3,
+        "budget_change": 50,
+        "citizen_satisfaction_change": 50,
+        "environment_change": -10,
+        "military_change": 0
+    }
+},
+{
+    "model": "main.solutionchoice",
+    "pk": 135,
+    "fields": {
+        "name": "Kulturní programy",
+        "problem": 45,
+        "time_before_effect": 2,
+        "budget_change": -30,
+        "citizen_satisfaction_change": 40,
+        "environment_change": 0,
+        "military_change": -10
+    }
+},
+
+{
+    "model": "main.solutionchoice",
+    "pk": 136,
+    "fields": {
+        "name": "Masivní podpora turismu",
+        "problem": 46,
+        "time_before_effect": 2,
+        "budget_change": 70,
+        "citizen_satisfaction_change": 30,
+        "environment_change": -50,
+        "military_change": -30
+    }
+},
+{
+    "model": "main.solutionchoice",
+    "pk": 137,
+    "fields": {
+        "name": "Ekoturismus",
+        "problem": 46,
+        "time_before_effect": 3,
+        "budget_change": 50,
+        "citizen_satisfaction_change": 40,
+        "environment_change": 40,
+        "military_change": 20
+    }
+},
+{
+    "model": "main.solutionchoice",
+    "pk": 138,
+    "fields": {
+        "name": "Bez zásahu",
+        "problem": 46,
+        "time_before_effect": 1,
+        "budget_change": -40,
+        "citizen_satisfaction_change": -50,
+        "environment_change": -30,
+        "military_change": -20
+    }
+},
+
+{
+    "model": "main.solutionchoice",
+    "pk": 139,
+    "fields": {
+        "name": "Nouzová digitalizace",
+        "problem": 47,
+        "time_before_effect": 1,
+        "budget_change": -40,
+        "citizen_satisfaction_change": 30,
+        "environment_change": 0,
+        "military_change": 50
+    }
+},
+{
+    "model": "main.solutionchoice",
+    "pk": 140,
+    "fields": {
+        "name": "Zapojení soukromých IT firem",
+        "problem": 47,
+        "time_before_effect": 2,
+        "budget_change": 60,
+        "citizen_satisfaction_change": 20,
+        "environment_change": 0,
+        "military_change": 30
+    }
+},
+{
+    "model": "main.solutionchoice",
+    "pk": 141,
+    "fields": {
+        "name": "Ignorování",
+        "problem": 47,
+        "time_before_effect": 1,
+        "budget_change": -60,
+        "citizen_satisfaction_change": -50,
+        "environment_change": 0,
+        "military_change": -40
+    }
+},
+
+{
+    "model": "main.solutionchoice",
+    "pk": 142,
+    "fields": {
+        "name": "Zvýšení kontrol policií",
+        "problem": 48,
+        "time_before_effect": 1,
+        "budget_change": -30,
+        "citizen_satisfaction_change": 20,
+        "environment_change": 30,
+        "military_change": 20
+    }
+},
+{
+    "model": "main.solutionchoice",
+    "pk": 143,
+    "fields": {
+        "name": "Legalizace a regulace",
+        "problem": 48,
+        "time_before_effect": 2,
+        "budget_change": 60,
+        "citizen_satisfaction_change": 10,
+        "environment_change": -20,
+        "military_change": 20
+    }
+},
+{
+    "model": "main.solutionchoice",
+    "pk": 144,
+    "fields": {
+        "name": "Bez zásahu",
+        "problem": 48,
+        "time_before_effect": 1,
+        "budget_change": -50,
+        "citizen_satisfaction_change": -40,
+        "environment_change": -50,
+        "military_change": -60
+    }
+},
+
+{
+    "model": "main.solutionchoice",
+    "pk": 145,
+    "fields": {
+        "name": "Investice do univerzity",
+        "problem": 49,
+        "time_before_effect": 3,
+        "budget_change": -50,
+        "citizen_satisfaction_change": 60,
+        "environment_change": 0,
+        "military_change": 0
+    }
+},
+{
+    "model": "main.solutionchoice",
+    "pk": 146,
+    "fields": {
+        "name": "Komercializace vzdělání",
+        "problem": 49,
+        "time_before_effect": 2,
+        "budget_change": 70,
+        "citizen_satisfaction_change": 30,
+        "environment_change": 0,
+        "military_change": 0
+    }
+},
+{
+    "model": "main.solutionchoice",
+    "pk": 147,
+    "fields": {
+        "name": "Bez zásahu",
+        "problem": 49,
+        "time_before_effect": 2,
+        "budget_change": -60,
+        "citizen_satisfaction_change": -60,
+        "environment_change": 0,
+        "military_change": -10
+    }
+},
+
+{
+    "model": "main.solutionchoice",
+    "pk": 148,
+    "fields": {
+        "name": "Modernizace chovu",
+        "problem": 50,
+        "time_before_effect": 3,
+        "budget_change": 60,
+        "citizen_satisfaction_change": 60,
+        "environment_change": 50,
+        "military_change": 0
+    }
+},
+{
+    "model": "main.solutionchoice",
+    "pk": 149,
+    "fields": {
+        "name": "Intenzivní produkce",
+        "problem": 50,
+        "time_before_effect": 1,
+        "budget_change": 70,
+        "citizen_satisfaction_change": 20,
+        "environment_change": -60,
+        "military_change": 0
+    }
+},
+{
+    "model": "main.solutionchoice",
+    "pk": 150,
+    "fields": {
+        "name": "Omezení chovu",
+        "problem": 50,
+        "time_before_effect": 2,
+        "budget_change": -40,
+        "citizen_satisfaction_change": -10,
+        "environment_change": 70,
+        "military_change": 0
+    }
+},
+{
+    "model": "main.solutionchoice",
+    "pk": 151,
+    "fields": {
+        "name": "Legalizace a poplatky",
+        "problem": 51,
+        "time_before_effect": 2,
+        "budget_change": 60,
+        "citizen_satisfaction_change": 20,
+        "environment_change": -20,
+        "military_change": 30
+    }
+},
+{
+    "model": "main.solutionchoice",
+    "pk": 152,
+    "fields": {
+        "name": "Tvrdé zákazy",
+        "problem": 51,
+        "time_before_effect": 1,
+        "budget_change": -30,
+        "citizen_satisfaction_change": 10,
+        "environment_change": 50,
+        "military_change": 50
+    }
+},
+{
+    "model": "main.solutionchoice",
+    "pk": 153,
+    "fields": {
+        "name": "Bez zásahu",
+        "problem": 51,
+        "time_before_effect": 1,
+        "budget_change": -50,
+        "citizen_satisfaction_change": -40,
+        "environment_change": -60,
+        "military_change": -50
+    }
+},
+
+{
+    "model": "main.solutionchoice",
+    "pk": 154,
+    "fields": {
+        "name": "Rozšíření elektrárny",
+        "problem": 52,
+        "time_before_effect": 3,
+        "budget_change": 70,
+        "citizen_satisfaction_change": -20,
+        "environment_change": -40,
+        "military_change": 30
+    }
+},
+{
+    "model": "main.solutionchoice",
+    "pk": 155,
+    "fields": {
+        "name": "Modernizace a ochrana",
+        "problem": 52,
+        "time_before_effect": 2,
+        "budget_change": 50,
+        "citizen_satisfaction_change": 30,
+        "environment_change": -10,
+        "military_change": 50
+    }
+},
+{
+    "model": "main.solutionchoice",
+    "pk": 156,
+    "fields": {
+        "name": "Zastavení projektu",
+        "problem": 52,
+        "time_before_effect": 1,
+        "budget_change": -60,
+        "citizen_satisfaction_change": 40,
+        "environment_change": 30,
+        "military_change": -20
+    }
+},
+
+{
+    "model": "main.solutionchoice",
+    "pk": 157,
+    "fields": {
+        "name": "Rychlé čištění",
+        "problem": 53,
+        "time_before_effect": 1,
+        "budget_change": -40,
+        "citizen_satisfaction_change": 30,
+        "environment_change": 50,
+        "military_change": 30
+    }
+},
+{
+    "model": "main.solutionchoice",
+    "pk": 158,
+    "fields": {
+        "name": "Pokuty firmám",
+        "problem": 53,
+        "time_before_effect": 1,
+        "budget_change": 60,
+        "citizen_satisfaction_change": 20,
+        "environment_change": 20,
+        "military_change": 10
+    }
+},
+{
+    "model": "main.solutionchoice",
+    "pk": 159,
+    "fields": {
+        "name": "Ignorování",
+        "problem": 53,
+        "time_before_effect": 1,
+        "budget_change": -50,
+        "citizen_satisfaction_change": -50,
+        "environment_change": -70,
+        "military_change": -30
+    }
+},
+
+{
+    "model": "main.solutionchoice",
+    "pk": 160,
+    "fields": {
+        "name": "Podpora výstavby",
+        "problem": 54,
+        "time_before_effect": 1,
+        "budget_change": 70,
+        "citizen_satisfaction_change": 30,
+        "environment_change": -60,
+        "military_change": 0
+    }
+},
+{
+    "model": "main.solutionchoice",
+    "pk": 161,
+    "fields": {
+        "name": "Regulace těžby",
+        "problem": 54,
+        "time_before_effect": 2,
+        "budget_change": 50,
+        "citizen_satisfaction_change": 20,
+        "environment_change": 60,
+        "military_change": -5
+    }
+},
+{
+    "model": "main.solutionchoice",
+    "pk": 162,
+    "fields": {
+        "name": "Zákaz kácení",
+        "problem": 54,
+        "time_before_effect": 1,
+        "budget_change": -50,
+        "citizen_satisfaction_change": 30,
+        "environment_change": 70,
+        "military_change": -10
+    }
+},
+
+{
+    "model": "main.solutionchoice",
+    "pk": 163,
+    "fields": {
+        "name": "Investice do vody",
+        "problem": 55,
+        "time_before_effect": 3,
+        "budget_change": 50,
+        "citizen_satisfaction_change": 30,
+        "environment_change": 60,
+        "military_change": 0
+    }
+},
+{
+    "model": "main.solutionchoice",
+    "pk": 164,
+    "fields": {
+        "name": "Priorita průmyslu",
+        "problem": 55,
+        "time_before_effect": 1,
+        "budget_change": 70,
+        "citizen_satisfaction_change": 10,
+        "environment_change": -70,
+        "military_change": 0
+    }
+},
+{
+    "model": "main.solutionchoice",
+    "pk": 165,
+    "fields": {
+        "name": "Omezení spotřeby",
+        "problem": 55,
+        "time_before_effect": 1,
+        "budget_change": -40,
+        "citizen_satisfaction_change": -30,
+        "environment_change": 70,
+        "military_change": 0
+    }
+},
+
+{
+    "model": "main.solutionchoice",
+    "pk": 166,
+    "fields": {
+        "name": "Omezení dopravy",
+        "problem": 56,
+        "time_before_effect": 1,
+        "budget_change": -40,
+        "citizen_satisfaction_change": 30,
+        "environment_change": 70,
+        "military_change": 10
+    }
+},
+{
+    "model": "main.solutionchoice",
+    "pk": 167,
+    "fields": {
+        "name": "Podpora průmyslu",
+        "problem": 56,
+        "time_before_effect": 1,
+        "budget_change": 60,
+        "citizen_satisfaction_change": -30,
+        "environment_change": -70,
+        "military_change": -20
+    }
+},
+{
+    "model": "main.solutionchoice",
+    "pk": 168,
+    "fields": {
+        "name": "Modernizace technologií",
+        "problem": 56,
+        "time_before_effect": 2,
+        "budget_change": 50,
+        "citizen_satisfaction_change": 30,
+        "environment_change": 60,
+        "military_change": 0
+    }
+},
+
+{
+    "model": "main.solutionchoice",
+    "pk": 169,
+    "fields": {
+        "name": "Posílení armády",
+        "problem": 57,
+        "time_before_effect": 1,
+        "budget_change": -60,
+        "citizen_satisfaction_change": 10,
+        "environment_change": 0,
+        "military_change": 80
+    }
+},
+{
+    "model": "main.solutionchoice",
+    "pk": 170,
+    "fields": {
+        "name": "Diplomatické řešení",
+        "problem": 57,
+        "time_before_effect": 2,
+        "budget_change": 50,
+        "citizen_satisfaction_change": 30,
+        "environment_change": 0,
+        "military_change": 40
+    }
+},
+{
+    "model": "main.solutionchoice",
+    "pk": 171,
+    "fields": {
+        "name": "Bez zásahu",
+        "problem": 57,
+        "time_before_effect": 1,
+        "budget_change": -70,
+        "citizen_satisfaction_change": -40,
+        "environment_change": 0,
+        "military_change": -80
+    }
+},
+
+{
+    "model": "main.solutionchoice",
+    "pk": 172,
+    "fields": {
+        "name": "Nábor policistů",
+        "problem": 58,
+        "time_before_effect": 2,
+        "budget_change": -50,
+        "citizen_satisfaction_change": 40,
+        "environment_change": 0,
+        "military_change": 70
+    }
+},
+{
+    "model": "main.solutionchoice",
+    "pk": 173,
+    "fields": {
+        "name": "Technologie (kamerové systémy)",
+        "problem": 58,
+        "time_before_effect": 2,
+        "budget_change": 60,
+        "citizen_satisfaction_change": 20,
+        "environment_change": 0,
+        "military_change": 50
+    }
+},
+{
+    "model": "main.solutionchoice",
+    "pk": 174,
+    "fields": {
+        "name": "Bez zásahu",
+        "problem": 58,
+        "time_before_effect": 1,
+        "budget_change": -60,
+        "citizen_satisfaction_change": -60,
+        "environment_change": 0,
+        "military_change": -80
+    }
+},
+
+{
+    "model": "main.solutionchoice",
+    "pk": 175,
+    "fields": {
+        "name": "Modernizace armády",
+        "problem": 59,
+        "time_before_effect": 3,
+        "budget_change": -60,
+        "citizen_satisfaction_change": 10,
+        "environment_change": 0,
+        "military_change": 80
+    }
+},
+{
+    "model": "main.solutionchoice",
+    "pk": 176,
+    "fields": {
+        "name": "Spolupráce s NATO",
+        "problem": 59,
+        "time_before_effect": 2,
+        "budget_change": 50,
+        "citizen_satisfaction_change": 20,
+        "environment_change": 0,
+        "military_change": 60
+    }
+},
+{
+    "model": "main.solutionchoice",
+    "pk": 177,
+    "fields": {
+        "name": "Odložení řešení",
+        "problem": 59,
+        "time_before_effect": 1,
+        "budget_change": 30,
+        "citizen_satisfaction_change": -20,
+        "environment_change": 0,
+        "military_change": -70
+    }
+},
+
+{
+    "model": "main.solutionchoice",
+    "pk": 178,
+    "fields": {
+        "name": "Zvýšení bezpečnostních opatření",
+        "problem": 60,
+        "time_before_effect": 1,
+        "budget_change": -50,
+        "citizen_satisfaction_change": -20,
+        "environment_change": 0,
+        "military_change": 80
+    }
+},
+{
+    "model": "main.solutionchoice",
+    "pk": 179,
+    "fields": {
+        "name": "Prevence a zpravodajství",
+        "problem": 60,
+        "time_before_effect": 2,
+        "budget_change": 40,
+        "citizen_satisfaction_change": 20,
+        "environment_change": 0,
+        "military_change": 60
+    }
+},
+{
+    "model": "main.solutionchoice",
+    "pk": 180,
+    "fields": {
+        "name": "Bez zásahu",
+        "problem": 60,
+        "time_before_effect": 1,
+        "budget_change": -70,
+        "citizen_satisfaction_change": -50,
+        "environment_change": 0,
+        "military_change": -100
+    }
+},
+{
+    "model": "main.solutionchoice",
+    "pk": 181,
+    "fields": {
+        "name": "Nouzové opravy",
+        "problem": 61,
+        "time_before_effect": 1,
+        "budget_change": -50,
+        "citizen_satisfaction_change": 40,
+        "environment_change": 0,
+        "military_change": 60
+    }
+},
+{
+    "model": "main.solutionchoice",
+    "pk": 182,
+    "fields": {
+        "name": "Modernizace sítě",
+        "problem": 61,
+        "time_before_effect": 2,
+        "budget_change": 60,
+        "citizen_satisfaction_change": 20,
+        "environment_change": 0,
+        "military_change": 40
+    }
+},
+{
+    "model": "main.solutionchoice",
+    "pk": 183,
+    "fields": {
+        "name": "Bez zásahu",
+        "problem": 61,
+        "time_before_effect": 0,
+        "budget_change": -60,
+        "citizen_satisfaction_change": -50,
+        "environment_change": 0,
+        "military_change": -70
+    }
+},
+
+{
+    "model": "main.solutionchoice",
+    "pk": 184,
+    "fields": {
+        "name": "Nouzové řešení",
+        "problem": 62,
+        "time_before_effect": 1,
+        "budget_change": -50,
+        "citizen_satisfaction_change": 40,
+        "environment_change": 70,
+        "military_change": 30
+    }
+},
+{
+    "model": "main.solutionchoice",
+    "pk": 185,
+    "fields": {
+        "name": "Pokuty firmám",
+        "problem": 62,
+        "time_before_effect": 2,
+        "budget_change": 60,
+        "citizen_satisfaction_change": 20,
+        "environment_change": -40,
+        "military_change": 10
+    }
+},
+{
+    "model": "main.solutionchoice",
+    "pk": 186,
+    "fields": {
+        "name": "Bez zásahu",
+        "problem": 62,
+        "time_before_effect": 1,
+        "budget_change": -70,
+        "citizen_satisfaction_change": -60,
+        "environment_change": -150,
+        "military_change": -50
+    }
+},
+
+{
+    "model": "main.solutionchoice",
+    "pk": 187,
+    "fields": {
+        "name": "Potlačení",
+        "problem": 63,
+        "time_before_effect": 0,
+        "budget_change": -30,
+        "citizen_satisfaction_change": -50,
+        "environment_change": 0,
+        "military_change": 60
+    }
+},
+{
+    "model": "main.solutionchoice",
+    "pk": 188,
+    "fields": {
+        "name": "Vyjednávání",
+        "problem": 63,
+        "time_before_effect": 1,
+        "budget_change": 20,
+        "citizen_satisfaction_change": 40,
+        "environment_change": 0,
+        "military_change": -10
+    }
+},
+{
+    "model": "main.solutionchoice",
+    "pk": 189,
+    "fields": {
+        "name": "Bez zásahu",
+        "problem": 63,
+        "time_before_effect": 0,
+        "budget_change": -50,
+        "citizen_satisfaction_change": -70,
+        "environment_change": 0,
+        "military_change": -60
+    }
+},
+
+{
+    "model": "main.solutionchoice",
+    "pk": 190,
+    "fields": {
+        "name": "Rychlá finanční pomoc",
+        "problem": 64,
+        "time_before_effect": 0,
+        "budget_change": -40,
+        "citizen_satisfaction_change": 30,
+        "environment_change": 0,
+        "military_change": -10
+    }
+},
+{
+    "model": "main.solutionchoice",
+    "pk": 191,
+    "fields": {
+        "name": "Soukromé kliniky",
+        "problem": 64,
+        "time_before_effect": 3,
+        "budget_change": 40,
+        "citizen_satisfaction_change": 20,
+        "environment_change": 0,
+        "military_change": 10
+    }
+},
+{
+    "model": "main.solutionchoice",
+    "pk": 192,
+    "fields": {
+        "name": "Bez zásahu",
+        "problem": 64,
+        "time_before_effect": 1,
+        "budget_change": -50,
+        "citizen_satisfaction_change": -80,
+        "environment_change": 0,
+        "military_change": -40
+    }
+},
+
+{
+    "model": "main.solutionchoice",
+    "pk": 193,
+    "fields": {
+        "name": "Okamžitý policejní zásah",
+        "problem": 65,
+        "time_before_effect": 0,
+        "budget_change": -30,
+        "citizen_satisfaction_change": 20,
+        "environment_change": 0,
+        "military_change": 70
+    }
+},
+{
+    "model": "main.solutionchoice",
+    "pk": 194,
+    "fields": {
+        "name": "Řešení pomocí technologií",
+        "problem": 65,
+        "time_before_effect": 2,
+        "budget_change": 40,
+        "citizen_satisfaction_change": 20,
+        "environment_change": 0,
+        "military_change": 30
+    }
+},
+{
+    "model": "main.solutionchoice",
+    "pk": 195,
+    "fields": {
+        "name": "Bez zásahu",
+        "problem": 65,
+        "time_before_effect": 1,
+        "budget_change": -50,
+        "citizen_satisfaction_change": -60,
+        "environment_change": 0,
+        "military_change": -80
+    }
+},
+
+{
+    "model": "main.solutionchoice",
+    "pk": 196,
+    "fields": {
+        "name": "Dovoz potravin ze zahraničí",
+        "problem": 66,
+        "time_before_effect": 1,
+        "budget_change": -40,
+        "citizen_satisfaction_change": 20,
+        "environment_change": -20,
+        "military_change": 0
+    }
+},
+{
+    "model": "main.solutionchoice",
+    "pk": 197,
+    "fields": {
+        "name": "Podpora výroby",
+        "problem": 66,
+        "time_before_effect": 2,
+        "budget_change": 50,
+        "citizen_satisfaction_change": 20,
+        "environment_change": -20,
+        "military_change": 0
+    }
+},
+{
+    "model": "main.solutionchoice",
+    "pk": 198,
+    "fields": {
+        "name": "Bez zásahu",
+        "problem": 66,
+        "time_before_effect": 1,
+        "budget_change": -60,
+        "citizen_satisfaction_change": -80,
+        "environment_change": -30,
+        "military_change": -20
+    }
+},
+
+{
+    "model": "main.solutionchoice",
+    "pk": 199,
+    "fields": {
+        "name": "Okamžité zvýšení platů",
+        "problem": 67,
+        "time_before_effect": 1,
+        "budget_change": -40,
+        "citizen_satisfaction_change": 30,
+        "environment_change": 0,
+        "military_change": 0
+    }
+},
+{
+    "model": "main.solutionchoice",
+    "pk": 200,
+    "fields": {
+        "name": "Zaměstnání soukromých firem",
+        "problem": 67,
+        "time_before_effect": 1,
+        "budget_change": 40,
+        "citizen_satisfaction_change": 20,
+        "environment_change": 0,
+        "military_change": 0
+    }
+},
+{
+    "model": "main.solutionchoice",
+    "pk": 201,
+    "fields": {
+        "name": "Bez zásahu",
+        "problem": 67,
+        "time_before_effect": 1,
+        "budget_change": -50,
+        "citizen_satisfaction_change": -60,
+        "environment_change": 0,
+        "military_change": -10
+    }
+},
+
+{
+    "model": "main.solutionchoice",
+    "pk": 202,
+    "fields": {
+        "name": "Regulace médií",
+        "problem": 68,
+        "time_before_effect": 2,
+        "budget_change": -30,
+        "citizen_satisfaction_change": -20,
+        "environment_change": 0,
+        "military_change": 50
+    }
+},
+{
+    "model": "main.solutionchoice",
+    "pk": 203,
+    "fields": {
+        "name": "Vzdělávání občanů",
+        "problem": 68,
+        "time_before_effect": 3,
+        "budget_change": 40,
+        "citizen_satisfaction_change": 20,
+        "environment_change": 0,
+        "military_change": 0
+    }
+},
+{
+    "model": "main.solutionchoice",
+    "pk": 204,
+    "fields": {
+        "name": "Bez zásahu",
+        "problem": 68,
+        "time_before_effect": 1,
+        "budget_change": -50,
+        "citizen_satisfaction_change": -50,
+        "environment_change": 0,
+        "military_change": -40
+    }
+},
+
+{
+    "model": "main.solutionchoice",
+    "pk": 205,
+    "fields": {
+        "name": "Dovoz energie",
+        "problem": 69,
+        "time_before_effect": 1,
+        "budget_change": -20,
+        "citizen_satisfaction_change": 20,
+        "environment_change": -30,
+        "military_change": -10
+    }
+},
+{
+    "model": "main.solutionchoice",
+    "pk": 206,
+    "fields": {
+        "name": "Omezení spotřeby",
+        "problem": 69,
+        "time_before_effect": 2,
+        "budget_change": -30,
+        "citizen_satisfaction_change": -20,
+        "environment_change": 40,
+        "military_change": 0
+    }
+},
+{
+    "model": "main.solutionchoice",
+    "pk": 207,
+    "fields": {
+        "name": "Bez zásahu",
+        "problem": 69,
+        "time_before_effect": 1,
+        "budget_change": -60,
+        "citizen_satisfaction_change": -60,
+        "environment_change": -40,
+        "military_change": -50
+    }
+},
+
+{
+    "model": "main.solutionchoice",
+    "pk": 208,
+    "fields": {
+        "name": "Okamžité odstavení reaktoru",
+        "problem": 70,
+        "time_before_effect": 1,
+        "budget_change": -50,
+        "citizen_satisfaction_change": 30,
+        "environment_change": 70,
+        "military_change": 40
+    }
+},
+{
+    "model": "main.solutionchoice",
+    "pk": 209,
+    "fields": {
+        "name": "Nouzová oprava",
+        "problem": 70,
+        "time_before_effect": 1,
+        "budget_change": -30,
+        "citizen_satisfaction_change": 30,
+        "environment_change": 20,
+        "military_change": 40
+    }
+},
+{
+    "model": "main.solutionchoice",
+    "pk": 210,
+    "fields": {
+        "name": "Bez zásahu",
+        "problem": 70,
+        "time_before_effect": 0,
+        "budget_change": -80,
+        "citizen_satisfaction_change": -80,
+        "environment_change": -200,
+        "military_change": -90
+    }
+},
+{
+    "model": "main.solutionchoice",
+    "pk": 211,
+    "fields": {
+        "name": "Státní zásah",
+        "problem": 71,
+        "time_before_effect": 1,
+        "budget_change": -60,
+        "citizen_satisfaction_change": 30,
+        "environment_change": 0,
+        "military_change": 30
+    }
+},
+{
+    "model": "main.solutionchoice",
+    "pk": 212,
+    "fields": {
+        "name": "Spolupráce se zahraničím",
+        "problem": 71,
+        "time_before_effect": 2,
+        "budget_change": 70,
+        "citizen_satisfaction_change": 20,
+        "environment_change": 0,
+        "military_change": 40
+    }
+},
+{
+    "model": "main.solutionchoice",
+    "pk": 213,
+    "fields": {
+        "name": "Bez zásahu",
+        "problem": 71,
+        "time_before_effect": 1,
+        "budget_change": -90,
+        "citizen_satisfaction_change": -80,
+        "environment_change": 0,
+        "military_change": -50
+    }
+},
+
+{
+    "model": "main.solutionchoice",
+    "pk": 214,
+    "fields": {
+        "name": "Tvrdá opatření",
+        "problem": 72,
+        "time_before_effect": 2,
+        "budget_change": -70,
+        "citizen_satisfaction_change": -30,
+        "environment_change": 40,
+        "military_change": 20
+    }
+},
+{
+    "model": "main.solutionchoice",
+    "pk": 215,
+    "fields": {
+        "name": "Vývoj vakcíny",
+        "problem": 72,
+        "time_before_effect": 3,
+        "budget_change": 50,
+        "citizen_satisfaction_change": 30,
+        "environment_change": 0,
+        "military_change": 10
+    }
+},
+{
+    "model": "main.solutionchoice",
+    "pk": 216,
+    "fields": {
+        "name": "Bez zásahu",
+        "problem": 72,
+        "time_before_effect": 1,
+        "budget_change": -80,
+        "citizen_satisfaction_change": -80,
+        "environment_change": 0,
+        "military_change": -40
+    }
+},
+
+{
+    "model": "main.solutionchoice",
+    "pk": 217,
+    "fields": {
+        "name": "Mezinárodní půjčka",
+        "problem": 73,
+        "time_before_effect": 1,
+        "budget_change": 70,
+        "citizen_satisfaction_change": 20,
+        "environment_change": 0,
+        "military_change": 30
+    }
+},
+{
+    "model": "main.solutionchoice",
+    "pk": 218,
+    "fields": {
+        "name": "Drastické škrty",
+        "problem": 73,
+        "time_before_effect": 2,
+        "budget_change": 60,
+        "citizen_satisfaction_change": -40,
+        "environment_change": 0,
+        "military_change": 10
+    }
+},
+{
+    "model": "main.solutionchoice",
+    "pk": 219,
+    "fields": {
+        "name": "Bez zásahu",
+        "problem": 73,
+        "time_before_effect": 1,
+        "budget_change": -80,
+        "citizen_satisfaction_change": -70,
+        "environment_change": 0,
+        "military_change": -50
+    }
+},
+
+{
+    "model": "main.solutionchoice",
+    "pk": 220,
+    "fields": {
+        "name": "Stabilizace měny",
+        "problem": 74,
+        "time_before_effect": 2,
+        "budget_change": -40,
+        "citizen_satisfaction_change": 20,
+        "environment_change": 0,
+        "military_change": 20
+    }
+},
+{
+    "model": "main.solutionchoice",
+    "pk": 221,
+    "fields": {
+        "name": "Stabilizace měny (dlouhodobá)",
+        "problem": 74,
+        "time_before_effect": 3,
+        "budget_change": 60,
+        "citizen_satisfaction_change": 30,
+        "environment_change": 0,
+        "military_change": 30
+    }
+},
+{
+    "model": "main.solutionchoice",
+    "pk": 222,
+    "fields": {
+        "name": "Bez zásahu",
+        "problem": 74,
+        "time_before_effect": 1,
+        "budget_change": -80,
+        "citizen_satisfaction_change": -70,
+        "environment_change": 0,
+        "military_change": -40
+    }
+},
+
+{
+    "model": "main.solutionchoice",
+    "pk": 223,
+    "fields": {
+        "name": "Privatizace služeb",
+        "problem": 75,
+        "time_before_effect": 2,
+        "budget_change": 60,
+        "citizen_satisfaction_change": 20,
+        "environment_change": 0,
+        "military_change": 0
+    }
+},
+{
+    "model": "main.solutionchoice",
+    "pk": 224,
+    "fields": {
+        "name": "Nouzové financování",
+        "problem": 75,
+        "time_before_effect": 1,
+        "budget_change": -40,
+        "citizen_satisfaction_change": 30,
+        "environment_change": 0,
+        "military_change": 0
+    }
+},
+{
+    "model": "main.solutionchoice",
+    "pk": 225,
+    "fields": {
+        "name": "Bez zásahu",
+        "problem": 75,
+        "time_before_effect": 1,
+        "budget_change": -70,
+        "citizen_satisfaction_change": -60,
+        "environment_change": 0,
+        "military_change": -20
+    }
+},
+
+{
+    "model": "main.solutionchoice",
+    "pk": 226,
+    "fields": {
+        "name": "Dotace podnikům",
+        "problem": 76,
+        "time_before_effect": 1,
+        "budget_change": 60,
+        "citizen_satisfaction_change": 30,
+        "environment_change": 0,
+        "military_change": 0
+    }
+},
+{
+    "model": "main.solutionchoice",
+    "pk": 227,
+    "fields": {
+        "name": "Digitalizace",
+        "problem": 76,
+        "time_before_effect": 3,
+        "budget_change": 50,
+        "citizen_satisfaction_change": 20,
+        "environment_change": 0,
+        "military_change": 10
+    }
+},
+{
+    "model": "main.solutionchoice",
+    "pk": 228,
+    "fields": {
+        "name": "Bez zásahu",
+        "problem": 76,
+        "time_before_effect": 1,
+        "budget_change": -70,
+        "citizen_satisfaction_change": -60,
+        "environment_change": 0,
+        "military_change": -20
+    }
+},
+
+{
+    "model": "main.solutionchoice",
+    "pk": 229,
+    "fields": {
+        "name": "Restrukturalizace dluhu",
+        "problem": 77,
+        "time_before_effect": 2,
+        "budget_change": 60,
+        "citizen_satisfaction_change": 20,
+        "environment_change": 0,
+        "military_change": 20
+    }
+},
+{
+    "model": "main.solutionchoice",
+    "pk": 230,
+    "fields": {
+        "name": "Zvýšení daní",
+        "problem": 77,
+        "time_before_effect": 2,
+        "budget_change": 70,
+        "citizen_satisfaction_change": -30,
+        "environment_change": 0,
+        "military_change": 0
+    }
+},
+{
+    "model": "main.solutionchoice",
+    "pk": 231,
+    "fields": {
+        "name": "Bez zásahu",
+        "problem": 77,
+        "time_before_effect": 1,
+        "budget_change": -80,
+        "citizen_satisfaction_change": -70,
+        "environment_change": 0,
+        "military_change": -40
+    }
+},
+
+{
+    "model": "main.solutionchoice",
+    "pk": 232,
+    "fields": {
+        "name": "Legalizace a regulace",
+        "problem": 78,
+        "time_before_effect": 2,
+        "budget_change": 60,
+        "citizen_satisfaction_change": 20,
+        "environment_change": -30,
+        "military_change": 10
+    }
+},
+{
+    "model": "main.solutionchoice",
+    "pk": 233,
+    "fields": {
+        "name": "Tvrdé kontroly",
+        "problem": 78,
+        "time_before_effect": 2,
+        "budget_change": -30,
+        "citizen_satisfaction_change": 30,
+        "environment_change": 60,
+        "military_change": 40
+    }
+},
+{
+    "model": "main.solutionchoice",
+    "pk": 234,
+    "fields": {
+        "name": "Bez zásahu",
+        "problem": 78,
+        "time_before_effect": 1,
+        "budget_change": -50,
+        "citizen_satisfaction_change": -50,
+        "environment_change": -70,
+        "military_change": -30
+    }
+},
+
+{
+    "model": "main.solutionchoice",
+    "pk": 235,
+    "fields": {
+        "name": "Privatizace odpadů",
+        "problem": 79,
+        "time_before_effect": 1,
+        "budget_change": 60,
+        "citizen_satisfaction_change": 20,
+        "environment_change": -20,
+        "military_change": 0
+    }
+},
+{
+    "model": "main.solutionchoice",
+    "pk": 236,
+    "fields": {
+        "name": "Ekologická sanace",
+        "problem": 79,
+        "time_before_effect": 2,
+        "budget_change": -40,
+        "citizen_satisfaction_change": 30,
+        "environment_change": 70,
+        "military_change": 10
+    }
+},
+{
+    "model": "main.solutionchoice",
+    "pk": 237,
+    "fields": {
+        "name": "Bez zásahu",
+        "problem": 79,
+        "time_before_effect": 1,
+        "budget_change": -60,
+        "citizen_satisfaction_change": -50,
+        "environment_change": -80,
+        "military_change": -20
+    }
+},
+
+{
+    "model": "main.solutionchoice",
+    "pk": 238,
+    "fields": {
+        "name": "Podpora těžby",
+        "problem": 80,
+        "time_before_effect": 1,
+        "budget_change": 70,
+        "citizen_satisfaction_change": 20,
+        "environment_change": -70,
+        "military_change": -10
+    }
+},
+{
+    "model": "main.solutionchoice",
+    "pk": 239,
+    "fields": {
+        "name": "Regulace těžby",
+        "problem": 80,
+        "time_before_effect": 2,
+        "budget_change": 40,
+        "citizen_satisfaction_change": 20,
+        "environment_change": 50,
+        "military_change": 10
+    }
+},
+{
+    "model": "main.solutionchoice",
+    "pk": 240,
+    "fields": {
+        "name": "Bez zásahu",
+        "problem": 80,
+        "time_before_effect": 1,
+        "budget_change": -50,
+        "citizen_satisfaction_change": -50,
+        "environment_change": -60,
+        "military_change": -30
+    }
+},
+{
+    "model": "main.solutionchoice",
+    "pk": 241,
+    "fields": {
+        "name": "Komerční využití parků",
+        "problem": 81,
+        "time_before_effect": 1,
+        "budget_change": 60,
+        "citizen_satisfaction_change": 20,
+        "environment_change": -30,
+        "military_change": 0
+    }
+},
+{
+    "model": "main.solutionchoice",
+    "pk": 242,
+    "fields": {
+        "name": "Dobrovolnické programy",
+        "problem": 81,
+        "time_before_effect": 2,
+        "budget_change": 40,
+        "citizen_satisfaction_change": 30,
+        "environment_change": 30,
+        "military_change": 10
+    }
+},
+{
+    "model": "main.solutionchoice",
+    "pk": 243,
+    "fields": {
+        "name": "Bez zásahu",
+        "problem": 81,
+        "time_before_effect": 1,
+        "budget_change": -50,
+        "citizen_satisfaction_change": -40,
+        "environment_change": -50,
+        "military_change": -10
+    }
+},
+
+{
+    "model": "main.solutionchoice",
+    "pk": 244,
+    "fields": {
+        "name": "Průmyslové využití vody",
+        "problem": 82,
+        "time_before_effect": 2,
+        "budget_change": 70,
+        "citizen_satisfaction_change": 10,
+        "environment_change": -70,
+        "military_change": 0
+    }
+},
+{
+    "model": "main.solutionchoice",
+    "pk": 245,
+    "fields": {
+        "name": "Investice do obnovy",
+        "problem": 82,
+        "time_before_effect": 3,
+        "budget_change": 50,
+        "citizen_satisfaction_change": 30,
+        "environment_change": 60,
+        "military_change": 0
+    }
+},
+{
+    "model": "main.solutionchoice",
+    "pk": 246,
+    "fields": {
+        "name": "Bez zásahu",
+        "problem": 82,
+        "time_before_effect": 1,
+        "budget_change": -60,
+        "citizen_satisfaction_change": -50,
+        "environment_change": -80,
+        "military_change": -20
+    }
+},
+
+{
+    "model": "main.solutionchoice",
+    "pk": 247,
+    "fields": {
+        "name": "Legalizace likvidace",
+        "problem": 83,
+        "time_before_effect": 1,
+        "budget_change": 60,
+        "citizen_satisfaction_change": 20,
+        "environment_change": -40,
+        "military_change": 10
+    }
+},
+{
+    "model": "main.solutionchoice",
+    "pk": 248,
+    "fields": {
+        "name": "Ekologické zásahy",
+        "problem": 83,
+        "time_before_effect": 2,
+        "budget_change": -40,
+        "citizen_satisfaction_change": 30,
+        "environment_change": 80,
+        "military_change": 20
+    }
+},
+{
+    "model": "main.solutionchoice",
+    "pk": 249,
+    "fields": {
+        "name": "Bez zásahu",
+        "problem": 83,
+        "time_before_effect": 1,
+        "budget_change": -70,
+        "citizen_satisfaction_change": -60,
+        "environment_change": -100,
+        "military_change": -40
+    }
+},
+
+{
+    "model": "main.solutionchoice",
+    "pk": 250,
+    "fields": {
+        "name": "Chemické řešení",
+        "problem": 84,
+        "time_before_effect": 1,
+        "budget_change": 60,
+        "citizen_satisfaction_change": 20,
+        "environment_change": -60,
+        "military_change": 0
+    }
+},
+{
+    "model": "main.solutionchoice",
+    "pk": 251,
+    "fields": {
+        "name": "Ekologická regulace",
+        "problem": 84,
+        "time_before_effect": 3,
+        "budget_change": 40,
+        "citizen_satisfaction_change": 30,
+        "environment_change": 50,
+        "military_change": 0
+    }
+},
+{
+    "model": "main.solutionchoice",
+    "pk": 252,
+    "fields": {
+        "name": "Bez zásahu",
+        "problem": 84,
+        "time_before_effect": 1,
+        "budget_change": -50,
+        "citizen_satisfaction_change": -50,
+        "environment_change": -70,
+        "military_change": -10
+    }
+},
+
+{
+    "model": "main.solutionchoice",
+    "pk": 253,
+    "fields": {
+        "name": "Legalizace těžby",
+        "problem": 85,
+        "time_before_effect": 2,
+        "budget_change": 70,
+        "citizen_satisfaction_change": 20,
+        "environment_change": -60,
+        "military_change": 0
+    }
+},
+{
+    "model": "main.solutionchoice",
+    "pk": 254,
+    "fields": {
+        "name": "Ochrana lesů",
+        "problem": 85,
+        "time_before_effect": 3,
+        "budget_change": -30,
+        "citizen_satisfaction_change": 30,
+        "environment_change": 70,
+        "military_change": 20
+    }
+},
+{
+    "model": "main.solutionchoice",
+    "pk": 255,
+    "fields": {
+        "name": "Bez zásahu",
+        "problem": 85,
+        "time_before_effect": 1,
+        "budget_change": -50,
+        "citizen_satisfaction_change": -50,
+        "environment_change": -80,
+        "military_change": -20
+    }
+},
+
+{
+    "model": "main.solutionchoice",
+    "pk": 256,
+    "fields": {
+        "name": "Uvolnění regulací",
+        "problem": 86,
+        "time_before_effect": 1,
+        "budget_change": 70,
+        "citizen_satisfaction_change": 20,
+        "environment_change": -60,
+        "military_change": 0
+    }
+},
+{
+    "model": "main.solutionchoice",
+    "pk": 257,
+    "fields": {
+        "name": "Vyvážená reforma",
+        "problem": 86,
+        "time_before_effect": 3,
+        "budget_change": 50,
+        "citizen_satisfaction_change": 30,
+        "environment_change": 20,
+        "military_change": 10
+    }
+},
+{
+    "model": "main.solutionchoice",
+    "pk": 258,
+    "fields": {
+        "name": "Zachování regulací",
+        "problem": 86,
+        "time_before_effect": 1,
+        "budget_change": -40,
+        "citizen_satisfaction_change": 40,
+        "environment_change": 50,
+        "military_change": 0
+    }
+},
+
+{
+    "model": "main.solutionchoice",
+    "pk": 259,
+    "fields": {
+        "name": "Modernizace sítě",
+        "problem": 87,
+        "time_before_effect": 3,
+        "budget_change": 60,
+        "citizen_satisfaction_change": 30,
+        "environment_change": 40,
+        "military_change": 20
+    }
+},
+{
+    "model": "main.solutionchoice",
+    "pk": 260,
+    "fields": {
+        "name": "Omezení výroby",
+        "problem": 87,
+        "time_before_effect": 2,
+        "budget_change": -30,
+        "citizen_satisfaction_change": 20,
+        "environment_change": 50,
+        "military_change": 0
+    }
+},
+{
+    "model": "main.solutionchoice",
+    "pk": 261,
+    "fields": {
+        "name": "Volný trh",
+        "problem": 87,
+        "time_before_effect": 1,
+        "budget_change": 70,
+        "citizen_satisfaction_change": 10,
+        "environment_change": -60,
+        "military_change": -20
+    }
+},
+
+{
+    "model": "main.solutionchoice",
+    "pk": 262,
+    "fields": {
+        "name": "Ochrana ekosystémů",
+        "problem": 88,
+        "time_before_effect": 2,
+        "budget_change": -50,
+        "citizen_satisfaction_change": 40,
+        "environment_change": 80,
+        "military_change": 10
+    }
+},
+{
+    "model": "main.solutionchoice",
+    "pk": 263,
+    "fields": {
+        "name": "Technologická náhrada",
+        "problem": 88,
+        "time_before_effect": 2,
+        "budget_change": 60,
+        "citizen_satisfaction_change": 20,
+        "environment_change": 30,
+        "military_change": 0
+    }
+},
+{
+    "model": "main.solutionchoice",
+    "pk": 264,
+    "fields": {
+        "name": "Bez zásahu",
+        "problem": 88,
+        "time_before_effect": 1,
+        "budget_change": -70,
+        "citizen_satisfaction_change": -60,
+        "environment_change": -100,
+        "military_change": -20
+    }
+},
+
+{
+    "model": "main.solutionchoice",
+    "pk": 265,
+    "fields": {
+        "name": "Regulace populace",
+        "problem": 89,
+        "time_before_effect": 2,
+        "budget_change": 60,
+        "citizen_satisfaction_change": 20,
+        "environment_change": -50,
+        "military_change": 10
+    }
+},
+{
+    "model": "main.solutionchoice",
+    "pk": 266,
+    "fields": {
+        "name": "Kompenzace farmářům",
+        "problem": 89,
+        "time_before_effect": 2,
+        "budget_change": 50,
+        "citizen_satisfaction_change": 30,
+        "environment_change": 20,
+        "military_change": 0
+    }
+},
+{
+    "model": "main.solutionchoice",
+    "pk": 267,
+    "fields": {
+        "name": "Bez zásahu",
+        "problem": 89,
+        "time_before_effect": 1,
+        "budget_change": -40,
+        "citizen_satisfaction_change": -40,
+        "environment_change": -30,
+        "military_change": -10
+    }
+},
+
+{
+    "model": "main.solutionchoice",
+    "pk": 268,
+    "fields": {
+        "name": "Diverzifikace",
+        "problem": 90,
+        "time_before_effect": 2,
+        "budget_change": 60,
+        "citizen_satisfaction_change": 30,
+        "environment_change": -20,
+        "military_change": 0
+    }
+},
+{
+    "model": "main.solutionchoice",
+    "pk": 269,
+    "fields": {
+        "name": "Pokračování investic",
+        "problem": 90,
+        "time_before_effect": 1,
+        "budget_change": 70,
+        "citizen_satisfaction_change": 20,
+        "environment_change": 30,
+        "military_change": 0
+    }
+},
+{
+    "model": "main.solutionchoice",
+    "pk": 270,
+    "fields": {
+        "name": "Omezení podpory",
+        "problem": 90,
+        "time_before_effect": 2,
+        "budget_change": 50,
+        "citizen_satisfaction_change": -20,
+        "environment_change": -40,
+        "military_change": 0
+    }
+},
+{
+    "model": "main.solutionchoice",
+    "pk": 271,
+    "fields": {
+        "name": "Přesměrování dopravy",
+        "problem": 91,
+        "time_before_effect": 1,
+        "budget_change": 60,
+        "citizen_satisfaction_change": 20,
+        "environment_change": -30,
+        "military_change": 0
+    }
+},
+{
+    "model": "main.solutionchoice",
+    "pk": 272,
+    "fields": {
+        "name": "Investice do kanálů",
+        "problem": 91,
+        "time_before_effect": 3,
+        "budget_change": 50,
+        "citizen_satisfaction_change": 30,
+        "environment_change": 20,
+        "military_change": 0
+    }
+},
+{
+    "model": "main.solutionchoice",
+    "pk": 273,
+    "fields": {
+        "name": "Bez zásahu",
+        "problem": 91,
+        "time_before_effect": 1,
+        "budget_change": -50,
+        "citizen_satisfaction_change": -40,
+        "environment_change": -60,
+        "military_change": -10
+    }
+},
+
+{
+    "model": "main.solutionchoice",
+    "pk": 274,
+    "fields": {
+        "name": "Investice do kyberbezpečnosti",
+        "problem": 92,
+        "time_before_effect": 2,
+        "budget_change": -40,
+        "citizen_satisfaction_change": 20,
+        "environment_change": 0,
+        "military_change": 60
+    }
+},
+{
+    "model": "main.solutionchoice",
+    "pk": 275,
+    "fields": {
+        "name": "Spolupráce s externími firmami",
+        "problem": 92,
+        "time_before_effect": 2,
+        "budget_change": 60,
+        "citizen_satisfaction_change": 30,
+        "environment_change": 0,
+        "military_change": 40
+    }
+},
+{
+    "model": "main.solutionchoice",
+    "pk": 276,
+    "fields": {
+        "name": "Ignorování",
+        "problem": 92,
+        "time_before_effect": 1,
+        "budget_change": -60,
+        "citizen_satisfaction_change": -60,
+        "environment_change": 0,
+        "military_change": -70
+    }
+},
+
+{
+    "model": "main.solutionchoice",
+    "pk": 277,
+    "fields": {
+        "name": "Rozšíření letiště",
+        "problem": 93,
+        "time_before_effect": 4,
+        "budget_change": 70,
+        "citizen_satisfaction_change": 30,
+        "environment_change": -40,
+        "military_change": 0
+    }
+},
+{
+    "model": "main.solutionchoice",
+    "pk": 278,
+    "fields": {
+        "name": "Optimalizace provozu",
+        "problem": 93,
+        "time_before_effect": 1,
+        "budget_change": 50,
+        "citizen_satisfaction_change": 20,
+        "environment_change": 10,
+        "military_change": 0
+    }
+},
+{
+    "model": "main.solutionchoice",
+    "pk": 279,
+    "fields": {
+        "name": "Bez zásahu",
+        "problem": 93,
+        "time_before_effect": 1,
+        "budget_change": -50,
+        "citizen_satisfaction_change": -40,
+        "environment_change": -20,
+        "military_change": -10
+    }
+},
+
+{
+    "model": "main.solutionchoice",
+    "pk": 280,
+    "fields": {
+        "name": "Sponzoring",
+        "problem": 94,
+        "time_before_effect": 1,
+        "budget_change": 60,
+        "citizen_satisfaction_change": 30,
+        "environment_change": 0,
+        "military_change": 0
+    }
+},
+{
+    "model": "main.solutionchoice",
+    "pk": 281,
+    "fields": {
+        "name": "Státní podpora",
+        "problem": 94,
+        "time_before_effect": 1,
+        "budget_change": -40,
+        "citizen_satisfaction_change": 40,
+        "environment_change": 0,
+        "military_change": 0
+    }
+},
+{
+    "model": "main.solutionchoice",
+    "pk": 282,
+    "fields": {
+        "name": "Bez zásahu",
+        "problem": 94,
+        "time_before_effect": 1,
+        "budget_change": -50,
+        "citizen_satisfaction_change": -50,
+        "environment_change": 0,
+        "military_change": -10
+    }
+},
+
+{
+    "model": "main.solutionchoice",
+    "pk": 283,
+    "fields": {
+        "name": "Legalizace",
+        "problem": 95,
+        "time_before_effect": 1,
+        "budget_change": 60,
+        "citizen_satisfaction_change": 20,
+        "environment_change": -40,
+        "military_change": 0
+    }
+},
+{
+    "model": "main.solutionchoice",
+    "pk": 284,
+    "fields": {
+        "name": "Regulace",
+        "problem": 95,
+        "time_before_effect": 1,
+        "budget_change": 50,
+        "citizen_satisfaction_change": 20,
+        "environment_change": 20,
+        "military_change": 10
+    }
+},
+{
+    "model": "main.solutionchoice",
+    "pk": 285,
+    "fields": {
+        "name": "Bez zásahu",
+        "problem": 95,
+        "time_before_effect": 1,
+        "budget_change": -50,
+        "citizen_satisfaction_change": -40,
+        "environment_change": -60,
+        "military_change": -20
+    }
+},
+
+{
+    "model": "main.solutionchoice",
+    "pk": 286,
+    "fields": {
+        "name": "Dovoz",
+        "problem": 96,
+        "time_before_effect": 1,
+        "budget_change": 60,
+        "citizen_satisfaction_change": 30,
+        "environment_change": -20,
+        "military_change": 0
+    }
+},
+{
+    "model": "main.solutionchoice",
+    "pk": 287,
+    "fields": {
+        "name": "Domácí výroba",
+        "problem": 96,
+        "time_before_effect": 2,
+        "budget_change": 50,
+        "citizen_satisfaction_change": 40,
+        "environment_change": 10,
+        "military_change": 0
+    }
+},
+{
+    "model": "main.solutionchoice",
+    "pk": 288,
+    "fields": {
+        "name": "Bez zásahu",
+        "problem": 96,
+        "time_before_effect": 1,
+        "budget_change": -60,
+        "citizen_satisfaction_change": -70,
+        "environment_change": -20,
+        "military_change": -10
+    }
+},
+
+{
+    "model": "main.solutionchoice",
+    "pk": 289,
+    "fields": {
+        "name": "Dovoz",
+        "problem": 97,
+        "time_before_effect": 1,
+        "budget_change": 60,
+        "citizen_satisfaction_change": 20,
+        "environment_change": -20,
+        "military_change": 0
+    }
+},
+{
+    "model": "main.solutionchoice",
+    "pk": 290,
+    "fields": {
+        "name": "Recyklace",
+        "problem": 97,
+        "time_before_effect": 2,
+        "budget_change": 50,
+        "citizen_satisfaction_change": 30,
+        "environment_change": 40,
+        "military_change": 0
+    }
+},
+{
+    "model": "main.solutionchoice",
+    "pk": 291,
+    "fields": {
+        "name": "Bez zásahu",
+        "problem": 97,
+        "time_before_effect": 1,
+        "budget_change": -50,
+        "citizen_satisfaction_change": -40,
+        "environment_change": -30,
+        "military_change": -10
+    }
+},
+
+{
+    "model": "main.solutionchoice",
+    "pk": 292,
+    "fields": {
+        "name": "Digitalizace",
+        "problem": 98,
+        "time_before_effect": 2,
+        "budget_change": 60,
+        "citizen_satisfaction_change": 30,
+        "environment_change": 0,
+        "military_change": 20
+    }
+},
+{
+    "model": "main.solutionchoice",
+    "pk": 293,
+    "fields": {
+        "name": "Navýšení kapacit",
+        "problem": 98,
+        "time_before_effect": 2,
+        "budget_change": -40,
+        "citizen_satisfaction_change": 40,
+        "environment_change": 0,
+        "military_change": 30
+    }
+},
+{
+    "model": "main.solutionchoice",
+    "pk": 294,
+    "fields": {
+        "name": "Bez zásahu",
+        "problem": 98,
+        "time_before_effect": 1,
+        "budget_change": -50,
+        "citizen_satisfaction_change": -50,
+        "environment_change": 0,
+        "military_change": -30
+    }
+},
+
+{
+    "model": "main.solutionchoice",
+    "pk": 295,
+    "fields": {
+        "name": "Komerční model",
+        "problem": 99,
+        "time_before_effect": 1,
+        "budget_change": 60,
+        "citizen_satisfaction_change": 20,
+        "environment_change": 0,
+        "military_change": 0
+    }
+},
+{
+    "model": "main.solutionchoice",
+    "pk": 296,
+    "fields": {
+        "name": "Dotace",
+        "problem": 99,
+        "time_before_effect": 1,
+        "budget_change": -40,
+        "citizen_satisfaction_change": 40,
+        "environment_change": 0,
+        "military_change": 0
+    }
+},
+{
+    "model": "main.solutionchoice",
+    "pk": 297,
+    "fields": {
+        "name": "Bez zásahu",
+        "problem": 99,
+        "time_before_effect": 1,
+        "budget_change": -50,
+        "citizen_satisfaction_change": -50,
+        "environment_change": 0,
+        "military_change": -10
+    }
+},
+
+{
+    "model": "main.solutionchoice",
+    "pk": 298,
+    "fields": {
+        "name": "Investice",
+        "problem": 100,
+        "time_before_effect": 2,
+        "budget_change": 50,
+        "citizen_satisfaction_change": 30,
+        "environment_change": 40,
+        "military_change": 0
+    }
+},
+{
+    "model": "main.solutionchoice",
+    "pk": 299,
+    "fields": {
+        "name": "Priorita průmyslu",
+        "problem": 100,
+        "time_before_effect": 3,
+        "budget_change": 70,
+        "citizen_satisfaction_change": 20,
+        "environment_change": -60,
+        "military_change": 0
+    }
+},
+{
+    "model": "main.solutionchoice",
+    "pk": 300,
+    "fields": {
+        "name": "Omezení výroby",
+        "problem": 100,
+        "time_before_effect": 1,
+        "budget_change": -40,
+        "citizen_satisfaction_change": -20,
+        "environment_change": 60,
+        "military_change": 0
     }
 }
 ]
