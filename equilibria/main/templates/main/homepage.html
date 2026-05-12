@@ -35,7 +35,7 @@
                             <div class="user-info">{{ user.username }}</div>
                             <hr>
 
-                            <a href="#"><span class="material-symbols-outlined" style="font-size: 1rem;">settings</span> Nastavení</a>
+                            <div class="user-info">Nejvyšší skóre: {{ user.high_score }}</div>
                             
                             <form action="{% url 'logout' %}" method="POST" style="margin: 0;">
                                 {% csrf_token %}
@@ -70,7 +70,20 @@
                 <div class="info-card">
                     <h2><span class="material-symbols-outlined">menu_book</span> Herní manuál</h2>
                     <p>Simulace pracuje se čtyřmi základními pilíři státu: <strong>Ekonomika, Spokojenost občanů, Životní prostředí a Vojenská síla</strong>.</p>
-                    <p>Hráč v roli vládce reaguje na náhodné události a pomocí legislativních karet mění parametry systému. Cílem je udržet rovnováhu (Equilibrium) po dobu 48 měsíců.</p>
+                    <p>Hlavním úkolem hráče v simulaci Equilibria je ujmout se role vrcholného představitele státu a udržet stabilitu systému. Celý koncept hry je postaven na hledání dynamické rovnováhy mezi čtyřmi základními pilíři, kterými jsou státní rozpočet, spokojenost obyvatel, ekologie a obranyschopnost. Hráč musí činit strategická rozhodnutí tak, aby žádný z těchto ukazatelů neklesl pod kritickou hranici, ale zároveň aby nedocházelo k extrémním výkyvům směrem nahoru, které by mohly systém destabilizovat jiným způsobem.
+                        <hr>
+
+                       <h3>Interakce s mapou a správa událostí</h3>
+                       Základním ovládacím rozhraním je interaktivní mapa České republiky rozdělená na statutární kraje. Během herní iterace systém na základě aktuálního stavu ukazatelů generuje v jednotlivých regionech specifické události, které reprezentují aktuální krize či výzvy. Tyto události jsou vizualizovány přímo na mapě a vyžadují včasnou pozornost hráče. Každý problém je časově omezen a pokud hráč včas nezareaguje, dojde k automatickému uplatnění negativních dopadů na státní parametry. Tato časová latence vnáší do simulace prvek krizového managementu a nutí uživatele prioritizovat problémy podle jejich závažnosti a geografického rozložení.
+                        <hr>
+
+                       <h3>Mechanismus legislativních karet</h3>
+                       Vlastní rozhodovací proces probíhá skrze systém legislativních karet. Ke každému problému jsou hráči nabídnuty tři odlišné varianty řešení, přičemž každá z nich obsahuje slovní popis politického kroku. Tyto změny ovlivňují herní statistiky v řádech desítek bodů, a to jak v kladných, tak v záporných hodnotách. Důležitým prvkem je časový efekt rozhodnutí, kdy se následky volby nemusí projevit okamžitě, ale až s určitým odstupem. Tento mechanismus simuluje setrvačnost reálného státního aparátu a komplikuje hráči možnost jednoduché lineární kalkulace výsledku.
+                        <hr>
+
+                       <h3>Podmínky konce a hodnocení úspěchu</h3>
+                          Simulace končí v moment, kdy některý z klíčových ukazatelů klesne pod kritickou hranici, což reprezentuje kolaps systému. Hra nemá přímý konec, spíše se hráč snaží dosáhnout co nejvyššího kola udržením stability co nejdéle.
+                    </p>
                 </div>
             </div>
             <div class="col-md-4">

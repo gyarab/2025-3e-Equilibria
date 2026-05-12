@@ -18,7 +18,7 @@ Studenti si hravou formou rozvíjejí dovednosti v oblasti logického myšlení,
 
 ## 3. Podrobný popis fungování hry
 ### Základní princip:
-Hráč vstupuje do role lídra jednoho státu (např. České republiky) a jeho úkolem je udržet zemi v rovnováze během série kol, která představují určité časové období (např. jedno volební období v PS PČR). V průběhu hry se pravidelně objevují nové výzvy, kterým musí uživatel čelit, některé výzvy stihne vyřešit, jiné však propadnou, avšak budou mít vliv na ukazatele hry. Může jít například o ekonomickou krizi, ekologickou reformu, stávku učitelů nebo mezinárodní spor. Hráč má na výběr obvykle tři možnosti, z nichž každá jinak ovlivní tři hlavní ukazatele hry:
+Hráč vstupuje do role lídra jednoho státu (např. České republiky) a jeho úkolem je udržet zemi v rovnováze během série kol. V průběhu hry se pravidelně objevují nové výzvy, kterým musí uživatel čelit, některé výzvy stihne vyřešit, jiné však propadnou, avšak budou mít vliv na ukazatele hry. Může jít například o ekonomickou krizi, ekologickou reformu, stávku učitelů nebo mezinárodní spor. Hráč má na výběr obvykle tři možnosti, z nichž každá jinak ovlivní tři hlavní ukazatele hry:
 
 - 💰 **Rozpočet** – finanční stabilita státu, schopnost investovat a reagovat na krize.
 
@@ -31,7 +31,18 @@ Hráč vstupuje do role lídra jednoho státu (např. České republiky) a jeho 
 Po každém rozhodnutí se hodnoty ukazatelů změní. Hráč tak musí neustále vyvažovat své kroky (například opatření, které zvýší spokojenost občanů, může zhoršit stav rozpočtu nebo poškodit ekologii). Pokud některý z ukazatelů klesne na kriticky nízkou úroveň, může dojít k krizi (např. ekonomický kolaps, ztráta důvěry, ekologická katastrofa). V takovém případě hra končí. Důležitým prvkem v rozhodování má i čas, který určuje, kdy dané rozhodnutí vstoupí v platnost, nebo kdy daný problém se stává neřešitelným a má přímý dopad na ukazatele hry.
 
 ### Cíl simulace:
-Cílem hry je udržet rovnováhu všech tří ukazatelů až do konce daného období, tedy úspěšně „vládnout“ po celou dobu hry.
+Cílem hry je udržet rovnováhu všech tří ukazatelů co nejdelší dobu
 
-### Další funkce a prvky:
-Každé rozhodnutí se ukládá do přehledu historie, takže hráč může zpětně sledovat své volby a jejich dopady. Hra bude obsahovat několik scénářů s různou obtížností a tématy. Design bude jednoduchý, přehledný a vhodný i pro použití ve školním prostředí.
+### Instalace a spuštění projektu
+Na svém počítači otevřete terminál Git Bash a zadejte pomocí příkazu cd se přesuňte do složky, ve které chcete projekt mít uchovaný a poté zadejte tento příkaz:
+'''
+git clone https://github.com/gyarab/2025-3e-Equilibria.git
+'''
+Poté se případně přihlašte na svůj GitHub účet a dokončete klonování. Dalé postupně jeden za druhým zadejte tyto příkazy:
+'''
+cd 2025-3e-Equilibria/
+bash initialize_project.txt
+'''
+Druhému příkazu dejte čas a pokud poslední řádka v terminále obsahuje "Listening on TCP address 127.0.0.1:8000" tak otevřete prohlížeč a do vyhledávání zadejte:
+"localhost:8000"
+

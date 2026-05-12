@@ -210,6 +210,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 // Tooltip creation
                 const tooltip = document.createElementNS("http://www.w3.org/2000/svg","g");
                 tooltip.classList.add("map-tooltip");
+                tooltip.classList.add("tooltip-" + pin.id);
                 tooltip.setAttribute("visibility","hidden");
 
                 // Tooltip dimensions and positioning logic
@@ -411,9 +412,14 @@ document.addEventListener("DOMContentLoaded", () => {
     function hideExpiredProblems(expiredProblems){
         expiredProblems.forEach(regionNameId => {
             const pin = document.getElementById(regionNameId);
+            const tooltip = document.querySelector(`.tooltip-${regionNameId}`);
             if(pin){
                 pin.style.pointerEvents = "none";
                 pin.classList.add("hidden");
+            }
+            if(tooltip){
+                tooltip.style.visibility = "hidden";
+                tooltip.style.pointerEvents = "none";
             }
         });
     }
