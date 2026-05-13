@@ -27,6 +27,11 @@
         "environment_tendency": 0,
         "military_tendency": 0,
 
+        "budget_expiration_change": -60,
+        "citizen_satisfaction_expiration_change": -80,
+        "environment_expiration_change": -20,
+        "military_expiration_change": -10,
+
         "possible_regions": [1,2,3,4,5,6,7,8,9,10,11,12,13,14]
     }
 },
@@ -57,6 +62,11 @@
         "citizen_satisfaction_tendency": 0,
         "environment_tendency": 0,
         "military_tendency": 0,
+
+        "budget_expiration_change": -40,
+        "citizen_satisfaction_expiration_change": -30,
+        "environment_expiration_change": -90,
+        "military_expiration_change": 0,
 
         "possible_regions": [10,3,4]
     }
@@ -89,6 +99,11 @@
         "environment_tendency": 0,
         "military_tendency": 0,
 
+        "budget_expiration_change": -30,
+        "citizen_satisfaction_expiration_change": -80,
+        "environment_expiration_change": 0,
+        "military_expiration_change": 0,
+
         "possible_regions": [1,2,3,4,5,6,7,8,9,10,11,12,13,14]
     }
 },
@@ -119,6 +134,11 @@
         "citizen_satisfaction_tendency": 0,
         "environment_tendency": 0,
         "military_tendency": 0,
+
+        "budget_expiration_change": -70,
+        "citizen_satisfaction_expiration_change": -100,
+        "environment_expiration_change": -50,
+        "military_expiration_change": -20,
 
         "possible_regions": [11,12]
     }
@@ -151,6 +171,11 @@
         "environment_tendency": 0,
         "military_tendency": 0,
 
+        "budget_expiration_change": -50,
+        "citizen_satisfaction_expiration_change": -60,
+        "environment_expiration_change": 0,
+        "military_expiration_change": -70,
+
         "possible_regions": [1,2,3,4,5,6,7,8,9,10,11,12,13,14]
     }
 },
@@ -181,6 +206,11 @@
         "citizen_satisfaction_tendency": 0,
         "environment_tendency": 1,
         "military_tendency": 1,
+
+        "budget_expiration_change": -60,
+        "citizen_satisfaction_expiration_change": -50,
+        "environment_expiration_change": -10,
+        "military_expiration_change": -90,
 
         "possible_regions": [1,2,3,4,5,6,7,8,9,10,11,12,13,14]
     }
@@ -213,6 +243,11 @@
         "environment_tendency": 0,
         "military_tendency": 0,
 
+        "budget_expiration_change": -90,
+        "citizen_satisfaction_expiration_change": -100,
+        "environment_expiration_change": 0,
+        "military_expiration_change": -40,
+
         "possible_regions": [1,2,3,4,5,6,7,8,9,10,11,12,13,14]
     }
 },
@@ -243,6 +278,11 @@
         "citizen_satisfaction_tendency": 0,
         "environment_tendency": 0,
         "military_tendency": 1,
+
+        "budget_expiration_change": -40,
+        "citizen_satisfaction_expiration_change": -40,
+        "environment_expiration_change": -80,
+        "military_expiration_change": 0,
 
         "possible_regions": [1,2,3,4,5,6,7,8,9,10,11,12,13,14]
     }
@@ -275,6 +315,11 @@
         "environment_tendency": 1,
         "military_tendency": 0,
 
+        "budget_expiration_change": -50,
+        "citizen_satisfaction_expiration_change": -30,
+        "environment_expiration_change": 0,
+        "military_expiration_change": -100,
+
         "possible_regions": [1,2,3,4,5,6,7,8,9,10,11,12,13,14]
     }
 },
@@ -305,6 +350,11 @@
         "citizen_satisfaction_tendency": 0,
         "environment_tendency": 0,
         "military_tendency": 0,
+
+        "budget_expiration_change": -60,
+        "citizen_satisfaction_expiration_change": -70,
+        "environment_expiration_change": -100,
+        "military_expiration_change": 0,
 
         "possible_regions": [1,2,3,4,5,6,7,8,9,10,11,12,13,14]
     }
@@ -337,6 +387,11 @@
         "environment_tendency": 0,
         "military_tendency": 0,
 
+        "budget_expiration_change": -65,
+        "citizen_satisfaction_expiration_change": -75,
+        "environment_expiration_change": -10,
+        "military_expiration_change": 0,
+
         "possible_regions": [1]
     }
 },
@@ -367,6 +422,11 @@
         "citizen_satisfaction_tendency": 0,
         "environment_tendency": 0,
         "military_tendency": 1,
+
+        "budget_expiration_change": -60,
+        "citizen_satisfaction_expiration_change": -70,
+        "environment_expiration_change": -40,
+        "military_expiration_change": 0,
 
         "possible_regions": [1]
     }
@@ -399,6 +459,11 @@
         "environment_tendency": 0,
         "military_tendency": 1,
 
+        "budget_expiration_change": -55,
+        "citizen_satisfaction_expiration_change": -70,
+        "environment_expiration_change": -30,
+        "military_expiration_change": 0,
+
         "possible_regions": [1]
     }
 },
@@ -429,6 +494,11 @@
         "citizen_satisfaction_tendency": 0,
         "environment_tendency": 0,
         "military_tendency": 0,
+
+        "budget_expiration_change": -70,
+        "citizen_satisfaction_expiration_change": -65,
+        "environment_expiration_change": -35,
+        "military_expiration_change": 0,
 
         "possible_regions": [2]
     }
@@ -461,6 +531,11 @@
         "environment_tendency": 0,
         "military_tendency": 1,
 
+        "budget_expiration_change": -60,
+        "citizen_satisfaction_expiration_change": -75,
+        "environment_expiration_change": -40,
+        "military_expiration_change": -5,
+
         "possible_regions": [2]
     }
 },
@@ -491,6 +566,11 @@
         "citizen_satisfaction_tendency": 0,
         "environment_tendency": 0,
         "military_tendency": 0,
+
+        "budget_expiration_change": -55,
+        "citizen_satisfaction_expiration_change": -80,
+        "environment_expiration_change": 0,
+        "military_expiration_change": 0,
 
         "possible_regions": [2]
     }
@@ -523,6 +603,11 @@
         "environment_tendency": 0,
         "military_tendency": 0,
 
+        "budget_expiration_change": -70,
+        "citizen_satisfaction_expiration_change": -50,
+        "environment_expiration_change": 0,
+        "military_expiration_change": -10,
+
         "possible_regions": [4]
     }
 },
@@ -553,6 +638,11 @@
         "citizen_satisfaction_tendency": 0,
         "environment_tendency": 0,
         "military_tendency": 0,
+
+        "budget_expiration_change": -75,
+        "citizen_satisfaction_expiration_change": -65,
+        "environment_expiration_change": -10,
+        "military_expiration_change": 0,
 
         "possible_regions": [4]
     }
@@ -585,6 +675,11 @@
         "environment_tendency": 0,
         "military_tendency": 0,
 
+        "budget_expiration_change": -65,
+        "citizen_satisfaction_expiration_change": -60,
+        "environment_expiration_change": -20,
+        "military_expiration_change": 0,
+
         "possible_regions": [4]
     }
 },
@@ -615,6 +710,11 @@
         "citizen_satisfaction_tendency": 0,
         "environment_tendency": 0,
         "military_tendency": 0,
+
+        "budget_expiration_change": -60,
+        "citizen_satisfaction_expiration_change": -85,
+        "environment_expiration_change": 0,
+        "military_expiration_change": -10,
 
         "possible_regions": [5]
     }
@@ -647,6 +747,11 @@
         "environment_tendency": 0,
         "military_tendency": 0,
 
+        "budget_expiration_change": -75,
+        "citizen_satisfaction_expiration_change": -45,
+        "environment_expiration_change": 0,
+        "military_expiration_change": -5,
+
         "possible_regions": [5]
     }
 },
@@ -677,6 +782,11 @@
         "citizen_satisfaction_tendency": 0,
         "environment_tendency": 0,
         "military_tendency": 0,
+
+        "budget_expiration_change": -55,
+        "citizen_satisfaction_expiration_change": -70,
+        "environment_expiration_change": 0,
+        "military_expiration_change": -80,
 
         "possible_regions": [5]
     }
@@ -709,6 +819,11 @@
         "environment_tendency": 0,
         "military_tendency": 0,
 
+        "budget_expiration_change": -45,
+        "citizen_satisfaction_expiration_change": -55,
+        "environment_expiration_change": -85,
+        "military_expiration_change": -10,
+
         "possible_regions": [6]
     }
 },
@@ -739,6 +854,11 @@
         "citizen_satisfaction_tendency": 0,
         "environment_tendency": 0,
         "military_tendency": 0,
+
+        "budget_expiration_change": -80,
+        "citizen_satisfaction_expiration_change": -70,
+        "environment_expiration_change": -10,
+        "military_expiration_change": -15,
 
         "possible_regions": [6]
     }
@@ -771,6 +891,11 @@
         "environment_tendency": 0,
         "military_tendency": 0,
 
+        "budget_expiration_change": -60,
+        "citizen_satisfaction_expiration_change": -80,
+        "environment_expiration_change": 0,
+        "military_expiration_change": -10,
+
         "possible_regions": [6]
     }
 },
@@ -801,6 +926,11 @@
         "citizen_satisfaction_tendency": 0,
         "environment_tendency": 0,
         "military_tendency": 1,
+
+        "budget_expiration_change": -40,
+        "citizen_satisfaction_expiration_change": -50,
+        "environment_expiration_change": -85,
+        "military_expiration_change": -10,
 
         "possible_regions": [7]
     }
@@ -833,6 +963,11 @@
         "environment_tendency": 0,
         "military_tendency": 0,
 
+        "budget_expiration_change": -50,
+        "citizen_satisfaction_expiration_change": -65,
+        "environment_expiration_change": -20,
+        "military_expiration_change": -85,
+
         "possible_regions": [7,3,4]
     }
 },
@@ -863,6 +998,11 @@
         "citizen_satisfaction_tendency": 0,
         "environment_tendency": 0,
         "military_tendency": 0,
+
+        "budget_expiration_change": -70,
+        "citizen_satisfaction_expiration_change": -60,
+        "environment_expiration_change": -10,
+        "military_expiration_change": -5,
 
         "possible_regions": [7]
     }
@@ -895,6 +1035,11 @@
         "environment_tendency": 0,
         "military_tendency": 0,
 
+        "budget_expiration_change": -65,
+        "citizen_satisfaction_expiration_change": -75,
+        "environment_expiration_change": -10,
+        "military_expiration_change": 0,
+
         "possible_regions": [8]
     }
 },
@@ -925,6 +1070,11 @@
         "citizen_satisfaction_tendency": 0,
         "environment_tendency": 0,
         "military_tendency": 0,
+
+        "budget_expiration_change": -55,
+        "citizen_satisfaction_expiration_change": -90,
+        "environment_expiration_change": 0,
+        "military_expiration_change": -15,
 
         "possible_regions": [8]
     }
@@ -957,6 +1107,11 @@
         "environment_tendency": 0,
         "military_tendency": 0,
 
+        "budget_expiration_change": -45,
+        "citizen_satisfaction_expiration_change": -80,
+        "environment_expiration_change": -25,
+        "military_expiration_change": -70,
+
         "possible_regions": [8]
     }
 },
@@ -987,6 +1142,11 @@
         "citizen_satisfaction_tendency": 0,
         "environment_tendency": 0,
         "military_tendency": 0,
+
+        "budget_expiration_change": -60,
+        "citizen_satisfaction_expiration_change": -75,
+        "environment_expiration_change": -120,
+        "military_expiration_change": -50,
 
         "possible_regions": [9]
     }
@@ -1019,6 +1179,11 @@
         "environment_tendency": 0,
         "military_tendency": 0,
 
+        "budget_expiration_change": -85,
+        "citizen_satisfaction_expiration_change": -55,
+        "environment_expiration_change": -70,
+        "military_expiration_change": -10,
+
         "possible_regions": [9]
     }
 },
@@ -1049,6 +1214,11 @@
         "citizen_satisfaction_tendency": 0,
         "environment_tendency": 0,
         "military_tendency": 1,
+
+        "budget_expiration_change": -70,
+        "citizen_satisfaction_expiration_change": -60,
+        "environment_expiration_change": -50,
+        "military_expiration_change": -15,
 
         "possible_regions": [9]
     }
@@ -1081,6 +1251,11 @@
         "environment_tendency": 0,
         "military_tendency": 0,
 
+        "budget_expiration_change": -80,
+        "citizen_satisfaction_expiration_change": -70,
+        "environment_expiration_change": -5,
+        "military_expiration_change": -10,
+
         "possible_regions": [10]
     }
 },
@@ -1111,6 +1286,11 @@
         "citizen_satisfaction_tendency": 0,
         "environment_tendency": 0,
         "military_tendency": 0,
+
+        "budget_expiration_change": -65,
+        "citizen_satisfaction_expiration_change": -60,
+        "environment_expiration_change": -10,
+        "military_expiration_change": -25,
 
         "possible_regions": [10]
     }
@@ -1143,6 +1323,11 @@
         "environment_tendency": 0,
         "military_tendency": 0,
 
+        "budget_expiration_change": -75,
+        "citizen_satisfaction_expiration_change": -55,
+        "environment_expiration_change": -40,
+        "military_expiration_change": -35,
+
         "possible_regions": [10]
     }
 },
@@ -1173,6 +1358,11 @@
         "citizen_satisfaction_tendency": 0,
         "environment_tendency": 0,
         "military_tendency": 0,
+
+        "budget_expiration_change": -70,
+        "citizen_satisfaction_expiration_change": -65,
+        "environment_expiration_change": -90,
+        "military_expiration_change": -10,
 
         "possible_regions": [11,12]
     }
@@ -1205,6 +1395,11 @@
         "environment_tendency": 0,
         "military_tendency": 1,
 
+        "budget_expiration_change": -60,
+        "citizen_satisfaction_expiration_change": -40,
+        "environment_expiration_change": 0,
+        "military_expiration_change": -20,
+
         "possible_regions": [11]
     }
 },
@@ -1235,6 +1430,11 @@
         "citizen_satisfaction_tendency": 0,
         "environment_tendency": 0,
         "military_tendency": 1,
+
+        "budget_expiration_change": -65,
+        "citizen_satisfaction_expiration_change": -75,
+        "environment_expiration_change": -25,
+        "military_expiration_change": -15,
 
         "possible_regions": [11]
     }
@@ -1267,6 +1467,11 @@
         "environment_tendency": 0,
         "military_tendency": 0,
 
+        "budget_expiration_change": -90,
+        "citizen_satisfaction_expiration_change": -75,
+        "environment_expiration_change": -10,
+        "military_expiration_change": -20,
+
         "possible_regions": [14]
     }
 },
@@ -1297,6 +1502,11 @@
         "citizen_satisfaction_tendency": 0,
         "environment_tendency": 0,
         "military_tendency": 0,
+
+        "budget_expiration_change": -55,
+        "citizen_satisfaction_expiration_change": -80,
+        "environment_expiration_change": -110,
+        "military_expiration_change": -10,
 
         "possible_regions": [14]
     }
@@ -1329,6 +1539,11 @@
         "environment_tendency": 0,
         "military_tendency": 0,
 
+        "budget_expiration_change": -80,
+        "citizen_satisfaction_expiration_change": -90,
+        "environment_expiration_change": -15,
+        "military_expiration_change": -35,
+
         "possible_regions": [14]
     }
 },
@@ -1359,6 +1574,11 @@
         "citizen_satisfaction_tendency": 0,
         "environment_tendency": 0,
         "military_tendency": 0,
+
+        "budget_expiration_change": -85,
+        "citizen_satisfaction_expiration_change": -70,
+        "environment_expiration_change": -5,
+        "military_expiration_change": -15,
 
         "possible_regions": [13]
     }
@@ -1391,6 +1611,11 @@
         "environment_tendency": 0,
         "military_tendency": 0,
 
+        "budget_expiration_change": -70,
+        "citizen_satisfaction_expiration_change": -75,
+        "environment_expiration_change": 0,
+        "military_expiration_change": -20,
+
         "possible_regions": [13,12]
     }
 },
@@ -1421,6 +1646,11 @@
         "citizen_satisfaction_tendency": 0,
         "environment_tendency": 0,
         "military_tendency": 1,
+
+        "budget_expiration_change": -55,
+        "citizen_satisfaction_expiration_change": -50,
+        "environment_expiration_change": -65,
+        "military_expiration_change": -40,
 
         "possible_regions": [13]
     }
@@ -1453,6 +1683,11 @@
         "environment_tendency": 1,
         "military_tendency": 0,
 
+        "budget_expiration_change": -70,
+        "citizen_satisfaction_expiration_change": -95,
+        "environment_expiration_change": 0,
+        "military_expiration_change": -75,
+
         "possible_regions": [12]
     }
 },
@@ -1483,6 +1718,11 @@
         "citizen_satisfaction_tendency": 0,
         "environment_tendency": 0,
         "military_tendency": 0,
+
+        "budget_expiration_change": -50,
+        "citizen_satisfaction_expiration_change": -60,
+        "environment_expiration_change": -85,
+        "military_expiration_change": -55,
 
         "possible_regions": [12]
     }
@@ -1515,6 +1755,11 @@
         "environment_tendency": 0,
         "military_tendency": 0,
 
+        "budget_expiration_change": -75,
+        "citizen_satisfaction_expiration_change": -80,
+        "environment_expiration_change": 0,
+        "military_expiration_change": -10,
+
         "possible_regions": [12]
     }
 },
@@ -1545,6 +1790,11 @@
         "citizen_satisfaction_tendency": 0,
         "environment_tendency": 0,
         "military_tendency": 0,
+
+        "budget_expiration_change": -70,
+        "citizen_satisfaction_expiration_change": -55,
+        "environment_expiration_change": -95,
+        "military_expiration_change": -10,
 
         "possible_regions": [3]
     }
@@ -1577,6 +1827,11 @@
         "environment_tendency": 0,
         "military_tendency": 0,
 
+        "budget_expiration_change": -45,
+        "citizen_satisfaction_expiration_change": -60,
+        "environment_expiration_change": -75,
+        "military_expiration_change": -40,
+
         "possible_regions": [3]
     }
 },
@@ -1607,6 +1862,11 @@
         "citizen_satisfaction_tendency": 1,
         "environment_tendency": 0,
         "military_tendency": 1,
+
+        "budget_expiration_change": -70,
+        "citizen_satisfaction_expiration_change": -65,
+        "environment_expiration_change": -40,
+        "military_expiration_change": -30,
 
         "possible_regions": [3]
     }
@@ -1639,6 +1899,11 @@
         "environment_tendency": 0,
         "military_tendency": 0,
 
+        "budget_expiration_change": -60,
+        "citizen_satisfaction_expiration_change": -70,
+        "environment_expiration_change": -120,
+        "military_expiration_change": -20,
+
         "possible_regions": [2,6,9]
     }
 },
@@ -1669,6 +1934,11 @@
         "citizen_satisfaction_tendency": 0,
         "environment_tendency": 0,
         "military_tendency": 0,
+
+        "budget_expiration_change": -40,
+        "citizen_satisfaction_expiration_change": -55,
+        "environment_expiration_change": -110,
+        "military_expiration_change": -10,
 
         "possible_regions": [3,4,10]
     }
@@ -1701,6 +1971,11 @@
         "environment_tendency": 0,
         "military_tendency": 0,
 
+        "budget_expiration_change": -65,
+        "citizen_satisfaction_expiration_change": -70,
+        "environment_expiration_change": -100,
+        "military_expiration_change": -15,
+
         "possible_regions": [11,12,13]
     }
 },
@@ -1731,6 +2006,11 @@
         "citizen_satisfaction_tendency": 0,
         "environment_tendency": 0,
         "military_tendency": 0,
+
+        "budget_expiration_change": -70,
+        "citizen_satisfaction_expiration_change": -85,
+        "environment_expiration_change": -120,
+        "military_expiration_change": -10,
 
         "possible_regions": [14,1,6]
     }
@@ -1763,6 +2043,11 @@
         "environment_tendency": 1,
         "military_tendency": 0,
 
+        "budget_expiration_change": -75,
+        "citizen_satisfaction_expiration_change": -65,
+        "environment_expiration_change": -10,
+        "military_expiration_change": -100,
+
         "possible_regions": [5,6,14]
     }
 },
@@ -1793,6 +2078,11 @@
         "citizen_satisfaction_tendency": 0,
         "environment_tendency": 0,
         "military_tendency": 0,
+
+        "budget_expiration_change": -80,
+        "citizen_satisfaction_expiration_change": -100,
+        "environment_expiration_change": -5,
+        "military_expiration_change": -90,
 
         "possible_regions": [1,11,14]
     }
@@ -1825,6 +2115,11 @@
         "environment_tendency": 0,
         "military_tendency": 0,
 
+        "budget_expiration_change": -60,
+        "citizen_satisfaction_expiration_change": -40,
+        "environment_expiration_change": 0,
+        "military_expiration_change": -120,
+
         "possible_regions": [1,2,3,4,5,6,7,8,9,10,11,12,13,14]
     }
 },
@@ -1855,6 +2150,11 @@
         "citizen_satisfaction_tendency": 0,
         "environment_tendency": 1,
         "military_tendency": 0,
+
+        "budget_expiration_change": -90,
+        "citizen_satisfaction_expiration_change": -120,
+        "environment_expiration_change": -20,
+        "military_expiration_change": -140,
 
         "possible_regions": [1,2,3,4,5,6,7,8,9,10,11,12,13,14]
     }
@@ -1887,6 +2187,11 @@
         "environment_tendency": 1,
         "military_tendency": 0,
 
+        "budget_expiration_change": -80,
+        "citizen_satisfaction_expiration_change": -90,
+        "environment_expiration_change": -20,
+        "military_expiration_change": -70,
+
         "possible_regions": [1,2]
     }
 },
@@ -1917,6 +2222,11 @@
         "citizen_satisfaction_tendency": 1,
         "environment_tendency": 0,
         "military_tendency": 0,
+
+        "budget_expiration_change": -70,
+        "citizen_satisfaction_expiration_change": -100,
+        "environment_expiration_change": -150,
+        "military_expiration_change": -40,
 
         "possible_regions": [6,9]
     }
@@ -1949,6 +2259,11 @@
         "environment_tendency": 0,
         "military_tendency": 0,
 
+        "budget_expiration_change": -60,
+        "citizen_satisfaction_expiration_change": -110,
+        "environment_expiration_change": -10,
+        "military_expiration_change": -80,
+
         "possible_regions": [1,2,3,4,5,6,7,8,9,10,11,12,13,14]
     }
 },
@@ -1979,6 +2294,11 @@
         "citizen_satisfaction_tendency": 0,
         "environment_tendency": 0,
         "military_tendency": 0,
+
+        "budget_expiration_change": -70,
+        "citizen_satisfaction_expiration_change": -120,
+        "environment_expiration_change": -10,
+        "military_expiration_change": -50,
 
         "possible_regions": [7,6,14]
     }
@@ -2011,6 +2331,11 @@
         "environment_tendency": 0,
         "military_tendency": 0,
 
+        "budget_expiration_change": -50,
+        "citizen_satisfaction_expiration_change": -90,
+        "environment_expiration_change": -10,
+        "military_expiration_change": -100,
+
         "possible_regions": [1,14]
     }
 },
@@ -2041,6 +2366,11 @@
         "citizen_satisfaction_tendency": 0,
         "environment_tendency": 0,
         "military_tendency": 0,
+
+        "budget_expiration_change": -80,
+        "citizen_satisfaction_expiration_change": -110,
+        "environment_expiration_change": -30,
+        "military_expiration_change": -60,
 
         "possible_regions": [1,2,3,4,5,6,7,8,9,10,11,12,13,14]
     }
@@ -2073,6 +2403,11 @@
         "environment_tendency": 0,
         "military_tendency": 0,
 
+        "budget_expiration_change": -60,
+        "citizen_satisfaction_expiration_change": -90,
+        "environment_expiration_change": -20,
+        "military_expiration_change": -30,
+
         "possible_regions": [1]
     }
 },
@@ -2103,6 +2438,11 @@
         "citizen_satisfaction_tendency": 0,
         "environment_tendency": 0,
         "military_tendency": 0,
+
+        "budget_expiration_change": -40,
+        "citizen_satisfaction_expiration_change": -100,
+        "environment_expiration_change": 0,
+        "military_expiration_change": -70,
 
         "possible_regions": [1,2,3,4,5,6,7,8,9,10,11,12,13,14]
     }
@@ -2135,6 +2475,11 @@
         "environment_tendency": 0,
         "military_tendency": 0,
 
+        "budget_expiration_change": -70,
+        "citizen_satisfaction_expiration_change": -80,
+        "environment_expiration_change": -30,
+        "military_expiration_change": -40,
+
         "possible_regions": [3,2,1]
     }
 },
@@ -2165,6 +2510,11 @@
         "citizen_satisfaction_tendency": 1,
         "environment_tendency": 0,
         "military_tendency": 0,
+
+        "budget_expiration_change": -120,
+        "citizen_satisfaction_expiration_change": -150,
+        "environment_expiration_change": -250,
+        "military_expiration_change": -100,
 
         "possible_regions": [3]
     }
@@ -2197,6 +2547,11 @@
         "environment_tendency": 0,
         "military_tendency": 0,
 
+        "budget_expiration_change": -140,
+        "citizen_satisfaction_expiration_change": -100,
+        "environment_expiration_change": -10,
+        "military_expiration_change": -50,
+
         "possible_regions": [1,2,3,4,5,6,7,8,9,10,11,12,13,14]
     }
 },
@@ -2227,6 +2582,11 @@
         "citizen_satisfaction_tendency": 0,
         "environment_tendency": 0,
         "military_tendency": 0,
+
+        "budget_expiration_change": -90,
+        "citizen_satisfaction_expiration_change": -140,
+        "environment_expiration_change": -20,
+        "military_expiration_change": -60,
 
         "possible_regions": [1,2,3,4,5,6,7,8,9,10,11,12,13,14]
     }
@@ -2259,6 +2619,11 @@
         "environment_tendency": 0,
         "military_tendency": 0,
 
+        "budget_expiration_change": -250,
+        "citizen_satisfaction_expiration_change": -160,
+        "environment_expiration_change": -40,
+        "military_expiration_change": -120,
+
         "possible_regions": [1,2,3,4,5,6,7,8,9,10,11,12,13,14]
     }
 },
@@ -2289,6 +2654,11 @@
         "citizen_satisfaction_tendency": 0,
         "environment_tendency": 0,
         "military_tendency": 0,
+
+        "budget_expiration_change": -180,
+        "citizen_satisfaction_expiration_change": -130,
+        "environment_expiration_change": -20,
+        "military_expiration_change": -70,
 
         "possible_regions": [1,2,3,4,5,6,7,8,9,10,11,12,13,14]
     }
@@ -2321,6 +2691,11 @@
         "environment_tendency": 0,
         "military_tendency": 0,
 
+        "budget_expiration_change": -70,
+        "citizen_satisfaction_expiration_change": -120,
+        "environment_expiration_change": -20,
+        "military_expiration_change": -40,
+
         "possible_regions": [12,14,10,6]
     }
 },
@@ -2351,6 +2726,11 @@
         "citizen_satisfaction_tendency": 0,
         "environment_tendency": 0,
         "military_tendency": 0,
+
+        "budget_expiration_change": -100,
+        "citizen_satisfaction_expiration_change": -80,
+        "environment_expiration_change": -10,
+        "military_expiration_change": -30,
 
         "possible_regions": [2,7,8]
     }
@@ -2383,6 +2763,11 @@
         "environment_tendency": 0,
         "military_tendency": 0,
 
+        "budget_expiration_change": -170,
+        "citizen_satisfaction_expiration_change": -90,
+        "environment_expiration_change": -20,
+        "military_expiration_change": -80,
+
         "possible_regions": [1,2,3,4,5,6,7,8,9,10,11,12,13,14]
     }
 },
@@ -2413,6 +2798,11 @@
         "citizen_satisfaction_tendency": 0,
         "environment_tendency": 0,
         "military_tendency": 0,
+
+        "budget_expiration_change": -40,
+        "citizen_satisfaction_expiration_change": -80,
+        "environment_expiration_change": -120,
+        "military_expiration_change": -30,
 
         "possible_regions": [6,14]
     }
@@ -2445,6 +2835,11 @@
         "environment_tendency": 0,
         "military_tendency": 0,
 
+        "budget_expiration_change": -50,
+        "citizen_satisfaction_expiration_change": -70,
+        "environment_expiration_change": -130,
+        "military_expiration_change": -20,
+
         "possible_regions": [2,4]
     }
 },
@@ -2475,6 +2870,11 @@
         "citizen_satisfaction_tendency": 0,
         "environment_tendency": 0,
         "military_tendency": 0,
+
+        "budget_expiration_change": -30,
+        "citizen_satisfaction_expiration_change": -60,
+        "environment_expiration_change": -140,
+        "military_expiration_change": -20,
 
         "possible_regions": [5,3]
     }
@@ -2507,6 +2907,11 @@
         "environment_tendency": 0,
         "military_tendency": 0,
 
+        "budget_expiration_change": -40,
+        "citizen_satisfaction_expiration_change": -80,
+        "environment_expiration_change": -70,
+        "military_expiration_change": -10,
+
         "possible_regions": [1,2,3,4,5,6,7,8,9,10,11,12,13,14]
     }
 },
@@ -2537,6 +2942,11 @@
         "citizen_satisfaction_tendency": 0,
         "environment_tendency": 0,
         "military_tendency": 0,
+
+        "budget_expiration_change": -50,
+        "citizen_satisfaction_expiration_change": -70,
+        "environment_expiration_change": -130,
+        "military_expiration_change": -20,
 
         "possible_regions": [11,12]
     }
@@ -2569,6 +2979,11 @@
         "environment_tendency": 0,
         "military_tendency": 0,
 
+        "budget_expiration_change": -60,
+        "citizen_satisfaction_expiration_change": -90,
+        "environment_expiration_change": -160,
+        "military_expiration_change": -40,
+
         "possible_regions": [9,6]
     }
 },
@@ -2599,6 +3014,11 @@
         "citizen_satisfaction_tendency": 1,
         "environment_tendency": 0,
         "military_tendency": 0,
+
+        "budget_expiration_change": -40,
+        "citizen_satisfaction_expiration_change": -60,
+        "environment_expiration_change": -110,
+        "military_expiration_change": -10,
 
         "possible_regions": [10,3]
     }
@@ -2631,6 +3051,11 @@
         "environment_tendency": 0,
         "military_tendency": 0,
 
+        "budget_expiration_change": -30,
+        "citizen_satisfaction_expiration_change": -60,
+        "environment_expiration_change": -140,
+        "military_expiration_change": -20,
+
         "possible_regions": [7,13]
     }
 },
@@ -2661,6 +3086,11 @@
         "citizen_satisfaction_tendency": 1,
         "environment_tendency": 0,
         "military_tendency": 0,
+
+        "budget_expiration_change": -90,
+        "citizen_satisfaction_expiration_change": -60,
+        "environment_expiration_change": -20,
+        "military_expiration_change": -10,
 
         "possible_regions": [3,7]
     }
@@ -2693,6 +3123,11 @@
         "environment_tendency": 0,
         "military_tendency": 1,
 
+        "budget_expiration_change": -80,
+        "citizen_satisfaction_expiration_change": -90,
+        "environment_expiration_change": -50,
+        "military_expiration_change": -70,
+
         "possible_regions": [11,2]
     }
 },
@@ -2723,6 +3158,11 @@
         "citizen_satisfaction_tendency": 0,
         "environment_tendency": 0,
         "military_tendency": 0,
+
+        "budget_expiration_change": -70,
+        "citizen_satisfaction_expiration_change": -90,
+        "environment_expiration_change": -180,
+        "military_expiration_change": -20,
 
         "possible_regions": [1,2,3,4,5,6,7,8,9,10,11,12,13,14]
     }
@@ -2755,6 +3195,11 @@
         "environment_tendency": 0,
         "military_tendency": 0,
 
+        "budget_expiration_change": -70,
+        "citizen_satisfaction_expiration_change": -80,
+        "environment_expiration_change": -60,
+        "military_expiration_change": -10,
+
         "possible_regions": [10,13]
     }
 },
@@ -2785,6 +3230,11 @@
         "citizen_satisfaction_tendency": 0,
         "environment_tendency": 0,
         "military_tendency": 0,
+
+        "budget_expiration_change": -120,
+        "citizen_satisfaction_expiration_change": -70,
+        "environment_expiration_change": -60,
+        "military_expiration_change": -40,
 
         "possible_regions": [1,2,3,4,5,6,7,8,9,10,11,12,13,14]
     }
@@ -2817,6 +3267,11 @@
         "environment_tendency": 0,
         "military_tendency": 0,
 
+        "budget_expiration_change": -90,
+        "citizen_satisfaction_expiration_change": -60,
+        "environment_expiration_change": -80,
+        "military_expiration_change": -20,
+
         "possible_regions": [2,6]
     }
 },
@@ -2847,6 +3302,11 @@
         "citizen_satisfaction_tendency": 0,
         "environment_tendency": 0,
         "military_tendency": 0,
+
+        "budget_expiration_change": -70,
+        "citizen_satisfaction_expiration_change": -120,
+        "environment_expiration_change": -10,
+        "military_expiration_change": -50,
 
         "possible_regions": [1,2,3,4,5,6,7,8,9,10,11,12,13,14]
     }
@@ -2879,6 +3339,11 @@
         "environment_tendency": 0,
         "military_tendency": 0,
 
+        "budget_expiration_change": -60,
+        "citizen_satisfaction_expiration_change": -90,
+        "environment_expiration_change": -40,
+        "military_expiration_change": -20,
+
         "possible_regions": [1]
     }
 },
@@ -2909,6 +3374,11 @@
         "citizen_satisfaction_tendency": 0,
         "environment_tendency": 0,
         "military_tendency": 0,
+
+        "budget_expiration_change": -50,
+        "citizen_satisfaction_expiration_change": -80,
+        "environment_expiration_change": -10,
+        "military_expiration_change": -10,
 
         "possible_regions": [1,2,3,4,5,6,7,8,9,10,11,12,13,14]
     }
@@ -2941,6 +3411,11 @@
         "environment_tendency": 0,
         "military_tendency": 1,
 
+        "budget_expiration_change": -80,
+        "citizen_satisfaction_expiration_change": -50,
+        "environment_expiration_change": -90,
+        "military_expiration_change": -60,
+
         "possible_regions": [14,6]
     }
 },
@@ -2971,6 +3446,11 @@
         "citizen_satisfaction_tendency": 0,
         "environment_tendency": 0,
         "military_tendency": 0,
+
+        "budget_expiration_change": -70,
+        "citizen_satisfaction_expiration_change": -130,
+        "environment_expiration_change": -10,
+        "military_expiration_change": -30,
 
         "possible_regions": [1,2,3,4,5,6,7,8,9,10,11,12,13,14]
     }
@@ -3003,6 +3483,11 @@
         "environment_tendency": 0,
         "military_tendency": 0,
 
+        "budget_expiration_change": -90,
+        "citizen_satisfaction_expiration_change": -60,
+        "environment_expiration_change": -20,
+        "military_expiration_change": -10,
+
         "possible_regions": [1,2,3,4,5,6,7,8,9,10,11,12,13,14]
     }
 },
@@ -3033,6 +3518,11 @@
         "citizen_satisfaction_tendency": 0,
         "environment_tendency": 0,
         "military_tendency": 0,
+
+        "budget_expiration_change": -60,
+        "citizen_satisfaction_expiration_change": -100,
+        "environment_expiration_change": -10,
+        "military_expiration_change": -20,
 
         "possible_regions": [1,2,3,4,5,6,7,8,9,10,11,12,13,14]
     }
@@ -3065,6 +3555,11 @@
         "environment_tendency": 0,
         "military_tendency": 0,
 
+        "budget_expiration_change": -50,
+        "citizen_satisfaction_expiration_change": -90,
+        "environment_expiration_change": -10,
+        "military_expiration_change": -10,
+
         "possible_regions": [1,11]
     }
 },
@@ -3096,7 +3591,12 @@
         "environment_tendency": 0,
         "military_tendency": 0,
 
+        "budget_expiration_change": -100,
+        "citizen_satisfaction_expiration_change": -70,
+        "environment_expiration_change": -110,
+        "military_expiration_change": -20,
+
         "possible_regions": [9,6,8]
     }
-}
+},
 ]
