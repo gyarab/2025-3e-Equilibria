@@ -10,7 +10,7 @@ Na svém počítači otevřete terminál Git Bash a zadejte pomocí příkazu cd
 git clone https://github.com/gyarab/2025-3e-Equilibria.git
 ```
 
-Poté se případně přihlaste na svůj GitHub účet a dokončete klonování. Dalé postupně jeden za druhým zadejte tyto příkazy:
+Poté se případně přihlaste na svůj GitHub účet a dokončete klonování. Dále postupně jeden za druhým zadejte tyto příkazy:
 
 ```
 cd 2025-3e-Equilibria/
@@ -21,7 +21,7 @@ Druhému příkazu dejte čas a pokud poslední řádka v terminále obsahuje "L
 "localhost:8000"
 
 ### Další zapínání projektu
-Po každé co znovu otevřete projekt v terminálu dojeďte do složky projektu a zadejte postupně:
+Pokaždé co znovu otevřete projekt v terminálu dojeďte do složky projektu a zadejte postupně:
 
 ```
 source venv/Scripts/activate
@@ -51,13 +51,13 @@ Studenti si hravou formou rozvíjejí dovednosti v oblasti logického myšlení,
 ### Základní princip:
 Hráč vstupuje do role lídra jednoho státu (např. České republiky) a jeho úkolem je udržet zemi v rovnováze během série kol. V průběhu hry se pravidelně objevují nové výzvy, kterým musí uživatel čelit, některé výzvy stihne vyřešit, jiné však propadnou, avšak budou mít vliv na ukazatele hry. Může jít například o ekonomickou krizi, ekologickou reformu, stávku učitelů nebo mezinárodní spor. Hráč má na výběr obvykle tři možnosti, z nichž každá jinak ovlivní tři hlavní ukazatele hry:
 
-- 💰 **Rozpočet** – finanční stabilita státu, schopnost investovat a reagovat na krize.
+-  **Rozpočet** – finanční stabilita státu, schopnost investovat a reagovat na krize.
 
-- 🙂 **Spokojenost občanů** – celková důvěra a podpora obyvatel.
+-  **Spokojenost občanů** – celková důvěra a podpora obyvatel.
 
-- 🌱 **Ekologie a udržitelnost** - kvalita životního prostředí a dlouhodobé dopady politik.
+-  **Ekologie a udržitelnost** - kvalita životního prostředí a dlouhodobé dopady politik.
 
-- 🪖 **Vojenská vybavenost státu** - celková vybavenost státu proti vnějším či vnitřním hrozbám.
+-  **Vojenská vybavenost státu** - celková vybavenost státu proti vnějším či vnitřním hrozbám.
 
 Po každém rozhodnutí se hodnoty ukazatelů změní. Hráč tak musí neustále vyvažovat své kroky (například opatření, které zvýší spokojenost občanů, může zhoršit stav rozpočtu nebo poškodit ekologii). Pokud některý z ukazatelů klesne na kriticky nízkou úroveň, může dojít k krizi (např. ekonomický kolaps, ztráta důvěry, ekologická katastrofa). V takovém případě hra končí. Důležitým prvkem v rozhodování má i čas, který určuje, kdy dané rozhodnutí vstoupí v platnost, nebo kdy daný problém se stává neřešitelným a má přímý dopad na ukazatele hry.
 

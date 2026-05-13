@@ -53,16 +53,21 @@ class GameConsumer(AsyncWebsocketConsumer):
         try:
             solution = await database_sync_to_async(SolutionChoice.objects.get)(id=solution_id)
 
-            await asyncio.sleep(solution.time_before_effect * self.time_for_turn)
-
             @database_sync_to_async
-            def apply_solution_to_db(g_id, r_id, sol):
-                current_game = Game.objects.get(id=g_id)
-                current_region = Region.objects.get(id=r_id)
+            def rid_region_of_problem(region_id):
+                current_region = Region.objects.get(id=region_id)
 
                 current_region.problem = None
                 current_region.occupied = False
                 current_region.save()
+
+            await rid_region_of_problem(region_id)
+
+            await asyncio.sleep(solution.time_before_effect * self.time_for_turn)
+
+            @database_sync_to_async
+            def apply_solution_to_db(sol):
+                current_game = Game.objects.get(id=self.game_id)
 
                 current_game.economy = min(1000, current_game.economy + sol.budget_change)
                 current_game.citizen_satisfaction = min(1000, current_game.citizen_satisfaction + sol.citizen_satisfaction_change)
@@ -72,7 +77,13 @@ class GameConsumer(AsyncWebsocketConsumer):
 
                 return current_game
 
-            updated_game = await apply_solution_to_db(self.game_id, region_id, solution)
+            updated_game = await apply_solution_to_db(solution)
+
+            if self.check_game_over(updated_game):
+                self.send(text_data=json.dumps({
+                    "type": "game_over",
+                }))
+                return
 
             await self.send(text_data=json.dumps({
                 "type": "update_state",
@@ -118,17 +129,21 @@ class GameConsumer(AsyncWebsocketConsumer):
                     }))
                     return
                 problems = ProblemInstance.objects.all()
+                
                 game.current_turn += 1
                 await self.send(text_data=json.dumps({
                     "type": "new_turn",
                     "current_turn": game.current_turn,
                 }))
+                self.time_for_turn = self.make_game_harder(game.current_turn, self.time_for_turn)
                 await database_sync_to_async(lambda: game.save())()
                 
                 problem, region, region_name = await self.choose_problem(game, problems)
                 if not problem:
-                    await asyncio.sleep(self.time_for_turn)  # Wait before trying to spawn next problem
-                    continue
+                    await self.send(text_data=json.dumps({
+                        "type": "game_over",
+                    }))
+                    return
                 
                 region.problem = problem
                 region.occupied = True
@@ -233,7 +248,7 @@ class GameConsumer(AsyncWebsocketConsumer):
     async def choose_problem(self, game, problems):
         problems = await self.filter_problems(game, problems)
         if not problems:
-            return None, None
+            return None, None, None
         
         while problems:
             problem_chances = []
@@ -242,7 +257,7 @@ class GameConsumer(AsyncWebsocketConsumer):
                 problem_chances.append(self.calculate_problem_probability(game, prob))
             
             if sum(problem_chances) <= 0:
-                return None, None
+                return None, None, None
 
             problem = random.choices(problems, weights=problem_chances, k=1)[0]
             possible_regions = await database_sync_to_async(lambda: list(problem.possible_regions.all()))()
@@ -254,8 +269,9 @@ class GameConsumer(AsyncWebsocketConsumer):
             else:
                 problems.remove(problem)
 
-        return None, None
+        return None, None, None
     
+    # Handles problems whose timers have expired, updates game state accordingly and returns list of expired problems to notify frontend
     @database_sync_to_async
     def handle_expired_problems(self, game):
         regions = list(Region.objects.filter(game=game, occupied=True, problem_expiration_turn__lte=game.current_turn))
@@ -286,6 +302,11 @@ class GameConsumer(AsyncWebsocketConsumer):
     
     @database_sync_to_async
     def turn_start_changes(self, game):
-        game.economy += 10
-        game.environment -= 10
+        game.economy += 5
+        game.environment -= 5
         game.save()
+
+    def make_game_harder(self, turn, time_for_turn):
+        if turn % 15 == 0 and time_for_turn > 1:
+            return time_for_turn - 0.2
+        return time_for_turn
