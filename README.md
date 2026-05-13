@@ -4,6 +4,7 @@
 - Školní rok: 2025/2026
 
 ## 1. Instalace a spuštění projektu
+Nejprve je nutné mít stažený Docker a Git Bash.
 Na svém počítači otevřete terminál Git Bash a zadejte pomocí příkazu cd se přesuňte do složky, ve které chcete projekt mít uchovaný a poté zadejte tento příkaz:
 
 ```

@@ -1,4 +1,5 @@
 python -m venv venv
 source venv/Scripts/activate
 python equilibria/setup_env.py
+docker run -d --name myredis -p 6379:6379 redis
 bash start_commands.txt

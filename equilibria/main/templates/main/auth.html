@@ -70,7 +70,6 @@
 
     <script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
     <script>
-        // Inicializace Particles
         particlesJS('particles-js', {
             particles: {
                 number: { value: 50 },
@@ -81,8 +80,8 @@
                 move: { enable: true, speed: 1.5 }
             }
         });
-
         
+        // Toggle between login and registration forms
         function switchForm() {
             const loginBox = document.getElementById('login-box');
             const registerBox = document.getElementById('register-box');
@@ -93,7 +92,6 @@
             } else {
                 loginBox.style.display = 'none';
                 registerBox.style.display = 'block';
-                // VOLÁNÍ FUNKCE PO ZOBRAZENÍ REGISTRACE
                 if (typeof initTooltips === "function") {
                     initTooltips();
                 }

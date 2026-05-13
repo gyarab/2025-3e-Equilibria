@@ -178,7 +178,6 @@ footer {
     transform: translateY(0);
 }
 
-/* Pro login */
 .auth-wrapper {
     min-height: 100vh;
     display: flex;
@@ -187,7 +186,6 @@ footer {
     padding: 100px 20px 20px 20px; 
 }
 
-/* Samotná přihlašovací karta */
 .auth-card {
     background: var(--bg-card);
     border: 1px solid var(--border);
@@ -208,7 +206,6 @@ footer {
     font-size: 1.8rem;
 }
 
-/* Stylování Django formulářů */
 .auth-card p {
     margin-bottom: 15px;
 }
@@ -237,7 +234,6 @@ footer {
     border-color: var(--accent);
 }
 
-/* Nápovědy u hesel a chybové hlášky od Djanga */
 .helptext, .errorlist {
     font-size: 0.75rem;
     color: var(--text-muted);
@@ -250,7 +246,6 @@ footer {
     color: #f85149; 
 }
 
-/* Tlačítka */
 .btn-submit {
     width: 100%;
     padding: 12px;
@@ -428,5 +423,4 @@ footer {
     color: var(--accent);
 }
 
-/* Skrytí ošklivých výchozích textů od Djanga */
 .helptext { display: none !important; }
