@@ -6,6 +6,7 @@ import random
 from channels.db import database_sync_to_async
 
 class GameConsumer(AsyncWebsocketConsumer):
+    time_for_turn = 5
     async def connect(self):
         self.game_id = self.scope['url_route']['kwargs']['game_id']
         self.game_group_name = f'game_{self.game_id}'
@@ -52,7 +53,7 @@ class GameConsumer(AsyncWebsocketConsumer):
         try:
             solution = await database_sync_to_async(SolutionChoice.objects.get)(id=solution_id)
 
-            await asyncio.sleep(solution.time_before_effect * 4)
+            await asyncio.sleep(solution.time_before_effect * self.time_for_turn)
 
             @database_sync_to_async
             def apply_solution_to_db(g_id, r_id, sol):
@@ -63,10 +64,10 @@ class GameConsumer(AsyncWebsocketConsumer):
                 current_region.occupied = False
                 current_region.save()
 
-                current_game.economy += sol.budget_change
-                current_game.citizen_satisfaction += sol.citizen_satisfaction_change
-                current_game.environment += sol.environment_change
-                current_game.military_power += sol.military_change
+                current_game.economy = min(1000, current_game.economy + sol.budget_change)
+                current_game.citizen_satisfaction = min(1000, current_game.citizen_satisfaction + sol.citizen_satisfaction_change)
+                current_game.environment = min(1000, current_game.environment + sol.environment_change)
+                current_game.military_power = min(1000, current_game.military_power + sol.military_change)
                 current_game.save()
 
                 return current_game
@@ -110,6 +111,7 @@ class GameConsumer(AsyncWebsocketConsumer):
         while True:
             try:
                 game = await database_sync_to_async(lambda: Game.objects.get(id=self.game_id))()
+                self.turn_start_changes(game)
                 if self.check_game_over(game):
                     await self.send(text_data=json.dumps({
                         "type": "game_over",
@@ -125,7 +127,7 @@ class GameConsumer(AsyncWebsocketConsumer):
                 
                 problem, region, region_name = await self.choose_problem(game, problems)
                 if not problem:
-                    await asyncio.sleep(4)  # Wait before trying to spawn next problem
+                    await asyncio.sleep(self.time_for_turn)  # Wait before trying to spawn next problem
                     continue
                 
                 region.problem = problem
@@ -168,11 +170,11 @@ class GameConsumer(AsyncWebsocketConsumer):
                         },
                     }))
 
-                await asyncio.sleep(4)  # wait before spawning next problem
+                await asyncio.sleep(self.time_for_turn)  # wait before spawning next problem
 
             except Exception as e:
                 print("Error spawning problem:", e)
-                await asyncio.sleep(4)
+                await asyncio.sleep(self.time_for_turn)
         
     # Filters problems who dont fit game state to speed up probability calculations
     async def filter_problems(self, game, problems):
@@ -281,3 +283,9 @@ class GameConsumer(AsyncWebsocketConsumer):
         if game.economy <= 0 or game.citizen_satisfaction <= 0 or game.environment <= 0 or game.military_power <= 0:
             return True
         return False
+    
+    @database_sync_to_async
+    def turn_start_changes(self, game):
+        game.economy += 10
+        game.environment -= 10
+        game.save()
